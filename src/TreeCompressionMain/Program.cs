@@ -1,33 +1,55 @@
 
+using System.Diagnostics;
+using System.Reflection;
 using MorphoDita;
 using Ufal.MorphoDiTa;
+using Version = Ufal.MorphoDiTa.Version;
 
 namespace TreeCompressionMain;
 
-public class Program
+public partial class Program
 {
-    public static void Main(string[] args)
+
+    private static void LoadLibraries()
     {
         MorphoDitaLoader.LoadNativeLibrary();
-        //get tagger from resources
+    }
+    
+    public static void Main(string[] args)
+    {
+
+        #if DEBUG
+        //Custom args for debugging
+        args =
+        [
+            //"EnglishMorphoditaTagger"
+            "EnglishMorphoditaDict"
+        ];
+        #endif
         
 
-        
-        var filePath = Path.Combine(Directory.GetCurrentDirectory(), 
-            "Resources",
-            "English",
-            "english-morphium-wsj-140407.tagger");
-        var tagger = Tagger.load(filePath);
-        var sentence = "This is a test sentence.";
-        var words = sentence.Split(' ');
-        var forms = new Forms(words);
-        var tags = new TaggedLemmas();
-        tagger.tag(forms, tags);
-
-        foreach (var tag in tags)
+        #region CommandExecution
+        LoadLibraries();
+        if(args.Length == 0)
         {
-            Console.WriteLine(tag.lemma + " " + tag.tag);
+            Console.WriteLine("No command specified");
+            return;
         }
+        var command = args[0];
+        var assembly = Assembly.GetExecutingAssembly();
+        var type = assembly.GetType($"TreeCompressionMain.Commands.{command}");
+
+        if(type == null)
+        {
+            Console.WriteLine($"Command {command} not found");
+            return;
+        }
+
+        var commandInstance = (ICommand) Activator.CreateInstance(type)!;
+
+        commandInstance.Execute(args);
+        
+        #endregion
 
     }
     

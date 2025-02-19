@@ -36,7 +36,6 @@ public static class MorphoDitaLoader
 
         var libPath = Path.Combine(basePath, libName);
 
-        Console.WriteLine(libPath);
         // Kontrola existence souboru
         if (!File.Exists(libPath))
         {

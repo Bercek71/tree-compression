@@ -22,6 +22,9 @@
       <None Update="Resources\English\english-morphium-wsj-140407.tagger">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="Resources\English\english-morphium-140407.dict">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
 
 </Project>

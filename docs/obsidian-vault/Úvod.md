@@ -1,0 +1,5 @@
+#19-02-2025
+
+Na začátku jsem začal zkoumat různé způsoby, jak strojově sestavit stromové struktury vět nebo jednotlivých slov. Jako první jsem se zaměřil na projekt **MorphoDiTa**, který slouží k **taggingu** (tj. přiřazování slovním tvarům jejich gramatických kategorií, jako je slovní druh, pád nebo osoba) a k **lemmatizaci** (tj. převodu slov na jejich základní tvar – lemma).
+Pro experimenty jsem vytvořil jednoduchý framework v jazyce **C#**, ve kterém pomocí základních příkazů testuji **tagger** a **lemmatizaci**. Zkoumám také, zda by části **lemmatizačního derivativního stromu** mohly být využity ke kompresi textu.
+U menších souborů se může stát, že se velikost spíše zvýší, ale u větších textů by naopak mohla klesnout – to však musím experimentálně ověřit. V této fázi projektu hledám vhodný způsob, jak efektivně sestavit stromové struktury na základě získaných analytických dat. **Tagging se zatím jeví jako nejlepší přístup, ale potřebuji najít optimální kritéria pro jejich konstrukci.**
