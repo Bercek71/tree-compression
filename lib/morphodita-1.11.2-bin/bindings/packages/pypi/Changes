@@ -1,0 +1,51 @@
+Revision history for ufal.morphodita
+
+1.11.1.1 [18 Feb 23]
+         Do not assume char is signed; fixes silent errors on aarch64
+           when compiled from the source (e.g. in Docker on ARM macOS).
+         Also provide aarch64 wheels.
+
+1.11.0.3 [05 Sep 22]
+         In the type stubs, mark arguments to nextSentence as optional.
+
+1.11.0.1 [01 Sep 22]
+         Update MorphoDiTa to version 1.11.0.
+         Add type information to the Python package.
+         Binary wheels are provided for Python 3.6-3.11.
+         For macOS, both Intel and Arm wheels are available.
+
+1.10.1.1 [29 Jun 20]
+         Update MorphoDiTa to version 1.10.1.
+         Add binary wheels for Linux, Windows and OS X.
+
+1.9.2.3 [18 May 19]
+        Improve compilation on OS X.
+
+1.9.2.2 [06 Mar 19]
+        Add -stdlib=libc++ compilation switch on OS X.
+
+1.9.2.1 [22 Sep 16]
+        Update MorphoDiTa to version 1.9.2.
+
+1.9.1.1 [20 Sep 16]
+        Update MorphoDiTa to version 1.9.1.
+        Support Visual C++ compiler.
+
+1.3.0.1 [30 Aug 14]
+        Update MorphoDiTa to version 1.3.0.
+        Add basic tests (in a CPAN-inspired manner).
+        Add support for OS X.
+        Silence warnings during compilation.
+
+1.2.0.1 [22 Apr 14]
+        Update MorphoDiTa to version 1.2.0.
+
+1.1.0.1 [09 Apr 14]
+        Update MorphoDiTa to version 1.1.0.
+
+1.0.0.2 [07 Apr 14]
+        Update MorphoDiTa sources to version 1.0.0.
+        The 1.0.0.1 package contained pre-release of MorphoDiTa.
+
+1.0.0.1 [04 Apr 2014]
+        First version of bindings for MorphoDiTa 1.0.0.

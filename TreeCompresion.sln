@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionMain", "src\TreeCompressionMain\TreeCompressionMain.csproj", "{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphoDiTaBindings", "lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj", "{012B9DEA-433C-412F-8AF9-DC833FC55EE5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeStructure", "TreeStructure\TreeStructure.csproj", "{95015837-5BFA-4A58-9D2C-6CC9F951961C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

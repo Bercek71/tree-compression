@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net9.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>MorphoDita</RootNamespace>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <StartArguments>DYLD_LIBRARY_PATH=./bin/Debug/net7.0</StartArguments>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Update="libmorphodita_csharp.dylib">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="morphodita_csharp.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="libmorphodita_csharp.so">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>
