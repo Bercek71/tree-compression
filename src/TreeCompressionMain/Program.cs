@@ -23,7 +23,8 @@ public partial class Program
         args =
         [
             //"EnglishMorphoditaTagger"
-            "EnglishMorphoditaDict"
+            //"EnglishMorphoditaDict"
+            //"ParsitoTest"
         ];
         #endif
         
@@ -44,7 +45,15 @@ public partial class Program
             Console.WriteLine($"Command {command} not found");
             return;
         }
-
+        
+        //check if type is marked as obsolete
+        var obsoleteAttribute = type.GetCustomAttribute<ObsoleteAttribute>();
+        if(obsoleteAttribute != null)
+        {
+            Console.WriteLine($"Command {command} is marked as obsolete: {obsoleteAttribute.Message}");
+            return;
+        }
+        
         var commandInstance = (ICommand) Activator.CreateInstance(type)!;
 
         commandInstance.Execute(args);

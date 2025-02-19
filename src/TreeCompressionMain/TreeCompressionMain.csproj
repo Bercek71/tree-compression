@@ -26,5 +26,9 @@
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
     </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="UDPipe.CSharp.Wrapper" Version="4.0.0" />
+    </ItemGroup>
 
 </Project>
