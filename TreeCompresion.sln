@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionMain", "src\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphoDiTaBindings", "lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj", "{012B9DEA-433C-412F-8AF9-DC833FC55EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeStructure", "TreeStructure\TreeStructure.csproj", "{95015837-5BFA-4A58-9D2C-6CC9F951961C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeStructure", "src\TreeStructure\TreeStructure.csproj", "{4E8CD43D-6312-4B37-9DE5-008DDE39A221}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,10 +20,10 @@ Global
 		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{012B9DEA-433C-412F-8AF9-DC833FC55EE5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{95015837-5BFA-4A58-9D2C-6CC9F951961C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E8CD43D-6312-4B37-9DE5-008DDE39A221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E8CD43D-6312-4B37-9DE5-008DDE39A221}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E8CD43D-6312-4B37-9DE5-008DDE39A221}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E8CD43D-6312-4B37-9DE5-008DDE39A221}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
