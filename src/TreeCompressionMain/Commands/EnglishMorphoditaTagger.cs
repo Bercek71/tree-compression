@@ -2,9 +2,9 @@ using Ufal.MorphoDiTa;
 
 namespace TreeCompressionMain.Commands;
 
-public class EnglishMorphoditaTagger : ICommand
+public class EnglishMorphoditaTagger : BaseCommand
 {
-    public void Execute(string[] parameters)
+    public override void Execute(object? parameter)
     {
         var filePath = Path.Combine(Directory.GetCurrentDirectory(), 
             "Resources",

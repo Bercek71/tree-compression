@@ -1,19 +1,16 @@
 
 using System.Diagnostics;
 using System.Reflection;
+using System.Windows.Input;
 using MorphoDita;
+using UDPipeBindings;
 using Ufal.MorphoDiTa;
 using Version = Ufal.MorphoDiTa.Version;
 
 namespace TreeCompressionMain;
 
-public partial class Program
+public static class Program
 {
-
-    private static void LoadLibraries()
-    {
-        MorphoDitaLoader.LoadNativeLibrary();
-    }
     
     public static void Main(string[] args)
     {
@@ -25,11 +22,28 @@ public partial class Program
             //"EnglishMorphoditaTagger"
             //"EnglishMorphoditaDict"
             //"ParsitoTest"
+            "UDPipeTest"
+            
         ];
         #endif
-        
 
         #region CommandExecution
+            ExecuteCommand(args);
+        #endregion
+
+    }
+    
+    
+    private static void LoadLibraries()
+    {
+        MorphoDitaLoader.LoadNativeLibrary();
+        UDPipeLoader.LoadNativeLibrary();
+    }
+
+
+
+    private static void ExecuteCommand(string[] args)
+    {
         LoadLibraries();
         if(args.Length == 0)
         {
@@ -57,9 +71,8 @@ public partial class Program
         var commandInstance = (ICommand) Activator.CreateInstance(type)!;
 
         commandInstance.Execute(args);
-        
-        #endregion
 
+        
     }
     
 }

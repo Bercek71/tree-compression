@@ -10,6 +10,7 @@
     
     <ItemGroup>
       <ProjectReference Include="..\..\lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj" />
+      <ProjectReference Include="..\..\lib\UDPipeBindings\UDPipeBindings.csproj" />
     </ItemGroup>
     
     <ItemGroup>
@@ -25,10 +26,16 @@
       <None Update="Resources\English\english-morphium-140407.dict">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
+      <None Update="Resources\English\english-ewt-ud-2.5.udpipe">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Resources\English\english-gum-ud-2.5.udpipe">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
     </ItemGroup>
     
     <ItemGroup>
-      <PackageReference Include="UDPipe.CSharp.Wrapper" Version="4.0.0" />
+      <Folder Include="ConsoleApp\" />
     </ItemGroup>
 
 </Project>

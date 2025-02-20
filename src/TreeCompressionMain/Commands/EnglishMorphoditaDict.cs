@@ -1,10 +1,11 @@
+using System.Windows.Input;
 using Ufal.MorphoDiTa;
 
 namespace TreeCompressionMain.Commands;
 
-public class EnglishMorphoditaDict : ICommand
+public class EnglishMorphoditaDict : BaseCommand
 {
-    public void Execute(string[] parameters)
+    public override void Execute(object? parameter)
     {
         var dictPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory ,"Resources", "English" ,  "english-morphium-140407.dict");
         var morpho = Morpho.load(dictPath);
@@ -21,6 +22,5 @@ public class EnglishMorphoditaDict : ICommand
                 Console.WriteLine(taggedLemma.lemma + " " + taggedLemma.tag);
             }
         }
-        
     }
 }
