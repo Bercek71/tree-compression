@@ -15,12 +15,6 @@
     </ItemGroup>
     
     <ItemGroup>
-      <Content Include="..\..\.dockerignore">
-        <Link>.dockerignore</Link>
-      </Content>
-    </ItemGroup>
-    
-    <ItemGroup>
       <None Update="Resources\English\english-morphium-wsj-140407.tagger">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
@@ -37,6 +31,12 @@
     
     <ItemGroup>
       <Folder Include="ConsoleApp\" />
+    </ItemGroup>
+    
+    <ItemGroup>
+      <Content Include="..\..\.dockerignore">
+        <Link>.dockerignore</Link>
+      </Content>
     </ItemGroup>
 
 </Project>

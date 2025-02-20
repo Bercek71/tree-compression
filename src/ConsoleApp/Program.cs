@@ -52,7 +52,7 @@ public static class Program
         }
         var command = args[0];
         var assembly = Assembly.GetExecutingAssembly();
-        var type = assembly.GetType($"TreeCompressionMain.Commands.{command}");
+        var type = assembly.GetType($"ConsoleApp.Commands.{command}");
 
         if(type == null)
         {

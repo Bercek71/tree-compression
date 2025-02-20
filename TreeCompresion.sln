@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionMain", "src\TreeCompressionMain\TreeCompressionMain.csproj", "{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "src\ConsoleApp\ConsoleApp.csproj", "{5B6ADC87-9DBE-4471-B903-E55E1D0362FD}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphoDiTaBindings", "lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj", "{012B9DEA-433C-412F-8AF9-DC833FC55EE5}"
 EndProject

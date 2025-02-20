@@ -1,4 +1,0 @@
-{
-  global: boot_*;
-  local: *;
-};

@@ -21,11 +21,11 @@ public class UDPipeLoader
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
         {
-            libName = "morphodita_csharp.dll";
+            libName = "udpipe_csharp.dll";
         }
         else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux))
         {
-            libName = "libmorphodita_csharp.so";
+            libName = "libudpipe_csharp.so";
         }
         else
         {

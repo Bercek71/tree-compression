@@ -1,4 +1,0 @@
-{
-  global: CSharp_*; SWIGRegister*;
-  local: *;
-};

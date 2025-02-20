@@ -1,5 +1,0 @@
-include Changes
-include LICENSE
-graft examples
-graft tests
-graft ufal
