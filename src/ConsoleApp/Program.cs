@@ -27,12 +27,12 @@ public static class Program
         ];
         #endif
 
-        #region CommandExecution
             ExecuteCommand(args);
-        #endregion
 
     }
     
+
+    #region ExecuteCommand
     
     private static void LoadLibraries()
     {
@@ -71,8 +71,8 @@ public static class Program
         var commandInstance = (ICommand) Activator.CreateInstance(type)!;
 
         commandInstance.Execute(args);
-
-        
     }
+    #endregion
+
     
 }
