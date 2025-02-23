@@ -4,7 +4,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "src\ConsoleAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphoDiTaBindings", "lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj", "{012B9DEA-433C-412F-8AF9-DC833FC55EE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeStructure", "src\TreeStructure\TreeStructure.csproj", "{4E8CD43D-6312-4B37-9DE5-008DDE39A221}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeStructures", "src\TreeStructures\TreeStructures.csproj", "{4E8CD43D-6312-4B37-9DE5-008DDE39A221}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPipeBindings", "lib\UDPipeBindings\UDPipeBindings.csproj", "{5BFF9106-44D0-470A-BE96-0FCA0B9A28EA}"
 EndProject

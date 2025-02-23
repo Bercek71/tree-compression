@@ -1,6 +1,6 @@
 using Ufal.MorphoDiTa;
 
-namespace TreeCompressionMain.Commands;
+namespace ConsoleApp.Commands;
 
 public class EnglishMorphoditaTagger : BaseCommand
 {

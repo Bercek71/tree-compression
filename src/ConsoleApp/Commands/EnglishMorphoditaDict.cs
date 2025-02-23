@@ -1,7 +1,7 @@
 using System.Windows.Input;
 using Ufal.MorphoDiTa;
 
-namespace TreeCompressionMain.Commands;
+namespace ConsoleApp.Commands;
 
 public class EnglishMorphoditaDict : BaseCommand
 {

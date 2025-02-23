@@ -6,12 +6,13 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
         <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
-        <RootNamespace>TreeCompressionMain</RootNamespace>
+        <RootNamespace>ConsoleApp</RootNamespace>
     </PropertyGroup>
     
     <ItemGroup>
       <ProjectReference Include="..\..\lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj" />
       <ProjectReference Include="..\..\lib\UDPipeBindings\UDPipeBindings.csproj" />
+      <ProjectReference Include="..\TreeStructures\TreeStructures.csproj" />
     </ItemGroup>
     
     <ItemGroup>

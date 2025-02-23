@@ -26,7 +26,7 @@ WORKDIR "/src/src/ConsoleApp"
 RUN dotnet build "ConsoleApp.csproj" -c Debug -o /app/build
 
 # Final runtime stage
-FROM mcr.microsoft.com/dotnet/aspnet:9.0 AS final
+FROM mcr.microsoft.com/dotnet/sdk:9.0 AS final
 WORKDIR /app
 
 # Install required C libraries in the final image

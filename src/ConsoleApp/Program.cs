@@ -7,7 +7,7 @@ using UDPipeBindings;
 using Ufal.MorphoDiTa;
 using Version = Ufal.MorphoDiTa.Version;
 
-namespace TreeCompressionMain;
+namespace ConsoleApp;
 
 public static class Program
 {

@@ -1,6 +1,6 @@
 using System.Windows.Input;
 
-namespace TreeCompressionMain;
+namespace ConsoleApp;
 
 public abstract class BaseCommand : ICommand
 {

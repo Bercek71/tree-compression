@@ -1,8 +1,9 @@
 using System;
 using System.IO;
+using TreeStructures;
 using Ufal.UDPipe;
 
-namespace TreeCompressionMain.Commands
+namespace ConsoleApp.Commands
 {
     public class UDPipeTest : BaseCommand
     {
@@ -22,7 +23,7 @@ namespace TreeCompressionMain.Commands
                 return;
             }
 
-            var testingSent = "This is a super long sentence that is going to be parsed by UDPipe, which is going to be totally awesome.";
+            var testingSent = "Despite the fact that the sun had long since dipped below the horizon, casting a blanket of darkness over the sleepy town, the air still hummed with the sound of distant conversations, the soft rustling of leaves caught in the gentle evening breeze, and the occasional bark of a dog from a nearby yard, as if the very essence of life, with all its complexities and intricacies, still managed to linger in the cool night, refusing to fade into the quiet that normally accompanied the setting of the day, and as I walked down the cobblestone street, each step echoing in the stillness, I couldn’t help but wonder about the endless number of stories that had unfolded in this very spot, each one adding to the rich tapestry of history that had shaped the town, its people, and the world beyond, where the intertwining of human experience, from the grand to the mundane, had created a vast web of connections, connections that, at times, seemed as fragile as a spider’s thread, yet were incredibly resilient, stretching across time and space, weaving through generations of families, cultures, and beliefs, leaving behind traces that would one day be discovered, analyzed, and perhaps even forgotten by those who came after us, but for now, in this fleeting moment, everything seemed so tangible, so alive, so full of potential, as if the universe itself had paused, holding its breath, waiting for the next chapter to begin.";
 
             // Step 1: Create tokenizer
             var tokenizer = model.newTokenizer(Model.DEFAULT);
@@ -65,6 +66,33 @@ namespace TreeCompressionMain.Commands
             {
                 Console.WriteLine("# {0}", sentenceComment);
             }
+            
+            var rootWord = sentence.words[0];
+            var tree = new Tree<string>(rootWord.form);
+
+            var words = sentence.words;
+            BuildTree(tree.Root, rootWord, words.ToList());
+
+            tree.PrintTree();
+
+            var compresor = new GrammarCompressor<string>();
+            compresor.CompressTree(tree.Root);
+            compresor.PrintGrammar();
+            compresor.ToBinaryFile("Test.bin");
+        }
+
+        private static void BuildTree(TreeNode<string> parentNode, Word parentWord , List<Word> words)
+        {
+            var children = words.Where(x => x.head == parentWord.id).ToList();
+
+            foreach (var word in children)
+            {
+                var newNode = new TreeNode<string>(word.form);
+                parentNode.Add(newNode, word.id > parentWord.id ? Direction.Right : Direction.Left);
+                // Recursively add children of this node
+                BuildTree(newNode, word,  words);
+            }
+            
         }
     }
 }
