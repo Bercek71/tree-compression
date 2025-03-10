@@ -3,10 +3,10 @@ name: Deploy MkDocs site to GitHub Pages
 on:
   push:
     branches:
-      - main  # Spustí se, když provedeš změny na větvi main
+      - main  # Trigger deployment on push to the main branch
 
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -29,6 +29,9 @@ jobs:
     - name: Deploy to GitHub Pages
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        branch: gh-pages  # Větev pro GitHub Pages
-        folder: site  # MkDocs generuje statickou stránku do složky 'site'
-        token: ${{ secrets.GITHUB_TOKEN }}  # Automaticky vytvořený token pro přístup do repozitáře
+        branch: gh-pages  # Target branch for GitHub Pages
+        folder: site  # The folder where MkDocs generates the site
+        token: ${{ secrets.GITHUB_TOKEN }}  # Automatically generated token with repo access
+
+    permissions:
+      contents: write  # Ensure the GitHub Actions bot can push to the repository
