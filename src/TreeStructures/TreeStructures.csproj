@@ -7,4 +7,8 @@
         <RootNamespace>TreeStructures</RootNamespace>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\..\lib\UDPipeBindings\UDPipeBindings.csproj" />
+    </ItemGroup>
+
 </Project>

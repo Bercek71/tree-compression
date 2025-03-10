@@ -1,13 +1,48 @@
 using System.Text;
 
-namespace TreeStructures;
+namespace TreeStructures.Compressors;
 
 
-public class GrammarCompressor<T>
+public class GrammarCompressor<T> : ITreeCompressor<T>
 {
     private readonly Dictionary<string, string> _grammarRules = new();
     private readonly Dictionary<string, TreeNode<T>> _uniqueSubtrees = new();
     private int _ruleCounter = 1;
+    
+
+    public void ToBinaryFile(string path)
+    {
+        using var stream = new FileStream(path, FileMode.Create);
+        using var writer = new BinaryWriter(stream);
+        // Write the rule counter
+        writer.Write(_ruleCounter);
+
+        // Write the number of grammar rules
+        writer.Write(_grammarRules.Count);
+
+        // Write each grammar rule
+        foreach (var rule in _grammarRules)
+        {
+            WriteString(writer, rule.Key);   // Writing the key (subtree structure)
+            WriteString(writer, rule.Value); // Writing the rule (compressed representation)
+        }
+    }
+    
+    private static void WriteString(BinaryWriter writer, string value)
+    {
+        var bytes = Encoding.UTF8.GetBytes(value);
+        writer.Write(bytes.Length);    // Write the length of the string
+        writer.Write(bytes);           // Write the string as bytes
+    }
+    
+    public void PrintGrammar()
+    {
+        Console.WriteLine("Generated Grammar Rules:");
+        foreach (var rule in _grammarRules)
+        {
+            Console.WriteLine($"{rule.Value} -> {rule.Key}");
+        }
+    }
 
     public string CompressTree(TreeNode<T> node)
     {
@@ -45,37 +80,9 @@ public class GrammarCompressor<T>
         }
     }
 
-    public void ToBinaryFile(string path)
+    public TreeNode<T> DecompressTree(string compressedTree)
     {
-        using var stream = new FileStream(path, FileMode.Create);
-        using var writer = new BinaryWriter(stream);
-        // Write the rule counter
-        writer.Write(_ruleCounter);
-
-        // Write the number of grammar rules
-        writer.Write(_grammarRules.Count);
-
-        // Write each grammar rule
-        foreach (var rule in _grammarRules)
-        {
-            WriteString(writer, rule.Key);   // Writing the key (subtree structure)
-            WriteString(writer, rule.Value); // Writing the rule (compressed representation)
-        }
+        throw new NotImplementedException();
     }
     
-    private static void WriteString(BinaryWriter writer, string value)
-    {
-        var bytes = Encoding.UTF8.GetBytes(value);
-        writer.Write(bytes.Length);    // Write the length of the string
-        writer.Write(bytes);           // Write the string as bytes
-    }
-    
-    public void PrintGrammar()
-    {
-        Console.WriteLine("Generated Grammar Rules:");
-        foreach (var rule in _grammarRules)
-        {
-            Console.WriteLine($"{rule.Value} -> {rule.Key}");
-        }
-    }
 }

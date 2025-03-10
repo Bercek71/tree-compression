@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using TreeStructures;
+using TreeStructures.Compressors;
 using Ufal.UDPipe;
 
 namespace ConsoleApp.Commands
@@ -75,10 +76,21 @@ namespace ConsoleApp.Commands
 
             tree.PrintTree();
 
-            var compresor = new GrammarCompressor<string>();
-            compresor.CompressTree(tree.Root);
-            compresor.PrintGrammar();
-            compresor.ToBinaryFile("Test.bin");
+            var compressor = new RePairTreeCompressor<string>();
+            var compressedTree = compressor.CompressTree(tree.Root);
+            
+            Console.WriteLine("Compressed Tree: {0}", compressedTree);
+
+            var treeNode = compressor.DecompressTree(compressedTree);
+
+            var decompressedTree = new Tree<string>(rootWord.form)
+            {
+                Root = treeNode
+            };
+            decompressedTree.PrintTree();
+
+
+//            compresor.ToBinaryFile("Test.bin");
         }
 
         private static void BuildTree(TreeNode<string> parentNode, Word parentWord , List<Word> words)
