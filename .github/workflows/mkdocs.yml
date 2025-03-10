@@ -13,12 +13,7 @@ jobs:
     - name: Check out repository
       uses: actions/checkout@v2
 
-    - name: Set up Python
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.x'
-
-    - name: Install MkDocs and dependencies
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install mkdocs mkdocs-material
@@ -27,11 +22,12 @@ jobs:
       run: mkdocs build
 
     - name: Deploy to GitHub Pages
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        branch: gh-pages  # Target branch for GitHub Pages
-        folder: site  # The folder where MkDocs generates the site
-        token: ${{ secrets.GITHUB_TOKEN }}  # Automatically generated token with repo access
-
-    permissions:
-      contents: write  # Ensure the GitHub Actions bot can push to the repository
+      run: |
+        git config --global user.name "GitHub Actions"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git checkout --orphan gh-pages
+        git rm -rf .
+        mv site/* .  # Move the generated site files to the root
+        git add -A
+        git commit -m "Deploy site to GitHub Pages"
+        git push --force origin gh-pages
