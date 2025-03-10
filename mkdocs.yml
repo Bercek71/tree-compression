@@ -19,6 +19,9 @@ theme:
 extra_css:
   - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css
 
+extra_javascript:
+  - js/script.js  # Link to the external JS file
+
 nav:
   - <i class="fas fa-home"></i> Home: index.md
   - <i class="fas fa-project-diagram"></i> Architektura: architecture.md
