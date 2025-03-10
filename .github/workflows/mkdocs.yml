@@ -27,7 +27,8 @@ jobs:
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
         git checkout --orphan gh-pages
         git rm -rf .
-        mv site/* .  # Move the generated site files to the root
+        mv site/* .
         git add -A
         git commit -m "Deploy site to GitHub Pages"
+        git remote set-url origin https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/Bercek71/tree-compression.git
         git push --force origin gh-pages
