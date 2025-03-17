@@ -1,0 +1,11 @@
+@startuml
+left to right direction
+[*] --> Analýza_textu
+[*] --> Dekomprese
+Analýza_textu --> Generování_stromové_struktury
+Dekomprese --> Generování_stromové_struktury
+Generování_stromové_struktury --> Komprese
+Komprese --> Uložení
+Uložení --> [*]
+Uložení --> Dekomprese
+@enduml

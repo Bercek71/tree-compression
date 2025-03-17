@@ -4,8 +4,6 @@ using System.Reflection;
 using System.Windows.Input;
 using MorphoDita;
 using UDPipeBindings;
-using Ufal.MorphoDiTa;
-using Version = Ufal.MorphoDiTa.Version;
 
 namespace ConsoleApp;
 
@@ -22,7 +20,8 @@ public static class Program
             //"EnglishMorphoditaTagger"
             //"EnglishMorphoditaDict"
             //"ParsitoTest"
-            "UDPipeTest"
+            //"UDPipeTest"
+            "FrameworkTest"
             
         ];
         #endif

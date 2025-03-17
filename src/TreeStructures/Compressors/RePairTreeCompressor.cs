@@ -121,7 +121,7 @@ public class RePairTreeCompressor<T> : ITreeCompressor<T>
     private static List<string> ReplacePairs(List<string> sequence, string targetPair, string newSymbol)
     {
         List<string> newSequence = [];
-        int i = 0;
+        var i = 0;
 
         while (i < sequence.Count)
         {
