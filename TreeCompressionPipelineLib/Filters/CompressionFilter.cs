@@ -3,11 +3,10 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionPipeline.Filters;
 
-public class CompressionFilter(ICompressionStrategy strategy) : FilterBase<ITreeNode, CompressedTree>
+public class CompressionFilter<T>(ICompressionStrategy<T> strategy) : FilterBase<T, CompressedTree>
 {
-    protected override CompressedTree ProcessData(ITreeNode tree)
+    protected override CompressedTree ProcessData(T tree)
     {
         return strategy.Compress(tree);
     }
-
 }

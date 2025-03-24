@@ -3,7 +3,7 @@ using TreeCompressionPipeline.TreeStructure;
 namespace TreeCompressionPipeline.CompressionStrategies;
 
 // Compression Strategies
-public abstract class CompressionStrategy : ICompressionStrategy
+public abstract class CompressionStrategy : ICompressionStrategy<ITreeNode>
 {
     protected Dictionary<string, int> FindPatterns(ITreeNode tree)
     {

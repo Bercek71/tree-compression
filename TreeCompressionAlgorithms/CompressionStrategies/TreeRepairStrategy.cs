@@ -6,12 +6,12 @@ using TreeCompressionPipeline.CompressionStrategies;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies
 {
-    public class TreeRepairStrategy : ICompressionStrategy
+    public class TreeRepairStrategy : ICompressionStrategy<ISyntacticTreeNode>
     {
         private readonly Dictionary<string, string> _grammarRules = new();
         private int _nextNonTerminal = 256; // Start from ASCII 256 to avoid conflicts
 
-        public CompressedTree Compress(ITreeNode? tree)
+        public CompressedTree Compress(ISyntacticTreeNode? tree)
         {
             ArgumentNullException.ThrowIfNull(tree);
 
@@ -45,7 +45,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies
             };
         }
 
-        public ITreeNode Decompress(CompressedTree? compressedTree)
+        public ISyntacticTreeNode Decompress(CompressedTree? compressedTree)
         {
             ArgumentNullException.ThrowIfNull(compressedTree);
 
@@ -71,15 +71,27 @@ namespace TreeCompressionAlgorithms.CompressionStrategies
             return DecodeTree(sequence, ref index);
         }
 
-        private static void EncodeTree(ITreeNode node, List<string> sequence)
+        private static void EncodeTree(ISyntacticTreeNode node, List<string> sequence)
         {
             // Add the node value to the sequence
             sequence.Add(node.Value.ToString());
 
-            // If the node has children, recursively encode each child
-            if (node.Children.Any())
+            // Encode left children
+            if (node.LeftChildren.Count != 0)
             {
-                foreach (var child in node.Children)
+                foreach (var child in node.LeftChildren)
+                {
+                    EncodeTree(child, sequence);
+                }
+            }
+
+            // Add separator between left and right children
+            sequence.Add("|");
+
+            // Encode right children
+            if (node.RightChildren.Count != 0)
+            {
+                foreach (var child in node.RightChildren)
                 {
                     EncodeTree(child, sequence);
                 }
@@ -88,25 +100,41 @@ namespace TreeCompressionAlgorithms.CompressionStrategies
             sequence.Add("]"); // Marks end of this node
         }
 
-        private static ITreeNode DecodeTree(List<string> sequence, ref int index)
+        private static ISyntacticTreeNode DecodeTree(List<string> sequence, ref int index)
         {
             if (index >= sequence.Count || sequence[index] == "]") return null;
 
             var value = sequence[index++];
-            ITreeNode node = new TreeNode(value);
+            var node = new SyntacticTreeNode(value);
 
-            // Decode children for the current node
+            // Decode left children for the current node
+            while (index < sequence.Count && sequence[index] != "]" && sequence[index] != "|")
+            {
+                var child = DecodeTree(sequence, ref index);
+                if (child != null)
+                {
+                    node.AddLeftChild(child);
+                }
+            }
+
+            // Skip the separator between left and right children
+            if (index < sequence.Count && sequence[index] == "|") index++;
+
+            // Decode right children for the current node
             while (index < sequence.Count && sequence[index] != "]")
             {
                 var child = DecodeTree(sequence, ref index);
-                node.AddChild(child);
+                if (child != null)
+                {
+                    node.AddRightChild(child);
+                }
             }
 
             if (index < sequence.Count && sequence[index] == "]") index++; // Skip end marker
             return node;
         }
 
-        private Dictionary<string, int> CountFrequentPairs(List<string> sequence)
+        private static Dictionary<string, int> CountFrequentPairs(List<string> sequence)
         {
             Dictionary<string, int> pairFreq = new();
             for (var i = 0; i < sequence.Count - 1; i++)
@@ -120,7 +148,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies
 
         private static List<string> ReplacePairs(List<string> sequence, string targetPair, string newSymbol)
         {
-            List<string> newSequence = new List<string>();
+            var newSequence = new List<string>();
             var i = 0;
 
             while (i < sequence.Count)

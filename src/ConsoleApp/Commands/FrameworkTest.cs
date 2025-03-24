@@ -18,9 +18,11 @@ public class FrameworkTest : BaseCommand
         };
 
 
-        var compressor = new XmlTreeCompressing(new TreeRepairStrategy());
+        var compressor = new NaturalLanguageTreeCompressing(new TreeRepairStrategy());
 
-        var testingSentence = "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<library>\n    <book>\n        <title>Introduction to XML</title>\n        <author>John Doe</author>\n        <year>2021</year>\n        <genre>Educational</genre>\n    </book>\n    <book>\n        <title>Advanced XML Techniques</title>\n        <author>Jane Smith</author>\n        <year>2023</year>\n        <genre>Technical</genre>\n    </book>\n</library>";
+        //Read sentence from Resources/Texts/Test.txt file
+        var testingSentence = File.ReadAllText(Path.Combine("Resources", "Texts", "old-man-and-the-sea.txt"));
+        Console.WriteLine($"Testing sentence: {testingSentence.Length}");
         var compressedTree = compressor.Compress(testingSentence);
         
         var decompressedText = compressor.Decompress(compressedTree);

@@ -5,22 +5,22 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms;
 
-public class XmlTreeCompressing(ICompressionStrategy compressionStrategy) : ITreeCompressor
+public class XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode> compressionStrategy) : ITreeCompressor<IOrderedTreeNode>
 {
-    public ICompressionStrategy CompressionStrategy { get; } = compressionStrategy;
+    public ICompressionStrategy<IOrderedTreeNode> CompressionStrategy { get; } = compressionStrategy;
 
     public Pipeline CompressingPipeline { get; } = new Pipeline()
         {
             ProcessObserver = new ProcessMonitor()
         }
-        .AddFilter(FilterFactory.CreateTextToTreeFilter(new XmlCreateTreeStrategy()))
-        .AddFilter(FilterFactory.CreateCompressionFilter(compressionStrategy));
+        .AddFilter(FilterFactory<IOrderedTreeNode>.CreateTextToTreeFilter(new XmlCreateTreeStrategy()))
+        .AddFilter(FilterFactory<IOrderedTreeNode>.CreateCompressionFilter(compressionStrategy));
     
     public Pipeline DecompressingPipeline { get; } = new Pipeline()
     {
         ProcessObserver = new ProcessMonitor()
     }
-    .AddFilter(FilterFactory.CreateDecompressionFilter(compressionStrategy));
+    .AddFilter(FilterFactory<IOrderedTreeNode>.CreateDecompressionFilter(compressionStrategy));
 
     public CompressedTree Compress(string text)
     {

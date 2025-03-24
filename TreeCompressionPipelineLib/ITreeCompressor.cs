@@ -3,10 +3,10 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionPipeline;
 
-public interface ITreeCompressor
+public interface ITreeCompressor<T> where T : ITreeNode
 {
     
-    protected ICompressionStrategy CompressionStrategy { get; }
+    protected ICompressionStrategy<T> CompressionStrategy { get; }
     protected Pipeline CompressingPipeline { get; }
     protected Pipeline DecompressingPipeline { get; }
     

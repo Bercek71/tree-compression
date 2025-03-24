@@ -4,9 +4,9 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.TreeCreationalStrategies;
 
-public class XmlCreateTreeStrategy : ITreeCreationStrategy
+public class XmlCreateTreeStrategy : ITreeCreationStrategy<IOrderedTreeNode>
 {
-    public ITreeNode CreateTree(string text)
+    public IOrderedTreeNode CreateTree(string text)
     {
         var xmlDoc = new XmlDocument();
         xmlDoc.LoadXml(text);  // Load the XML string into an XmlDocument
@@ -16,10 +16,10 @@ public class XmlCreateTreeStrategy : ITreeCreationStrategy
         throw new ArgumentNullException(nameof(xmlDoc.DocumentElement));
     }
 
-    private static ITreeNode CreateTreeNodeFromXml(XmlNode xmlNode)
+    private static IOrderedTreeNode CreateTreeNodeFromXml(XmlNode xmlNode)
     {
         // Create a new tree node for the current XML element
-        ITreeNode node = new XmlTreeNode(xmlNode.Name, xmlNode.InnerText);
+        var node = new OrderedTreeNode(xmlNode.Name);
         if (node == null) throw new ArgumentNullException(nameof(node));
 
 

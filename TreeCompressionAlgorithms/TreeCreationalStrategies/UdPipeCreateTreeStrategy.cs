@@ -4,9 +4,9 @@ using Ufal.UDPipe;
 
 namespace TreeCompressionAlgorithms.TreeCreationalStrategies;
 
-public class UdPipeCreateTreeStrategy : ITreeCreationStrategy
+public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode>
 {
-    public ITreeNode CreateTree(string data)
+    public ISyntacticTreeNode CreateTree(string data)
     {
              var modelPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
                 "Resources",
@@ -30,34 +30,44 @@ public class UdPipeCreateTreeStrategy : ITreeCreationStrategy
             tokenizer.setText(data);
 
             var sentence = new Sentence();
-            tokenizer.nextSentence(sentence);
-            model.tag(sentence, Model.DEFAULT);
-            model.parse(sentence, Model.DEFAULT);
-            var rootWord = sentence.words[0];
-            var tree = new TreeNode(rootWord.form);
+            var docTree = new SyntacticTreeNode("<DocumentRoot>");
+            while (tokenizer.nextSentence(sentence))
+            {
+                model.tag(sentence, Model.DEFAULT);
+                model.parse(sentence, Model.DEFAULT);
+                var rootWord = sentence.words[0];
+                var tree = new SyntacticTreeNode(rootWord.form);
 
-            var words = sentence.words;
+                var words = sentence.words;
+
+                BuildTree(tree, rootWord, words.ToList());
+                
+                docTree.AddRightChild(tree);
+            }
             
-            BuildTree(tree, rootWord, words.ToList());
             
-            
-            return tree;
+
+
+            return docTree;
                 
             
 
     }
     
-    private static void BuildTree(ITreeNode parentNode, Word parentWord , List<Word> words)
+    private static void BuildTree(ISyntacticTreeNode parentNode, Word parentWord , List<Word> words)
     {
         var children = words.Where(x => x.head == parentWord.id).ToList();
 
         foreach (var word in children)
         {
-            var newNode = new TreeNode(word.form);
-            parentNode.AddChild(newNode);
-            // Recursively add children of this node
+            var newNode = new SyntacticTreeNode(word.form);
+            if(word.id > parentWord.id)
+                parentNode.AddRightChild(newNode);
+            else
+                parentNode.AddLeftChild(newNode);
             BuildTree(newNode, word,  words);
         }
+            
     }
 
 

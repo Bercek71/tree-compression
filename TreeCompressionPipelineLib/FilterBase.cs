@@ -21,7 +21,7 @@ public abstract class FilterBase<T, TO> : IFilter
             }
                 
             var processedData = ProcessData(typedData);
-            NotifyComplete(GetType().Name, processedData);
+            NotifyComplete(GetType().Name, processedData ?? throw new InvalidOperationException());
             return _nextFilter != null ? _nextFilter.Process(processedData) : processedData;
         }
         catch (Exception e)

@@ -2,8 +2,8 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionPipeline.CompressionStrategies;
 
-public interface ICompressionStrategy
+public interface ICompressionStrategy<T>
 {
-    CompressedTree Compress(ITreeNode? tree);
-    ITreeNode Decompress(CompressedTree? compressedTree);
+    CompressedTree Compress(T? tree);
+    T Decompress(CompressedTree compressedTree);
 }

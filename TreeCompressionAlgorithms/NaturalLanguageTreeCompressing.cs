@@ -6,22 +6,22 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms;
 
-public class NaturalLanguageTreeCompressing(ICompressionStrategy compressionStrategy) : ITreeCompressor
+public class NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeNode> compressionStrategy) : ITreeCompressor<ISyntacticTreeNode>
 {
-    public ICompressionStrategy CompressionStrategy { get; } = compressionStrategy;
+    public ICompressionStrategy<ISyntacticTreeNode> CompressionStrategy { get; } = compressionStrategy;
     
     public Pipeline CompressingPipeline { get; } = new Pipeline()
         {
             ProcessObserver = new ProcessMonitor()
         }
-        .AddFilter(FilterFactory.CreateTextToTreeFilter(new UdPipeCreateTreeStrategy()))
-        .AddFilter(FilterFactory.CreateCompressionFilter(compressionStrategy));
+        .AddFilter(FilterFactory<ISyntacticTreeNode>.CreateTextToTreeFilter(new UdPipeCreateTreeStrategy()))
+        .AddFilter(FilterFactory<ISyntacticTreeNode>.CreateCompressionFilter(compressionStrategy));
     
     public Pipeline DecompressingPipeline { get; } = new Pipeline()
             {
                 ProcessObserver = new ProcessMonitor()
             }
-            .AddFilter(FilterFactory.CreateDecompressionFilter(compressionStrategy));
+            .AddFilter(FilterFactory<ISyntacticTreeNode>.CreateDecompressionFilter(compressionStrategy));
     
     
     public CompressedTree Compress(string text)
@@ -31,6 +31,7 @@ public class NaturalLanguageTreeCompressing(ICompressionStrategy compressionStra
 
     public string Decompress(CompressedTree compressedTree)
     {
-        return DecompressingPipeline.Process(compressedTree) as string ?? throw new InvalidOperationException();
+        var reuslt = DecompressingPipeline.Process(compressedTree) as ISyntacticTreeNode ?? throw new InvalidOperationException();
+        return reuslt.ToString();
     }
 }

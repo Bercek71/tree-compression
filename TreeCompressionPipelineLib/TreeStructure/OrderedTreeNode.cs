@@ -1,10 +1,11 @@
 namespace TreeCompressionPipeline.TreeStructure;
 
 // Tree structure
-public class TreeNode(object value) : ITreeNode
+public class OrderedTreeNode(object value) : IOrderedTreeNode
 {
+    public IOrderedTreeNode? Parent { get; set; }
     public object Value { get; init; } = value;
-    public IList<ITreeNode> Children { get; } = new List<ITreeNode>();
+    public List<IOrderedTreeNode> Children { get; } = [];
 
     public override string ToString()
     {
@@ -13,12 +14,13 @@ public class TreeNode(object value) : ITreeNode
         return visitor.ToString();
     }
 
-    public void AddChild(ITreeNode child)
+    public void AddChild(IOrderedTreeNode child)
     {
+        child.Parent = this;
         Children.Add(child);
     }
 
-    public void Accept(ITreeVisitor visitor)
+    public void Accept(IOrderedTreeVisitor visitor)
     {
         visitor.Visit(this);
         foreach (var child in Children)

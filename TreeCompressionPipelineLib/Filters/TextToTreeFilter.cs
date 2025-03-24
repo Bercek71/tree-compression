@@ -3,10 +3,10 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionPipeline.Filters;
 
-public class TextToTreeFilter(ITreeCreationStrategy creationStrategy) : FilterBase<string, ITreeNode>
+public class TextToTreeFilter<T>(ITreeCreationStrategy<T> creationStrategy) : FilterBase<string, T>
 {
 
-    protected override ITreeNode ProcessData(string text)
+    protected override T ProcessData(string text)
     {
         return creationStrategy.CreateTree(text);
     }

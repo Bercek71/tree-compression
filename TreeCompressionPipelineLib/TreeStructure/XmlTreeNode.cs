@@ -1,17 +1,17 @@
 namespace TreeCompressionPipeline.TreeStructure;
 
-public class XmlTreeNode(string name, object value) : ITreeNode
+public class XmlTreeNode(string name) : IOrderedTreeNode
 {
-    public object Value { get; } = value;
-    public string Name { get; } = name;
+    public List<IOrderedTreeNode> Children { get; } = [];
+    public IOrderedTreeNode? Parent { get; set; }
 
-    public IList<ITreeNode> Children { get; } = [];
-    public void AddChild(ITreeNode child)
+    public void AddChild(IOrderedTreeNode child)
     {
+        child.Parent = this;
         Children.Add(child);
     }
 
-    public void Accept(ITreeVisitor visitor)
+    public void Accept(IOrderedTreeVisitor visitor)
     {
         visitor.Visit(this);
         foreach (var child in Children)
@@ -19,4 +19,6 @@ public class XmlTreeNode(string name, object value) : ITreeNode
             child.Accept(visitor);
         }
     }
+
+    public object Value { get; } = name;
 }

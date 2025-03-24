@@ -2,7 +2,7 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionPipeline.TreeCreationStrategies;
 
-public interface ITreeCreationStrategy
+public interface ITreeCreationStrategy<T>
 {
-    public ITreeNode CreateTree(string text);
+    public T CreateTree(string text);
 }
