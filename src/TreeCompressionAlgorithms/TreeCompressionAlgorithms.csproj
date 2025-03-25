@@ -7,7 +7,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\lib\UDPipeBindings\UDPipeBindings.csproj" />
+      <ProjectReference Include="..\..\lib\UDPipeBindings\UDPipeBindings.csproj" />
       <ProjectReference Include="..\TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj" />
     </ItemGroup>
 

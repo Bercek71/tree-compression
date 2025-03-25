@@ -8,9 +8,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeStructures", "src\TreeS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPipeBindings", "lib\UDPipeBindings\UDPipeBindings.csproj", "{5BFF9106-44D0-470A-BE96-0FCA0B9A28EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionPipelineLib", "TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj", "{33336F25-08F1-4B37-9EC2-816519BB71B6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionPipelineLib", "src\TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj", "{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionAlgorithms", "TreeCompressionAlgorithms\TreeCompressionAlgorithms.csproj", "{7B162F20-9D77-4A64-86F7-70F646613313}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionAlgorithms", "src\TreeCompressionAlgorithms\TreeCompressionAlgorithms.csproj", "{51CA9CCF-4B18-476D-85AF-82F456C1C13B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -34,14 +34,14 @@ Global
 		{5BFF9106-44D0-470A-BE96-0FCA0B9A28EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5BFF9106-44D0-470A-BE96-0FCA0B9A28EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5BFF9106-44D0-470A-BE96-0FCA0B9A28EA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{33336F25-08F1-4B37-9EC2-816519BB71B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{33336F25-08F1-4B37-9EC2-816519BB71B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{33336F25-08F1-4B37-9EC2-816519BB71B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{33336F25-08F1-4B37-9EC2-816519BB71B6}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7B162F20-9D77-4A64-86F7-70F646613313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7B162F20-9D77-4A64-86F7-70F646613313}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7B162F20-9D77-4A64-86F7-70F646613313}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7B162F20-9D77-4A64-86F7-70F646613313}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51CA9CCF-4B18-476D-85AF-82F456C1C13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51CA9CCF-4B18-476D-85AF-82F456C1C13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51CA9CCF-4B18-476D-85AF-82F456C1C13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51CA9CCF-4B18-476D-85AF-82F456C1C13B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection

@@ -12,8 +12,8 @@
     <ItemGroup>
       <ProjectReference Include="..\..\lib\MorphoDiTaBindings\MorphoDiTaBindings.csproj" />
       <ProjectReference Include="..\..\lib\UDPipeBindings\UDPipeBindings.csproj" />
-      <ProjectReference Include="..\..\TreeCompressionAlgorithms\TreeCompressionAlgorithms.csproj" />
-      <ProjectReference Include="..\..\TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj" />
+      <ProjectReference Include="..\TreeCompressionAlgorithms\TreeCompressionAlgorithms.csproj" />
+      <ProjectReference Include="..\TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj" />
     </ItemGroup>
     
     <ItemGroup>
