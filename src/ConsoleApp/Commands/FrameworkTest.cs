@@ -1,3 +1,5 @@
+using System.ComponentModel;
+using ConsoleApp.Framework;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies;
 using TreeCompressionPipeline;
@@ -6,10 +8,15 @@ using TreeCompressionPipeline.Filters;
 
 namespace ConsoleApp.Commands;
 
-public class FrameworkTest : BaseCommand
+[Description("Framework testing command")]
+public class FrameworkTest : ICommand
 {
-    public override void Execute(object? parameter)
+    [RequireArgument("input", "The input string to compress")]
+    public string InputFile { get; set; }
+
+    public void Execute()
     {
+        Console.WriteLine($"Input file: {InputFile}");
         Console.WriteLine("FrameworkTest");
 
         var pipeline = new Pipeline()
@@ -21,7 +28,13 @@ public class FrameworkTest : BaseCommand
         var compressor = new NaturalLanguageTreeCompressing(new TreeRepairStrategy());
 
         //Read sentence from Resources/Texts/Test.txt file
-        var testingSentence = File.ReadAllText(Path.Combine("Resources", "Texts", "old-man-and-the-sea.txt"));
+
+        if (!File.Exists(InputFile))
+        {
+            throw new FileNotFoundException("The input file does not exist.", InputFile);
+        }
+        
+        var testingSentence = File.ReadAllText(InputFile);
         Console.WriteLine($"Testing sentence: {testingSentence.Length}");
         var compressedTree = compressor.Compress(testingSentence);
         

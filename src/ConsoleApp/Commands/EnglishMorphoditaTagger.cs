@@ -1,10 +1,13 @@
+using System.ComponentModel;
+using ConsoleApp.Framework;
 using Ufal.MorphoDiTa;
 
 namespace ConsoleApp.Commands;
 
-public class EnglishMorphoditaTagger : BaseCommand
+[Description("English Morphodita Tagger")]
+public class EnglishMorphoditaTagger : ICommand
 {
-    public override void Execute(object? parameter)
+    public void Execute()
     {
         var filePath = Path.Combine(Directory.GetCurrentDirectory(), 
             "Resources",

@@ -1,11 +1,14 @@
+using System.ComponentModel;
 using System.Windows.Input;
 using Ufal.MorphoDiTa;
+using ICommand = ConsoleApp.Framework.ICommand;
 
 namespace ConsoleApp.Commands;
 
-public class EnglishMorphoditaDict : BaseCommand
+[Description("English Morphodita dictionary command")]
+public class EnglishMorphoditaDict : ICommand
 {
-    public override void Execute(object? parameter)
+    public void Execute()
     {
         var dictPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory ,"Resources", "English" ,  "english-morphium-140407.dict");
         var morpho = Morpho.load(dictPath);

@@ -38,10 +38,6 @@
     </ItemGroup>
     
     <ItemGroup>
-      <Folder Include="ConsoleApp\" />
-    </ItemGroup>
-    
-    <ItemGroup>
       <Content Include="..\..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>

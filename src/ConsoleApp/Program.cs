@@ -1,9 +1,10 @@
 
 using System.Diagnostics;
 using System.Reflection;
-using System.Windows.Input;
+using ConsoleApp.Framework;
 using MorphoDita;
 using UDPipeBindings;
+using ICommand = System.Windows.Input.ICommand;
 
 namespace ConsoleApp;
 
@@ -21,57 +22,26 @@ public static class Program
             //"EnglishMorphoditaDict"
             //"ParsitoTest"
             //"UDPipeTest"
-            "FrameworkTest"
+            "FrameworkTest",
+            "--input",
+            "Resources/Texts/old-man-and-the-sea.txt",
             
         ];
         #endif
 
-            ExecuteCommand(args);
+            //ExecuteCommand(args);
+            var commandName = args[0];
+            var commandArgs = args.Skip(1).ToArray();
+            var command = CommandRegistry.CreateCommand(commandName, commandArgs);
+            command?.Execute();
 
     }
     
 
-    #region ExecuteCommand
-    
     private static void LoadLibraries()
     {
         MorphoDitaLoader.LoadNativeLibrary();
         UDPipeLoader.LoadNativeLibrary();
     }
-
-
-
-    private static void ExecuteCommand(string[] args)
-    {
-        LoadLibraries();
-        if(args.Length == 0)
-        {
-            Console.WriteLine("No command specified");
-            return;
-        }
-        var command = args[0];
-        var assembly = Assembly.GetExecutingAssembly();
-        var type = assembly.GetType($"ConsoleApp.Commands.{command}");
-
-        if(type == null)
-        {
-            Console.WriteLine($"Command {command} not found");
-            return;
-        }
-        
-        //check if type is marked as obsolete
-        var obsoleteAttribute = type.GetCustomAttribute<ObsoleteAttribute>();
-        if(obsoleteAttribute != null)
-        {
-            Console.WriteLine($"Command {command} is marked as obsolete: {obsoleteAttribute.Message}");
-            return;
-        }
-        
-        var commandInstance = (ICommand) Activator.CreateInstance(type)!;
-
-        commandInstance.Execute(args);
-    }
-    #endregion
-
     
 }
