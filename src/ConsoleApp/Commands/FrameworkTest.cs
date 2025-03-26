@@ -25,7 +25,7 @@ public class FrameworkTest : ICommand
         };
 
 
-        var compressor = new NaturalLanguageTreeCompressing(new TreeRepairStrategy());
+        var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategy());
 
         //Read sentence from Resources/Texts/Test.txt file
 

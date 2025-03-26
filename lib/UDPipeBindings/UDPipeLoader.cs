@@ -2,7 +2,10 @@
 
 namespace UDPipeBindings;
 
-public class UDPipeLoader
+/// <summary>
+/// Slouží k načtení nativní knihovny pro UDPipe podle platformy.
+/// </summary>
+public static class UdPipeLoader
 {
     private static IntPtr _nativeLibHandle;
 
@@ -15,6 +18,7 @@ public class UDPipeLoader
         // Určení názvu knihovny podle platformy
         string libName;
 
+        // Určení názvu knihovny podle platformy
         if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX))
         {
             libName = "libudpipe_csharp.dylib";

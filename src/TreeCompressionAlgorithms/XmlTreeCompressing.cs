@@ -31,6 +31,6 @@ public class XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode> compressi
     {
         var result = DecompressingPipeline.Process(compressedTree);
         if(result is null) throw new InvalidOperationException();
-        return result.ToString();
+        return result.ToString() ?? "";
     }
 }

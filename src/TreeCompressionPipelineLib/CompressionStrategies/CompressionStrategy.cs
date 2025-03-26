@@ -2,7 +2,7 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionPipeline.CompressionStrategies;
 
-// Compression Strategies
+[Obsolete("Ukázková třída, která byla použita pro ukázání principu komprese stromové struktury.")]
 public abstract class CompressionStrategy : ICompressionStrategy<ITreeNode>
 {
     protected Dictionary<string, int> FindPatterns(ITreeNode tree)

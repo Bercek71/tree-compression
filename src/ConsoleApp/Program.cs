@@ -41,7 +41,7 @@ public static class Program
     private static void LoadLibraries()
     {
         MorphoDitaLoader.LoadNativeLibrary();
-        UDPipeLoader.LoadNativeLibrary();
+        UdPipeLoader.LoadNativeLibrary();
     }
     
 }

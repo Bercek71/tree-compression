@@ -1,6 +1,5 @@
 namespace TreeCompressionPipeline.TreeStructure;
 
-// Tree structure
 public class OrderedTreeNode(object value) : IOrderedTreeNode
 {
     public IOrderedTreeNode? Parent { get; set; }

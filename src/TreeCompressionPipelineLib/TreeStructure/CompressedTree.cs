@@ -2,11 +2,21 @@ using System.Text;
 
 namespace TreeCompressionPipeline.TreeStructure;
 
+/// <summary>
+/// Datová struktura pro uložení komprimované stromové struktury.
+/// </summary>
 public class CompressedTree
 {
-    public byte[] Structure { get; set; }
+    /// <summary>
+    /// Binární reprezentace komprimované stromové struktury.
+    /// </summary>
+    public byte[] Structure { get; set; } = [];
+    
+    /// <summary>
+    /// Metadata komprimované stromové struktury. 
+    /// </summary>
     public Dictionary<string, string> Metadata { get; init; } = new();
-
+    
     public override string ToString()
     {
         StringBuilder sb = new();

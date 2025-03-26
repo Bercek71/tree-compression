@@ -4,6 +4,9 @@ using Ufal.UDPipe;
 
 namespace TreeCompressionAlgorithms.TreeCreationalStrategies;
 
+/// <summary>
+/// Využití UDPipe pro vytvoření stromové struktury.
+/// </summary>
 public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode>
 {
     public ISyntacticTreeNode CreateTree(string data)

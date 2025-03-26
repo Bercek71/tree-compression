@@ -32,6 +32,6 @@ public class NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeN
     public string Decompress(CompressedTree compressedTree)
     {
         var reuslt = DecompressingPipeline.Process(compressedTree) as ISyntacticTreeNode ?? throw new InvalidOperationException();
-        return reuslt.ToString();
+        return reuslt.ToString() ?? "";
     }
 }

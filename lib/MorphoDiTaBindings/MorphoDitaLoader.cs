@@ -4,6 +4,9 @@ using System.Net.Mime;
 
 namespace MorphoDita;
 
+/// <summary>
+/// Slouží k načtení nativní knihovny pro MorphoDiTa podle platformy.
+/// </summary>
 public static class MorphoDitaLoader
 {
     private static IntPtr _nativeLibHandle;
