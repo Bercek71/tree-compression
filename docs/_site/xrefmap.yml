@@ -1,0 +1,2680 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: ConsoleApp
+  name: ConsoleApp
+  href: api/ConsoleApp.html
+  commentId: N:ConsoleApp
+  fullName: ConsoleApp
+  nameWithType: ConsoleApp
+- uid: ConsoleApp.Commands
+  name: ConsoleApp.Commands
+  href: api/ConsoleApp.Commands.html
+  commentId: N:ConsoleApp.Commands
+  fullName: ConsoleApp.Commands
+  nameWithType: ConsoleApp.Commands
+- uid: ConsoleApp.Commands.EnglishMorphoditaDict
+  name: EnglishMorphoditaDict
+  href: api/ConsoleApp.Commands.EnglishMorphoditaDict.html
+  commentId: T:ConsoleApp.Commands.EnglishMorphoditaDict
+  fullName: ConsoleApp.Commands.EnglishMorphoditaDict
+  nameWithType: EnglishMorphoditaDict
+- uid: ConsoleApp.Commands.EnglishMorphoditaDict.Execute
+  name: Execute()
+  href: api/ConsoleApp.Commands.EnglishMorphoditaDict.html#ConsoleApp_Commands_EnglishMorphoditaDict_Execute
+  commentId: M:ConsoleApp.Commands.EnglishMorphoditaDict.Execute
+  fullName: ConsoleApp.Commands.EnglishMorphoditaDict.Execute()
+  nameWithType: EnglishMorphoditaDict.Execute()
+- uid: ConsoleApp.Commands.EnglishMorphoditaDict.Execute*
+  name: Execute
+  href: api/ConsoleApp.Commands.EnglishMorphoditaDict.html#ConsoleApp_Commands_EnglishMorphoditaDict_Execute_
+  commentId: Overload:ConsoleApp.Commands.EnglishMorphoditaDict.Execute
+  isSpec: "True"
+  fullName: ConsoleApp.Commands.EnglishMorphoditaDict.Execute
+  nameWithType: EnglishMorphoditaDict.Execute
+- uid: ConsoleApp.Commands.EnglishMorphoditaTagger
+  name: EnglishMorphoditaTagger
+  href: api/ConsoleApp.Commands.EnglishMorphoditaTagger.html
+  commentId: T:ConsoleApp.Commands.EnglishMorphoditaTagger
+  fullName: ConsoleApp.Commands.EnglishMorphoditaTagger
+  nameWithType: EnglishMorphoditaTagger
+- uid: ConsoleApp.Commands.EnglishMorphoditaTagger.Execute
+  name: Execute()
+  href: api/ConsoleApp.Commands.EnglishMorphoditaTagger.html#ConsoleApp_Commands_EnglishMorphoditaTagger_Execute
+  commentId: M:ConsoleApp.Commands.EnglishMorphoditaTagger.Execute
+  fullName: ConsoleApp.Commands.EnglishMorphoditaTagger.Execute()
+  nameWithType: EnglishMorphoditaTagger.Execute()
+- uid: ConsoleApp.Commands.EnglishMorphoditaTagger.Execute*
+  name: Execute
+  href: api/ConsoleApp.Commands.EnglishMorphoditaTagger.html#ConsoleApp_Commands_EnglishMorphoditaTagger_Execute_
+  commentId: Overload:ConsoleApp.Commands.EnglishMorphoditaTagger.Execute
+  isSpec: "True"
+  fullName: ConsoleApp.Commands.EnglishMorphoditaTagger.Execute
+  nameWithType: EnglishMorphoditaTagger.Execute
+- uid: ConsoleApp.Commands.FrameworkTest
+  name: FrameworkTest
+  href: api/ConsoleApp.Commands.FrameworkTest.html
+  commentId: T:ConsoleApp.Commands.FrameworkTest
+  fullName: ConsoleApp.Commands.FrameworkTest
+  nameWithType: FrameworkTest
+- uid: ConsoleApp.Commands.FrameworkTest.Execute
+  name: Execute()
+  href: api/ConsoleApp.Commands.FrameworkTest.html#ConsoleApp_Commands_FrameworkTest_Execute
+  commentId: M:ConsoleApp.Commands.FrameworkTest.Execute
+  fullName: ConsoleApp.Commands.FrameworkTest.Execute()
+  nameWithType: FrameworkTest.Execute()
+- uid: ConsoleApp.Commands.FrameworkTest.Execute*
+  name: Execute
+  href: api/ConsoleApp.Commands.FrameworkTest.html#ConsoleApp_Commands_FrameworkTest_Execute_
+  commentId: Overload:ConsoleApp.Commands.FrameworkTest.Execute
+  isSpec: "True"
+  fullName: ConsoleApp.Commands.FrameworkTest.Execute
+  nameWithType: FrameworkTest.Execute
+- uid: ConsoleApp.Commands.FrameworkTest.InputFile
+  name: InputFile
+  href: api/ConsoleApp.Commands.FrameworkTest.html#ConsoleApp_Commands_FrameworkTest_InputFile
+  commentId: P:ConsoleApp.Commands.FrameworkTest.InputFile
+  fullName: ConsoleApp.Commands.FrameworkTest.InputFile
+  nameWithType: FrameworkTest.InputFile
+- uid: ConsoleApp.Commands.FrameworkTest.InputFile*
+  name: InputFile
+  href: api/ConsoleApp.Commands.FrameworkTest.html#ConsoleApp_Commands_FrameworkTest_InputFile_
+  commentId: Overload:ConsoleApp.Commands.FrameworkTest.InputFile
+  isSpec: "True"
+  fullName: ConsoleApp.Commands.FrameworkTest.InputFile
+  nameWithType: FrameworkTest.InputFile
+- uid: ConsoleApp.Framework
+  name: ConsoleApp.Framework
+  href: api/ConsoleApp.Framework.html
+  commentId: N:ConsoleApp.Framework
+  fullName: ConsoleApp.Framework
+  nameWithType: ConsoleApp.Framework
+- uid: ConsoleApp.Framework.Argument
+  name: Argument
+  href: api/ConsoleApp.Framework.Argument.html
+  commentId: T:ConsoleApp.Framework.Argument
+  fullName: ConsoleApp.Framework.Argument
+  nameWithType: Argument
+- uid: ConsoleApp.Framework.Argument.Description
+  name: Description
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Description
+  commentId: P:ConsoleApp.Framework.Argument.Description
+  fullName: ConsoleApp.Framework.Argument.Description
+  nameWithType: Argument.Description
+- uid: ConsoleApp.Framework.Argument.Description*
+  name: Description
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Description_
+  commentId: Overload:ConsoleApp.Framework.Argument.Description
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.Argument.Description
+  nameWithType: Argument.Description
+- uid: ConsoleApp.Framework.Argument.IsRequired
+  name: IsRequired
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_IsRequired
+  commentId: P:ConsoleApp.Framework.Argument.IsRequired
+  fullName: ConsoleApp.Framework.Argument.IsRequired
+  nameWithType: Argument.IsRequired
+- uid: ConsoleApp.Framework.Argument.IsRequired*
+  name: IsRequired
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_IsRequired_
+  commentId: Overload:ConsoleApp.Framework.Argument.IsRequired
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.Argument.IsRequired
+  nameWithType: Argument.IsRequired
+- uid: ConsoleApp.Framework.Argument.Name
+  name: Name
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Name
+  commentId: P:ConsoleApp.Framework.Argument.Name
+  fullName: ConsoleApp.Framework.Argument.Name
+  nameWithType: Argument.Name
+- uid: ConsoleApp.Framework.Argument.Name*
+  name: Name
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Name_
+  commentId: Overload:ConsoleApp.Framework.Argument.Name
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.Argument.Name
+  nameWithType: Argument.Name
+- uid: ConsoleApp.Framework.Argument.Shortcut
+  name: Shortcut
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Shortcut
+  commentId: P:ConsoleApp.Framework.Argument.Shortcut
+  fullName: ConsoleApp.Framework.Argument.Shortcut
+  nameWithType: Argument.Shortcut
+- uid: ConsoleApp.Framework.Argument.Shortcut*
+  name: Shortcut
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Shortcut_
+  commentId: Overload:ConsoleApp.Framework.Argument.Shortcut
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.Argument.Shortcut
+  nameWithType: Argument.Shortcut
+- uid: ConsoleApp.Framework.Argument.Value
+  name: Value
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Value
+  commentId: P:ConsoleApp.Framework.Argument.Value
+  fullName: ConsoleApp.Framework.Argument.Value
+  nameWithType: Argument.Value
+- uid: ConsoleApp.Framework.Argument.Value*
+  name: Value
+  href: api/ConsoleApp.Framework.Argument.html#ConsoleApp_Framework_Argument_Value_
+  commentId: Overload:ConsoleApp.Framework.Argument.Value
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.Argument.Value
+  nameWithType: Argument.Value
+- uid: ConsoleApp.Framework.ArgumentParser
+  name: ArgumentParser
+  href: api/ConsoleApp.Framework.ArgumentParser.html
+  commentId: T:ConsoleApp.Framework.ArgumentParser
+  fullName: ConsoleApp.Framework.ArgumentParser
+  nameWithType: ArgumentParser
+- uid: ConsoleApp.Framework.ArgumentParser.BindArguments(System.Object,System.String[])
+  name: BindArguments(object, string[])
+  href: api/ConsoleApp.Framework.ArgumentParser.html#ConsoleApp_Framework_ArgumentParser_BindArguments_System_Object_System_String___
+  commentId: M:ConsoleApp.Framework.ArgumentParser.BindArguments(System.Object,System.String[])
+  name.vb: BindArguments(Object, String())
+  fullName: ConsoleApp.Framework.ArgumentParser.BindArguments(object, string[])
+  fullName.vb: ConsoleApp.Framework.ArgumentParser.BindArguments(Object, String())
+  nameWithType: ArgumentParser.BindArguments(object, string[])
+  nameWithType.vb: ArgumentParser.BindArguments(Object, String())
+- uid: ConsoleApp.Framework.ArgumentParser.BindArguments*
+  name: BindArguments
+  href: api/ConsoleApp.Framework.ArgumentParser.html#ConsoleApp_Framework_ArgumentParser_BindArguments_
+  commentId: Overload:ConsoleApp.Framework.ArgumentParser.BindArguments
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.ArgumentParser.BindArguments
+  nameWithType: ArgumentParser.BindArguments
+- uid: ConsoleApp.Framework.CommandRegistry
+  name: CommandRegistry
+  href: api/ConsoleApp.Framework.CommandRegistry.html
+  commentId: T:ConsoleApp.Framework.CommandRegistry
+  fullName: ConsoleApp.Framework.CommandRegistry
+  nameWithType: CommandRegistry
+- uid: ConsoleApp.Framework.CommandRegistry.CreateCommand(System.String,System.String[])
+  name: CreateCommand(string, string[])
+  href: api/ConsoleApp.Framework.CommandRegistry.html#ConsoleApp_Framework_CommandRegistry_CreateCommand_System_String_System_String___
+  commentId: M:ConsoleApp.Framework.CommandRegistry.CreateCommand(System.String,System.String[])
+  name.vb: CreateCommand(String, String())
+  fullName: ConsoleApp.Framework.CommandRegistry.CreateCommand(string, string[])
+  fullName.vb: ConsoleApp.Framework.CommandRegistry.CreateCommand(String, String())
+  nameWithType: CommandRegistry.CreateCommand(string, string[])
+  nameWithType.vb: CommandRegistry.CreateCommand(String, String())
+- uid: ConsoleApp.Framework.CommandRegistry.CreateCommand*
+  name: CreateCommand
+  href: api/ConsoleApp.Framework.CommandRegistry.html#ConsoleApp_Framework_CommandRegistry_CreateCommand_
+  commentId: Overload:ConsoleApp.Framework.CommandRegistry.CreateCommand
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.CommandRegistry.CreateCommand
+  nameWithType: CommandRegistry.CreateCommand
+- uid: ConsoleApp.Framework.HelpHelper
+  name: HelpHelper
+  href: api/ConsoleApp.Framework.HelpHelper.html
+  commentId: T:ConsoleApp.Framework.HelpHelper
+  fullName: ConsoleApp.Framework.HelpHelper
+  nameWithType: HelpHelper
+- uid: ConsoleApp.Framework.HelpHelper.GetHelp
+  name: GetHelp()
+  href: api/ConsoleApp.Framework.HelpHelper.html#ConsoleApp_Framework_HelpHelper_GetHelp
+  commentId: M:ConsoleApp.Framework.HelpHelper.GetHelp
+  fullName: ConsoleApp.Framework.HelpHelper.GetHelp()
+  nameWithType: HelpHelper.GetHelp()
+- uid: ConsoleApp.Framework.HelpHelper.GetHelp*
+  name: GetHelp
+  href: api/ConsoleApp.Framework.HelpHelper.html#ConsoleApp_Framework_HelpHelper_GetHelp_
+  commentId: Overload:ConsoleApp.Framework.HelpHelper.GetHelp
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.HelpHelper.GetHelp
+  nameWithType: HelpHelper.GetHelp
+- uid: ConsoleApp.Framework.ICommand
+  name: ICommand
+  href: api/ConsoleApp.Framework.ICommand.html
+  commentId: T:ConsoleApp.Framework.ICommand
+  fullName: ConsoleApp.Framework.ICommand
+  nameWithType: ICommand
+- uid: ConsoleApp.Framework.ICommand.Execute
+  name: Execute()
+  href: api/ConsoleApp.Framework.ICommand.html#ConsoleApp_Framework_ICommand_Execute
+  commentId: M:ConsoleApp.Framework.ICommand.Execute
+  fullName: ConsoleApp.Framework.ICommand.Execute()
+  nameWithType: ICommand.Execute()
+- uid: ConsoleApp.Framework.ICommand.Execute*
+  name: Execute
+  href: api/ConsoleApp.Framework.ICommand.html#ConsoleApp_Framework_ICommand_Execute_
+  commentId: Overload:ConsoleApp.Framework.ICommand.Execute
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.ICommand.Execute
+  nameWithType: ICommand.Execute
+- uid: ConsoleApp.Framework.RequireArgumentAttribute
+  name: RequireArgumentAttribute
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html
+  commentId: T:ConsoleApp.Framework.RequireArgumentAttribute
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute
+  nameWithType: RequireArgumentAttribute
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.#ctor(System.String,System.String,System.Boolean)
+  name: RequireArgumentAttribute(string, string, bool)
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute__ctor_System_String_System_String_System_Boolean_
+  commentId: M:ConsoleApp.Framework.RequireArgumentAttribute.#ctor(System.String,System.String,System.Boolean)
+  name.vb: New(String, String, Boolean)
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.RequireArgumentAttribute(string, string, bool)
+  fullName.vb: ConsoleApp.Framework.RequireArgumentAttribute.New(String, String, Boolean)
+  nameWithType: RequireArgumentAttribute.RequireArgumentAttribute(string, string, bool)
+  nameWithType.vb: RequireArgumentAttribute.New(String, String, Boolean)
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.#ctor*
+  name: RequireArgumentAttribute
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute__ctor_
+  commentId: Overload:ConsoleApp.Framework.RequireArgumentAttribute.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.RequireArgumentAttribute
+  fullName.vb: ConsoleApp.Framework.RequireArgumentAttribute.New
+  nameWithType: RequireArgumentAttribute.RequireArgumentAttribute
+  nameWithType.vb: RequireArgumentAttribute.New
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.Description
+  name: Description
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute_Description
+  commentId: P:ConsoleApp.Framework.RequireArgumentAttribute.Description
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.Description
+  nameWithType: RequireArgumentAttribute.Description
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.Description*
+  name: Description
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute_Description_
+  commentId: Overload:ConsoleApp.Framework.RequireArgumentAttribute.Description
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.Description
+  nameWithType: RequireArgumentAttribute.Description
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.Name
+  name: Name
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute_Name
+  commentId: P:ConsoleApp.Framework.RequireArgumentAttribute.Name
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.Name
+  nameWithType: RequireArgumentAttribute.Name
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.Name*
+  name: Name
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute_Name_
+  commentId: Overload:ConsoleApp.Framework.RequireArgumentAttribute.Name
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.Name
+  nameWithType: RequireArgumentAttribute.Name
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.Required
+  name: Required
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute_Required
+  commentId: P:ConsoleApp.Framework.RequireArgumentAttribute.Required
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.Required
+  nameWithType: RequireArgumentAttribute.Required
+- uid: ConsoleApp.Framework.RequireArgumentAttribute.Required*
+  name: Required
+  href: api/ConsoleApp.Framework.RequireArgumentAttribute.html#ConsoleApp_Framework_RequireArgumentAttribute_Required_
+  commentId: Overload:ConsoleApp.Framework.RequireArgumentAttribute.Required
+  isSpec: "True"
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute.Required
+  nameWithType: RequireArgumentAttribute.Required
+- uid: ConsoleApp.Program
+  name: Program
+  href: api/ConsoleApp.Program.html
+  commentId: T:ConsoleApp.Program
+  fullName: ConsoleApp.Program
+  nameWithType: Program
+- uid: ConsoleApp.Program.Main(System.String[])
+  name: Main(string[])
+  href: api/ConsoleApp.Program.html#ConsoleApp_Program_Main_System_String___
+  commentId: M:ConsoleApp.Program.Main(System.String[])
+  name.vb: Main(String())
+  fullName: ConsoleApp.Program.Main(string[])
+  fullName.vb: ConsoleApp.Program.Main(String())
+  nameWithType: Program.Main(string[])
+  nameWithType.vb: Program.Main(String())
+- uid: ConsoleApp.Program.Main*
+  name: Main
+  href: api/ConsoleApp.Program.html#ConsoleApp_Program_Main_
+  commentId: Overload:ConsoleApp.Program.Main
+  isSpec: "True"
+  fullName: ConsoleApp.Program.Main
+  nameWithType: Program.Main
+- uid: TreeCompressionAlgorithms
+  name: TreeCompressionAlgorithms
+  href: api/TreeCompressionAlgorithms.html
+  commentId: N:TreeCompressionAlgorithms
+  fullName: TreeCompressionAlgorithms
+  nameWithType: TreeCompressionAlgorithms
+- uid: TreeCompressionAlgorithms.CompressionStrategies
+  name: TreeCompressionAlgorithms.CompressionStrategies
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.html
+  commentId: N:TreeCompressionAlgorithms.CompressionStrategies
+  fullName: TreeCompressionAlgorithms.CompressionStrategies
+  nameWithType: TreeCompressionAlgorithms.CompressionStrategies
+- uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+  name: DictionaryTreeCompressor
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html
+  commentId: T:TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+  nameWithType: DictionaryTreeCompressor
+- uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: Compress(ISyntacticTreeNode?)
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html#TreeCompressionAlgorithms_CompressionStrategies_DictionaryTreeCompressor_Compress_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name.vb: Compress(ISyntacticTreeNode)
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode?)
+  fullName.vb: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: DictionaryTreeCompressor.Compress(ISyntacticTreeNode?)
+  nameWithType.vb: DictionaryTreeCompressor.Compress(ISyntacticTreeNode)
+- uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress*
+  name: Compress
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html#TreeCompressionAlgorithms_CompressionStrategies_DictionaryTreeCompressor_Compress_
+  commentId: Overload:TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Compress
+  nameWithType: DictionaryTreeCompressor.Compress
+- uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree?)
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html#TreeCompressionAlgorithms_CompressionStrategies_DictionaryTreeCompressor_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name.vb: Decompress(CompressedTree)
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree?)
+  fullName.vb: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: DictionaryTreeCompressor.Decompress(CompressedTree?)
+  nameWithType.vb: DictionaryTreeCompressor.Decompress(CompressedTree)
+- uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress*
+  name: Decompress
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html#TreeCompressionAlgorithms_CompressionStrategies_DictionaryTreeCompressor_Decompress_
+  commentId: Overload:TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.Decompress
+  nameWithType: DictionaryTreeCompressor.Decompress
+- uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+  name: TreeRePairStrategy
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html
+  commentId: T:TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+  nameWithType: TreeRePairStrategy
+- uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: Compress(ISyntacticTreeNode?)
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html#TreeCompressionAlgorithms_CompressionStrategies_TreeRePairStrategy_Compress_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name.vb: Compress(ISyntacticTreeNode)
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode?)
+  fullName.vb: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: TreeRePairStrategy.Compress(ISyntacticTreeNode?)
+  nameWithType.vb: TreeRePairStrategy.Compress(ISyntacticTreeNode)
+- uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress*
+  name: Compress
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html#TreeCompressionAlgorithms_CompressionStrategies_TreeRePairStrategy_Compress_
+  commentId: Overload:TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Compress
+  nameWithType: TreeRePairStrategy.Compress
+- uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree?)
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html#TreeCompressionAlgorithms_CompressionStrategies_TreeRePairStrategy_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name.vb: Decompress(CompressedTree)
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree?)
+  fullName.vb: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: TreeRePairStrategy.Decompress(CompressedTree?)
+  nameWithType.vb: TreeRePairStrategy.Decompress(CompressedTree)
+- uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress*
+  name: Decompress
+  href: api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html#TreeCompressionAlgorithms_CompressionStrategies_TreeRePairStrategy_Decompress_
+  commentId: Overload:TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.Decompress
+  nameWithType: TreeRePairStrategy.Decompress
+- uid: TreeCompressionAlgorithms.Extensions
+  name: TreeCompressionAlgorithms.Extensions
+  href: api/TreeCompressionAlgorithms.Extensions.html
+  commentId: N:TreeCompressionAlgorithms.Extensions
+  fullName: TreeCompressionAlgorithms.Extensions
+  nameWithType: TreeCompressionAlgorithms.Extensions
+- uid: TreeCompressionAlgorithms.Extensions.XmlTagExtension
+  name: XmlTagExtension
+  href: api/TreeCompressionAlgorithms.Extensions.XmlTagExtension.html
+  commentId: T:TreeCompressionAlgorithms.Extensions.XmlTagExtension
+  fullName: TreeCompressionAlgorithms.Extensions.XmlTagExtension
+  nameWithType: XmlTagExtension
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+  name: NaturalLanguageTreeCompressing
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html
+  commentId: T:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+  nameWithType: NaturalLanguageTreeCompressing
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode})
+  name: NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeNode>)
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing__ctor_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode__
+  commentId: M:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode})
+  name.vb: New(ICompressionStrategy(Of ISyntacticTreeNode))
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.NaturalLanguageTreeCompressing(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode>)
+  fullName.vb: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.New(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode))
+  nameWithType: NaturalLanguageTreeCompressing.NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeNode>)
+  nameWithType.vb: NaturalLanguageTreeCompressing.New(ICompressionStrategy(Of ISyntacticTreeNode))
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.#ctor*
+  name: NaturalLanguageTreeCompressing
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing__ctor_
+  commentId: Overload:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.NaturalLanguageTreeCompressing
+  fullName.vb: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.New
+  nameWithType: NaturalLanguageTreeCompressing.NaturalLanguageTreeCompressing
+  nameWithType.vb: NaturalLanguageTreeCompressing.New
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress(System.String)
+  name: Compress(string)
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_Compress_System_String_
+  commentId: M:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress(System.String)
+  name.vb: Compress(String)
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress(string)
+  fullName.vb: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress(String)
+  nameWithType: NaturalLanguageTreeCompressing.Compress(string)
+  nameWithType.vb: NaturalLanguageTreeCompressing.Compress(String)
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress*
+  name: Compress
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_Compress_
+  commentId: Overload:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Compress
+  nameWithType: NaturalLanguageTreeCompressing.Compress
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressingPipeline
+  name: CompressingPipeline
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_CompressingPipeline
+  commentId: P:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressingPipeline
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressingPipeline
+  nameWithType: NaturalLanguageTreeCompressing.CompressingPipeline
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressingPipeline*
+  name: CompressingPipeline
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_CompressingPipeline_
+  commentId: Overload:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressingPipeline
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressingPipeline
+  nameWithType: NaturalLanguageTreeCompressing.CompressingPipeline
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressionStrategy
+  name: CompressionStrategy
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_CompressionStrategy
+  commentId: P:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressionStrategy
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressionStrategy
+  nameWithType: NaturalLanguageTreeCompressing.CompressionStrategy
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressionStrategy*
+  name: CompressionStrategy
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_CompressionStrategy_
+  commentId: Overload:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressionStrategy
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.CompressionStrategy
+  nameWithType: NaturalLanguageTreeCompressing.CompressionStrategy
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree)
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: NaturalLanguageTreeCompressing.Decompress(CompressedTree)
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Decompress*
+  name: Decompress
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_Decompress_
+  commentId: Overload:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.Decompress
+  nameWithType: NaturalLanguageTreeCompressing.Decompress
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.DecompressingPipeline
+  name: DecompressingPipeline
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_DecompressingPipeline
+  commentId: P:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.DecompressingPipeline
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.DecompressingPipeline
+  nameWithType: NaturalLanguageTreeCompressing.DecompressingPipeline
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.DecompressingPipeline*
+  name: DecompressingPipeline
+  href: api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html#TreeCompressionAlgorithms_NaturalLanguageTreeCompressing_DecompressingPipeline_
+  commentId: Overload:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.DecompressingPipeline
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.DecompressingPipeline
+  nameWithType: NaturalLanguageTreeCompressing.DecompressingPipeline
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies
+  name: TreeCompressionAlgorithms.TreeCreationalStrategies
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.html
+  commentId: N:TreeCompressionAlgorithms.TreeCreationalStrategies
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies
+  nameWithType: TreeCompressionAlgorithms.TreeCreationalStrategies
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+  name: UdPipeCreateTreeStrategy
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.html
+  commentId: T:TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+  nameWithType: UdPipeCreateTreeStrategy
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree(System.String)
+  name: CreateTree(string)
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.html#TreeCompressionAlgorithms_TreeCreationalStrategies_UdPipeCreateTreeStrategy_CreateTree_System_String_
+  commentId: M:TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree(System.String)
+  name.vb: CreateTree(String)
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree(string)
+  fullName.vb: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree(String)
+  nameWithType: UdPipeCreateTreeStrategy.CreateTree(string)
+  nameWithType.vb: UdPipeCreateTreeStrategy.CreateTree(String)
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree*
+  name: CreateTree
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.html#TreeCompressionAlgorithms_TreeCreationalStrategies_UdPipeCreateTreeStrategy_CreateTree_
+  commentId: Overload:TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.CreateTree
+  nameWithType: UdPipeCreateTreeStrategy.CreateTree
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  name: XmlCreateTreeStrategy
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.html
+  commentId: T:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  nameWithType: XmlCreateTreeStrategy
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(System.String)
+  name: CreateTree(string)
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.html#TreeCompressionAlgorithms_TreeCreationalStrategies_XmlCreateTreeStrategy_CreateTree_System_String_
+  commentId: M:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(System.String)
+  name.vb: CreateTree(String)
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(string)
+  fullName.vb: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(String)
+  nameWithType: XmlCreateTreeStrategy.CreateTree(string)
+  nameWithType.vb: XmlCreateTreeStrategy.CreateTree(String)
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree*
+  name: CreateTree
+  href: api/TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.html#TreeCompressionAlgorithms_TreeCreationalStrategies_XmlCreateTreeStrategy_CreateTree_
+  commentId: Overload:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree
+  nameWithType: XmlCreateTreeStrategy.CreateTree
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing
+  name: XmlTreeCompressing
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html
+  commentId: T:TreeCompressionAlgorithms.XmlTreeCompressing
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing
+  nameWithType: XmlTreeCompressing
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode})
+  name: XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode>)
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing__ctor_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode__
+  commentId: M:TreeCompressionAlgorithms.XmlTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode})
+  name.vb: New(ICompressionStrategy(Of IOrderedTreeNode))
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.XmlTreeCompressing(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>)
+  fullName.vb: TreeCompressionAlgorithms.XmlTreeCompressing.New(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode))
+  nameWithType: XmlTreeCompressing.XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode>)
+  nameWithType.vb: XmlTreeCompressing.New(ICompressionStrategy(Of IOrderedTreeNode))
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.#ctor*
+  name: XmlTreeCompressing
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing__ctor_
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.XmlTreeCompressing
+  fullName.vb: TreeCompressionAlgorithms.XmlTreeCompressing.New
+  nameWithType: XmlTreeCompressing.XmlTreeCompressing
+  nameWithType.vb: XmlTreeCompressing.New
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Compress(System.String)
+  name: Compress(string)
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_Compress_System_String_
+  commentId: M:TreeCompressionAlgorithms.XmlTreeCompressing.Compress(System.String)
+  name.vb: Compress(String)
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Compress(string)
+  fullName.vb: TreeCompressionAlgorithms.XmlTreeCompressing.Compress(String)
+  nameWithType: XmlTreeCompressing.Compress(string)
+  nameWithType.vb: XmlTreeCompressing.Compress(String)
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Compress*
+  name: Compress
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_Compress_
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.Compress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Compress
+  nameWithType: XmlTreeCompressing.Compress
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  name: CompressingPipeline
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_CompressingPipeline
+  commentId: P:TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  nameWithType: XmlTreeCompressing.CompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline*
+  name: CompressingPipeline
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_CompressingPipeline_
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  nameWithType: XmlTreeCompressing.CompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  name: CompressionStrategy
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_CompressionStrategy
+  commentId: P:TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  nameWithType: XmlTreeCompressing.CompressionStrategy
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy*
+  name: CompressionStrategy
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_CompressionStrategy_
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  nameWithType: XmlTreeCompressing.CompressionStrategy
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree)
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: XmlTreeCompressing.Decompress(CompressedTree)
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress*
+  name: Decompress
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_Decompress_
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress
+  nameWithType: XmlTreeCompressing.Decompress
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  name: DecompressingPipeline
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_DecompressingPipeline
+  commentId: P:TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  nameWithType: XmlTreeCompressing.DecompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline*
+  name: DecompressingPipeline
+  href: api/TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_DecompressingPipeline_
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  isSpec: "True"
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  nameWithType: XmlTreeCompressing.DecompressingPipeline
+- uid: TreeCompressionPipeline
+  name: TreeCompressionPipeline
+  href: api/TreeCompressionPipeline.html
+  commentId: N:TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+- uid: TreeCompressionPipeline.CompressionStrategies
+  name: TreeCompressionPipeline.CompressionStrategies
+  href: api/TreeCompressionPipeline.CompressionStrategies.html
+  commentId: N:TreeCompressionPipeline.CompressionStrategies
+  fullName: TreeCompressionPipeline.CompressionStrategies
+  nameWithType: TreeCompressionPipeline.CompressionStrategies
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+  name: CompressionStrategy
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+  nameWithType: CompressionStrategy
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Compress(TreeCompressionPipeline.TreeStructure.ITreeNode)
+  name: Compress(ITreeNode)
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html#TreeCompressionPipeline_CompressionStrategies_CompressionStrategy_Compress_TreeCompressionPipeline_TreeStructure_ITreeNode_
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Compress(TreeCompressionPipeline.TreeStructure.ITreeNode)
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Compress(TreeCompressionPipeline.TreeStructure.ITreeNode)
+  nameWithType: CompressionStrategy.Compress(ITreeNode)
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Compress*
+  name: Compress
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html#TreeCompressionPipeline_CompressionStrategies_CompressionStrategy_Compress_
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Compress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Compress
+  nameWithType: CompressionStrategy.Compress
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree)
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html#TreeCompressionPipeline_CompressionStrategies_CompressionStrategy_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: CompressionStrategy.Decompress(CompressedTree)
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Decompress*
+  name: Decompress
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html#TreeCompressionPipeline_CompressionStrategies_CompressionStrategy_Decompress_
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.Decompress
+  nameWithType: CompressionStrategy.Decompress
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.FindPatterns(TreeCompressionPipeline.TreeStructure.ITreeNode)
+  name: FindPatterns(ITreeNode)
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html#TreeCompressionPipeline_CompressionStrategies_CompressionStrategy_FindPatterns_TreeCompressionPipeline_TreeStructure_ITreeNode_
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.FindPatterns(TreeCompressionPipeline.TreeStructure.ITreeNode)
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.FindPatterns(TreeCompressionPipeline.TreeStructure.ITreeNode)
+  nameWithType: CompressionStrategy.FindPatterns(ITreeNode)
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.FindPatterns*
+  name: FindPatterns
+  href: api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html#TreeCompressionPipeline_CompressionStrategies_CompressionStrategy_FindPatterns_
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.FindPatterns
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.FindPatterns
+  nameWithType: CompressionStrategy.FindPatterns
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  name: ICompressionStrategy<T>
+  href: api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  name.vb: ICompressionStrategy(Of T)
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T)
+  nameWithType: ICompressionStrategy<T>
+  nameWithType.vb: ICompressionStrategy(Of T)
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress(`0)
+  name: Compress(T)
+  href: api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html#TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_1_Compress__0_
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress(`0)
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Compress(T)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Compress(T)
+  nameWithType: ICompressionStrategy<T>.Compress(T)
+  nameWithType.vb: ICompressionStrategy(Of T).Compress(T)
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress*
+  name: Compress
+  href: api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html#TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_1_Compress_
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Compress
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Compress
+  nameWithType: ICompressionStrategy<T>.Compress
+  nameWithType.vb: ICompressionStrategy(Of T).Compress
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree)
+  href: api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html#TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: ICompressionStrategy<T>.Decompress(CompressedTree)
+  nameWithType.vb: ICompressionStrategy(Of T).Decompress(CompressedTree)
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress*
+  name: Decompress
+  href: api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html#TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_1_Decompress_
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Decompress
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Decompress
+  nameWithType: ICompressionStrategy<T>.Decompress
+  nameWithType.vb: ICompressionStrategy(Of T).Decompress
+- uid: TreeCompressionPipeline.FilterBase`2
+  name: FilterBase<T, TO>
+  href: api/TreeCompressionPipeline.FilterBase-2.html
+  commentId: T:TreeCompressionPipeline.FilterBase`2
+  name.vb: FilterBase(Of T, TO)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO)
+  nameWithType: FilterBase<T, TO>
+  nameWithType.vb: FilterBase(Of T, TO)
+- uid: TreeCompressionPipeline.FilterBase`2.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  name: AddObserver(IProcessObserver)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).AddObserver(TreeCompressionPipeline.IProcessObserver)
+  nameWithType: FilterBase<T, TO>.AddObserver(IProcessObserver)
+  nameWithType.vb: FilterBase(Of T, TO).AddObserver(IProcessObserver)
+- uid: TreeCompressionPipeline.FilterBase`2.AddObserver*
+  name: AddObserver
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_AddObserver_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.AddObserver
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.AddObserver
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).AddObserver
+  nameWithType: FilterBase<T, TO>.AddObserver
+  nameWithType.vb: FilterBase(Of T, TO).AddObserver
+- uid: TreeCompressionPipeline.FilterBase`2.Chain(TreeCompressionPipeline.IFilter)
+  name: Chain(IFilter)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_Chain_TreeCompressionPipeline_IFilter_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.Chain(TreeCompressionPipeline.IFilter)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Chain(TreeCompressionPipeline.IFilter)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Chain(TreeCompressionPipeline.IFilter)
+  nameWithType: FilterBase<T, TO>.Chain(IFilter)
+  nameWithType.vb: FilterBase(Of T, TO).Chain(IFilter)
+- uid: TreeCompressionPipeline.FilterBase`2.Chain*
+  name: Chain
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_Chain_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.Chain
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Chain
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Chain
+  nameWithType: FilterBase<T, TO>.Chain
+  nameWithType.vb: FilterBase(Of T, TO).Chain
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyComplete(System.String,System.Object)
+  name: NotifyComplete(string, object)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyComplete_System_String_System_Object_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyComplete(System.String,System.Object)
+  name.vb: NotifyComplete(String, Object)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyComplete(string, object)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyComplete(String, Object)
+  nameWithType: FilterBase<T, TO>.NotifyComplete(string, object)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyComplete(String, Object)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyComplete*
+  name: NotifyComplete
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyComplete_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyComplete
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyComplete
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyComplete
+  nameWithType: FilterBase<T, TO>.NotifyComplete
+  nameWithType.vb: FilterBase(Of T, TO).NotifyComplete
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyError(System.String,System.Exception)
+  name: NotifyError(string, Exception)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyError_System_String_System_Exception_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyError(System.String,System.Exception)
+  name.vb: NotifyError(String, Exception)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyError(string, System.Exception)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyError(String, System.Exception)
+  nameWithType: FilterBase<T, TO>.NotifyError(string, Exception)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyError(String, Exception)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyError*
+  name: NotifyError
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyError_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyError
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyError
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyError
+  nameWithType: FilterBase<T, TO>.NotifyError
+  nameWithType.vb: FilterBase(Of T, TO).NotifyError
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyProgress(System.String,System.Double)
+  name: NotifyProgress(string, double)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyProgress_System_String_System_Double_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyProgress(System.String,System.Double)
+  name.vb: NotifyProgress(String, Double)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyProgress(string, double)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyProgress(String, Double)
+  nameWithType: FilterBase<T, TO>.NotifyProgress(string, double)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyProgress(String, Double)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyProgress*
+  name: NotifyProgress
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyProgress_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyProgress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyProgress
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyProgress
+  nameWithType: FilterBase<T, TO>.NotifyProgress
+  nameWithType.vb: FilterBase(Of T, TO).NotifyProgress
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyStart(System.String)
+  name: NotifyStart(string)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyStart_System_String_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyStart(System.String)
+  name.vb: NotifyStart(String)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyStart(string)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyStart(String)
+  nameWithType: FilterBase<T, TO>.NotifyStart(string)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyStart(String)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyStart*
+  name: NotifyStart
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyStart_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyStart
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyStart
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyStart
+  nameWithType: FilterBase<T, TO>.NotifyStart
+  nameWithType.vb: FilterBase(Of T, TO).NotifyStart
+- uid: TreeCompressionPipeline.FilterBase`2.Process(System.Object)
+  name: Process(object)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_Process_System_Object_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.Process(System.Object)
+  name.vb: Process(Object)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Process(object)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Process(Object)
+  nameWithType: FilterBase<T, TO>.Process(object)
+  nameWithType.vb: FilterBase(Of T, TO).Process(Object)
+- uid: TreeCompressionPipeline.FilterBase`2.Process*
+  name: Process
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_Process_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.Process
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Process
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Process
+  nameWithType: FilterBase<T, TO>.Process
+  nameWithType.vb: FilterBase(Of T, TO).Process
+- uid: TreeCompressionPipeline.FilterBase`2.ProcessData(`0)
+  name: ProcessData(T)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_ProcessData__0_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.ProcessData(`0)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.ProcessData(T)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).ProcessData(T)
+  nameWithType: FilterBase<T, TO>.ProcessData(T)
+  nameWithType.vb: FilterBase(Of T, TO).ProcessData(T)
+- uid: TreeCompressionPipeline.FilterBase`2.ProcessData*
+  name: ProcessData
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_ProcessData_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.ProcessData
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.ProcessData
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).ProcessData
+  nameWithType: FilterBase<T, TO>.ProcessData
+  nameWithType.vb: FilterBase(Of T, TO).ProcessData
+- uid: TreeCompressionPipeline.FilterBase`2.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  name: RemoveObserver(IProcessObserver)
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  commentId: M:TreeCompressionPipeline.FilterBase`2.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  nameWithType: FilterBase<T, TO>.RemoveObserver(IProcessObserver)
+  nameWithType.vb: FilterBase(Of T, TO).RemoveObserver(IProcessObserver)
+- uid: TreeCompressionPipeline.FilterBase`2.RemoveObserver*
+  name: RemoveObserver
+  href: api/TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_RemoveObserver_
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.RemoveObserver
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.RemoveObserver
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).RemoveObserver
+  nameWithType: FilterBase<T, TO>.RemoveObserver
+  nameWithType.vb: FilterBase(Of T, TO).RemoveObserver
+- uid: TreeCompressionPipeline.FilterFactory`1
+  name: FilterFactory<T>
+  href: api/TreeCompressionPipeline.FilterFactory-1.html
+  commentId: T:TreeCompressionPipeline.FilterFactory`1
+  name.vb: FilterFactory(Of T)
+  fullName: TreeCompressionPipeline.FilterFactory<T>
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T)
+  nameWithType: FilterFactory<T>
+  nameWithType.vb: FilterFactory(Of T)
+- uid: TreeCompressionPipeline.FilterFactory`1.CreateCompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name: CreateCompressionFilter(ICompressionStrategy<T>)
+  href: api/TreeCompressionPipeline.FilterFactory-1.html#TreeCompressionPipeline_FilterFactory_1_CreateCompressionFilter_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy__0__
+  commentId: M:TreeCompressionPipeline.FilterFactory`1.CreateCompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name.vb: CreateCompressionFilter(ICompressionStrategy(Of T))
+  fullName: TreeCompressionPipeline.FilterFactory<T>.CreateCompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>)
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T).CreateCompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T))
+  nameWithType: FilterFactory<T>.CreateCompressionFilter(ICompressionStrategy<T>)
+  nameWithType.vb: FilterFactory(Of T).CreateCompressionFilter(ICompressionStrategy(Of T))
+- uid: TreeCompressionPipeline.FilterFactory`1.CreateCompressionFilter*
+  name: CreateCompressionFilter
+  href: api/TreeCompressionPipeline.FilterFactory-1.html#TreeCompressionPipeline_FilterFactory_1_CreateCompressionFilter_
+  commentId: Overload:TreeCompressionPipeline.FilterFactory`1.CreateCompressionFilter
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterFactory<T>.CreateCompressionFilter
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T).CreateCompressionFilter
+  nameWithType: FilterFactory<T>.CreateCompressionFilter
+  nameWithType.vb: FilterFactory(Of T).CreateCompressionFilter
+- uid: TreeCompressionPipeline.FilterFactory`1.CreateDecompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name: CreateDecompressionFilter(ICompressionStrategy<T>)
+  href: api/TreeCompressionPipeline.FilterFactory-1.html#TreeCompressionPipeline_FilterFactory_1_CreateDecompressionFilter_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy__0__
+  commentId: M:TreeCompressionPipeline.FilterFactory`1.CreateDecompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name.vb: CreateDecompressionFilter(ICompressionStrategy(Of T))
+  fullName: TreeCompressionPipeline.FilterFactory<T>.CreateDecompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>)
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T).CreateDecompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T))
+  nameWithType: FilterFactory<T>.CreateDecompressionFilter(ICompressionStrategy<T>)
+  nameWithType.vb: FilterFactory(Of T).CreateDecompressionFilter(ICompressionStrategy(Of T))
+- uid: TreeCompressionPipeline.FilterFactory`1.CreateDecompressionFilter*
+  name: CreateDecompressionFilter
+  href: api/TreeCompressionPipeline.FilterFactory-1.html#TreeCompressionPipeline_FilterFactory_1_CreateDecompressionFilter_
+  commentId: Overload:TreeCompressionPipeline.FilterFactory`1.CreateDecompressionFilter
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterFactory<T>.CreateDecompressionFilter
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T).CreateDecompressionFilter
+  nameWithType: FilterFactory<T>.CreateDecompressionFilter
+  nameWithType.vb: FilterFactory(Of T).CreateDecompressionFilter
+- uid: TreeCompressionPipeline.FilterFactory`1.CreateTextToTreeFilter(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{`0})
+  name: CreateTextToTreeFilter(ITreeCreationStrategy<T>)
+  href: api/TreeCompressionPipeline.FilterFactory-1.html#TreeCompressionPipeline_FilterFactory_1_CreateTextToTreeFilter_TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy__0__
+  commentId: M:TreeCompressionPipeline.FilterFactory`1.CreateTextToTreeFilter(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{`0})
+  name.vb: CreateTextToTreeFilter(ITreeCreationStrategy(Of T))
+  fullName: TreeCompressionPipeline.FilterFactory<T>.CreateTextToTreeFilter(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>)
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T).CreateTextToTreeFilter(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T))
+  nameWithType: FilterFactory<T>.CreateTextToTreeFilter(ITreeCreationStrategy<T>)
+  nameWithType.vb: FilterFactory(Of T).CreateTextToTreeFilter(ITreeCreationStrategy(Of T))
+- uid: TreeCompressionPipeline.FilterFactory`1.CreateTextToTreeFilter*
+  name: CreateTextToTreeFilter
+  href: api/TreeCompressionPipeline.FilterFactory-1.html#TreeCompressionPipeline_FilterFactory_1_CreateTextToTreeFilter_
+  commentId: Overload:TreeCompressionPipeline.FilterFactory`1.CreateTextToTreeFilter
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.FilterFactory<T>.CreateTextToTreeFilter
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T).CreateTextToTreeFilter
+  nameWithType: FilterFactory<T>.CreateTextToTreeFilter
+  nameWithType.vb: FilterFactory(Of T).CreateTextToTreeFilter
+- uid: TreeCompressionPipeline.Filters
+  name: TreeCompressionPipeline.Filters
+  href: api/TreeCompressionPipeline.Filters.html
+  commentId: N:TreeCompressionPipeline.Filters
+  fullName: TreeCompressionPipeline.Filters
+  nameWithType: TreeCompressionPipeline.Filters
+- uid: TreeCompressionPipeline.Filters.CompressionFilter`1
+  name: CompressionFilter<T>
+  href: api/TreeCompressionPipeline.Filters.CompressionFilter-1.html
+  commentId: T:TreeCompressionPipeline.Filters.CompressionFilter`1
+  name.vb: CompressionFilter(Of T)
+  fullName: TreeCompressionPipeline.Filters.CompressionFilter<T>
+  fullName.vb: TreeCompressionPipeline.Filters.CompressionFilter(Of T)
+  nameWithType: CompressionFilter<T>
+  nameWithType.vb: CompressionFilter(Of T)
+- uid: TreeCompressionPipeline.Filters.CompressionFilter`1.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name: CompressionFilter(ICompressionStrategy<T>)
+  href: api/TreeCompressionPipeline.Filters.CompressionFilter-1.html#TreeCompressionPipeline_Filters_CompressionFilter_1__ctor_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy__0__
+  commentId: M:TreeCompressionPipeline.Filters.CompressionFilter`1.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name.vb: New(ICompressionStrategy(Of T))
+  fullName: TreeCompressionPipeline.Filters.CompressionFilter<T>.CompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>)
+  fullName.vb: TreeCompressionPipeline.Filters.CompressionFilter(Of T).New(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T))
+  nameWithType: CompressionFilter<T>.CompressionFilter(ICompressionStrategy<T>)
+  nameWithType.vb: CompressionFilter(Of T).New(ICompressionStrategy(Of T))
+- uid: TreeCompressionPipeline.Filters.CompressionFilter`1.#ctor*
+  name: CompressionFilter
+  href: api/TreeCompressionPipeline.Filters.CompressionFilter-1.html#TreeCompressionPipeline_Filters_CompressionFilter_1__ctor_
+  commentId: Overload:TreeCompressionPipeline.Filters.CompressionFilter`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionPipeline.Filters.CompressionFilter<T>.CompressionFilter
+  fullName.vb: TreeCompressionPipeline.Filters.CompressionFilter(Of T).New
+  nameWithType: CompressionFilter<T>.CompressionFilter
+  nameWithType.vb: CompressionFilter(Of T).New
+- uid: TreeCompressionPipeline.Filters.CompressionFilter`1.ProcessData(`0)
+  name: ProcessData(T)
+  href: api/TreeCompressionPipeline.Filters.CompressionFilter-1.html#TreeCompressionPipeline_Filters_CompressionFilter_1_ProcessData__0_
+  commentId: M:TreeCompressionPipeline.Filters.CompressionFilter`1.ProcessData(`0)
+  fullName: TreeCompressionPipeline.Filters.CompressionFilter<T>.ProcessData(T)
+  fullName.vb: TreeCompressionPipeline.Filters.CompressionFilter(Of T).ProcessData(T)
+  nameWithType: CompressionFilter<T>.ProcessData(T)
+  nameWithType.vb: CompressionFilter(Of T).ProcessData(T)
+- uid: TreeCompressionPipeline.Filters.CompressionFilter`1.ProcessData*
+  name: ProcessData
+  href: api/TreeCompressionPipeline.Filters.CompressionFilter-1.html#TreeCompressionPipeline_Filters_CompressionFilter_1_ProcessData_
+  commentId: Overload:TreeCompressionPipeline.Filters.CompressionFilter`1.ProcessData
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.Filters.CompressionFilter<T>.ProcessData
+  fullName.vb: TreeCompressionPipeline.Filters.CompressionFilter(Of T).ProcessData
+  nameWithType: CompressionFilter<T>.ProcessData
+  nameWithType.vb: CompressionFilter(Of T).ProcessData
+- uid: TreeCompressionPipeline.Filters.DecompressionFilter`1
+  name: DecompressionFilter<T>
+  href: api/TreeCompressionPipeline.Filters.DecompressionFilter-1.html
+  commentId: T:TreeCompressionPipeline.Filters.DecompressionFilter`1
+  name.vb: DecompressionFilter(Of T)
+  fullName: TreeCompressionPipeline.Filters.DecompressionFilter<T>
+  fullName.vb: TreeCompressionPipeline.Filters.DecompressionFilter(Of T)
+  nameWithType: DecompressionFilter<T>
+  nameWithType.vb: DecompressionFilter(Of T)
+- uid: TreeCompressionPipeline.Filters.DecompressionFilter`1.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name: DecompressionFilter(ICompressionStrategy<T>)
+  href: api/TreeCompressionPipeline.Filters.DecompressionFilter-1.html#TreeCompressionPipeline_Filters_DecompressionFilter_1__ctor_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy__0__
+  commentId: M:TreeCompressionPipeline.Filters.DecompressionFilter`1.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{`0})
+  name.vb: New(ICompressionStrategy(Of T))
+  fullName: TreeCompressionPipeline.Filters.DecompressionFilter<T>.DecompressionFilter(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>)
+  fullName.vb: TreeCompressionPipeline.Filters.DecompressionFilter(Of T).New(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T))
+  nameWithType: DecompressionFilter<T>.DecompressionFilter(ICompressionStrategy<T>)
+  nameWithType.vb: DecompressionFilter(Of T).New(ICompressionStrategy(Of T))
+- uid: TreeCompressionPipeline.Filters.DecompressionFilter`1.#ctor*
+  name: DecompressionFilter
+  href: api/TreeCompressionPipeline.Filters.DecompressionFilter-1.html#TreeCompressionPipeline_Filters_DecompressionFilter_1__ctor_
+  commentId: Overload:TreeCompressionPipeline.Filters.DecompressionFilter`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionPipeline.Filters.DecompressionFilter<T>.DecompressionFilter
+  fullName.vb: TreeCompressionPipeline.Filters.DecompressionFilter(Of T).New
+  nameWithType: DecompressionFilter<T>.DecompressionFilter
+  nameWithType.vb: DecompressionFilter(Of T).New
+- uid: TreeCompressionPipeline.Filters.DecompressionFilter`1.ProcessData(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: ProcessData(CompressedTree)
+  href: api/TreeCompressionPipeline.Filters.DecompressionFilter-1.html#TreeCompressionPipeline_Filters_DecompressionFilter_1_ProcessData_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionPipeline.Filters.DecompressionFilter`1.ProcessData(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName: TreeCompressionPipeline.Filters.DecompressionFilter<T>.ProcessData(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName.vb: TreeCompressionPipeline.Filters.DecompressionFilter(Of T).ProcessData(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: DecompressionFilter<T>.ProcessData(CompressedTree)
+  nameWithType.vb: DecompressionFilter(Of T).ProcessData(CompressedTree)
+- uid: TreeCompressionPipeline.Filters.DecompressionFilter`1.ProcessData*
+  name: ProcessData
+  href: api/TreeCompressionPipeline.Filters.DecompressionFilter-1.html#TreeCompressionPipeline_Filters_DecompressionFilter_1_ProcessData_
+  commentId: Overload:TreeCompressionPipeline.Filters.DecompressionFilter`1.ProcessData
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.Filters.DecompressionFilter<T>.ProcessData
+  fullName.vb: TreeCompressionPipeline.Filters.DecompressionFilter(Of T).ProcessData
+  nameWithType: DecompressionFilter<T>.ProcessData
+  nameWithType.vb: DecompressionFilter(Of T).ProcessData
+- uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1
+  name: TextToTreeFilter<T>
+  href: api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.html
+  commentId: T:TreeCompressionPipeline.Filters.TextToTreeFilter`1
+  name.vb: TextToTreeFilter(Of T)
+  fullName: TreeCompressionPipeline.Filters.TextToTreeFilter<T>
+  fullName.vb: TreeCompressionPipeline.Filters.TextToTreeFilter(Of T)
+  nameWithType: TextToTreeFilter<T>
+  nameWithType.vb: TextToTreeFilter(Of T)
+- uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1.#ctor(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{`0})
+  name: TextToTreeFilter(ITreeCreationStrategy<T>)
+  href: api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.html#TreeCompressionPipeline_Filters_TextToTreeFilter_1__ctor_TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy__0__
+  commentId: M:TreeCompressionPipeline.Filters.TextToTreeFilter`1.#ctor(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{`0})
+  name.vb: New(ITreeCreationStrategy(Of T))
+  fullName: TreeCompressionPipeline.Filters.TextToTreeFilter<T>.TextToTreeFilter(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>)
+  fullName.vb: TreeCompressionPipeline.Filters.TextToTreeFilter(Of T).New(TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T))
+  nameWithType: TextToTreeFilter<T>.TextToTreeFilter(ITreeCreationStrategy<T>)
+  nameWithType.vb: TextToTreeFilter(Of T).New(ITreeCreationStrategy(Of T))
+- uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1.#ctor*
+  name: TextToTreeFilter
+  href: api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.html#TreeCompressionPipeline_Filters_TextToTreeFilter_1__ctor_
+  commentId: Overload:TreeCompressionPipeline.Filters.TextToTreeFilter`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionPipeline.Filters.TextToTreeFilter<T>.TextToTreeFilter
+  fullName.vb: TreeCompressionPipeline.Filters.TextToTreeFilter(Of T).New
+  nameWithType: TextToTreeFilter<T>.TextToTreeFilter
+  nameWithType.vb: TextToTreeFilter(Of T).New
+- uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1.ProcessData(System.String)
+  name: ProcessData(string)
+  href: api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.html#TreeCompressionPipeline_Filters_TextToTreeFilter_1_ProcessData_System_String_
+  commentId: M:TreeCompressionPipeline.Filters.TextToTreeFilter`1.ProcessData(System.String)
+  name.vb: ProcessData(String)
+  fullName: TreeCompressionPipeline.Filters.TextToTreeFilter<T>.ProcessData(string)
+  fullName.vb: TreeCompressionPipeline.Filters.TextToTreeFilter(Of T).ProcessData(String)
+  nameWithType: TextToTreeFilter<T>.ProcessData(string)
+  nameWithType.vb: TextToTreeFilter(Of T).ProcessData(String)
+- uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1.ProcessData*
+  name: ProcessData
+  href: api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.html#TreeCompressionPipeline_Filters_TextToTreeFilter_1_ProcessData_
+  commentId: Overload:TreeCompressionPipeline.Filters.TextToTreeFilter`1.ProcessData
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.Filters.TextToTreeFilter<T>.ProcessData
+  fullName.vb: TreeCompressionPipeline.Filters.TextToTreeFilter(Of T).ProcessData
+  nameWithType: TextToTreeFilter<T>.ProcessData
+  nameWithType.vb: TextToTreeFilter(Of T).ProcessData
+- uid: TreeCompressionPipeline.IFilter
+  name: IFilter
+  href: api/TreeCompressionPipeline.IFilter.html
+  commentId: T:TreeCompressionPipeline.IFilter
+  fullName: TreeCompressionPipeline.IFilter
+  nameWithType: IFilter
+- uid: TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  name: Chain(IFilter)
+  href: api/TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Chain_TreeCompressionPipeline_IFilter_
+  commentId: M:TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  fullName: TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  nameWithType: IFilter.Chain(IFilter)
+- uid: TreeCompressionPipeline.IFilter.Chain*
+  name: Chain
+  href: api/TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Chain_
+  commentId: Overload:TreeCompressionPipeline.IFilter.Chain
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IFilter.Chain
+  nameWithType: IFilter.Chain
+- uid: TreeCompressionPipeline.IFilter.Process(System.Object)
+  name: Process(object)
+  href: api/TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Process_System_Object_
+  commentId: M:TreeCompressionPipeline.IFilter.Process(System.Object)
+  name.vb: Process(Object)
+  fullName: TreeCompressionPipeline.IFilter.Process(object)
+  fullName.vb: TreeCompressionPipeline.IFilter.Process(Object)
+  nameWithType: IFilter.Process(object)
+  nameWithType.vb: IFilter.Process(Object)
+- uid: TreeCompressionPipeline.IFilter.Process*
+  name: Process
+  href: api/TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Process_
+  commentId: Overload:TreeCompressionPipeline.IFilter.Process
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IFilter.Process
+  nameWithType: IFilter.Process
+- uid: TreeCompressionPipeline.IProcessObserver
+  name: IProcessObserver
+  href: api/TreeCompressionPipeline.IProcessObserver.html
+  commentId: T:TreeCompressionPipeline.IProcessObserver
+  fullName: TreeCompressionPipeline.IProcessObserver
+  nameWithType: IProcessObserver
+- uid: TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  name: OnComplete(string, object)
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnComplete_System_String_System_Object_
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  name.vb: OnComplete(String, Object)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnComplete(string, object)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnComplete(String, Object)
+  nameWithType: IProcessObserver.OnComplete(string, object)
+  nameWithType.vb: IProcessObserver.OnComplete(String, Object)
+- uid: TreeCompressionPipeline.IProcessObserver.OnComplete*
+  name: OnComplete
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnComplete_
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnComplete
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessObserver.OnComplete
+  nameWithType: IProcessObserver.OnComplete
+- uid: TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  name: OnError(string, Exception)
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnError_System_String_System_Exception_
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  name.vb: OnError(String, Exception)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnError(string, System.Exception)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnError(String, System.Exception)
+  nameWithType: IProcessObserver.OnError(string, Exception)
+  nameWithType.vb: IProcessObserver.OnError(String, Exception)
+- uid: TreeCompressionPipeline.IProcessObserver.OnError*
+  name: OnError
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnError_
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnError
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessObserver.OnError
+  nameWithType: IProcessObserver.OnError
+- uid: TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  name: OnProgress(string, double)
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnProgress_System_String_System_Double_
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  name.vb: OnProgress(String, Double)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnProgress(string, double)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnProgress(String, Double)
+  nameWithType: IProcessObserver.OnProgress(string, double)
+  nameWithType.vb: IProcessObserver.OnProgress(String, Double)
+- uid: TreeCompressionPipeline.IProcessObserver.OnProgress*
+  name: OnProgress
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnProgress_
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnProgress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessObserver.OnProgress
+  nameWithType: IProcessObserver.OnProgress
+- uid: TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  name: OnStart(string)
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnStart_System_String_
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  name.vb: OnStart(String)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnStart(string)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnStart(String)
+  nameWithType: IProcessObserver.OnStart(string)
+  nameWithType.vb: IProcessObserver.OnStart(String)
+- uid: TreeCompressionPipeline.IProcessObserver.OnStart*
+  name: OnStart
+  href: api/TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnStart_
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnStart
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessObserver.OnStart
+  nameWithType: IProcessObserver.OnStart
+- uid: TreeCompressionPipeline.IProcessSubject
+  name: IProcessSubject
+  href: api/TreeCompressionPipeline.IProcessSubject.html
+  commentId: T:TreeCompressionPipeline.IProcessSubject
+  fullName: TreeCompressionPipeline.IProcessSubject
+  nameWithType: IProcessSubject
+- uid: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  name: AddObserver(IProcessObserver)
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  commentId: M:TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  fullName: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  nameWithType: IProcessSubject.AddObserver(IProcessObserver)
+- uid: TreeCompressionPipeline.IProcessSubject.AddObserver*
+  name: AddObserver
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.AddObserver
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessSubject.AddObserver
+  nameWithType: IProcessSubject.AddObserver
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  name: NotifyComplete(string, object)
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_System_String_System_Object_
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  name.vb: NotifyComplete(String, Object)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyComplete(string, object)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyComplete(String, Object)
+  nameWithType: IProcessSubject.NotifyComplete(string, object)
+  nameWithType.vb: IProcessSubject.NotifyComplete(String, Object)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete*
+  name: NotifyComplete
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyComplete
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyComplete
+  nameWithType: IProcessSubject.NotifyComplete
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  name: NotifyError(string, Exception)
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_System_String_System_Exception_
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  name.vb: NotifyError(String, Exception)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyError(string, System.Exception)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyError(String, System.Exception)
+  nameWithType: IProcessSubject.NotifyError(string, Exception)
+  nameWithType.vb: IProcessSubject.NotifyError(String, Exception)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyError*
+  name: NotifyError
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyError
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyError
+  nameWithType: IProcessSubject.NotifyError
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  name: NotifyProgress(string, double)
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_System_String_System_Double_
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  name.vb: NotifyProgress(String, Double)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyProgress(string, double)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyProgress(String, Double)
+  nameWithType: IProcessSubject.NotifyProgress(string, double)
+  nameWithType.vb: IProcessSubject.NotifyProgress(String, Double)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress*
+  name: NotifyProgress
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyProgress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyProgress
+  nameWithType: IProcessSubject.NotifyProgress
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  name: NotifyStart(string)
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_System_String_
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  name.vb: NotifyStart(String)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyStart(string)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyStart(String)
+  nameWithType: IProcessSubject.NotifyStart(string)
+  nameWithType.vb: IProcessSubject.NotifyStart(String)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyStart*
+  name: NotifyStart
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyStart
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyStart
+  nameWithType: IProcessSubject.NotifyStart
+- uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  name: RemoveObserver(IProcessObserver)
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  commentId: M:TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  fullName: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  nameWithType: IProcessSubject.RemoveObserver(IProcessObserver)
+- uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver*
+  name: RemoveObserver
+  href: api/TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.RemoveObserver
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.IProcessSubject.RemoveObserver
+  nameWithType: IProcessSubject.RemoveObserver
+- uid: TreeCompressionPipeline.ITreeCompressor`1
+  name: ITreeCompressor<T>
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html
+  commentId: T:TreeCompressionPipeline.ITreeCompressor`1
+  name.vb: ITreeCompressor(Of T)
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T)
+  nameWithType: ITreeCompressor<T>
+  nameWithType.vb: ITreeCompressor(Of T)
+- uid: TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+  name: Compress(string)
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  commentId: M:TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+  name.vb: Compress(String)
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.Compress(string)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).Compress(String)
+  nameWithType: ITreeCompressor<T>.Compress(string)
+  nameWithType.vb: ITreeCompressor(Of T).Compress(String)
+- uid: TreeCompressionPipeline.ITreeCompressor`1.Compress*
+  name: Compress
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_
+  commentId: Overload:TreeCompressionPipeline.ITreeCompressor`1.Compress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.Compress
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).Compress
+  nameWithType: ITreeCompressor<T>.Compress
+  nameWithType.vb: ITreeCompressor(Of T).Compress
+- uid: TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline
+  name: CompressingPipeline
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressingPipeline
+  commentId: P:TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.CompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).CompressingPipeline
+  nameWithType: ITreeCompressor<T>.CompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of T).CompressingPipeline
+- uid: TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline*
+  name: CompressingPipeline
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressingPipeline_
+  commentId: Overload:TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.CompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).CompressingPipeline
+  nameWithType: ITreeCompressor<T>.CompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of T).CompressingPipeline
+- uid: TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy
+  name: CompressionStrategy
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressionStrategy
+  commentId: P:TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.CompressionStrategy
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).CompressionStrategy
+  nameWithType: ITreeCompressor<T>.CompressionStrategy
+  nameWithType.vb: ITreeCompressor(Of T).CompressionStrategy
+- uid: TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy*
+  name: CompressionStrategy
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressionStrategy_
+  commentId: Overload:TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.CompressionStrategy
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).CompressionStrategy
+  nameWithType: ITreeCompressor<T>.CompressionStrategy
+  nameWithType.vb: ITreeCompressor(Of T).CompressionStrategy
+- uid: TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  name: Decompress(CompressedTree)
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  commentId: M:TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType: ITreeCompressor<T>.Decompress(CompressedTree)
+  nameWithType.vb: ITreeCompressor(Of T).Decompress(CompressedTree)
+- uid: TreeCompressionPipeline.ITreeCompressor`1.Decompress*
+  name: Decompress
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_
+  commentId: Overload:TreeCompressionPipeline.ITreeCompressor`1.Decompress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.Decompress
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).Decompress
+  nameWithType: ITreeCompressor<T>.Decompress
+  nameWithType.vb: ITreeCompressor(Of T).Decompress
+- uid: TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline
+  name: DecompressingPipeline
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_DecompressingPipeline
+  commentId: P:TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.DecompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).DecompressingPipeline
+  nameWithType: ITreeCompressor<T>.DecompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of T).DecompressingPipeline
+- uid: TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline*
+  name: DecompressingPipeline
+  href: api/TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_DecompressingPipeline_
+  commentId: Overload:TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.DecompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).DecompressingPipeline
+  nameWithType: ITreeCompressor<T>.DecompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of T).DecompressingPipeline
+- uid: TreeCompressionPipeline.Pipeline
+  name: Pipeline
+  href: api/TreeCompressionPipeline.Pipeline.html
+  commentId: T:TreeCompressionPipeline.Pipeline
+  fullName: TreeCompressionPipeline.Pipeline
+  nameWithType: Pipeline
+- uid: TreeCompressionPipeline.Pipeline.AddFilter(TreeCompressionPipeline.IFilter)
+  name: AddFilter(IFilter)
+  href: api/TreeCompressionPipeline.Pipeline.html#TreeCompressionPipeline_Pipeline_AddFilter_TreeCompressionPipeline_IFilter_
+  commentId: M:TreeCompressionPipeline.Pipeline.AddFilter(TreeCompressionPipeline.IFilter)
+  fullName: TreeCompressionPipeline.Pipeline.AddFilter(TreeCompressionPipeline.IFilter)
+  nameWithType: Pipeline.AddFilter(IFilter)
+- uid: TreeCompressionPipeline.Pipeline.AddFilter*
+  name: AddFilter
+  href: api/TreeCompressionPipeline.Pipeline.html#TreeCompressionPipeline_Pipeline_AddFilter_
+  commentId: Overload:TreeCompressionPipeline.Pipeline.AddFilter
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.Pipeline.AddFilter
+  nameWithType: Pipeline.AddFilter
+- uid: TreeCompressionPipeline.Pipeline.Process(System.Object)
+  name: Process(object)
+  href: api/TreeCompressionPipeline.Pipeline.html#TreeCompressionPipeline_Pipeline_Process_System_Object_
+  commentId: M:TreeCompressionPipeline.Pipeline.Process(System.Object)
+  name.vb: Process(Object)
+  fullName: TreeCompressionPipeline.Pipeline.Process(object)
+  fullName.vb: TreeCompressionPipeline.Pipeline.Process(Object)
+  nameWithType: Pipeline.Process(object)
+  nameWithType.vb: Pipeline.Process(Object)
+- uid: TreeCompressionPipeline.Pipeline.Process*
+  name: Process
+  href: api/TreeCompressionPipeline.Pipeline.html#TreeCompressionPipeline_Pipeline_Process_
+  commentId: Overload:TreeCompressionPipeline.Pipeline.Process
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.Pipeline.Process
+  nameWithType: Pipeline.Process
+- uid: TreeCompressionPipeline.Pipeline.ProcessObserver
+  name: ProcessObserver
+  href: api/TreeCompressionPipeline.Pipeline.html#TreeCompressionPipeline_Pipeline_ProcessObserver
+  commentId: P:TreeCompressionPipeline.Pipeline.ProcessObserver
+  fullName: TreeCompressionPipeline.Pipeline.ProcessObserver
+  nameWithType: Pipeline.ProcessObserver
+- uid: TreeCompressionPipeline.Pipeline.ProcessObserver*
+  name: ProcessObserver
+  href: api/TreeCompressionPipeline.Pipeline.html#TreeCompressionPipeline_Pipeline_ProcessObserver_
+  commentId: Overload:TreeCompressionPipeline.Pipeline.ProcessObserver
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.Pipeline.ProcessObserver
+  nameWithType: Pipeline.ProcessObserver
+- uid: TreeCompressionPipeline.ProcessMonitor
+  name: ProcessMonitor
+  href: api/TreeCompressionPipeline.ProcessMonitor.html
+  commentId: T:TreeCompressionPipeline.ProcessMonitor
+  fullName: TreeCompressionPipeline.ProcessMonitor
+  nameWithType: ProcessMonitor
+- uid: TreeCompressionPipeline.ProcessMonitor.OnComplete(System.String,System.Object)
+  name: OnComplete(string, object)
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnComplete_System_String_System_Object_
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnComplete(System.String,System.Object)
+  name.vb: OnComplete(String, Object)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnComplete(string, object)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnComplete(String, Object)
+  nameWithType: ProcessMonitor.OnComplete(string, object)
+  nameWithType.vb: ProcessMonitor.OnComplete(String, Object)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnComplete*
+  name: OnComplete
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnComplete_
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnComplete
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnComplete
+  nameWithType: ProcessMonitor.OnComplete
+- uid: TreeCompressionPipeline.ProcessMonitor.OnError(System.String,System.Exception)
+  name: OnError(string, Exception)
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnError_System_String_System_Exception_
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnError(System.String,System.Exception)
+  name.vb: OnError(String, Exception)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnError(string, System.Exception)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnError(String, System.Exception)
+  nameWithType: ProcessMonitor.OnError(string, Exception)
+  nameWithType.vb: ProcessMonitor.OnError(String, Exception)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnError*
+  name: OnError
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnError_
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnError
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnError
+  nameWithType: ProcessMonitor.OnError
+- uid: TreeCompressionPipeline.ProcessMonitor.OnProgress(System.String,System.Double)
+  name: OnProgress(string, double)
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnProgress_System_String_System_Double_
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnProgress(System.String,System.Double)
+  name.vb: OnProgress(String, Double)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnProgress(string, double)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnProgress(String, Double)
+  nameWithType: ProcessMonitor.OnProgress(string, double)
+  nameWithType.vb: ProcessMonitor.OnProgress(String, Double)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnProgress*
+  name: OnProgress
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnProgress_
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnProgress
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnProgress
+  nameWithType: ProcessMonitor.OnProgress
+- uid: TreeCompressionPipeline.ProcessMonitor.OnStart(System.String)
+  name: OnStart(string)
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnStart_System_String_
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnStart(System.String)
+  name.vb: OnStart(String)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnStart(string)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnStart(String)
+  nameWithType: ProcessMonitor.OnStart(string)
+  nameWithType.vb: ProcessMonitor.OnStart(String)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnStart*
+  name: OnStart
+  href: api/TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnStart_
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnStart
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnStart
+  nameWithType: ProcessMonitor.OnStart
+- uid: TreeCompressionPipeline.TreeCreationStrategies
+  name: TreeCompressionPipeline.TreeCreationStrategies
+  href: api/TreeCompressionPipeline.TreeCreationStrategies.html
+  commentId: N:TreeCompressionPipeline.TreeCreationStrategies
+  fullName: TreeCompressionPipeline.TreeCreationStrategies
+  nameWithType: TreeCompressionPipeline.TreeCreationStrategies
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  name: ITreeCreationStrategy<T>
+  href: api/TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  commentId: T:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  name.vb: ITreeCreationStrategy(Of T)
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T)
+  nameWithType: ITreeCreationStrategy<T>
+  nameWithType.vb: ITreeCreationStrategy(Of T)
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  name: CreateTree(string)
+  href: api/TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  commentId: M:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  name.vb: CreateTree(String)
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>.CreateTree(string)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T).CreateTree(String)
+  nameWithType: ITreeCreationStrategy<T>.CreateTree(string)
+  nameWithType.vb: ITreeCreationStrategy(Of T).CreateTree(String)
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree*
+  name: CreateTree
+  href: api/TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_
+  commentId: Overload:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>.CreateTree
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T).CreateTree
+  nameWithType: ITreeCreationStrategy<T>.CreateTree
+  nameWithType.vb: ITreeCreationStrategy(Of T).CreateTree
+- uid: TreeCompressionPipeline.TreeStructure
+  name: TreeCompressionPipeline.TreeStructure
+  href: api/TreeCompressionPipeline.TreeStructure.html
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+  name: CompressedTree
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.CompressedTree
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree
+  nameWithType: CompressedTree
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree.Metadata
+  name: Metadata
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html#TreeCompressionPipeline_TreeStructure_CompressedTree_Metadata
+  commentId: P:TreeCompressionPipeline.TreeStructure.CompressedTree.Metadata
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree.Metadata
+  nameWithType: CompressedTree.Metadata
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree.Metadata*
+  name: Metadata
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html#TreeCompressionPipeline_TreeStructure_CompressedTree_Metadata_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.CompressedTree.Metadata
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree.Metadata
+  nameWithType: CompressedTree.Metadata
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree.Structure
+  name: Structure
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html#TreeCompressionPipeline_TreeStructure_CompressedTree_Structure
+  commentId: P:TreeCompressionPipeline.TreeStructure.CompressedTree.Structure
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree.Structure
+  nameWithType: CompressedTree.Structure
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree.Structure*
+  name: Structure
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html#TreeCompressionPipeline_TreeStructure_CompressedTree_Structure_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.CompressedTree.Structure
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree.Structure
+  nameWithType: CompressedTree.Structure
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree.ToString
+  name: ToString()
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html#TreeCompressionPipeline_TreeStructure_CompressedTree_ToString
+  commentId: M:TreeCompressionPipeline.TreeStructure.CompressedTree.ToString
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree.ToString()
+  nameWithType: CompressedTree.ToString()
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree.ToString*
+  name: ToString
+  href: api/TreeCompressionPipeline.TreeStructure.CompressedTree.html#TreeCompressionPipeline_TreeStructure_CompressedTree_ToString_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.CompressedTree.ToString
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree.ToString
+  nameWithType: CompressedTree.ToString
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  name: IOrderedTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  nameWithType: IOrderedTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  name: Accept(IOrderedTreeVisitor)
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Accept_TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_
+  commentId: M:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  nameWithType: IOrderedTreeNode.Accept(IOrderedTreeVisitor)
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept*
+  name: Accept
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Accept_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept
+  nameWithType: IOrderedTreeNode.Accept
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name: AddChild(IOrderedTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_AddChild_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  nameWithType: IOrderedTreeNode.AddChild(IOrderedTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild*
+  name: AddChild
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_AddChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild
+  nameWithType: IOrderedTreeNode.AddChild
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  name: Children
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Children
+  commentId: P:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  nameWithType: IOrderedTreeNode.Children
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children*
+  name: Children
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Children_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  nameWithType: IOrderedTreeNode.Children
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  nameWithType: IOrderedTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent*
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Parent_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  nameWithType: IOrderedTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  name: IOrderedTreeVisitor
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  nameWithType: IOrderedTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name: Visit(IOrderedTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_Visit_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  nameWithType: IOrderedTreeVisitor.Visit(IOrderedTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit*
+  name: Visit
+  href: api/TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_Visit_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit
+  nameWithType: IOrderedTreeVisitor.Visit
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  name: ISyntacticTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  nameWithType: ISyntacticTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  name: Accept(ISyntacticTreeVisitor)
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_Accept_TreeCompressionPipeline_TreeStructure_ISyntacticTreeVisitor_
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  nameWithType: ISyntacticTreeNode.Accept(ISyntacticTreeVisitor)
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept*
+  name: Accept
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_Accept_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept
+  nameWithType: ISyntacticTreeNode.Accept
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: AddLeftChild(ISyntacticTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_AddLeftChild_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: ISyntacticTreeNode.AddLeftChild(ISyntacticTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild*
+  name: AddLeftChild
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_AddLeftChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild
+  nameWithType: ISyntacticTreeNode.AddLeftChild
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: AddRightChild(ISyntacticTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_AddRightChild_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: ISyntacticTreeNode.AddRightChild(ISyntacticTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild*
+  name: AddRightChild
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_AddRightChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild
+  nameWithType: ISyntacticTreeNode.AddRightChild
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  name: LeftChildren
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_LeftChildren
+  commentId: P:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  nameWithType: ISyntacticTreeNode.LeftChildren
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren*
+  name: LeftChildren
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_LeftChildren_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  nameWithType: ISyntacticTreeNode.LeftChildren
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  nameWithType: ISyntacticTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent*
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_Parent_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  nameWithType: ISyntacticTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  name: RightChildren
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_RightChildren
+  commentId: P:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  nameWithType: ISyntacticTreeNode.RightChildren
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren*
+  name: RightChildren
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_RightChildren_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  nameWithType: ISyntacticTreeNode.RightChildren
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  name: ISyntacticTreeVisitor
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  nameWithType: ISyntacticTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: Visit(ISyntacticTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeVisitor_Visit_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: ISyntacticTreeVisitor.Visit(ISyntacticTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit*
+  name: Visit
+  href: api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeVisitor_Visit_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit
+  nameWithType: ISyntacticTreeVisitor.Visit
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode
+  name: ITreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.ITreeNode.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.ITreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode
+  nameWithType: ITreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.ITreeNode.html#TreeCompressionPipeline_TreeStructure_ITreeNode_Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  nameWithType: ITreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode.Value*
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.ITreeNode.html#TreeCompressionPipeline_TreeStructure_ITreeNode_Value_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  nameWithType: ITreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+  name: OrderedTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+  nameWithType: OrderedTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.#ctor(System.Object)
+  name: OrderedTreeNode(object)
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode__ctor_System_Object_
+  commentId: M:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.#ctor(System.Object)
+  name.vb: New(Object)
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.OrderedTreeNode(object)
+  fullName.vb: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.New(Object)
+  nameWithType: OrderedTreeNode.OrderedTreeNode(object)
+  nameWithType.vb: OrderedTreeNode.New(Object)
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.#ctor*
+  name: OrderedTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode__ctor_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.OrderedTreeNode
+  fullName.vb: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.New
+  nameWithType: OrderedTreeNode.OrderedTreeNode
+  nameWithType.vb: OrderedTreeNode.New
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  name: Accept(IOrderedTreeVisitor)
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Accept_TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_
+  commentId: M:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  nameWithType: OrderedTreeNode.Accept(IOrderedTreeVisitor)
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Accept*
+  name: Accept
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Accept_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Accept
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Accept
+  nameWithType: OrderedTreeNode.Accept
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name: AddChild(IOrderedTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_AddChild_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  nameWithType: OrderedTreeNode.AddChild(IOrderedTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.AddChild*
+  name: AddChild
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_AddChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.AddChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.AddChild
+  nameWithType: OrderedTreeNode.AddChild
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Children
+  name: Children
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Children
+  commentId: P:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Children
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Children
+  nameWithType: OrderedTreeNode.Children
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Children*
+  name: Children
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Children_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Children
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Children
+  nameWithType: OrderedTreeNode.Children
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Parent
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Parent
+  nameWithType: OrderedTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Parent*
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Parent_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Parent
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Parent
+  nameWithType: OrderedTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.ToString
+  name: ToString()
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_ToString
+  commentId: M:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.ToString
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.ToString()
+  nameWithType: OrderedTreeNode.ToString()
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.ToString*
+  name: ToString
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_ToString_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.ToString
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.ToString
+  nameWithType: OrderedTreeNode.ToString
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Value
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Value
+  nameWithType: OrderedTreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Value*
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_OrderedTreeNode_Value_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Value
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.Value
+  nameWithType: OrderedTreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.PrintVisitor
+  name: PrintVisitor
+  href: api/TreeCompressionPipeline.TreeStructure.PrintVisitor.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.PrintVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.PrintVisitor
+  nameWithType: PrintVisitor
+- uid: TreeCompressionPipeline.TreeStructure.PrintVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name: Visit(IOrderedTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.PrintVisitor.html#TreeCompressionPipeline_TreeStructure_PrintVisitor_Visit_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.PrintVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.PrintVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  nameWithType: PrintVisitor.Visit(IOrderedTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.PrintVisitor.Visit*
+  name: Visit
+  href: api/TreeCompressionPipeline.TreeStructure.PrintVisitor.html#TreeCompressionPipeline_TreeStructure_PrintVisitor_Visit_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.PrintVisitor.Visit
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.PrintVisitor.Visit
+  nameWithType: PrintVisitor.Visit
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+  name: SyntacticTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+  nameWithType: SyntacticTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.#ctor(System.String)
+  name: SyntacticTreeNode(string)
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode__ctor_System_String_
+  commentId: M:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.#ctor(System.String)
+  name.vb: New(String)
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.SyntacticTreeNode(string)
+  fullName.vb: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.New(String)
+  nameWithType: SyntacticTreeNode.SyntacticTreeNode(string)
+  nameWithType.vb: SyntacticTreeNode.New(String)
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.#ctor*
+  name: SyntacticTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode__ctor_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.SyntacticTreeNode
+  fullName.vb: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.New
+  nameWithType: SyntacticTreeNode.SyntacticTreeNode
+  nameWithType.vb: SyntacticTreeNode.New
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  name: Accept(ISyntacticTreeVisitor)
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_Accept_TreeCompressionPipeline_TreeStructure_ISyntacticTreeVisitor_
+  commentId: M:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  nameWithType: SyntacticTreeNode.Accept(ISyntacticTreeVisitor)
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Accept*
+  name: Accept
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_Accept_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Accept
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Accept
+  nameWithType: SyntacticTreeNode.Accept
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: AddLeftChild(ISyntacticTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_AddLeftChild_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: SyntacticTreeNode.AddLeftChild(ISyntacticTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddLeftChild*
+  name: AddLeftChild
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_AddLeftChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddLeftChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddLeftChild
+  nameWithType: SyntacticTreeNode.AddLeftChild
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name: AddRightChild(ISyntacticTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_AddRightChild_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  nameWithType: SyntacticTreeNode.AddRightChild(ISyntacticTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddRightChild*
+  name: AddRightChild
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_AddRightChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddRightChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.AddRightChild
+  nameWithType: SyntacticTreeNode.AddRightChild
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.LeftChildren
+  name: LeftChildren
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_LeftChildren
+  commentId: P:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.LeftChildren
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.LeftChildren
+  nameWithType: SyntacticTreeNode.LeftChildren
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.LeftChildren*
+  name: LeftChildren
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_LeftChildren_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.LeftChildren
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.LeftChildren
+  nameWithType: SyntacticTreeNode.LeftChildren
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Parent
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Parent
+  nameWithType: SyntacticTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Parent*
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_Parent_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Parent
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Parent
+  nameWithType: SyntacticTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.RightChildren
+  name: RightChildren
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_RightChildren
+  commentId: P:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.RightChildren
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.RightChildren
+  nameWithType: SyntacticTreeNode.RightChildren
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.RightChildren*
+  name: RightChildren
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_RightChildren_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.RightChildren
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.RightChildren
+  nameWithType: SyntacticTreeNode.RightChildren
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.ToString
+  name: ToString()
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_ToString
+  commentId: M:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.ToString
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.ToString()
+  nameWithType: SyntacticTreeNode.ToString()
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.ToString*
+  name: ToString
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_ToString_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.ToString
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.ToString
+  nameWithType: SyntacticTreeNode.ToString
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Value
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Value
+  nameWithType: SyntacticTreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Value*
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_SyntacticTreeNode_Value_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Value
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.Value
+  nameWithType: SyntacticTreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor
+  name: ToStringVisitor
+  href: api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.ToStringVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.ToStringVisitor
+  nameWithType: ToStringVisitor
+- uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor.ToString
+  name: ToString()
+  href: api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.html#TreeCompressionPipeline_TreeStructure_ToStringVisitor_ToString
+  commentId: M:TreeCompressionPipeline.TreeStructure.ToStringVisitor.ToString
+  fullName: TreeCompressionPipeline.TreeStructure.ToStringVisitor.ToString()
+  nameWithType: ToStringVisitor.ToString()
+- uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor.ToString*
+  name: ToString
+  href: api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.html#TreeCompressionPipeline_TreeStructure_ToStringVisitor_ToString_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ToStringVisitor.ToString
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ToStringVisitor.ToString
+  nameWithType: ToStringVisitor.ToString
+- uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name: Visit(IOrderedTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.html#TreeCompressionPipeline_TreeStructure_ToStringVisitor_Visit_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.ToStringVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ToStringVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  nameWithType: ToStringVisitor.Visit(IOrderedTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor.Visit*
+  name: Visit
+  href: api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.html#TreeCompressionPipeline_TreeStructure_ToStringVisitor_Visit_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ToStringVisitor.Visit
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.ToStringVisitor.Visit
+  nameWithType: ToStringVisitor.Visit
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode
+  name: XmlTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html
+  commentId: T:TreeCompressionPipeline.TreeStructure.XmlTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode
+  nameWithType: XmlTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.#ctor(System.String)
+  name: XmlTreeNode(string)
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode__ctor_System_String_
+  commentId: M:TreeCompressionPipeline.TreeStructure.XmlTreeNode.#ctor(System.String)
+  name.vb: New(String)
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.XmlTreeNode(string)
+  fullName.vb: TreeCompressionPipeline.TreeStructure.XmlTreeNode.New(String)
+  nameWithType: XmlTreeNode.XmlTreeNode(string)
+  nameWithType.vb: XmlTreeNode.New(String)
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.#ctor*
+  name: XmlTreeNode
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode__ctor_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.XmlTreeNode.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.XmlTreeNode
+  fullName.vb: TreeCompressionPipeline.TreeStructure.XmlTreeNode.New
+  nameWithType: XmlTreeNode.XmlTreeNode
+  nameWithType.vb: XmlTreeNode.New
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  name: Accept(IOrderedTreeVisitor)
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Accept_TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_
+  commentId: M:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  nameWithType: XmlTreeNode.Accept(IOrderedTreeVisitor)
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Accept*
+  name: Accept
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Accept_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Accept
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Accept
+  nameWithType: XmlTreeNode.Accept
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name: AddChild(IOrderedTreeNode)
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_AddChild_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  commentId: M:TreeCompressionPipeline.TreeStructure.XmlTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  nameWithType: XmlTreeNode.AddChild(IOrderedTreeNode)
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.AddChild*
+  name: AddChild
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_AddChild_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.XmlTreeNode.AddChild
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.AddChild
+  nameWithType: XmlTreeNode.AddChild
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Children
+  name: Children
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Children
+  commentId: P:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Children
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Children
+  nameWithType: XmlTreeNode.Children
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Children*
+  name: Children
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Children_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Children
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Children
+  nameWithType: XmlTreeNode.Children
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Parent
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Parent
+  nameWithType: XmlTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Parent*
+  name: Parent
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Parent_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Parent
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Parent
+  nameWithType: XmlTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Value
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Value
+  nameWithType: XmlTreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Value*
+  name: Value
+  href: api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html#TreeCompressionPipeline_TreeStructure_XmlTreeNode_Value_
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.XmlTreeNode.Value
+  isSpec: "True"
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode.Value
+  nameWithType: XmlTreeNode.Value
+- uid: TreeStructures
+  name: TreeStructures
+  href: api/TreeStructures.html
+  commentId: N:TreeStructures
+  fullName: TreeStructures
+  nameWithType: TreeStructures
+- uid: TreeStructures.Compressors
+  name: TreeStructures.Compressors
+  href: api/TreeStructures.Compressors.html
+  commentId: N:TreeStructures.Compressors
+  fullName: TreeStructures.Compressors
+  nameWithType: TreeStructures.Compressors
+- uid: TreeStructures.Compressors.DictionaryTreeCompressor`1
+  name: DictionaryTreeCompressor<T>
+  href: api/TreeStructures.Compressors.DictionaryTreeCompressor-1.html
+  commentId: T:TreeStructures.Compressors.DictionaryTreeCompressor`1
+  name.vb: DictionaryTreeCompressor(Of T)
+  fullName: TreeStructures.Compressors.DictionaryTreeCompressor<T>
+  fullName.vb: TreeStructures.Compressors.DictionaryTreeCompressor(Of T)
+  nameWithType: DictionaryTreeCompressor<T>
+  nameWithType.vb: DictionaryTreeCompressor(Of T)
+- uid: TreeStructures.Compressors.DictionaryTreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name: CompressTree(TreeNode<T>)
+  href: api/TreeStructures.Compressors.DictionaryTreeCompressor-1.html#TreeStructures_Compressors_DictionaryTreeCompressor_1_CompressTree_TreeStructures_TreeNode__0__
+  commentId: M:TreeStructures.Compressors.DictionaryTreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name.vb: CompressTree(TreeNode(Of T))
+  fullName: TreeStructures.Compressors.DictionaryTreeCompressor<T>.CompressTree(TreeStructures.TreeNode<T>)
+  fullName.vb: TreeStructures.Compressors.DictionaryTreeCompressor(Of T).CompressTree(TreeStructures.TreeNode(Of T))
+  nameWithType: DictionaryTreeCompressor<T>.CompressTree(TreeNode<T>)
+  nameWithType.vb: DictionaryTreeCompressor(Of T).CompressTree(TreeNode(Of T))
+- uid: TreeStructures.Compressors.DictionaryTreeCompressor`1.CompressTree*
+  name: CompressTree
+  href: api/TreeStructures.Compressors.DictionaryTreeCompressor-1.html#TreeStructures_Compressors_DictionaryTreeCompressor_1_CompressTree_
+  commentId: Overload:TreeStructures.Compressors.DictionaryTreeCompressor`1.CompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.DictionaryTreeCompressor<T>.CompressTree
+  fullName.vb: TreeStructures.Compressors.DictionaryTreeCompressor(Of T).CompressTree
+  nameWithType: DictionaryTreeCompressor<T>.CompressTree
+  nameWithType.vb: DictionaryTreeCompressor(Of T).CompressTree
+- uid: TreeStructures.Compressors.DictionaryTreeCompressor`1.DecompressTree(System.String)
+  name: DecompressTree(string)
+  href: api/TreeStructures.Compressors.DictionaryTreeCompressor-1.html#TreeStructures_Compressors_DictionaryTreeCompressor_1_DecompressTree_System_String_
+  commentId: M:TreeStructures.Compressors.DictionaryTreeCompressor`1.DecompressTree(System.String)
+  name.vb: DecompressTree(String)
+  fullName: TreeStructures.Compressors.DictionaryTreeCompressor<T>.DecompressTree(string)
+  fullName.vb: TreeStructures.Compressors.DictionaryTreeCompressor(Of T).DecompressTree(String)
+  nameWithType: DictionaryTreeCompressor<T>.DecompressTree(string)
+  nameWithType.vb: DictionaryTreeCompressor(Of T).DecompressTree(String)
+- uid: TreeStructures.Compressors.DictionaryTreeCompressor`1.DecompressTree*
+  name: DecompressTree
+  href: api/TreeStructures.Compressors.DictionaryTreeCompressor-1.html#TreeStructures_Compressors_DictionaryTreeCompressor_1_DecompressTree_
+  commentId: Overload:TreeStructures.Compressors.DictionaryTreeCompressor`1.DecompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.DictionaryTreeCompressor<T>.DecompressTree
+  fullName.vb: TreeStructures.Compressors.DictionaryTreeCompressor(Of T).DecompressTree
+  nameWithType: DictionaryTreeCompressor<T>.DecompressTree
+  nameWithType.vb: DictionaryTreeCompressor(Of T).DecompressTree
+- uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1
+  name: FrequentSubtreeCompressor<T>
+  href: api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.html
+  commentId: T:TreeStructures.Compressors.FrequentSubtreeCompressor`1
+  name.vb: FrequentSubtreeCompressor(Of T)
+  fullName: TreeStructures.Compressors.FrequentSubtreeCompressor<T>
+  fullName.vb: TreeStructures.Compressors.FrequentSubtreeCompressor(Of T)
+  nameWithType: FrequentSubtreeCompressor<T>
+  nameWithType.vb: FrequentSubtreeCompressor(Of T)
+- uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name: CompressTree(TreeNode<T>)
+  href: api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.html#TreeStructures_Compressors_FrequentSubtreeCompressor_1_CompressTree_TreeStructures_TreeNode__0__
+  commentId: M:TreeStructures.Compressors.FrequentSubtreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name.vb: CompressTree(TreeNode(Of T))
+  fullName: TreeStructures.Compressors.FrequentSubtreeCompressor<T>.CompressTree(TreeStructures.TreeNode<T>)
+  fullName.vb: TreeStructures.Compressors.FrequentSubtreeCompressor(Of T).CompressTree(TreeStructures.TreeNode(Of T))
+  nameWithType: FrequentSubtreeCompressor<T>.CompressTree(TreeNode<T>)
+  nameWithType.vb: FrequentSubtreeCompressor(Of T).CompressTree(TreeNode(Of T))
+- uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1.CompressTree*
+  name: CompressTree
+  href: api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.html#TreeStructures_Compressors_FrequentSubtreeCompressor_1_CompressTree_
+  commentId: Overload:TreeStructures.Compressors.FrequentSubtreeCompressor`1.CompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.FrequentSubtreeCompressor<T>.CompressTree
+  fullName.vb: TreeStructures.Compressors.FrequentSubtreeCompressor(Of T).CompressTree
+  nameWithType: FrequentSubtreeCompressor<T>.CompressTree
+  nameWithType.vb: FrequentSubtreeCompressor(Of T).CompressTree
+- uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1.DecompressTree(System.String)
+  name: DecompressTree(string)
+  href: api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.html#TreeStructures_Compressors_FrequentSubtreeCompressor_1_DecompressTree_System_String_
+  commentId: M:TreeStructures.Compressors.FrequentSubtreeCompressor`1.DecompressTree(System.String)
+  name.vb: DecompressTree(String)
+  fullName: TreeStructures.Compressors.FrequentSubtreeCompressor<T>.DecompressTree(string)
+  fullName.vb: TreeStructures.Compressors.FrequentSubtreeCompressor(Of T).DecompressTree(String)
+  nameWithType: FrequentSubtreeCompressor<T>.DecompressTree(string)
+  nameWithType.vb: FrequentSubtreeCompressor(Of T).DecompressTree(String)
+- uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1.DecompressTree*
+  name: DecompressTree
+  href: api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.html#TreeStructures_Compressors_FrequentSubtreeCompressor_1_DecompressTree_
+  commentId: Overload:TreeStructures.Compressors.FrequentSubtreeCompressor`1.DecompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.FrequentSubtreeCompressor<T>.DecompressTree
+  fullName.vb: TreeStructures.Compressors.FrequentSubtreeCompressor(Of T).DecompressTree
+  nameWithType: FrequentSubtreeCompressor<T>.DecompressTree
+  nameWithType.vb: FrequentSubtreeCompressor(Of T).DecompressTree
+- uid: TreeStructures.Compressors.GrammarCompressor`1
+  name: GrammarCompressor<T>
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html
+  commentId: T:TreeStructures.Compressors.GrammarCompressor`1
+  name.vb: GrammarCompressor(Of T)
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T)
+  nameWithType: GrammarCompressor<T>
+  nameWithType.vb: GrammarCompressor(Of T)
+- uid: TreeStructures.Compressors.GrammarCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name: CompressTree(TreeNode<T>)
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_CompressTree_TreeStructures_TreeNode__0__
+  commentId: M:TreeStructures.Compressors.GrammarCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name.vb: CompressTree(TreeNode(Of T))
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.CompressTree(TreeStructures.TreeNode<T>)
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).CompressTree(TreeStructures.TreeNode(Of T))
+  nameWithType: GrammarCompressor<T>.CompressTree(TreeNode<T>)
+  nameWithType.vb: GrammarCompressor(Of T).CompressTree(TreeNode(Of T))
+- uid: TreeStructures.Compressors.GrammarCompressor`1.CompressTree*
+  name: CompressTree
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_CompressTree_
+  commentId: Overload:TreeStructures.Compressors.GrammarCompressor`1.CompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.CompressTree
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).CompressTree
+  nameWithType: GrammarCompressor<T>.CompressTree
+  nameWithType.vb: GrammarCompressor(Of T).CompressTree
+- uid: TreeStructures.Compressors.GrammarCompressor`1.DecompressTree(System.String)
+  name: DecompressTree(string)
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_DecompressTree_System_String_
+  commentId: M:TreeStructures.Compressors.GrammarCompressor`1.DecompressTree(System.String)
+  name.vb: DecompressTree(String)
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.DecompressTree(string)
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).DecompressTree(String)
+  nameWithType: GrammarCompressor<T>.DecompressTree(string)
+  nameWithType.vb: GrammarCompressor(Of T).DecompressTree(String)
+- uid: TreeStructures.Compressors.GrammarCompressor`1.DecompressTree*
+  name: DecompressTree
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_DecompressTree_
+  commentId: Overload:TreeStructures.Compressors.GrammarCompressor`1.DecompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.DecompressTree
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).DecompressTree
+  nameWithType: GrammarCompressor<T>.DecompressTree
+  nameWithType.vb: GrammarCompressor(Of T).DecompressTree
+- uid: TreeStructures.Compressors.GrammarCompressor`1.PrintGrammar
+  name: PrintGrammar()
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_PrintGrammar
+  commentId: M:TreeStructures.Compressors.GrammarCompressor`1.PrintGrammar
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.PrintGrammar()
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).PrintGrammar()
+  nameWithType: GrammarCompressor<T>.PrintGrammar()
+  nameWithType.vb: GrammarCompressor(Of T).PrintGrammar()
+- uid: TreeStructures.Compressors.GrammarCompressor`1.PrintGrammar*
+  name: PrintGrammar
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_PrintGrammar_
+  commentId: Overload:TreeStructures.Compressors.GrammarCompressor`1.PrintGrammar
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.PrintGrammar
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).PrintGrammar
+  nameWithType: GrammarCompressor<T>.PrintGrammar
+  nameWithType.vb: GrammarCompressor(Of T).PrintGrammar
+- uid: TreeStructures.Compressors.GrammarCompressor`1.ToBinaryFile(System.String)
+  name: ToBinaryFile(string)
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_ToBinaryFile_System_String_
+  commentId: M:TreeStructures.Compressors.GrammarCompressor`1.ToBinaryFile(System.String)
+  name.vb: ToBinaryFile(String)
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.ToBinaryFile(string)
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).ToBinaryFile(String)
+  nameWithType: GrammarCompressor<T>.ToBinaryFile(string)
+  nameWithType.vb: GrammarCompressor(Of T).ToBinaryFile(String)
+- uid: TreeStructures.Compressors.GrammarCompressor`1.ToBinaryFile*
+  name: ToBinaryFile
+  href: api/TreeStructures.Compressors.GrammarCompressor-1.html#TreeStructures_Compressors_GrammarCompressor_1_ToBinaryFile_
+  commentId: Overload:TreeStructures.Compressors.GrammarCompressor`1.ToBinaryFile
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>.ToBinaryFile
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T).ToBinaryFile
+  nameWithType: GrammarCompressor<T>.ToBinaryFile
+  nameWithType.vb: GrammarCompressor(Of T).ToBinaryFile
+- uid: TreeStructures.Compressors.ITreeCompressor`1
+  name: ITreeCompressor<T>
+  href: api/TreeStructures.Compressors.ITreeCompressor-1.html
+  commentId: T:TreeStructures.Compressors.ITreeCompressor`1
+  name.vb: ITreeCompressor(Of T)
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T)
+  nameWithType: ITreeCompressor<T>
+  nameWithType.vb: ITreeCompressor(Of T)
+- uid: TreeStructures.Compressors.ITreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name: CompressTree(TreeNode<T>)
+  href: api/TreeStructures.Compressors.ITreeCompressor-1.html#TreeStructures_Compressors_ITreeCompressor_1_CompressTree_TreeStructures_TreeNode__0__
+  commentId: M:TreeStructures.Compressors.ITreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name.vb: CompressTree(TreeNode(Of T))
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.CompressTree(TreeStructures.TreeNode<T>)
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).CompressTree(TreeStructures.TreeNode(Of T))
+  nameWithType: ITreeCompressor<T>.CompressTree(TreeNode<T>)
+  nameWithType.vb: ITreeCompressor(Of T).CompressTree(TreeNode(Of T))
+- uid: TreeStructures.Compressors.ITreeCompressor`1.CompressTree*
+  name: CompressTree
+  href: api/TreeStructures.Compressors.ITreeCompressor-1.html#TreeStructures_Compressors_ITreeCompressor_1_CompressTree_
+  commentId: Overload:TreeStructures.Compressors.ITreeCompressor`1.CompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.CompressTree
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).CompressTree
+  nameWithType: ITreeCompressor<T>.CompressTree
+  nameWithType.vb: ITreeCompressor(Of T).CompressTree
+- uid: TreeStructures.Compressors.ITreeCompressor`1.DecompressTree(System.String)
+  name: DecompressTree(string)
+  href: api/TreeStructures.Compressors.ITreeCompressor-1.html#TreeStructures_Compressors_ITreeCompressor_1_DecompressTree_System_String_
+  commentId: M:TreeStructures.Compressors.ITreeCompressor`1.DecompressTree(System.String)
+  name.vb: DecompressTree(String)
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.DecompressTree(string)
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).DecompressTree(String)
+  nameWithType: ITreeCompressor<T>.DecompressTree(string)
+  nameWithType.vb: ITreeCompressor(Of T).DecompressTree(String)
+- uid: TreeStructures.Compressors.ITreeCompressor`1.DecompressTree*
+  name: DecompressTree
+  href: api/TreeStructures.Compressors.ITreeCompressor-1.html#TreeStructures_Compressors_ITreeCompressor_1_DecompressTree_
+  commentId: Overload:TreeStructures.Compressors.ITreeCompressor`1.DecompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.DecompressTree
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).DecompressTree
+  nameWithType: ITreeCompressor<T>.DecompressTree
+  nameWithType.vb: ITreeCompressor(Of T).DecompressTree
+- uid: TreeStructures.Compressors.RePairTreeCompressor`1
+  name: RePairTreeCompressor<T>
+  href: api/TreeStructures.Compressors.RePairTreeCompressor-1.html
+  commentId: T:TreeStructures.Compressors.RePairTreeCompressor`1
+  name.vb: RePairTreeCompressor(Of T)
+  fullName: TreeStructures.Compressors.RePairTreeCompressor<T>
+  fullName.vb: TreeStructures.Compressors.RePairTreeCompressor(Of T)
+  nameWithType: RePairTreeCompressor<T>
+  nameWithType.vb: RePairTreeCompressor(Of T)
+- uid: TreeStructures.Compressors.RePairTreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name: CompressTree(TreeNode<T>)
+  href: api/TreeStructures.Compressors.RePairTreeCompressor-1.html#TreeStructures_Compressors_RePairTreeCompressor_1_CompressTree_TreeStructures_TreeNode__0__
+  commentId: M:TreeStructures.Compressors.RePairTreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  name.vb: CompressTree(TreeNode(Of T))
+  fullName: TreeStructures.Compressors.RePairTreeCompressor<T>.CompressTree(TreeStructures.TreeNode<T>)
+  fullName.vb: TreeStructures.Compressors.RePairTreeCompressor(Of T).CompressTree(TreeStructures.TreeNode(Of T))
+  nameWithType: RePairTreeCompressor<T>.CompressTree(TreeNode<T>)
+  nameWithType.vb: RePairTreeCompressor(Of T).CompressTree(TreeNode(Of T))
+- uid: TreeStructures.Compressors.RePairTreeCompressor`1.CompressTree*
+  name: CompressTree
+  href: api/TreeStructures.Compressors.RePairTreeCompressor-1.html#TreeStructures_Compressors_RePairTreeCompressor_1_CompressTree_
+  commentId: Overload:TreeStructures.Compressors.RePairTreeCompressor`1.CompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.RePairTreeCompressor<T>.CompressTree
+  fullName.vb: TreeStructures.Compressors.RePairTreeCompressor(Of T).CompressTree
+  nameWithType: RePairTreeCompressor<T>.CompressTree
+  nameWithType.vb: RePairTreeCompressor(Of T).CompressTree
+- uid: TreeStructures.Compressors.RePairTreeCompressor`1.DecompressTree(System.String)
+  name: DecompressTree(string)
+  href: api/TreeStructures.Compressors.RePairTreeCompressor-1.html#TreeStructures_Compressors_RePairTreeCompressor_1_DecompressTree_System_String_
+  commentId: M:TreeStructures.Compressors.RePairTreeCompressor`1.DecompressTree(System.String)
+  name.vb: DecompressTree(String)
+  fullName: TreeStructures.Compressors.RePairTreeCompressor<T>.DecompressTree(string)
+  fullName.vb: TreeStructures.Compressors.RePairTreeCompressor(Of T).DecompressTree(String)
+  nameWithType: RePairTreeCompressor<T>.DecompressTree(string)
+  nameWithType.vb: RePairTreeCompressor(Of T).DecompressTree(String)
+- uid: TreeStructures.Compressors.RePairTreeCompressor`1.DecompressTree*
+  name: DecompressTree
+  href: api/TreeStructures.Compressors.RePairTreeCompressor-1.html#TreeStructures_Compressors_RePairTreeCompressor_1_DecompressTree_
+  commentId: Overload:TreeStructures.Compressors.RePairTreeCompressor`1.DecompressTree
+  isSpec: "True"
+  fullName: TreeStructures.Compressors.RePairTreeCompressor<T>.DecompressTree
+  fullName.vb: TreeStructures.Compressors.RePairTreeCompressor(Of T).DecompressTree
+  nameWithType: RePairTreeCompressor<T>.DecompressTree
+  nameWithType.vb: RePairTreeCompressor(Of T).DecompressTree
+- uid: TreeStructures.Direction
+  name: Direction
+  href: api/TreeStructures.Direction.html
+  commentId: T:TreeStructures.Direction
+  fullName: TreeStructures.Direction
+  nameWithType: Direction
+- uid: TreeStructures.Direction.Left
+  name: Left
+  href: api/TreeStructures.Direction.html#TreeStructures_Direction_Left
+  commentId: F:TreeStructures.Direction.Left
+  fullName: TreeStructures.Direction.Left
+  nameWithType: Direction.Left
+- uid: TreeStructures.Direction.Right
+  name: Right
+  href: api/TreeStructures.Direction.html#TreeStructures_Direction_Right
+  commentId: F:TreeStructures.Direction.Right
+  fullName: TreeStructures.Direction.Right
+  nameWithType: Direction.Right
+- uid: TreeStructures.TreeBuilder
+  name: TreeBuilder
+  href: api/TreeStructures.TreeBuilder.html
+  commentId: T:TreeStructures.TreeBuilder
+  fullName: TreeStructures.TreeBuilder
+  nameWithType: TreeBuilder
+- uid: TreeStructures.TreeNode`1
+  name: TreeNode<T>
+  href: api/TreeStructures.TreeNode-1.html
+  commentId: T:TreeStructures.TreeNode`1
+  name.vb: TreeNode(Of T)
+  fullName: TreeStructures.TreeNode<T>
+  fullName.vb: TreeStructures.TreeNode(Of T)
+  nameWithType: TreeNode<T>
+  nameWithType.vb: TreeNode(Of T)
+- uid: TreeStructures.TreeNode`1.#ctor(`0)
+  name: TreeNode(T)
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1__ctor__0_
+  commentId: M:TreeStructures.TreeNode`1.#ctor(`0)
+  name.vb: New(T)
+  fullName: TreeStructures.TreeNode<T>.TreeNode(T)
+  fullName.vb: TreeStructures.TreeNode(Of T).New(T)
+  nameWithType: TreeNode<T>.TreeNode(T)
+  nameWithType.vb: TreeNode(Of T).New(T)
+- uid: TreeStructures.TreeNode`1.#ctor*
+  name: TreeNode
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1__ctor_
+  commentId: Overload:TreeStructures.TreeNode`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeStructures.TreeNode<T>.TreeNode
+  fullName.vb: TreeStructures.TreeNode(Of T).New
+  nameWithType: TreeNode<T>.TreeNode
+  nameWithType.vb: TreeNode(Of T).New
+- uid: TreeStructures.TreeNode`1.Add(TreeStructures.TreeNode{`0},TreeStructures.Direction)
+  name: Add(TreeNode<T>, Direction)
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Add_TreeStructures_TreeNode__0__TreeStructures_Direction_
+  commentId: M:TreeStructures.TreeNode`1.Add(TreeStructures.TreeNode{`0},TreeStructures.Direction)
+  name.vb: Add(TreeNode(Of T), Direction)
+  fullName: TreeStructures.TreeNode<T>.Add(TreeStructures.TreeNode<T>, TreeStructures.Direction)
+  fullName.vb: TreeStructures.TreeNode(Of T).Add(TreeStructures.TreeNode(Of T), TreeStructures.Direction)
+  nameWithType: TreeNode<T>.Add(TreeNode<T>, Direction)
+  nameWithType.vb: TreeNode(Of T).Add(TreeNode(Of T), Direction)
+- uid: TreeStructures.TreeNode`1.Add*
+  name: Add
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Add_
+  commentId: Overload:TreeStructures.TreeNode`1.Add
+  isSpec: "True"
+  fullName: TreeStructures.TreeNode<T>.Add
+  fullName.vb: TreeStructures.TreeNode(Of T).Add
+  nameWithType: TreeNode<T>.Add
+  nameWithType.vb: TreeNode(Of T).Add
+- uid: TreeStructures.TreeNode`1.Left
+  name: Left
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Left
+  commentId: P:TreeStructures.TreeNode`1.Left
+  fullName: TreeStructures.TreeNode<T>.Left
+  fullName.vb: TreeStructures.TreeNode(Of T).Left
+  nameWithType: TreeNode<T>.Left
+  nameWithType.vb: TreeNode(Of T).Left
+- uid: TreeStructures.TreeNode`1.Left*
+  name: Left
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Left_
+  commentId: Overload:TreeStructures.TreeNode`1.Left
+  isSpec: "True"
+  fullName: TreeStructures.TreeNode<T>.Left
+  fullName.vb: TreeStructures.TreeNode(Of T).Left
+  nameWithType: TreeNode<T>.Left
+  nameWithType.vb: TreeNode(Of T).Left
+- uid: TreeStructures.TreeNode`1.Right
+  name: Right
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Right
+  commentId: P:TreeStructures.TreeNode`1.Right
+  fullName: TreeStructures.TreeNode<T>.Right
+  fullName.vb: TreeStructures.TreeNode(Of T).Right
+  nameWithType: TreeNode<T>.Right
+  nameWithType.vb: TreeNode(Of T).Right
+- uid: TreeStructures.TreeNode`1.Right*
+  name: Right
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Right_
+  commentId: Overload:TreeStructures.TreeNode`1.Right
+  isSpec: "True"
+  fullName: TreeStructures.TreeNode<T>.Right
+  fullName.vb: TreeStructures.TreeNode(Of T).Right
+  nameWithType: TreeNode<T>.Right
+  nameWithType.vb: TreeNode(Of T).Right
+- uid: TreeStructures.TreeNode`1.Value
+  name: Value
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Value
+  commentId: P:TreeStructures.TreeNode`1.Value
+  fullName: TreeStructures.TreeNode<T>.Value
+  fullName.vb: TreeStructures.TreeNode(Of T).Value
+  nameWithType: TreeNode<T>.Value
+  nameWithType.vb: TreeNode(Of T).Value
+- uid: TreeStructures.TreeNode`1.Value*
+  name: Value
+  href: api/TreeStructures.TreeNode-1.html#TreeStructures_TreeNode_1_Value_
+  commentId: Overload:TreeStructures.TreeNode`1.Value
+  isSpec: "True"
+  fullName: TreeStructures.TreeNode<T>.Value
+  fullName.vb: TreeStructures.TreeNode(Of T).Value
+  nameWithType: TreeNode<T>.Value
+  nameWithType.vb: TreeNode(Of T).Value
+- uid: TreeStructures.Tree`1
+  name: Tree<T>
+  href: api/TreeStructures.Tree-1.html
+  commentId: T:TreeStructures.Tree`1
+  name.vb: Tree(Of T)
+  fullName: TreeStructures.Tree<T>
+  fullName.vb: TreeStructures.Tree(Of T)
+  nameWithType: Tree<T>
+  nameWithType.vb: Tree(Of T)
+- uid: TreeStructures.Tree`1.#ctor(`0)
+  name: Tree(T)
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1__ctor__0_
+  commentId: M:TreeStructures.Tree`1.#ctor(`0)
+  name.vb: New(T)
+  fullName: TreeStructures.Tree<T>.Tree(T)
+  fullName.vb: TreeStructures.Tree(Of T).New(T)
+  nameWithType: Tree<T>.Tree(T)
+  nameWithType.vb: Tree(Of T).New(T)
+- uid: TreeStructures.Tree`1.#ctor*
+  name: Tree
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1__ctor_
+  commentId: Overload:TreeStructures.Tree`1.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: TreeStructures.Tree<T>.Tree
+  fullName.vb: TreeStructures.Tree(Of T).New
+  nameWithType: Tree<T>.Tree
+  nameWithType.vb: Tree(Of T).New
+- uid: TreeStructures.Tree`1.Find(`0)
+  name: Find(T)
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1_Find__0_
+  commentId: M:TreeStructures.Tree`1.Find(`0)
+  fullName: TreeStructures.Tree<T>.Find(T)
+  fullName.vb: TreeStructures.Tree(Of T).Find(T)
+  nameWithType: Tree<T>.Find(T)
+  nameWithType.vb: Tree(Of T).Find(T)
+- uid: TreeStructures.Tree`1.Find*
+  name: Find
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1_Find_
+  commentId: Overload:TreeStructures.Tree`1.Find
+  isSpec: "True"
+  fullName: TreeStructures.Tree<T>.Find
+  fullName.vb: TreeStructures.Tree(Of T).Find
+  nameWithType: Tree<T>.Find
+  nameWithType.vb: Tree(Of T).Find
+- uid: TreeStructures.Tree`1.PrintTree
+  name: PrintTree()
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1_PrintTree
+  commentId: M:TreeStructures.Tree`1.PrintTree
+  fullName: TreeStructures.Tree<T>.PrintTree()
+  fullName.vb: TreeStructures.Tree(Of T).PrintTree()
+  nameWithType: Tree<T>.PrintTree()
+  nameWithType.vb: Tree(Of T).PrintTree()
+- uid: TreeStructures.Tree`1.PrintTree*
+  name: PrintTree
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1_PrintTree_
+  commentId: Overload:TreeStructures.Tree`1.PrintTree
+  isSpec: "True"
+  fullName: TreeStructures.Tree<T>.PrintTree
+  fullName.vb: TreeStructures.Tree(Of T).PrintTree
+  nameWithType: Tree<T>.PrintTree
+  nameWithType.vb: Tree(Of T).PrintTree
+- uid: TreeStructures.Tree`1.Root
+  name: Root
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1_Root
+  commentId: P:TreeStructures.Tree`1.Root
+  fullName: TreeStructures.Tree<T>.Root
+  fullName.vb: TreeStructures.Tree(Of T).Root
+  nameWithType: Tree<T>.Root
+  nameWithType.vb: Tree(Of T).Root
+- uid: TreeStructures.Tree`1.Root*
+  name: Root
+  href: api/TreeStructures.Tree-1.html#TreeStructures_Tree_1_Root_
+  commentId: Overload:TreeStructures.Tree`1.Root
+  isSpec: "True"
+  fullName: TreeStructures.Tree<T>.Root
+  fullName.vb: TreeStructures.Tree(Of T).Root
+  nameWithType: Tree<T>.Root
+  nameWithType.vb: Tree(Of T).Root

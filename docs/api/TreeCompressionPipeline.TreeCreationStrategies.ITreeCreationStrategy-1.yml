@@ -1,0 +1,134 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  commentId: T:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  id: ITreeCreationStrategy`1
+  parent: TreeCompressionPipeline.TreeCreationStrategies
+  children:
+  - TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITreeCreationStrategy<T>
+  nameWithType: ITreeCreationStrategy<T>
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeCreationStrategies/ITreeCreationStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ITreeCreationStrategy
+    path: ../src/TreeCompressionPipelineLib/TreeCreationStrategies/ITreeCreationStrategy.cs
+    startLine: 10
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeCreationStrategies
+  summary: Strategie pro vytvoření stromové struktury z textu.
+  example: []
+  syntax:
+    content: 'public interface ITreeCreationStrategy<out T> where T : ITreeNode'
+    typeParameters:
+    - id: T
+      description: Typ stromové struktury, která bude vytvořena.
+    content.vb: Public Interface ITreeCreationStrategy(Of Out T As ITreeNode)
+  nameWithType.vb: ITreeCreationStrategy(Of T)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T)
+  name.vb: ITreeCreationStrategy(Of T)
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  commentId: M:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  id: CreateTree(System.String)
+  parent: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  langs:
+  - csharp
+  - vb
+  name: CreateTree(string)
+  nameWithType: ITreeCreationStrategy<T>.CreateTree(string)
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>.CreateTree(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeCreationStrategies/ITreeCreationStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: CreateTree
+    path: ../src/TreeCompressionPipelineLib/TreeCreationStrategies/ITreeCreationStrategy.cs
+    startLine: 21
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeCreationStrategies
+  summary: Metoda pro vytvoření stromové struktury z textu.
+  example: []
+  syntax:
+    content: T CreateTree(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: Text, který by se měl převést do stromové struktury.
+    return:
+      type: '{T}'
+      description: Vrací vytvořenou stromovou strukturu daného typu.
+    content.vb: Function CreateTree(text As String) As T
+  overload: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree*
+  nameWithType.vb: ITreeCreationStrategy(Of T).CreateTree(String)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T).CreateTree(String)
+  name.vb: CreateTree(String)
+references:
+- uid: TreeCompressionPipeline.TreeCreationStrategies
+  commentId: N:TreeCompressionPipeline.TreeCreationStrategies
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeCreationStrategies
+  nameWithType: TreeCompressionPipeline.TreeCreationStrategies
+  fullName: TreeCompressionPipeline.TreeCreationStrategies
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeCreationStrategies
+    name: TreeCreationStrategies
+    href: TreeCompressionPipeline.TreeCreationStrategies.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeCreationStrategies
+    name: TreeCreationStrategies
+    href: TreeCompressionPipeline.TreeCreationStrategies.html
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree*
+  commentId: Overload:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree
+  href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  name: CreateTree
+  nameWithType: ITreeCreationStrategy<T>.CreateTree
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>.CreateTree
+  nameWithType.vb: ITreeCreationStrategy(Of T).CreateTree
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T).CreateTree
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T

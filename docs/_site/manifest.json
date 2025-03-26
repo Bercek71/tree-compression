@@ -1,0 +1,1064 @@
+{
+  "source_base_path": "/Users/marekberan/Code/SP/tree-compression/docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Commands.EnglishMorphoditaDict.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Commands.EnglishMorphoditaDict.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Commands.EnglishMorphoditaDict",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Commands.EnglishMorphoditaTagger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Commands.EnglishMorphoditaTagger.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Commands.EnglishMorphoditaTagger",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Commands.FrameworkTest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Commands.FrameworkTest.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Commands.FrameworkTest",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Commands.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Commands",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.Argument.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.Argument.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework.Argument",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.ArgumentParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.ArgumentParser.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework.ArgumentParser",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.CommandRegistry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.CommandRegistry.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework.CommandRegistry",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.HelpHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.HelpHelper.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework.HelpHelper",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.ICommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.ICommand.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework.ICommand",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.RequireArgumentAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.RequireArgumentAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework.RequireArgumentAttribute",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Framework.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Framework.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Framework",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.Program.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.Program.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp.Program",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/ConsoleApp.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/ConsoleApp.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "ConsoleApp",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy",
+      "Summary": "<p sourcefile=\"api/TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.yml\" sourcestartlinenumber=\"1\">TreeRePair kompresní strategie pro kompresi a dekompresi stromové struktury.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.CompressionStrategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.CompressionStrategies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.CompressionStrategies",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.Extensions.XmlTagExtension.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.Extensions.XmlTagExtension.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.Extensions.XmlTagExtension",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.Extensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.Extensions",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.NaturalLanguageTreeCompressing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy",
+      "Summary": "<p sourcefile=\"api/TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.yml\" sourcestartlinenumber=\"1\">Využití UDPipe pro vytvoření stromové struktury.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.TreeCreationalStrategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.TreeCreationalStrategies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.TreeCreationalStrategies",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.XmlTreeCompressing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.XmlTreeCompressing.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms.XmlTreeCompressing",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionAlgorithms.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionAlgorithms.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionAlgorithms",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.CompressionStrategies.CompressionStrategy",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.yml\" sourcestartlinenumber=\"1\">Kompresní strategie pro kompresi a dekompresi stromové struktury.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.CompressionStrategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.CompressionStrategies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.CompressionStrategies",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.FilterBase-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.FilterBase-2.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.FilterBase<T, TO>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.FilterBase-2.yml\" sourcestartlinenumber=\"1\">Implementace filtru pro pipeline. Filtr je základní jednotka pro zpracování dat v rámci pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.FilterFactory-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.FilterFactory-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.FilterFactory<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.FilterFactory-1.yml\" sourcestartlinenumber=\"1\">Továrna pro vytvoření filtrů v rámci pipeline.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.Filters.CompressionFilter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.Filters.CompressionFilter-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.Filters.CompressionFilter<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.Filters.CompressionFilter-1.yml\" sourcestartlinenumber=\"1\">Filtr pro kompresi stromové struktury.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.Filters.DecompressionFilter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.Filters.DecompressionFilter-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.Filters.DecompressionFilter<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.Filters.DecompressionFilter-1.yml\" sourcestartlinenumber=\"1\">Filtr pro dekompresi stromové struktury.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.Filters.TextToTreeFilter<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.Filters.TextToTreeFilter-1.yml\" sourcestartlinenumber=\"1\">Filtr pro převod textu na stromovou strukturu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.Filters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.Filters.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.Filters",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.IFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.IFilter.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.IFilter",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.IFilter.yml\" sourcestartlinenumber=\"1\">Rozhraní pro vytvoření filtru v rámci pipeline.\nProjekt využívá architekturu Pipes and Filters.\nFiltr představuje jednotku zpracování dat.\nDědí z rozhraní IProcessSubject, které definuje metody pro přidání a odebrání observerů.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.IProcessObserver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.IProcessObserver.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.IProcessObserver",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.IProcessObserver.yml\" sourcestartlinenumber=\"1\">Definuje rozhraní pro observera, který sleduje průběh procesu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.IProcessSubject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.IProcessSubject.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.IProcessSubject",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.IProcessSubject.yml\" sourcestartlinenumber=\"1\">Rozhraní pro definici subjektu, díky kterému mohou observeři sledovat průběh procesu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.ITreeCompressor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.ITreeCompressor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.ITreeCompressor<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.ITreeCompressor-1.yml\" sourcestartlinenumber=\"1\">Rozhraní, které definuje metody pro kompresi a dekompresi stromu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.Pipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.Pipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.Pipeline",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.Pipeline.yml\" sourcestartlinenumber=\"1\">Pipeline pro zpracování dat v rámci Pipes and Filters architektury.\nPipeline je tvořena jednotlivými filtry, které zpracovávají data.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.ProcessMonitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.ProcessMonitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.ProcessMonitor",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.ProcessMonitor.yml\" sourcestartlinenumber=\"1\">Jednoduchá implementace observera pro sledování průběhu procesu. Slouží hlavně pro debugging a testování.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.yml\" sourcestartlinenumber=\"1\">Strategie pro vytvoření stromové struktury z textu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeCreationStrategies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeCreationStrategies.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeCreationStrategies",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.CompressedTree.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.CompressedTree.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.CompressedTree",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.TreeStructure.CompressedTree.yml\" sourcestartlinenumber=\"1\">Datová struktura pro uložení komprimované stromové struktury.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.IOrderedTreeNode",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.yml\" sourcestartlinenumber=\"1\">Rozhraní stromové struktury, která definuje základní metody pro klasický jakýsi uspořádaný strom.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.yml\" sourcestartlinenumber=\"1\">Visitor pro zpracování uzlu stromu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.yml\" sourcestartlinenumber=\"1\">Uzel syntaktického stromu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.ITreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.ITreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.ITreeNode",
+      "Summary": "<p sourcefile=\"api/TreeCompressionPipeline.TreeStructure.ITreeNode.yml\" sourcestartlinenumber=\"1\">Nejzákladnější rozhraní libovolného uzlu stromu.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.OrderedTreeNode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.PrintVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.PrintVisitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.PrintVisitor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.SyntacticTreeNode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.ToStringVisitor.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.ToStringVisitor",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.XmlTreeNode.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure.XmlTreeNode",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.TreeStructure.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.TreeStructure.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline.TreeStructure",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeCompressionPipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeCompressionPipeline.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeCompressionPipeline",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Compressors.DictionaryTreeCompressor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Compressors.DictionaryTreeCompressor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Compressors.DictionaryTreeCompressor<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Compressors.FrequentSubtreeCompressor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Compressors.FrequentSubtreeCompressor<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Compressors.GrammarCompressor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Compressors.GrammarCompressor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Compressors.GrammarCompressor<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Compressors.ITreeCompressor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Compressors.ITreeCompressor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Compressors.ITreeCompressor<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Compressors.RePairTreeCompressor-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Compressors.RePairTreeCompressor-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Compressors.RePairTreeCompressor<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Compressors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Compressors.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Compressors",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Direction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Direction.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Direction",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.Tree-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.Tree-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.Tree<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.TreeBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.TreeBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.TreeBuilder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.TreeNode-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.TreeNode-1.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures.TreeNode<T>",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TreeStructures.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TreeStructures.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "TreeStructures",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "architecture/architecture.md",
+      "output": {
+        ".html": {
+          "relative_path": "architecture/architecture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "architecture/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "architecture/toc.html"
+        },
+        ".json": {
+          "relative_path": "architecture/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "journal/2025-02-19.md",
+      "output": {
+        ".html": {
+          "relative_path": "journal/2025-02-19.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "journal/2025-02-20.md",
+      "output": {
+        ".html": {
+          "relative_path": "journal/2025-02-20.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "journal/2025-02-23.md",
+      "output": {
+        ".html": {
+          "relative_path": "journal/2025-02-23.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "journal/2025-03-10.md",
+      "output": {
+        ".html": {
+          "relative_path": "journal/2025-03-10.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "journal/journal.md",
+      "output": {
+        ".html": {
+          "relative_path": "journal/journal.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "journal/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "journal/toc.html"
+        },
+        ".json": {
+          "relative_path": "journal/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "requirements/requirements.md",
+      "output": {
+        ".html": {
+          "relative_path": "requirements/requirements.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "requirements/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "requirements/toc.html"
+        },
+        ".json": {
+          "relative_path": "requirements/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

@@ -1,0 +1,893 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing
+  commentId: T:TreeCompressionAlgorithms.XmlTreeCompressing
+  id: XmlTreeCompressing
+  parent: TreeCompressionAlgorithms
+  children:
+  - TreeCompressionAlgorithms.XmlTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode})
+  - TreeCompressionAlgorithms.XmlTreeCompressing.Compress(System.String)
+  - TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  - TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  - TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  - TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  langs:
+  - csharp
+  - vb
+  name: XmlTreeCompressing
+  nameWithType: XmlTreeCompressing
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing
+  type: Class
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: XmlTreeCompressing
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 7
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  syntax:
+    content: 'public class XmlTreeCompressing : ITreeCompressor<IOrderedTreeNode>'
+    content.vb: Public Class XmlTreeCompressing Implements ITreeCompressor(Of IOrderedTreeNode)
+  inheritance:
+  - System.Object
+  implements:
+  - TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode})
+  commentId: M:TreeCompressionAlgorithms.XmlTreeCompressing.#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode})
+  id: '#ctor(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode})'
+  parent: TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode>)
+  nameWithType: XmlTreeCompressing.XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode>)
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.XmlTreeCompressing(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>)
+  type: Constructor
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: .ctor
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 7
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  syntax:
+    content: public XmlTreeCompressing(ICompressionStrategy<IOrderedTreeNode> compressionStrategy)
+    parameters:
+    - id: compressionStrategy
+      type: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+    content.vb: Public Sub New(compressionStrategy As ICompressionStrategy(Of IOrderedTreeNode))
+  overload: TreeCompressionAlgorithms.XmlTreeCompressing.#ctor*
+  nameWithType.vb: XmlTreeCompressing.New(ICompressionStrategy(Of IOrderedTreeNode))
+  fullName.vb: TreeCompressionAlgorithms.XmlTreeCompressing.New(TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode))
+  name.vb: New(ICompressionStrategy(Of IOrderedTreeNode))
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  commentId: P:TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  id: CompressionStrategy
+  parent: TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: CompressionStrategy
+  nameWithType: XmlTreeCompressing.CompressionStrategy
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: CompressionStrategy
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 9
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  summary: Kompresní strategie, která je použita pro kompresi stromu.
+  example: []
+  syntax:
+    content: public ICompressionStrategy<IOrderedTreeNode> CompressionStrategy { get; }
+    parameters: []
+    return:
+      type: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+    content.vb: Public ReadOnly Property CompressionStrategy As ICompressionStrategy(Of IOrderedTreeNode)
+  overload: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy*
+  implements:
+  - TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CompressionStrategy
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  commentId: P:TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  id: CompressingPipeline
+  parent: TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: CompressingPipeline
+  nameWithType: XmlTreeCompressing.CompressingPipeline
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: CompressingPipeline
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 11
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  summary: Pipeline pro kompresi stromu.
+  example: []
+  syntax:
+    content: public Pipeline CompressingPipeline { get; }
+    parameters: []
+    return:
+      type: TreeCompressionPipeline.Pipeline
+    content.vb: Public ReadOnly Property CompressingPipeline As Pipeline
+  overload: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline*
+  implements:
+  - TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  commentId: P:TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  id: DecompressingPipeline
+  parent: TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: DecompressingPipeline
+  nameWithType: XmlTreeCompressing.DecompressingPipeline
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: DecompressingPipeline
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 18
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  summary: Pipeline pro dekompresi stromu.
+  example: []
+  syntax:
+    content: public Pipeline DecompressingPipeline { get; }
+    parameters: []
+    return:
+      type: TreeCompressionPipeline.Pipeline
+    content.vb: Public ReadOnly Property DecompressingPipeline As Pipeline
+  overload: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline*
+  implements:
+  - TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.DecompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Compress(System.String)
+  commentId: M:TreeCompressionAlgorithms.XmlTreeCompressing.Compress(System.String)
+  id: Compress(System.String)
+  parent: TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: Compress(string)
+  nameWithType: XmlTreeCompressing.Compress(string)
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Compress(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Compress
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 24
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  summary: Metoda pro kompresi stromu.
+  example: []
+  syntax:
+    content: public CompressedTree Compress(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: Text, který by se měl převést do stromové struktury a komprimovat.
+    return:
+      type: TreeCompressionPipeline.TreeStructure.CompressedTree
+      description: ''
+    content.vb: Public Function Compress(text As String) As CompressedTree
+  overload: TreeCompressionAlgorithms.XmlTreeCompressing.Compress*
+  implements:
+  - TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Compress(System.String)
+  nameWithType.vb: XmlTreeCompressing.Compress(String)
+  fullName.vb: TreeCompressionAlgorithms.XmlTreeCompressing.Compress(String)
+  name.vb: Compress(String)
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  commentId: M:TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  id: Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  parent: TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: Decompress(CompressedTree)
+  nameWithType: XmlTreeCompressing.Decompress(CompressedTree)
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Decompress
+    path: ../src/TreeCompressionAlgorithms/XmlTreeCompressing.cs
+    startLine: 29
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms
+  summary: Metoda pro dekompresi stromu.
+  example: []
+  syntax:
+    content: public string Decompress(CompressedTree compressedTree)
+    parameters:
+    - id: compressedTree
+      type: TreeCompressionPipeline.TreeStructure.CompressedTree
+      description: Komprimovaný strom, který by se měl dekomprimovat.
+    return:
+      type: System.String
+      description: Text, který byl dekomprimován ze stromové struktury.
+    content.vb: Public Function Decompress(compressedTree As CompressedTree) As String
+  overload: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress*
+  implements:
+  - TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+references:
+- uid: TreeCompressionAlgorithms
+  commentId: N:TreeCompressionAlgorithms
+  href: TreeCompressionAlgorithms.html
+  name: TreeCompressionAlgorithms
+  nameWithType: TreeCompressionAlgorithms
+  fullName: TreeCompressionAlgorithms
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  commentId: T:TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  parent: TreeCompressionPipeline
+  definition: TreeCompressionPipeline.ITreeCompressor`1
+  href: TreeCompressionPipeline.ITreeCompressor-1.html
+  name: ITreeCompressor<IOrderedTreeNode>
+  nameWithType: ITreeCompressor<IOrderedTreeNode>
+  fullName: TreeCompressionPipeline.ITreeCompressor<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>
+  nameWithType.vb: ITreeCompressor(Of IOrderedTreeNode)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name.vb: ITreeCompressor(Of IOrderedTreeNode)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeCompressionPipeline.ITreeCompressor-1.html
+  - name: <
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeCompressionPipeline.ITreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeCompressionPipeline.ITreeCompressor`1
+  commentId: T:TreeCompressionPipeline.ITreeCompressor`1
+  href: TreeCompressionPipeline.ITreeCompressor-1.html
+  name: ITreeCompressor<T>
+  nameWithType: ITreeCompressor<T>
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>
+  nameWithType.vb: ITreeCompressor(Of T)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T)
+  name.vb: ITreeCompressor(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeCompressionPipeline.ITreeCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeCompressionPipeline.ITreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.#ctor*
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.#ctor
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing__ctor_TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode__
+  name: XmlTreeCompressing
+  nameWithType: XmlTreeCompressing.XmlTreeCompressing
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.XmlTreeCompressing
+  nameWithType.vb: XmlTreeCompressing.New
+  fullName.vb: TreeCompressionAlgorithms.XmlTreeCompressing.New
+  name.vb: New
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  parent: TreeCompressionPipeline.CompressionStrategies
+  definition: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  name: ICompressionStrategy<IOrderedTreeNode>
+  nameWithType: ICompressionStrategy<IOrderedTreeNode>
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>
+  nameWithType.vb: ICompressionStrategy(Of IOrderedTreeNode)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name.vb: ICompressionStrategy(Of IOrderedTreeNode)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy
+    href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  - name: <
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy
+    href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: )
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  name: ICompressionStrategy<T>
+  nameWithType: ICompressionStrategy<T>
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>
+  nameWithType.vb: ICompressionStrategy(Of T)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T)
+  name.vb: ICompressionStrategy(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy
+    href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy
+    href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline.CompressionStrategies
+  commentId: N:TreeCompressionPipeline.CompressionStrategies
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.CompressionStrategies
+  nameWithType: TreeCompressionPipeline.CompressionStrategies
+  fullName: TreeCompressionPipeline.CompressionStrategies
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.CompressionStrategies
+    name: CompressionStrategies
+    href: TreeCompressionPipeline.CompressionStrategies.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.CompressionStrategies
+    name: CompressionStrategies
+    href: TreeCompressionPipeline.CompressionStrategies.html
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy*
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_CompressionStrategy
+  name: CompressionStrategy
+  nameWithType: XmlTreeCompressing.CompressionStrategy
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressionStrategy
+- uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CompressionStrategy
+  commentId: P:TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CompressionStrategy
+  parent: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  definition: TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressionStrategy
+  name: CompressionStrategy
+  nameWithType: ITreeCompressor<IOrderedTreeNode>.CompressionStrategy
+  fullName: TreeCompressionPipeline.ITreeCompressor<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>.CompressionStrategy
+  nameWithType.vb: ITreeCompressor(Of IOrderedTreeNode).CompressionStrategy
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode).CompressionStrategy
+- uid: TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy
+  commentId: P:TreeCompressionPipeline.ITreeCompressor`1.CompressionStrategy
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressionStrategy
+  name: CompressionStrategy
+  nameWithType: ITreeCompressor<T>.CompressionStrategy
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.CompressionStrategy
+  nameWithType.vb: ITreeCompressor(Of T).CompressionStrategy
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).CompressionStrategy
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline*
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_CompressingPipeline
+  name: CompressingPipeline
+  nameWithType: XmlTreeCompressing.CompressingPipeline
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.CompressingPipeline
+- uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CompressingPipeline
+  commentId: P:TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CompressingPipeline
+  parent: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  definition: TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressingPipeline
+  name: CompressingPipeline
+  nameWithType: ITreeCompressor<IOrderedTreeNode>.CompressingPipeline
+  fullName: TreeCompressionPipeline.ITreeCompressor<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>.CompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of IOrderedTreeNode).CompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode).CompressingPipeline
+- uid: TreeCompressionPipeline.Pipeline
+  commentId: T:TreeCompressionPipeline.Pipeline
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.Pipeline.html
+  name: Pipeline
+  nameWithType: Pipeline
+  fullName: TreeCompressionPipeline.Pipeline
+- uid: TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline
+  commentId: P:TreeCompressionPipeline.ITreeCompressor`1.CompressingPipeline
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_CompressingPipeline
+  name: CompressingPipeline
+  nameWithType: ITreeCompressor<T>.CompressingPipeline
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.CompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of T).CompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).CompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline*
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_DecompressingPipeline
+  name: DecompressingPipeline
+  nameWithType: XmlTreeCompressing.DecompressingPipeline
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.DecompressingPipeline
+- uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.DecompressingPipeline
+  commentId: P:TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.DecompressingPipeline
+  parent: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  definition: TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_DecompressingPipeline
+  name: DecompressingPipeline
+  nameWithType: ITreeCompressor<IOrderedTreeNode>.DecompressingPipeline
+  fullName: TreeCompressionPipeline.ITreeCompressor<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>.DecompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of IOrderedTreeNode).DecompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode).DecompressingPipeline
+- uid: TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline
+  commentId: P:TreeCompressionPipeline.ITreeCompressor`1.DecompressingPipeline
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_DecompressingPipeline
+  name: DecompressingPipeline
+  nameWithType: ITreeCompressor<T>.DecompressingPipeline
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.DecompressingPipeline
+  nameWithType.vb: ITreeCompressor(Of T).DecompressingPipeline
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).DecompressingPipeline
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Compress*
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.Compress
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_Compress_System_String_
+  name: Compress
+  nameWithType: XmlTreeCompressing.Compress
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Compress
+- uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Compress(System.String)
+  commentId: M:TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Compress(System.String)
+  parent: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  definition: TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  name: Compress(string)
+  nameWithType: ITreeCompressor<IOrderedTreeNode>.Compress(string)
+  fullName: TreeCompressionPipeline.ITreeCompressor<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>.Compress(string)
+  nameWithType.vb: ITreeCompressor(Of IOrderedTreeNode).Compress(String)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode).Compress(String)
+  name.vb: Compress(String)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Compress(System.String)
+    name: Compress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Compress(System.String)
+    name: Compress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+  commentId: T:TreeCompressionPipeline.TreeStructure.CompressedTree
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  name: CompressedTree
+  nameWithType: CompressedTree
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree
+- uid: TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+  commentId: M:TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+  isExternal: true
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  name: Compress(string)
+  nameWithType: ITreeCompressor<T>.Compress(string)
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.Compress(string)
+  nameWithType.vb: ITreeCompressor(Of T).Compress(String)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).Compress(String)
+  name.vb: Compress(String)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+    name: Compress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1.Compress(System.String)
+    name: Compress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Compress_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress*
+  commentId: Overload:TreeCompressionAlgorithms.XmlTreeCompressing.Decompress
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html#TreeCompressionAlgorithms_XmlTreeCompressing_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  name: Decompress
+  nameWithType: XmlTreeCompressing.Decompress
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing.Decompress
+- uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  commentId: M:TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  parent: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  definition: TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  name: Decompress(CompressedTree)
+  nameWithType: ITreeCompressor<IOrderedTreeNode>.Decompress(CompressedTree)
+  fullName: TreeCompressionPipeline.ITreeCompressor<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType.vb: ITreeCompressor(Of IOrderedTreeNode).Decompress(CompressedTree)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode).Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+    name: Decompress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  - name: (
+  - uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+    name: CompressedTree
+    href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+    name: Decompress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  - name: (
+  - uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+    name: CompressedTree
+    href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  - name: )
+- uid: TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  commentId: M:TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  name: Decompress(CompressedTree)
+  nameWithType: ITreeCompressor<T>.Decompress(CompressedTree)
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  nameWithType.vb: ITreeCompressor(Of T).Decompress(CompressedTree)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T).Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+    name: Decompress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  - name: (
+  - uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+    name: CompressedTree
+    href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+    name: Decompress
+    href: TreeCompressionPipeline.ITreeCompressor-1.html#TreeCompressionPipeline_ITreeCompressor_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  - name: (
+  - uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+    name: CompressedTree
+    href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  - name: )

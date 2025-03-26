@@ -1,0 +1,82 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleApp.Framework
+  commentId: N:ConsoleApp.Framework
+  id: ConsoleApp.Framework
+  children:
+  - ConsoleApp.Framework.Argument
+  - ConsoleApp.Framework.ArgumentParser
+  - ConsoleApp.Framework.CommandRegistry
+  - ConsoleApp.Framework.HelpHelper
+  - ConsoleApp.Framework.ICommand
+  - ConsoleApp.Framework.RequireArgumentAttribute
+  langs:
+  - csharp
+  - vb
+  name: ConsoleApp.Framework
+  nameWithType: ConsoleApp.Framework
+  fullName: ConsoleApp.Framework
+  type: Namespace
+  assemblies:
+  - ConsoleApp
+references:
+- uid: ConsoleApp.Framework.Argument
+  commentId: T:ConsoleApp.Framework.Argument
+  href: ConsoleApp.Framework.Argument.html
+  name: Argument
+  nameWithType: Argument
+  fullName: ConsoleApp.Framework.Argument
+- uid: ConsoleApp.Framework.RequireArgumentAttribute
+  commentId: T:ConsoleApp.Framework.RequireArgumentAttribute
+  parent: ConsoleApp.Framework
+  href: ConsoleApp.Framework.RequireArgumentAttribute.html
+  name: RequireArgumentAttribute
+  nameWithType: RequireArgumentAttribute
+  fullName: ConsoleApp.Framework.RequireArgumentAttribute
+- uid: ConsoleApp.Framework.ArgumentParser
+  commentId: T:ConsoleApp.Framework.ArgumentParser
+  href: ConsoleApp.Framework.ArgumentParser.html
+  name: ArgumentParser
+  nameWithType: ArgumentParser
+  fullName: ConsoleApp.Framework.ArgumentParser
+- uid: ConsoleApp.Framework.CommandRegistry
+  commentId: T:ConsoleApp.Framework.CommandRegistry
+  href: ConsoleApp.Framework.CommandRegistry.html
+  name: CommandRegistry
+  nameWithType: CommandRegistry
+  fullName: ConsoleApp.Framework.CommandRegistry
+- uid: ConsoleApp.Framework.HelpHelper
+  commentId: T:ConsoleApp.Framework.HelpHelper
+  href: ConsoleApp.Framework.HelpHelper.html
+  name: HelpHelper
+  nameWithType: HelpHelper
+  fullName: ConsoleApp.Framework.HelpHelper
+- uid: ConsoleApp.Framework.ICommand
+  commentId: T:ConsoleApp.Framework.ICommand
+  parent: ConsoleApp.Framework
+  href: ConsoleApp.Framework.ICommand.html
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ConsoleApp.Framework.ICommand
+- uid: ConsoleApp.Framework
+  commentId: N:ConsoleApp.Framework
+  href: ConsoleApp.html
+  name: ConsoleApp.Framework
+  nameWithType: ConsoleApp.Framework
+  fullName: ConsoleApp.Framework
+  spec.csharp:
+  - uid: ConsoleApp
+    name: ConsoleApp
+    href: ConsoleApp.html
+  - name: .
+  - uid: ConsoleApp.Framework
+    name: Framework
+    href: ConsoleApp.Framework.html
+  spec.vb:
+  - uid: ConsoleApp
+    name: ConsoleApp
+    href: ConsoleApp.html
+  - name: .
+  - uid: ConsoleApp.Framework
+    name: Framework
+    href: ConsoleApp.Framework.html

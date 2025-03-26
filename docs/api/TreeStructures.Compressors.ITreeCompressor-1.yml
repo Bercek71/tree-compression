@@ -1,0 +1,219 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeStructures.Compressors.ITreeCompressor`1
+  commentId: T:TreeStructures.Compressors.ITreeCompressor`1
+  id: ITreeCompressor`1
+  parent: TreeStructures.Compressors
+  children:
+  - TreeStructures.Compressors.ITreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  - TreeStructures.Compressors.ITreeCompressor`1.DecompressTree(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ITreeCompressor<T>
+  nameWithType: ITreeCompressor<T>
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>
+  type: Interface
+  source:
+    remote:
+      path: src/TreeStructures/Compressors/ITreeCompressor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ITreeCompressor
+    path: ../src/TreeStructures/Compressors/ITreeCompressor.cs
+    startLine: 2
+  assemblies:
+  - TreeStructures
+  namespace: TreeStructures.Compressors
+  syntax:
+    content: public interface ITreeCompressor<T>
+    typeParameters:
+    - id: T
+    content.vb: Public Interface ITreeCompressor(Of T)
+  nameWithType.vb: ITreeCompressor(Of T)
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T)
+  name.vb: ITreeCompressor(Of T)
+- uid: TreeStructures.Compressors.ITreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  commentId: M:TreeStructures.Compressors.ITreeCompressor`1.CompressTree(TreeStructures.TreeNode{`0})
+  id: CompressTree(TreeStructures.TreeNode{`0})
+  parent: TreeStructures.Compressors.ITreeCompressor`1
+  langs:
+  - csharp
+  - vb
+  name: CompressTree(TreeNode<T>)
+  nameWithType: ITreeCompressor<T>.CompressTree(TreeNode<T>)
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.CompressTree(TreeStructures.TreeNode<T>)
+  type: Method
+  source:
+    remote:
+      path: src/TreeStructures/Compressors/ITreeCompressor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: CompressTree
+    path: ../src/TreeStructures/Compressors/ITreeCompressor.cs
+    startLine: 4
+  assemblies:
+  - TreeStructures
+  namespace: TreeStructures.Compressors
+  syntax:
+    content: string CompressTree(TreeNode<T> node)
+    parameters:
+    - id: node
+      type: TreeStructures.TreeNode{{T}}
+    return:
+      type: System.String
+    content.vb: Function CompressTree(node As TreeNode(Of T)) As String
+  overload: TreeStructures.Compressors.ITreeCompressor`1.CompressTree*
+  nameWithType.vb: ITreeCompressor(Of T).CompressTree(TreeNode(Of T))
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).CompressTree(TreeStructures.TreeNode(Of T))
+  name.vb: CompressTree(TreeNode(Of T))
+- uid: TreeStructures.Compressors.ITreeCompressor`1.DecompressTree(System.String)
+  commentId: M:TreeStructures.Compressors.ITreeCompressor`1.DecompressTree(System.String)
+  id: DecompressTree(System.String)
+  parent: TreeStructures.Compressors.ITreeCompressor`1
+  langs:
+  - csharp
+  - vb
+  name: DecompressTree(string)
+  nameWithType: ITreeCompressor<T>.DecompressTree(string)
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.DecompressTree(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeStructures/Compressors/ITreeCompressor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: DecompressTree
+    path: ../src/TreeStructures/Compressors/ITreeCompressor.cs
+    startLine: 5
+  assemblies:
+  - TreeStructures
+  namespace: TreeStructures.Compressors
+  syntax:
+    content: TreeNode<T> DecompressTree(string compressedTree)
+    parameters:
+    - id: compressedTree
+      type: System.String
+    return:
+      type: TreeStructures.TreeNode{{T}}
+    content.vb: Function DecompressTree(compressedTree As String) As TreeNode(Of T)
+  overload: TreeStructures.Compressors.ITreeCompressor`1.DecompressTree*
+  nameWithType.vb: ITreeCompressor(Of T).DecompressTree(String)
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).DecompressTree(String)
+  name.vb: DecompressTree(String)
+references:
+- uid: TreeStructures.Compressors
+  commentId: N:TreeStructures.Compressors
+  href: TreeStructures.html
+  name: TreeStructures.Compressors
+  nameWithType: TreeStructures.Compressors
+  fullName: TreeStructures.Compressors
+  spec.csharp:
+  - uid: TreeStructures
+    name: TreeStructures
+    href: TreeStructures.html
+  - name: .
+  - uid: TreeStructures.Compressors
+    name: Compressors
+    href: TreeStructures.Compressors.html
+  spec.vb:
+  - uid: TreeStructures
+    name: TreeStructures
+    href: TreeStructures.html
+  - name: .
+  - uid: TreeStructures.Compressors
+    name: Compressors
+    href: TreeStructures.Compressors.html
+- uid: TreeStructures.Compressors.ITreeCompressor`1.CompressTree*
+  commentId: Overload:TreeStructures.Compressors.ITreeCompressor`1.CompressTree
+  href: TreeStructures.Compressors.ITreeCompressor-1.html#TreeStructures_Compressors_ITreeCompressor_1_CompressTree_TreeStructures_TreeNode__0__
+  name: CompressTree
+  nameWithType: ITreeCompressor<T>.CompressTree
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.CompressTree
+  nameWithType.vb: ITreeCompressor(Of T).CompressTree
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).CompressTree
+- uid: TreeStructures.TreeNode{{T}}
+  commentId: T:TreeStructures.TreeNode{`0}
+  parent: TreeStructures
+  definition: TreeStructures.TreeNode`1
+  href: TreeStructures.TreeNode-1.html
+  name: TreeNode<T>
+  nameWithType: TreeNode<T>
+  fullName: TreeStructures.TreeNode<T>
+  nameWithType.vb: TreeNode(Of T)
+  fullName.vb: TreeStructures.TreeNode(Of T)
+  name.vb: TreeNode(Of T)
+  spec.csharp:
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode
+    href: TreeStructures.TreeNode-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode
+    href: TreeStructures.TreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TreeStructures.TreeNode`1
+  commentId: T:TreeStructures.TreeNode`1
+  parent: TreeStructures
+  href: TreeStructures.TreeNode-1.html
+  name: TreeNode<T>
+  nameWithType: TreeNode<T>
+  fullName: TreeStructures.TreeNode<T>
+  nameWithType.vb: TreeNode(Of T)
+  fullName.vb: TreeStructures.TreeNode(Of T)
+  name.vb: TreeNode(Of T)
+  spec.csharp:
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode
+    href: TreeStructures.TreeNode-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode
+    href: TreeStructures.TreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures
+  commentId: N:TreeStructures
+  href: TreeStructures.html
+  name: TreeStructures
+  nameWithType: TreeStructures
+  fullName: TreeStructures
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeStructures.Compressors.ITreeCompressor`1.DecompressTree*
+  commentId: Overload:TreeStructures.Compressors.ITreeCompressor`1.DecompressTree
+  href: TreeStructures.Compressors.ITreeCompressor-1.html#TreeStructures_Compressors_ITreeCompressor_1_DecompressTree_System_String_
+  name: DecompressTree
+  nameWithType: ITreeCompressor<T>.DecompressTree
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>.DecompressTree
+  nameWithType.vb: ITreeCompressor(Of T).DecompressTree
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T).DecompressTree

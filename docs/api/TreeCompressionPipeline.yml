@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  id: TreeCompressionPipeline
+  children:
+  - TreeCompressionPipeline.FilterBase`2
+  - TreeCompressionPipeline.FilterFactory`1
+  - TreeCompressionPipeline.IFilter
+  - TreeCompressionPipeline.IProcessObserver
+  - TreeCompressionPipeline.IProcessSubject
+  - TreeCompressionPipeline.ITreeCompressor`1
+  - TreeCompressionPipeline.Pipeline
+  - TreeCompressionPipeline.ProcessMonitor
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+  type: Namespace
+  assemblies:
+  - TreeCompressionPipelineLib
+references:
+- uid: TreeCompressionPipeline.FilterBase`2
+  commentId: T:TreeCompressionPipeline.FilterBase`2
+  href: TreeCompressionPipeline.FilterBase-2.html
+  name: FilterBase<T, TO>
+  nameWithType: FilterBase<T, TO>
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>
+  nameWithType.vb: FilterBase(Of T, TO)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO)
+  name.vb: FilterBase(Of T, TO)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.FilterBase`2
+    name: FilterBase
+    href: TreeCompressionPipeline.FilterBase-2.html
+  - name: <
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TO
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.FilterBase`2
+    name: FilterBase
+    href: TreeCompressionPipeline.FilterBase-2.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: ','
+  - name: " "
+  - name: TO
+  - name: )
+- uid: TreeCompressionPipeline.FilterFactory`1
+  commentId: T:TreeCompressionPipeline.FilterFactory`1
+  href: TreeCompressionPipeline.FilterFactory-1.html
+  name: FilterFactory<T>
+  nameWithType: FilterFactory<T>
+  fullName: TreeCompressionPipeline.FilterFactory<T>
+  nameWithType.vb: FilterFactory(Of T)
+  fullName.vb: TreeCompressionPipeline.FilterFactory(Of T)
+  name.vb: FilterFactory(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.FilterFactory`1
+    name: FilterFactory
+    href: TreeCompressionPipeline.FilterFactory-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.FilterFactory`1
+    name: FilterFactory
+    href: TreeCompressionPipeline.FilterFactory-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline.IFilter
+  commentId: T:TreeCompressionPipeline.IFilter
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IFilter.html
+  name: IFilter
+  nameWithType: IFilter
+  fullName: TreeCompressionPipeline.IFilter
+- uid: TreeCompressionPipeline.IProcessObserver
+  commentId: T:TreeCompressionPipeline.IProcessObserver
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IProcessObserver.html
+  name: IProcessObserver
+  nameWithType: IProcessObserver
+  fullName: TreeCompressionPipeline.IProcessObserver
+- uid: TreeCompressionPipeline.IProcessSubject
+  commentId: T:TreeCompressionPipeline.IProcessSubject
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IProcessSubject.html
+  name: IProcessSubject
+  nameWithType: IProcessSubject
+  fullName: TreeCompressionPipeline.IProcessSubject
+- uid: TreeCompressionPipeline.ITreeCompressor`1
+  commentId: T:TreeCompressionPipeline.ITreeCompressor`1
+  href: TreeCompressionPipeline.ITreeCompressor-1.html
+  name: ITreeCompressor<T>
+  nameWithType: ITreeCompressor<T>
+  fullName: TreeCompressionPipeline.ITreeCompressor<T>
+  nameWithType.vb: ITreeCompressor(Of T)
+  fullName.vb: TreeCompressionPipeline.ITreeCompressor(Of T)
+  name.vb: ITreeCompressor(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeCompressionPipeline.ITreeCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeCompressionPipeline.ITreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline.Pipeline
+  commentId: T:TreeCompressionPipeline.Pipeline
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.Pipeline.html
+  name: Pipeline
+  nameWithType: Pipeline
+  fullName: TreeCompressionPipeline.Pipeline
+- uid: TreeCompressionPipeline.ProcessMonitor
+  commentId: T:TreeCompressionPipeline.ProcessMonitor
+  href: TreeCompressionPipeline.ProcessMonitor.html
+  name: ProcessMonitor
+  nameWithType: ProcessMonitor
+  fullName: TreeCompressionPipeline.ProcessMonitor
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline

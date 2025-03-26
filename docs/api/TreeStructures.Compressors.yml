@@ -1,0 +1,146 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeStructures.Compressors
+  commentId: N:TreeStructures.Compressors
+  id: TreeStructures.Compressors
+  children:
+  - TreeStructures.Compressors.DictionaryTreeCompressor`1
+  - TreeStructures.Compressors.FrequentSubtreeCompressor`1
+  - TreeStructures.Compressors.GrammarCompressor`1
+  - TreeStructures.Compressors.ITreeCompressor`1
+  - TreeStructures.Compressors.RePairTreeCompressor`1
+  langs:
+  - csharp
+  - vb
+  name: TreeStructures.Compressors
+  nameWithType: TreeStructures.Compressors
+  fullName: TreeStructures.Compressors
+  type: Namespace
+  assemblies:
+  - TreeStructures
+references:
+- uid: TreeStructures.Compressors.DictionaryTreeCompressor`1
+  commentId: T:TreeStructures.Compressors.DictionaryTreeCompressor`1
+  href: TreeStructures.Compressors.DictionaryTreeCompressor-1.html
+  name: DictionaryTreeCompressor<T>
+  nameWithType: DictionaryTreeCompressor<T>
+  fullName: TreeStructures.Compressors.DictionaryTreeCompressor<T>
+  nameWithType.vb: DictionaryTreeCompressor(Of T)
+  fullName.vb: TreeStructures.Compressors.DictionaryTreeCompressor(Of T)
+  name.vb: DictionaryTreeCompressor(Of T)
+  spec.csharp:
+  - uid: TreeStructures.Compressors.DictionaryTreeCompressor`1
+    name: DictionaryTreeCompressor
+    href: TreeStructures.Compressors.DictionaryTreeCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.Compressors.DictionaryTreeCompressor`1
+    name: DictionaryTreeCompressor
+    href: TreeStructures.Compressors.DictionaryTreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1
+  commentId: T:TreeStructures.Compressors.FrequentSubtreeCompressor`1
+  href: TreeStructures.Compressors.FrequentSubtreeCompressor-1.html
+  name: FrequentSubtreeCompressor<T>
+  nameWithType: FrequentSubtreeCompressor<T>
+  fullName: TreeStructures.Compressors.FrequentSubtreeCompressor<T>
+  nameWithType.vb: FrequentSubtreeCompressor(Of T)
+  fullName.vb: TreeStructures.Compressors.FrequentSubtreeCompressor(Of T)
+  name.vb: FrequentSubtreeCompressor(Of T)
+  spec.csharp:
+  - uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1
+    name: FrequentSubtreeCompressor
+    href: TreeStructures.Compressors.FrequentSubtreeCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1
+    name: FrequentSubtreeCompressor
+    href: TreeStructures.Compressors.FrequentSubtreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures.Compressors.GrammarCompressor`1
+  commentId: T:TreeStructures.Compressors.GrammarCompressor`1
+  href: TreeStructures.Compressors.GrammarCompressor-1.html
+  name: GrammarCompressor<T>
+  nameWithType: GrammarCompressor<T>
+  fullName: TreeStructures.Compressors.GrammarCompressor<T>
+  nameWithType.vb: GrammarCompressor(Of T)
+  fullName.vb: TreeStructures.Compressors.GrammarCompressor(Of T)
+  name.vb: GrammarCompressor(Of T)
+  spec.csharp:
+  - uid: TreeStructures.Compressors.GrammarCompressor`1
+    name: GrammarCompressor
+    href: TreeStructures.Compressors.GrammarCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.Compressors.GrammarCompressor`1
+    name: GrammarCompressor
+    href: TreeStructures.Compressors.GrammarCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures.Compressors.ITreeCompressor`1
+  commentId: T:TreeStructures.Compressors.ITreeCompressor`1
+  href: TreeStructures.Compressors.ITreeCompressor-1.html
+  name: ITreeCompressor<T>
+  nameWithType: ITreeCompressor<T>
+  fullName: TreeStructures.Compressors.ITreeCompressor<T>
+  nameWithType.vb: ITreeCompressor(Of T)
+  fullName.vb: TreeStructures.Compressors.ITreeCompressor(Of T)
+  name.vb: ITreeCompressor(Of T)
+  spec.csharp:
+  - uid: TreeStructures.Compressors.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeStructures.Compressors.ITreeCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.Compressors.ITreeCompressor`1
+    name: ITreeCompressor
+    href: TreeStructures.Compressors.ITreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures.Compressors.RePairTreeCompressor`1
+  commentId: T:TreeStructures.Compressors.RePairTreeCompressor`1
+  href: TreeStructures.Compressors.RePairTreeCompressor-1.html
+  name: RePairTreeCompressor<T>
+  nameWithType: RePairTreeCompressor<T>
+  fullName: TreeStructures.Compressors.RePairTreeCompressor<T>
+  nameWithType.vb: RePairTreeCompressor(Of T)
+  fullName.vb: TreeStructures.Compressors.RePairTreeCompressor(Of T)
+  name.vb: RePairTreeCompressor(Of T)
+  spec.csharp:
+  - uid: TreeStructures.Compressors.RePairTreeCompressor`1
+    name: RePairTreeCompressor
+    href: TreeStructures.Compressors.RePairTreeCompressor-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.Compressors.RePairTreeCompressor`1
+    name: RePairTreeCompressor
+    href: TreeStructures.Compressors.RePairTreeCompressor-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

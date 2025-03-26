@@ -1,0 +1,37 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleApp.Commands
+  commentId: N:ConsoleApp.Commands
+  id: ConsoleApp.Commands
+  children:
+  - ConsoleApp.Commands.EnglishMorphoditaDict
+  - ConsoleApp.Commands.EnglishMorphoditaTagger
+  - ConsoleApp.Commands.FrameworkTest
+  langs:
+  - csharp
+  - vb
+  name: ConsoleApp.Commands
+  nameWithType: ConsoleApp.Commands
+  fullName: ConsoleApp.Commands
+  type: Namespace
+  assemblies:
+  - ConsoleApp
+references:
+- uid: ConsoleApp.Commands.EnglishMorphoditaDict
+  commentId: T:ConsoleApp.Commands.EnglishMorphoditaDict
+  href: ConsoleApp.Commands.EnglishMorphoditaDict.html
+  name: EnglishMorphoditaDict
+  nameWithType: EnglishMorphoditaDict
+  fullName: ConsoleApp.Commands.EnglishMorphoditaDict
+- uid: ConsoleApp.Commands.EnglishMorphoditaTagger
+  commentId: T:ConsoleApp.Commands.EnglishMorphoditaTagger
+  href: ConsoleApp.Commands.EnglishMorphoditaTagger.html
+  name: EnglishMorphoditaTagger
+  nameWithType: EnglishMorphoditaTagger
+  fullName: ConsoleApp.Commands.EnglishMorphoditaTagger
+- uid: ConsoleApp.Commands.FrameworkTest
+  commentId: T:ConsoleApp.Commands.FrameworkTest
+  href: ConsoleApp.Commands.FrameworkTest.html
+  name: FrameworkTest
+  nameWithType: FrameworkTest
+  fullName: ConsoleApp.Commands.FrameworkTest

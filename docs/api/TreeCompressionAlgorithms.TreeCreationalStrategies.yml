@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies
+  commentId: N:TreeCompressionAlgorithms.TreeCreationalStrategies
+  id: TreeCompressionAlgorithms.TreeCreationalStrategies
+  children:
+  - TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+  - TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionAlgorithms.TreeCreationalStrategies
+  nameWithType: TreeCompressionAlgorithms.TreeCreationalStrategies
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies
+  type: Namespace
+  assemblies:
+  - TreeCompressionAlgorithms
+references:
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+  commentId: T:TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+  href: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy.html
+  name: UdPipeCreateTreeStrategy
+  nameWithType: UdPipeCreateTreeStrategy
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  commentId: T:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  href: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.html
+  name: XmlCreateTreeStrategy
+  nameWithType: XmlCreateTreeStrategy
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy

@@ -1,0 +1,121 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  id: TreeCompressionPipeline.TreeStructure
+  children:
+  - TreeCompressionPipeline.TreeStructure.CompressedTree
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  - TreeCompressionPipeline.TreeStructure.ITreeNode
+  - TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+  - TreeCompressionPipeline.TreeStructure.PrintVisitor
+  - TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+  - TreeCompressionPipeline.TreeStructure.ToStringVisitor
+  - TreeCompressionPipeline.TreeStructure.XmlTreeNode
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  type: Namespace
+  assemblies:
+  - TreeCompressionPipelineLib
+references:
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+  commentId: T:TreeCompressionPipeline.TreeStructure.CompressedTree
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  name: CompressedTree
+  nameWithType: CompressedTree
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  name: IOrderedTreeNode
+  nameWithType: IOrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html
+  name: IOrderedTreeVisitor
+  nameWithType: IOrderedTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html
+  name: ISyntacticTreeNode
+  nameWithType: ISyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html
+  name: ISyntacticTreeVisitor
+  nameWithType: ISyntacticTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ITreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ITreeNode.html
+  name: ITreeNode
+  nameWithType: ITreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode
+- uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+  href: TreeCompressionPipeline.TreeStructure.OrderedTreeNode.html
+  name: OrderedTreeNode
+  nameWithType: OrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.PrintVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.PrintVisitor
+  href: TreeCompressionPipeline.TreeStructure.PrintVisitor.html
+  name: PrintVisitor
+  nameWithType: PrintVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.PrintVisitor
+- uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+  href: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode.html
+  name: SyntacticTreeNode
+  nameWithType: SyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.ToStringVisitor
+  href: TreeCompressionPipeline.TreeStructure.ToStringVisitor.html
+  name: ToStringVisitor
+  nameWithType: ToStringVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.ToStringVisitor
+- uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.XmlTreeNode
+  href: TreeCompressionPipeline.TreeStructure.XmlTreeNode.html
+  name: XmlTreeNode
+  nameWithType: XmlTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.XmlTreeNode
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html

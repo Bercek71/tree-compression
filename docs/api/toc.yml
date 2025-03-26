@@ -1,0 +1,212 @@
+### YamlMime:TableOfContent
+items:
+- uid: ConsoleApp
+  name: ConsoleApp
+  type: Namespace
+  items:
+  - uid: ConsoleApp.Program
+    name: Program
+    type: Class
+- uid: ConsoleApp.Commands
+  name: ConsoleApp.Commands
+  type: Namespace
+  items:
+  - uid: ConsoleApp.Commands.EnglishMorphoditaDict
+    name: EnglishMorphoditaDict
+    type: Class
+  - uid: ConsoleApp.Commands.EnglishMorphoditaTagger
+    name: EnglishMorphoditaTagger
+    type: Class
+  - uid: ConsoleApp.Commands.FrameworkTest
+    name: FrameworkTest
+    type: Class
+- uid: ConsoleApp.Framework
+  name: ConsoleApp.Framework
+  type: Namespace
+  items:
+  - uid: ConsoleApp.Framework.Argument
+    name: Argument
+    type: Class
+  - uid: ConsoleApp.Framework.ArgumentParser
+    name: ArgumentParser
+    type: Class
+  - uid: ConsoleApp.Framework.CommandRegistry
+    name: CommandRegistry
+    type: Class
+  - uid: ConsoleApp.Framework.HelpHelper
+    name: HelpHelper
+    type: Class
+  - uid: ConsoleApp.Framework.ICommand
+    name: ICommand
+    type: Interface
+  - uid: ConsoleApp.Framework.RequireArgumentAttribute
+    name: RequireArgumentAttribute
+    type: Class
+- uid: TreeCompressionAlgorithms
+  name: TreeCompressionAlgorithms
+  type: Namespace
+  items:
+  - uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+    name: NaturalLanguageTreeCompressing
+    type: Class
+  - uid: TreeCompressionAlgorithms.XmlTreeCompressing
+    name: XmlTreeCompressing
+    type: Class
+- uid: TreeCompressionAlgorithms.CompressionStrategies
+  name: TreeCompressionAlgorithms.CompressionStrategies
+  type: Namespace
+  items:
+  - uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+    name: DictionaryTreeCompressor
+    type: Class
+  - uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+    name: TreeRePairStrategy
+    type: Class
+- uid: TreeCompressionAlgorithms.Extensions
+  name: TreeCompressionAlgorithms.Extensions
+  type: Namespace
+  items:
+  - uid: TreeCompressionAlgorithms.Extensions.XmlTagExtension
+    name: XmlTagExtension
+    type: Class
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies
+  name: TreeCompressionAlgorithms.TreeCreationalStrategies
+  type: Namespace
+  items:
+  - uid: TreeCompressionAlgorithms.TreeCreationalStrategies.UdPipeCreateTreeStrategy
+    name: UdPipeCreateTreeStrategy
+    type: Class
+  - uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+    name: XmlCreateTreeStrategy
+    type: Class
+- uid: TreeCompressionPipeline
+  name: TreeCompressionPipeline
+  type: Namespace
+  items:
+  - uid: TreeCompressionPipeline.FilterBase`2
+    name: FilterBase<T, TO>
+    type: Class
+  - uid: TreeCompressionPipeline.FilterFactory`1
+    name: FilterFactory<T>
+    type: Class
+  - uid: TreeCompressionPipeline.IFilter
+    name: IFilter
+    type: Interface
+  - uid: TreeCompressionPipeline.IProcessObserver
+    name: IProcessObserver
+    type: Interface
+  - uid: TreeCompressionPipeline.IProcessSubject
+    name: IProcessSubject
+    type: Interface
+  - uid: TreeCompressionPipeline.ITreeCompressor`1
+    name: ITreeCompressor<T>
+    type: Interface
+  - uid: TreeCompressionPipeline.Pipeline
+    name: Pipeline
+    type: Class
+  - uid: TreeCompressionPipeline.ProcessMonitor
+    name: ProcessMonitor
+    type: Class
+- uid: TreeCompressionPipeline.CompressionStrategies
+  name: TreeCompressionPipeline.CompressionStrategies
+  type: Namespace
+  items:
+  - uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+    name: CompressionStrategy
+    type: Class
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy<T>
+    type: Interface
+- uid: TreeCompressionPipeline.Filters
+  name: TreeCompressionPipeline.Filters
+  type: Namespace
+  items:
+  - uid: TreeCompressionPipeline.Filters.CompressionFilter`1
+    name: CompressionFilter<T>
+    type: Class
+  - uid: TreeCompressionPipeline.Filters.DecompressionFilter`1
+    name: DecompressionFilter<T>
+    type: Class
+  - uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1
+    name: TextToTreeFilter<T>
+    type: Class
+- uid: TreeCompressionPipeline.TreeCreationStrategies
+  name: TreeCompressionPipeline.TreeCreationStrategies
+  type: Namespace
+  items:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy<T>
+    type: Interface
+- uid: TreeCompressionPipeline.TreeStructure
+  name: TreeCompressionPipeline.TreeStructure
+  type: Namespace
+  items:
+  - uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+    name: CompressedTree
+    type: Class
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    type: Interface
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+    name: IOrderedTreeVisitor
+    type: Interface
+  - uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+    name: ISyntacticTreeNode
+    type: Interface
+  - uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+    name: ISyntacticTreeVisitor
+    type: Interface
+  - uid: TreeCompressionPipeline.TreeStructure.ITreeNode
+    name: ITreeNode
+    type: Interface
+  - uid: TreeCompressionPipeline.TreeStructure.OrderedTreeNode
+    name: OrderedTreeNode
+    type: Class
+  - uid: TreeCompressionPipeline.TreeStructure.PrintVisitor
+    name: PrintVisitor
+    type: Class
+  - uid: TreeCompressionPipeline.TreeStructure.SyntacticTreeNode
+    name: SyntacticTreeNode
+    type: Class
+  - uid: TreeCompressionPipeline.TreeStructure.ToStringVisitor
+    name: ToStringVisitor
+    type: Class
+  - uid: TreeCompressionPipeline.TreeStructure.XmlTreeNode
+    name: XmlTreeNode
+    type: Class
+- uid: TreeStructures
+  name: TreeStructures
+  type: Namespace
+  items:
+  - uid: TreeStructures.Direction
+    name: Direction
+    type: Enum
+  - uid: TreeStructures.TreeBuilder
+    name: TreeBuilder
+    type: Class
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode<T>
+    type: Class
+  - uid: TreeStructures.Tree`1
+    name: Tree<T>
+    type: Class
+- uid: TreeStructures.Compressors
+  name: TreeStructures.Compressors
+  type: Namespace
+  items:
+  - uid: TreeStructures.Compressors.DictionaryTreeCompressor`1
+    name: DictionaryTreeCompressor<T>
+    type: Class
+  - uid: TreeStructures.Compressors.FrequentSubtreeCompressor`1
+    name: FrequentSubtreeCompressor<T>
+    type: Class
+  - uid: TreeStructures.Compressors.GrammarCompressor`1
+    name: GrammarCompressor<T>
+    type: Class
+  - uid: TreeStructures.Compressors.ITreeCompressor`1
+    name: ITreeCompressor<T>
+    type: Interface
+  - uid: TreeStructures.Compressors.RePairTreeCompressor`1
+    name: RePairTreeCompressor<T>
+    type: Class
+memberLayout: SamePage

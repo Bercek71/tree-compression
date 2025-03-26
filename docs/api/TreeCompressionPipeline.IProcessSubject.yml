@@ -1,0 +1,359 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.IProcessSubject
+  commentId: T:TreeCompressionPipeline.IProcessSubject
+  id: IProcessSubject
+  parent: TreeCompressionPipeline
+  children:
+  - TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  - TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  - TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  - TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  - TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  - TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  langs:
+  - csharp
+  - vb
+  name: IProcessSubject
+  nameWithType: IProcessSubject
+  fullName: TreeCompressionPipeline.IProcessSubject
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: IProcessSubject
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 5
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Rozhraní pro definici subjektu, díky kterému mohou observeři sledovat průběh procesu.
+  example: []
+  syntax:
+    content: public interface IProcessSubject
+    content.vb: Public Interface IProcessSubject
+- uid: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  id: AddObserver(TreeCompressionPipeline.IProcessObserver)
+  parent: TreeCompressionPipeline.IProcessSubject
+  langs:
+  - csharp
+  - vb
+  name: AddObserver(IProcessObserver)
+  nameWithType: IProcessSubject.AddObserver(IProcessObserver)
+  fullName: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: AddObserver
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 13
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Přidání observeru, který bude sledovat průběh procesu.
+  example: []
+  syntax:
+    content: void AddObserver(IProcessObserver observer)
+    parameters:
+    - id: observer
+      type: TreeCompressionPipeline.IProcessObserver
+      description: Observer, který bude sledovat průběh procesu.
+    content.vb: Sub AddObserver(observer As IProcessObserver)
+  overload: TreeCompressionPipeline.IProcessSubject.AddObserver*
+- uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  id: RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  parent: TreeCompressionPipeline.IProcessSubject
+  langs:
+  - csharp
+  - vb
+  name: RemoveObserver(IProcessObserver)
+  nameWithType: IProcessSubject.RemoveObserver(IProcessObserver)
+  fullName: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: RemoveObserver
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 21
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Odebrání observeru, který sledoval průběh procesu.
+  example: []
+  syntax:
+    content: void RemoveObserver(IProcessObserver observer)
+    parameters:
+    - id: observer
+      type: TreeCompressionPipeline.IProcessObserver
+      description: Observer, který sledoval průběh procesu.
+    content.vb: Sub RemoveObserver(observer As IProcessObserver)
+  overload: TreeCompressionPipeline.IProcessSubject.RemoveObserver*
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  id: NotifyStart(System.String)
+  parent: TreeCompressionPipeline.IProcessSubject
+  langs:
+  - csharp
+  - vb
+  name: NotifyStart(string)
+  nameWithType: IProcessSubject.NotifyStart(string)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyStart(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyStart
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 29
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro oznámení observerům o začátku procesu.
+  example: []
+  syntax:
+    content: void NotifyStart(string process)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je spuštěn.
+    content.vb: Sub NotifyStart(process As String)
+  overload: TreeCompressionPipeline.IProcessSubject.NotifyStart*
+  nameWithType.vb: IProcessSubject.NotifyStart(String)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyStart(String)
+  name.vb: NotifyStart(String)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  id: NotifyProgress(System.String,System.Double)
+  parent: TreeCompressionPipeline.IProcessSubject
+  langs:
+  - csharp
+  - vb
+  name: NotifyProgress(string, double)
+  nameWithType: IProcessSubject.NotifyProgress(string, double)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyProgress(string, double)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyProgress
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 40
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda by měla sloužit pouze pro debugging a testování průběhu procesu.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Metoda by měla sloužit pouze pro debugging a testování.")]
+
+      void NotifyProgress(string process, double percentComplete)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je sledován.
+    - id: percentComplete
+      type: System.Double
+      description: Procenta dokončení procesu.
+    content.vb: >-
+      <Obsolete("Metoda by měla sloužit pouze pro debugging a testování.")>
+
+      Sub NotifyProgress(process As String, percentComplete As Double)
+  overload: TreeCompressionPipeline.IProcessSubject.NotifyProgress*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Metoda by měla sloužit pouze pro debugging a testování.
+  nameWithType.vb: IProcessSubject.NotifyProgress(String, Double)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyProgress(String, Double)
+  name.vb: NotifyProgress(String, Double)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  id: NotifyComplete(System.String,System.Object)
+  parent: TreeCompressionPipeline.IProcessSubject
+  langs:
+  - csharp
+  - vb
+  name: NotifyComplete(string, object)
+  nameWithType: IProcessSubject.NotifyComplete(string, object)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyComplete(string, object)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyComplete
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 52
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro oznámení observerům o dokončení procesu.
+  example: []
+  syntax:
+    content: void NotifyComplete(string process, object result)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který byl dokončen.
+    - id: result
+      type: System.Object
+      description: Výsledek procesu, který může být libovolného typu.
+    content.vb: Sub NotifyComplete(process As String, result As Object)
+  overload: TreeCompressionPipeline.IProcessSubject.NotifyComplete*
+  nameWithType.vb: IProcessSubject.NotifyComplete(String, Object)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyComplete(String, Object)
+  name.vb: NotifyComplete(String, Object)
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  id: NotifyError(System.String,System.Exception)
+  parent: TreeCompressionPipeline.IProcessSubject
+  langs:
+  - csharp
+  - vb
+  name: NotifyError(string, Exception)
+  nameWithType: IProcessSubject.NotifyError(string, Exception)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyError(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessSubject.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyError
+    path: ../src/TreeCompressionPipelineLib/IProcessSubject.cs
+    startLine: 63
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro oznámení observerům o chybě v průběhu procesu.
+  example: []
+  syntax:
+    content: void NotifyError(string process, Exception error)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, ve kterém došlo k chybě.
+    - id: error
+      type: System.Exception
+      description: Vyjímka, která nastala v průběhu procesu.
+    content.vb: Sub NotifyError(process As String, [error] As Exception)
+  overload: TreeCompressionPipeline.IProcessSubject.NotifyError*
+  nameWithType.vb: IProcessSubject.NotifyError(String, Exception)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyError(String, System.Exception)
+  name.vb: NotifyError(String, Exception)
+references:
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+- uid: TreeCompressionPipeline.IProcessSubject.AddObserver*
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.AddObserver
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  name: AddObserver
+  nameWithType: IProcessSubject.AddObserver
+  fullName: TreeCompressionPipeline.IProcessSubject.AddObserver
+- uid: TreeCompressionPipeline.IProcessObserver
+  commentId: T:TreeCompressionPipeline.IProcessObserver
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IProcessObserver.html
+  name: IProcessObserver
+  nameWithType: IProcessObserver
+  fullName: TreeCompressionPipeline.IProcessObserver
+- uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver*
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.RemoveObserver
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  name: RemoveObserver
+  nameWithType: IProcessSubject.RemoveObserver
+  fullName: TreeCompressionPipeline.IProcessSubject.RemoveObserver
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyStart*
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyStart
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_System_String_
+  name: NotifyStart
+  nameWithType: IProcessSubject.NotifyStart
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyStart
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress*
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyProgress
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_System_String_System_Double_
+  name: NotifyProgress
+  nameWithType: IProcessSubject.NotifyProgress
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyProgress
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete*
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyComplete
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_System_String_System_Object_
+  name: NotifyComplete
+  nameWithType: IProcessSubject.NotifyComplete
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyComplete
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyError*
+  commentId: Overload:TreeCompressionPipeline.IProcessSubject.NotifyError
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_System_String_System_Exception_
+  name: NotifyError
+  nameWithType: IProcessSubject.NotifyError
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyError
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

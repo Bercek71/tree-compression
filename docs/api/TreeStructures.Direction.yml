@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeStructures.Direction
+  commentId: T:TreeStructures.Direction
+  id: Direction
+  parent: TreeStructures
+  children:
+  - TreeStructures.Direction.Left
+  - TreeStructures.Direction.Right
+  langs:
+  - csharp
+  - vb
+  name: Direction
+  nameWithType: Direction
+  fullName: TreeStructures.Direction
+  type: Enum
+  source:
+    remote:
+      path: src/TreeStructures/Direction.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Direction
+    path: ../src/TreeStructures/Direction.cs
+    startLine: 2
+  assemblies:
+  - TreeStructures
+  namespace: TreeStructures
+  syntax:
+    content: public enum Direction
+    content.vb: Public Enum Direction
+- uid: TreeStructures.Direction.Left
+  commentId: F:TreeStructures.Direction.Left
+  id: Left
+  parent: TreeStructures.Direction
+  langs:
+  - csharp
+  - vb
+  name: Left
+  nameWithType: Direction.Left
+  fullName: TreeStructures.Direction.Left
+  type: Field
+  source:
+    remote:
+      path: src/TreeStructures/Direction.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Left
+    path: ../src/TreeStructures/Direction.cs
+    startLine: 4
+  assemblies:
+  - TreeStructures
+  namespace: TreeStructures
+  syntax:
+    content: Left = 0
+    return:
+      type: TreeStructures.Direction
+- uid: TreeStructures.Direction.Right
+  commentId: F:TreeStructures.Direction.Right
+  id: Right
+  parent: TreeStructures.Direction
+  langs:
+  - csharp
+  - vb
+  name: Right
+  nameWithType: Direction.Right
+  fullName: TreeStructures.Direction.Right
+  type: Field
+  source:
+    remote:
+      path: src/TreeStructures/Direction.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Right
+    path: ../src/TreeStructures/Direction.cs
+    startLine: 5
+  assemblies:
+  - TreeStructures
+  namespace: TreeStructures
+  syntax:
+    content: Right = 1
+    return:
+      type: TreeStructures.Direction
+references:
+- uid: TreeStructures
+  commentId: N:TreeStructures
+  href: TreeStructures.html
+  name: TreeStructures
+  nameWithType: TreeStructures
+  fullName: TreeStructures
+- uid: TreeStructures.Direction
+  commentId: T:TreeStructures.Direction
+  parent: TreeStructures
+  href: TreeStructures.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: TreeStructures.Direction

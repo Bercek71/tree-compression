@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Architektura syst&#233;mu | Komprese stromov&#253;ch struktur </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Architektura syst&#233;mu | Komprese stromov&#253;ch struktur ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bercek71/tree-compression/blob/main/docs/architecture.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="Komprese stromov&#253;ch struktur">
+            Komprese stromov&#253;ch struktur
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="architektura-systému">Architektura systému</h1>
+
+<h2 id="-modulární-struktura">🏛️ Modulární struktura</h2>
+<p>Systém je rozdělen do několika modulů, zajišťujících flexibilitu a efektivitu.</p>
+<h3 id="-analýza-textu">📦 Analýza textu</h3>
+<p>Modul pro syntaktickou analýzu a generování stromových struktur z textů.</p>
+<ul>
+<li><strong>Výstupy</strong>: Generované stromové struktury.</li>
+<li><strong>Použité technologie</strong>: .NET</li>
+</ul>
+<h3 id="-detekce-vzorců">🧠 Detekce vzorců</h3>
+<p>Tento modul identifikuje opakující se vzory ve stromových strukturách, které lze komprimovat.</p>
+<ul>
+<li><strong>Výstupy</strong>: Seznam vzorců pro kompresi.</li>
+<li><strong>Použité technologie</strong>: Algoritmy pro detekci vzorců.</li>
+</ul>
+<h3 id="-kompresní-algoritmy">⚙️ Kompresní algoritmy</h3>
+<p>Implementace kompresních metod pro optimalizaci stromových struktur.</p>
+<ul>
+<li><strong>Typy algoritmů</strong>: Huffmanovo kódování, LZW.</li>
+<li><strong>Výstupy</strong>: Komprimované datové struktury.</li>
+</ul>
+<blockquote>
+<p><strong>Tip</strong>: Každý modul je navržen pro snadnou rozšiřitelnost a testování nových metod.</p>
+</blockquote>
+<h2 id="-výhody-modulární-struktury">💡 Výhody modulární struktury</h2>
+<ul>
+<li><strong>Flexibilita</strong>: Snadno přidáváte nové moduly.</li>
+<li><strong>Škálovatelnost</strong>: Podporuje práci s různými velikostmi dat.</li>
+<li><strong>Paralelizace</strong>: Každý modul lze paralelizovat pro zrychlení výpočtů.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bercek71/tree-compression/blob/main/docs/architecture.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

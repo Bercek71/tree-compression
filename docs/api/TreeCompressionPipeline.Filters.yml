@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.Filters
+  commentId: N:TreeCompressionPipeline.Filters
+  id: TreeCompressionPipeline.Filters
+  children:
+  - TreeCompressionPipeline.Filters.CompressionFilter`1
+  - TreeCompressionPipeline.Filters.DecompressionFilter`1
+  - TreeCompressionPipeline.Filters.TextToTreeFilter`1
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionPipeline.Filters
+  nameWithType: TreeCompressionPipeline.Filters
+  fullName: TreeCompressionPipeline.Filters
+  type: Namespace
+  assemblies:
+  - TreeCompressionPipelineLib
+references:
+- uid: TreeCompressionPipeline.Filters.CompressionFilter`1
+  commentId: T:TreeCompressionPipeline.Filters.CompressionFilter`1
+  href: TreeCompressionPipeline.Filters.CompressionFilter-1.html
+  name: CompressionFilter<T>
+  nameWithType: CompressionFilter<T>
+  fullName: TreeCompressionPipeline.Filters.CompressionFilter<T>
+  nameWithType.vb: CompressionFilter(Of T)
+  fullName.vb: TreeCompressionPipeline.Filters.CompressionFilter(Of T)
+  name.vb: CompressionFilter(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.Filters.CompressionFilter`1
+    name: CompressionFilter
+    href: TreeCompressionPipeline.Filters.CompressionFilter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.Filters.CompressionFilter`1
+    name: CompressionFilter
+    href: TreeCompressionPipeline.Filters.CompressionFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline.Filters.DecompressionFilter`1
+  commentId: T:TreeCompressionPipeline.Filters.DecompressionFilter`1
+  href: TreeCompressionPipeline.Filters.DecompressionFilter-1.html
+  name: DecompressionFilter<T>
+  nameWithType: DecompressionFilter<T>
+  fullName: TreeCompressionPipeline.Filters.DecompressionFilter<T>
+  nameWithType.vb: DecompressionFilter(Of T)
+  fullName.vb: TreeCompressionPipeline.Filters.DecompressionFilter(Of T)
+  name.vb: DecompressionFilter(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.Filters.DecompressionFilter`1
+    name: DecompressionFilter
+    href: TreeCompressionPipeline.Filters.DecompressionFilter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.Filters.DecompressionFilter`1
+    name: DecompressionFilter
+    href: TreeCompressionPipeline.Filters.DecompressionFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1
+  commentId: T:TreeCompressionPipeline.Filters.TextToTreeFilter`1
+  href: TreeCompressionPipeline.Filters.TextToTreeFilter-1.html
+  name: TextToTreeFilter<T>
+  nameWithType: TextToTreeFilter<T>
+  fullName: TreeCompressionPipeline.Filters.TextToTreeFilter<T>
+  nameWithType.vb: TextToTreeFilter(Of T)
+  fullName.vb: TreeCompressionPipeline.Filters.TextToTreeFilter(Of T)
+  name.vb: TextToTreeFilter(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1
+    name: TextToTreeFilter
+    href: TreeCompressionPipeline.Filters.TextToTreeFilter-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.Filters.TextToTreeFilter`1
+    name: TextToTreeFilter
+    href: TreeCompressionPipeline.Filters.TextToTreeFilter-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Journal Entry - 2025-02-19 | Komprese stromov&#253;ch struktur </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Journal Entry - 2025-02-19 | Komprese stromov&#253;ch struktur ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bercek71/tree-compression/blob/main/docs/journal/2025-02-19.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Komprese stromov&#253;ch struktur">
+            Komprese stromov&#253;ch struktur
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="journal-entry---2025-02-19">Journal Entry - 2025-02-19</h1>
+
+<p>Na začátku jsem začal zkoumat různé způsoby, jak strojově sestavit stromové struktury vět nebo jednotlivých slov. Jako první jsem se zaměřil na projekt <strong>MorphoDiTa</strong>, který slouží k <strong>taggingu</strong> (tj. přiřazování slovním tvarům jejich gramatických kategorií, jako je slovní druh, pád nebo osoba) a k <strong>lemmatizaci</strong> (tj. převodu slov na jejich základní tvar – lemma).</p>
+<p>Pro experimenty jsem vytvořil jednoduchý framework v jazyce <strong>C#</strong>, ve kterém pomocí základních příkazů testuji <strong>tagger</strong> a <strong>lemmatizaci</strong>. Zkoumám také, zda by části <strong>lemmatizačního derivativního stromu</strong> mohly být využity ke kompresi textu.</p>
+<p>U menších souborů se může stát, že se velikost spíše zvýší, ale u větších textů by naopak mohla klesnout – to však musím experimentálně ověřit. V této fázi projektu hledám vhodný způsob, jak efektivně sestavit stromové struktury na základě získaných analytických dat. <strong>Tagging se zatím jeví jako nejlepší přístup, ale potřebuji najít optimální kritéria pro jejich konstrukci.</strong></p>
+<p>Našel jsem Dependency Parser <a href="https://lindat.mff.cuni.cz/repository/xmlui/handle/11234/1-1573"><strong>Parsito</strong></a>, který by mohl dokázat vytvořit strom. Musím se ještě více naučit jak funguje NLP a tyto algoritmy.</p>
+<p>Parsito bohužel nefunguje na architekturách ARM64, zároveň je dlouhou dobu nepoužívaný. Release co se mi podařilo stáhnout je z roku 2016.</p>
+<p>Dále jsem narazil na StanfordNLP, který je momentálně označený za deprecated, tudíž pro mě nejspíš nepoužitelný???</p>
+<p><del>Zároveň mě napadlo, pokud se mi nepodaří rozjet model pro dependency parsing lokálně,</del> mohl <del>bych využít alespoň nějaké REST API.</del> REST API není podporované.</p>
+<p>Našel jsem knihovnu UDPipe, která má wrapper přímo pro C#, takže by mohla být jednoduše použitelná.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bercek71/tree-compression/blob/main/docs/journal/2025-02-19.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionAlgorithms.Extensions
+  commentId: N:TreeCompressionAlgorithms.Extensions
+  id: TreeCompressionAlgorithms.Extensions
+  children:
+  - TreeCompressionAlgorithms.Extensions.XmlTagExtension
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionAlgorithms.Extensions
+  nameWithType: TreeCompressionAlgorithms.Extensions
+  fullName: TreeCompressionAlgorithms.Extensions
+  type: Namespace
+  assemblies:
+  - TreeCompressionAlgorithms
+references:
+- uid: TreeCompressionAlgorithms.Extensions.XmlTagExtension
+  commentId: T:TreeCompressionAlgorithms.Extensions.XmlTagExtension
+  href: TreeCompressionAlgorithms.Extensions.XmlTagExtension.html
+  name: XmlTagExtension
+  nameWithType: XmlTagExtension
+  fullName: TreeCompressionAlgorithms.Extensions.XmlTagExtension

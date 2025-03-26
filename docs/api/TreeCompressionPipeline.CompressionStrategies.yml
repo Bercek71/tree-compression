@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.CompressionStrategies
+  commentId: N:TreeCompressionPipeline.CompressionStrategies
+  id: TreeCompressionPipeline.CompressionStrategies
+  children:
+  - TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+  - TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionPipeline.CompressionStrategies
+  nameWithType: TreeCompressionPipeline.CompressionStrategies
+  fullName: TreeCompressionPipeline.CompressionStrategies
+  type: Namespace
+  assemblies:
+  - TreeCompressionPipelineLib
+references:
+- uid: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+  href: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy.html
+  name: CompressionStrategy
+  nameWithType: CompressionStrategy
+  fullName: TreeCompressionPipeline.CompressionStrategies.CompressionStrategy
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  name: ICompressionStrategy<T>
+  nameWithType: ICompressionStrategy<T>
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>
+  nameWithType.vb: ICompressionStrategy(Of T)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T)
+  name.vb: ICompressionStrategy(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy
+    href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+    name: ICompressionStrategy
+    href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

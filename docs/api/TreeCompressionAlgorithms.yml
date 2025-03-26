@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionAlgorithms
+  commentId: N:TreeCompressionAlgorithms
+  id: TreeCompressionAlgorithms
+  children:
+  - TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+  - TreeCompressionAlgorithms.XmlTreeCompressing
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionAlgorithms
+  nameWithType: TreeCompressionAlgorithms
+  fullName: TreeCompressionAlgorithms
+  type: Namespace
+  assemblies:
+  - TreeCompressionAlgorithms
+references:
+- uid: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+  commentId: T:TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+  href: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing.html
+  name: NaturalLanguageTreeCompressing
+  nameWithType: NaturalLanguageTreeCompressing
+  fullName: TreeCompressionAlgorithms.NaturalLanguageTreeCompressing
+- uid: TreeCompressionAlgorithms.XmlTreeCompressing
+  commentId: T:TreeCompressionAlgorithms.XmlTreeCompressing
+  href: TreeCompressionAlgorithms.XmlTreeCompressing.html
+  name: XmlTreeCompressing
+  nameWithType: XmlTreeCompressing
+  fullName: TreeCompressionAlgorithms.XmlTreeCompressing

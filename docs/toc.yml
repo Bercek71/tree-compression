@@ -1,0 +1,8 @@
+- name: Architecture
+  href: architecture/
+- name: Requirements
+  href: requirements/
+- name: Journal
+  href: journal/
+- name: API
+  href: api/

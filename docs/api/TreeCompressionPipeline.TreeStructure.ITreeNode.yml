@@ -1,0 +1,109 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ITreeNode
+  id: ITreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  children:
+  - TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  langs:
+  - csharp
+  - vb
+  name: ITreeNode
+  nameWithType: ITreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ITreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ITreeNode
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ITreeNode.cs
+    startLine: 5
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Nejzákladnější rozhraní libovolného uzlu stromu.
+  example: []
+  syntax:
+    content: public interface ITreeNode
+    content.vb: Public Interface ITreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  id: Value
+  parent: TreeCompressionPipeline.TreeStructure.ITreeNode
+  langs:
+  - csharp
+  - vb
+  name: Value
+  nameWithType: ITreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ITreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Value
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ITreeNode.cs
+    startLine: 10
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Hodnota uzlu stromu, může být cokoliv.
+  example: []
+  syntax:
+    content: object Value { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: ReadOnly Property Value As Object
+  overload: TreeCompressionPipeline.TreeStructure.ITreeNode.Value*
+references:
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode.Value*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  href: TreeCompressionPipeline.TreeStructure.ITreeNode.html#TreeCompressionPipeline_TreeStructure_ITreeNode_Value
+  name: Value
+  nameWithType: ITreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System

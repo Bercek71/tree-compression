@@ -1,0 +1,274 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.IProcessObserver
+  commentId: T:TreeCompressionPipeline.IProcessObserver
+  id: IProcessObserver
+  parent: TreeCompressionPipeline
+  children:
+  - TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  - TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  - TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  - TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  langs:
+  - csharp
+  - vb
+  name: IProcessObserver
+  nameWithType: IProcessObserver
+  fullName: TreeCompressionPipeline.IProcessObserver
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessObserver.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: IProcessObserver
+    path: ../src/TreeCompressionPipelineLib/IProcessObserver.cs
+    startLine: 5
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Definuje rozhraní pro observera, který sleduje průběh procesu.
+  example: []
+  syntax:
+    content: public interface IProcessObserver
+    content.vb: Public Interface IProcessObserver
+- uid: TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  id: OnStart(System.String)
+  parent: TreeCompressionPipeline.IProcessObserver
+  langs:
+  - csharp
+  - vb
+  name: OnStart(string)
+  nameWithType: IProcessObserver.OnStart(string)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnStart(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessObserver.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnStart
+    path: ../src/TreeCompressionPipelineLib/IProcessObserver.cs
+    startLine: 13
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při spuštění procesu.
+  example: []
+  syntax:
+    content: void OnStart(string process)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je spuštěn.
+    content.vb: Sub OnStart(process As String)
+  overload: TreeCompressionPipeline.IProcessObserver.OnStart*
+  nameWithType.vb: IProcessObserver.OnStart(String)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnStart(String)
+  name.vb: OnStart(String)
+- uid: TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  id: OnProgress(System.String,System.Double)
+  parent: TreeCompressionPipeline.IProcessObserver
+  langs:
+  - csharp
+  - vb
+  name: OnProgress(string, double)
+  nameWithType: IProcessObserver.OnProgress(string, double)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnProgress(string, double)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessObserver.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnProgress
+    path: ../src/TreeCompressionPipelineLib/IProcessObserver.cs
+    startLine: 24
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při průběhu procesu.
+  example: []
+  syntax:
+    content: >-
+      [Obsolete("Metoda by měla sloužit pouze pro debugging a testování.")]
+
+      void OnProgress(string process, double percentComplete)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je sledován.
+    - id: percentComplete
+      type: System.Double
+      description: Procenta dokončení procesu.
+    content.vb: >-
+      <Obsolete("Metoda by měla sloužit pouze pro debugging a testování.")>
+
+      Sub OnProgress(process As String, percentComplete As Double)
+  overload: TreeCompressionPipeline.IProcessObserver.OnProgress*
+  attributes:
+  - type: System.ObsoleteAttribute
+    ctor: System.ObsoleteAttribute.#ctor(System.String)
+    arguments:
+    - type: System.String
+      value: Metoda by měla sloužit pouze pro debugging a testování.
+  nameWithType.vb: IProcessObserver.OnProgress(String, Double)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnProgress(String, Double)
+  name.vb: OnProgress(String, Double)
+- uid: TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  id: OnComplete(System.String,System.Object)
+  parent: TreeCompressionPipeline.IProcessObserver
+  langs:
+  - csharp
+  - vb
+  name: OnComplete(string, object)
+  nameWithType: IProcessObserver.OnComplete(string, object)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnComplete(string, object)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessObserver.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnComplete
+    path: ../src/TreeCompressionPipelineLib/IProcessObserver.cs
+    startLine: 36
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při dokončení procesu.
+  example: []
+  syntax:
+    content: void OnComplete(string process, object result)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který byl dokončen.
+    - id: result
+      type: System.Object
+      description: Výsledek procesu, který může být libovolného typu.
+    content.vb: Sub OnComplete(process As String, result As Object)
+  overload: TreeCompressionPipeline.IProcessObserver.OnComplete*
+  nameWithType.vb: IProcessObserver.OnComplete(String, Object)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnComplete(String, Object)
+  name.vb: OnComplete(String, Object)
+- uid: TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  id: OnError(System.String,System.Exception)
+  parent: TreeCompressionPipeline.IProcessObserver
+  langs:
+  - csharp
+  - vb
+  name: OnError(string, Exception)
+  nameWithType: IProcessObserver.OnError(string, Exception)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnError(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/IProcessObserver.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnError
+    path: ../src/TreeCompressionPipelineLib/IProcessObserver.cs
+    startLine: 47
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při chybě v průběhu procesu.
+  example: []
+  syntax:
+    content: void OnError(string process, Exception error)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, ve kterém došlo k chybě.
+    - id: error
+      type: System.Exception
+      description: Vyjímka, která popisuje chybu v průběhu procesu.
+    content.vb: Sub OnError(process As String, [error] As Exception)
+  overload: TreeCompressionPipeline.IProcessObserver.OnError*
+  nameWithType.vb: IProcessObserver.OnError(String, Exception)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnError(String, System.Exception)
+  name.vb: OnError(String, Exception)
+references:
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+- uid: TreeCompressionPipeline.IProcessObserver.OnStart*
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnStart
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnStart_System_String_
+  name: OnStart
+  nameWithType: IProcessObserver.OnStart
+  fullName: TreeCompressionPipeline.IProcessObserver.OnStart
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeCompressionPipeline.IProcessObserver.OnProgress*
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnProgress
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnProgress_System_String_System_Double_
+  name: OnProgress
+  nameWithType: IProcessObserver.OnProgress
+  fullName: TreeCompressionPipeline.IProcessObserver.OnProgress
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TreeCompressionPipeline.IProcessObserver.OnComplete*
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnComplete
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnComplete_System_String_System_Object_
+  name: OnComplete
+  nameWithType: IProcessObserver.OnComplete
+  fullName: TreeCompressionPipeline.IProcessObserver.OnComplete
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TreeCompressionPipeline.IProcessObserver.OnError*
+  commentId: Overload:TreeCompressionPipeline.IProcessObserver.OnError
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnError_System_String_System_Exception_
+  name: OnError
+  nameWithType: IProcessObserver.OnError
+  fullName: TreeCompressionPipeline.IProcessObserver.OnError
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

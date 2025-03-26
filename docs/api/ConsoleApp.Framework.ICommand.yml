@@ -1,0 +1,84 @@
+### YamlMime:ManagedReference
+items:
+- uid: ConsoleApp.Framework.ICommand
+  commentId: T:ConsoleApp.Framework.ICommand
+  id: ICommand
+  parent: ConsoleApp.Framework
+  children:
+  - ConsoleApp.Framework.ICommand.Execute
+  langs:
+  - csharp
+  - vb
+  name: ICommand
+  nameWithType: ICommand
+  fullName: ConsoleApp.Framework.ICommand
+  type: Interface
+  source:
+    remote:
+      path: src/ConsoleApp/Framework/ICommand.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ICommand
+    path: ../src/ConsoleApp/Framework/ICommand.cs
+    startLine: 3
+  assemblies:
+  - ConsoleApp
+  namespace: ConsoleApp.Framework
+  syntax:
+    content: public interface ICommand
+    content.vb: Public Interface ICommand
+- uid: ConsoleApp.Framework.ICommand.Execute
+  commentId: M:ConsoleApp.Framework.ICommand.Execute
+  id: Execute
+  parent: ConsoleApp.Framework.ICommand
+  langs:
+  - csharp
+  - vb
+  name: Execute()
+  nameWithType: ICommand.Execute()
+  fullName: ConsoleApp.Framework.ICommand.Execute()
+  type: Method
+  source:
+    remote:
+      path: src/ConsoleApp/Framework/ICommand.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Execute
+    path: ../src/ConsoleApp/Framework/ICommand.cs
+    startLine: 5
+  assemblies:
+  - ConsoleApp
+  namespace: ConsoleApp.Framework
+  syntax:
+    content: void Execute()
+    content.vb: Sub Execute()
+  overload: ConsoleApp.Framework.ICommand.Execute*
+references:
+- uid: ConsoleApp.Framework
+  commentId: N:ConsoleApp.Framework
+  href: ConsoleApp.html
+  name: ConsoleApp.Framework
+  nameWithType: ConsoleApp.Framework
+  fullName: ConsoleApp.Framework
+  spec.csharp:
+  - uid: ConsoleApp
+    name: ConsoleApp
+    href: ConsoleApp.html
+  - name: .
+  - uid: ConsoleApp.Framework
+    name: Framework
+    href: ConsoleApp.Framework.html
+  spec.vb:
+  - uid: ConsoleApp
+    name: ConsoleApp
+    href: ConsoleApp.html
+  - name: .
+  - uid: ConsoleApp.Framework
+    name: Framework
+    href: ConsoleApp.Framework.html
+- uid: ConsoleApp.Framework.ICommand.Execute*
+  commentId: Overload:ConsoleApp.Framework.ICommand.Execute
+  href: ConsoleApp.Framework.ICommand.html#ConsoleApp_Framework_ICommand_Execute
+  name: Execute
+  nameWithType: ICommand.Execute
+  fullName: ConsoleApp.Framework.ICommand.Execute

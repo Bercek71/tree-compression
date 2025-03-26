@@ -1,0 +1,94 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  id: ISyntacticTreeVisitor
+  parent: TreeCompressionPipeline.TreeStructure
+  children:
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  langs:
+  - csharp
+  - vb
+  name: ISyntacticTreeVisitor
+  nameWithType: ISyntacticTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeVisitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ISyntacticTreeVisitor
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeVisitor.cs
+    startLine: 2
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  syntax:
+    content: public interface ISyntacticTreeVisitor
+    content.vb: Public Interface ISyntacticTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  id: Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  langs:
+  - csharp
+  - vb
+  name: Visit(ISyntacticTreeNode)
+  nameWithType: ISyntacticTreeVisitor.Visit(ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeVisitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Visit
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeVisitor.cs
+    startLine: 4
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  syntax:
+    content: void Visit(ISyntacticTreeNode node)
+    parameters:
+    - id: node
+      type: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+    content.vb: Sub Visit(node As ISyntacticTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit*
+references:
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeVisitor_Visit_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  name: Visit
+  nameWithType: ISyntacticTreeVisitor.Visit
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.Visit
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html
+  name: ISyntacticTreeNode
+  nameWithType: ISyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode

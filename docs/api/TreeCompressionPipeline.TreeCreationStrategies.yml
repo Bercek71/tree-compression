@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeCreationStrategies
+  commentId: N:TreeCompressionPipeline.TreeCreationStrategies
+  id: TreeCompressionPipeline.TreeCreationStrategies
+  children:
+  - TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionPipeline.TreeCreationStrategies
+  nameWithType: TreeCompressionPipeline.TreeCreationStrategies
+  fullName: TreeCompressionPipeline.TreeCreationStrategies
+  type: Namespace
+  assemblies:
+  - TreeCompressionPipelineLib
+references:
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  commentId: T:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  name: ITreeCreationStrategy<T>
+  nameWithType: ITreeCreationStrategy<T>
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>
+  nameWithType.vb: ITreeCreationStrategy(Of T)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T)
+  name.vb: ITreeCreationStrategy(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )

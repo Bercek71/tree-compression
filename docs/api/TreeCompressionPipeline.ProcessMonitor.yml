@@ -1,0 +1,668 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.ProcessMonitor
+  commentId: T:TreeCompressionPipeline.ProcessMonitor
+  id: ProcessMonitor
+  parent: TreeCompressionPipeline
+  children:
+  - TreeCompressionPipeline.ProcessMonitor.OnComplete(System.String,System.Object)
+  - TreeCompressionPipeline.ProcessMonitor.OnError(System.String,System.Exception)
+  - TreeCompressionPipeline.ProcessMonitor.OnProgress(System.String,System.Double)
+  - TreeCompressionPipeline.ProcessMonitor.OnStart(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ProcessMonitor
+  nameWithType: ProcessMonitor
+  fullName: TreeCompressionPipeline.ProcessMonitor
+  type: Class
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/ProcessMonitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ProcessMonitor
+    path: ../src/TreeCompressionPipelineLib/ProcessMonitor.cs
+    startLine: 7
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Jednoduchá implementace observera pro sledování průběhu procesu. Slouží hlavně pro debugging a testování.
+  example: []
+  syntax:
+    content: 'public class ProcessMonitor : IProcessObserver'
+    content.vb: Public Class ProcessMonitor Implements IProcessObserver
+  inheritance:
+  - System.Object
+  implements:
+  - TreeCompressionPipeline.IProcessObserver
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TreeCompressionPipeline.ProcessMonitor.OnStart(System.String)
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnStart(System.String)
+  id: OnStart(System.String)
+  parent: TreeCompressionPipeline.ProcessMonitor
+  langs:
+  - csharp
+  - vb
+  name: OnStart(string)
+  nameWithType: ProcessMonitor.OnStart(string)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnStart(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/ProcessMonitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnStart
+    path: ../src/TreeCompressionPipelineLib/ProcessMonitor.cs
+    startLine: 9
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při spuštění procesu.
+  example: []
+  syntax:
+    content: public void OnStart(string process)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je spuštěn.
+    content.vb: Public Sub OnStart(process As String)
+  overload: TreeCompressionPipeline.ProcessMonitor.OnStart*
+  implements:
+  - TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  nameWithType.vb: ProcessMonitor.OnStart(String)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnStart(String)
+  name.vb: OnStart(String)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnProgress(System.String,System.Double)
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnProgress(System.String,System.Double)
+  id: OnProgress(System.String,System.Double)
+  parent: TreeCompressionPipeline.ProcessMonitor
+  langs:
+  - csharp
+  - vb
+  name: OnProgress(string, double)
+  nameWithType: ProcessMonitor.OnProgress(string, double)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnProgress(string, double)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/ProcessMonitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnProgress
+    path: ../src/TreeCompressionPipelineLib/ProcessMonitor.cs
+    startLine: 10
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při průběhu procesu.
+  example: []
+  syntax:
+    content: public void OnProgress(string process, double percentComplete)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je sledován.
+    - id: percentComplete
+      type: System.Double
+      description: Procenta dokončení procesu.
+    content.vb: Public Sub OnProgress(process As String, percentComplete As Double)
+  overload: TreeCompressionPipeline.ProcessMonitor.OnProgress*
+  implements:
+  - TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  nameWithType.vb: ProcessMonitor.OnProgress(String, Double)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnProgress(String, Double)
+  name.vb: OnProgress(String, Double)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnComplete(System.String,System.Object)
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnComplete(System.String,System.Object)
+  id: OnComplete(System.String,System.Object)
+  parent: TreeCompressionPipeline.ProcessMonitor
+  langs:
+  - csharp
+  - vb
+  name: OnComplete(string, object)
+  nameWithType: ProcessMonitor.OnComplete(string, object)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnComplete(string, object)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/ProcessMonitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnComplete
+    path: ../src/TreeCompressionPipelineLib/ProcessMonitor.cs
+    startLine: 12
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při dokončení procesu.
+  example: []
+  syntax:
+    content: public void OnComplete(string process, object result)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který byl dokončen.
+    - id: result
+      type: System.Object
+      description: Výsledek procesu, který může být libovolného typu.
+    content.vb: Public Sub OnComplete(process As String, result As Object)
+  overload: TreeCompressionPipeline.ProcessMonitor.OnComplete*
+  implements:
+  - TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  nameWithType.vb: ProcessMonitor.OnComplete(String, Object)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnComplete(String, Object)
+  name.vb: OnComplete(String, Object)
+- uid: TreeCompressionPipeline.ProcessMonitor.OnError(System.String,System.Exception)
+  commentId: M:TreeCompressionPipeline.ProcessMonitor.OnError(System.String,System.Exception)
+  id: OnError(System.String,System.Exception)
+  parent: TreeCompressionPipeline.ProcessMonitor
+  langs:
+  - csharp
+  - vb
+  name: OnError(string, Exception)
+  nameWithType: ProcessMonitor.OnError(string, Exception)
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnError(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/ProcessMonitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: OnError
+    path: ../src/TreeCompressionPipelineLib/ProcessMonitor.cs
+    startLine: 16
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda, která je volána při chybě v průběhu procesu.
+  example: []
+  syntax:
+    content: public void OnError(string process, Exception error)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, ve kterém došlo k chybě.
+    - id: error
+      type: System.Exception
+      description: Vyjímka, která popisuje chybu v průběhu procesu.
+    content.vb: Public Sub OnError(process As String, [error] As Exception)
+  overload: TreeCompressionPipeline.ProcessMonitor.OnError*
+  implements:
+  - TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  nameWithType.vb: ProcessMonitor.OnError(String, Exception)
+  fullName.vb: TreeCompressionPipeline.ProcessMonitor.OnError(String, System.Exception)
+  name.vb: OnError(String, Exception)
+references:
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TreeCompressionPipeline.IProcessObserver
+  commentId: T:TreeCompressionPipeline.IProcessObserver
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IProcessObserver.html
+  name: IProcessObserver
+  nameWithType: IProcessObserver
+  fullName: TreeCompressionPipeline.IProcessObserver
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeCompressionPipeline.ProcessMonitor.OnStart*
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnStart
+  href: TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnStart_System_String_
+  name: OnStart
+  nameWithType: ProcessMonitor.OnStart
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnStart
+- uid: TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+  parent: TreeCompressionPipeline.IProcessObserver
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnStart_System_String_
+  name: OnStart(string)
+  nameWithType: IProcessObserver.OnStart(string)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnStart(string)
+  nameWithType.vb: IProcessObserver.OnStart(String)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnStart(String)
+  name.vb: OnStart(String)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+    name: OnStart
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnStart_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnStart(System.String)
+    name: OnStart
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnStart_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TreeCompressionPipeline.ProcessMonitor.OnProgress*
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnProgress
+  href: TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnProgress_System_String_System_Double_
+  name: OnProgress
+  nameWithType: ProcessMonitor.OnProgress
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnProgress
+- uid: TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+  parent: TreeCompressionPipeline.IProcessObserver
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnProgress_System_String_System_Double_
+  name: OnProgress(string, double)
+  nameWithType: IProcessObserver.OnProgress(string, double)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnProgress(string, double)
+  nameWithType.vb: IProcessObserver.OnProgress(String, Double)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnProgress(String, Double)
+  name.vb: OnProgress(String, Double)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+    name: OnProgress
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnProgress_System_String_System_Double_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnProgress(System.String,System.Double)
+    name: OnProgress
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnProgress_System_String_System_Double_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TreeCompressionPipeline.ProcessMonitor.OnComplete*
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnComplete
+  href: TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnComplete_System_String_System_Object_
+  name: OnComplete
+  nameWithType: ProcessMonitor.OnComplete
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnComplete
+- uid: TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+  parent: TreeCompressionPipeline.IProcessObserver
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnComplete_System_String_System_Object_
+  name: OnComplete(string, object)
+  nameWithType: IProcessObserver.OnComplete(string, object)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnComplete(string, object)
+  nameWithType.vb: IProcessObserver.OnComplete(String, Object)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnComplete(String, Object)
+  name.vb: OnComplete(String, Object)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+    name: OnComplete
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnComplete_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnComplete(System.String,System.Object)
+    name: OnComplete
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnComplete_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: TreeCompressionPipeline.ProcessMonitor.OnError*
+  commentId: Overload:TreeCompressionPipeline.ProcessMonitor.OnError
+  href: TreeCompressionPipeline.ProcessMonitor.html#TreeCompressionPipeline_ProcessMonitor_OnError_System_String_System_Exception_
+  name: OnError
+  nameWithType: ProcessMonitor.OnError
+  fullName: TreeCompressionPipeline.ProcessMonitor.OnError
+- uid: TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  commentId: M:TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+  parent: TreeCompressionPipeline.IProcessObserver
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnError_System_String_System_Exception_
+  name: OnError(string, Exception)
+  nameWithType: IProcessObserver.OnError(string, Exception)
+  fullName: TreeCompressionPipeline.IProcessObserver.OnError(string, System.Exception)
+  nameWithType.vb: IProcessObserver.OnError(String, Exception)
+  fullName.vb: TreeCompressionPipeline.IProcessObserver.OnError(String, System.Exception)
+  name.vb: OnError(String, Exception)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+    name: OnError
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnError_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessObserver.OnError(System.String,System.Exception)
+    name: OnError
+    href: TreeCompressionPipeline.IProcessObserver.html#TreeCompressionPipeline_IProcessObserver_OnError_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

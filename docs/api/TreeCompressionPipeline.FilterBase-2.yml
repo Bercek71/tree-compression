@@ -1,0 +1,1093 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.FilterBase`2
+  commentId: T:TreeCompressionPipeline.FilterBase`2
+  id: FilterBase`2
+  parent: TreeCompressionPipeline
+  children:
+  - TreeCompressionPipeline.FilterBase`2.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  - TreeCompressionPipeline.FilterBase`2.Chain(TreeCompressionPipeline.IFilter)
+  - TreeCompressionPipeline.FilterBase`2.NotifyComplete(System.String,System.Object)
+  - TreeCompressionPipeline.FilterBase`2.NotifyError(System.String,System.Exception)
+  - TreeCompressionPipeline.FilterBase`2.NotifyProgress(System.String,System.Double)
+  - TreeCompressionPipeline.FilterBase`2.NotifyStart(System.String)
+  - TreeCompressionPipeline.FilterBase`2.Process(System.Object)
+  - TreeCompressionPipeline.FilterBase`2.ProcessData(`0)
+  - TreeCompressionPipeline.FilterBase`2.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  langs:
+  - csharp
+  - vb
+  name: FilterBase<T, TO>
+  nameWithType: FilterBase<T, TO>
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>
+  type: Class
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: FilterBase
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 17
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Implementace filtru pro pipeline. Filtr je základní jednotka pro zpracování dat v rámci pipeline.
+  example: []
+  syntax:
+    content: 'public abstract class FilterBase<T, TO> : IFilter, IProcessSubject'
+    typeParameters:
+    - id: T
+      description: Vstupní typ dat, které filtr zpracovává.
+    - id: TO
+      description: Výstupní typ dat, která filtr vrací.
+    content.vb: Public MustInherit Class FilterBase(Of T, [TO]) Implements IFilter, IProcessSubject
+  seealso:
+  - linkId: TreeCompressionPipeline.IFilter
+    commentId: T:TreeCompressionPipeline.IFilter
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - TreeCompressionPipeline.Filters.CompressionFilter`1
+  - TreeCompressionPipeline.Filters.DecompressionFilter`1
+  - TreeCompressionPipeline.Filters.TextToTreeFilter`1
+  implements:
+  - TreeCompressionPipeline.IFilter
+  - TreeCompressionPipeline.IProcessSubject
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: FilterBase(Of T, TO)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO)
+  name.vb: FilterBase(Of T, TO)
+- uid: TreeCompressionPipeline.FilterBase`2.ProcessData(`0)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.ProcessData(`0)
+  id: ProcessData(`0)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: ProcessData(T)
+  nameWithType: FilterBase<T, TO>.ProcessData(T)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.ProcessData(T)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ProcessData
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 32
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: >-
+    Obálka pro zpracování dat v rámci filtru pro konkrétní typ dat.
+
+    Musí se doimplementovat
+  example: []
+  syntax:
+    content: protected abstract TO ProcessData(T data)
+    parameters:
+    - id: data
+      type: '{T}'
+      description: Data pro zpracování filtrem
+    return:
+      type: '{TO}'
+      description: Zpraocovaná data ve formě objektu, který může být libovolného typu.
+    content.vb: Protected MustOverride Function ProcessData(data As T) As [TO]
+  overload: TreeCompressionPipeline.FilterBase`2.ProcessData*
+  nameWithType.vb: FilterBase(Of T, TO).ProcessData(T)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).ProcessData(T)
+- uid: TreeCompressionPipeline.FilterBase`2.Process(System.Object)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.Process(System.Object)
+  id: Process(System.Object)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: Process(object)
+  nameWithType: FilterBase<T, TO>.Process(object)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Process(object)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Process
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 48
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: >-
+    Implementace metody pro zpracování dat v rámci filtru.
+
+    Přetypuje data na konkrétní typ a zavolá metodu pro zpracování dat.
+  example: []
+  syntax:
+    content: public object Process(object data)
+    parameters:
+    - id: data
+      type: System.Object
+      description: Data, která jsou zpracována v rámci filtru.
+    return:
+      type: System.Object
+      description: ''
+    content.vb: Public Function Process(data As Object) As Object
+  overload: TreeCompressionPipeline.FilterBase`2.Process*
+  exceptions:
+  - type: System.ArgumentException
+    commentId: T:System.ArgumentException
+    description: Pokud filtr obdrží data, která nejsou typu <code class="typeparamref">T</code>.
+  - type: System.InvalidOperationException
+    commentId: T:System.InvalidOperationException
+    description: Pokud zpracování dat skončí chybou.
+  implements:
+  - TreeCompressionPipeline.IFilter.Process(System.Object)
+  nameWithType.vb: FilterBase(Of T, TO).Process(Object)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Process(Object)
+  name.vb: Process(Object)
+- uid: TreeCompressionPipeline.FilterBase`2.Chain(TreeCompressionPipeline.IFilter)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.Chain(TreeCompressionPipeline.IFilter)
+  id: Chain(TreeCompressionPipeline.IFilter)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: Chain(IFilter)
+  nameWithType: FilterBase<T, TO>.Chain(IFilter)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Chain(TreeCompressionPipeline.IFilter)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Chain
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 71
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro přidání dalšího filtru do řetězce filtrů pro zpracování dat.
+  example: []
+  syntax:
+    content: public IFilter Chain(IFilter nextFilter)
+    parameters:
+    - id: nextFilter
+      type: TreeCompressionPipeline.IFilter
+      description: Další filtr, který bude následovat po aktuálním filtru.
+    return:
+      type: TreeCompressionPipeline.IFilter
+      description: Vrací odkaz na aktuální filtr, pro fluent chaining.
+    content.vb: Public Function Chain(nextFilter As IFilter) As IFilter
+  overload: TreeCompressionPipeline.FilterBase`2.Chain*
+  implements:
+  - TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  nameWithType.vb: FilterBase(Of T, TO).Chain(IFilter)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Chain(TreeCompressionPipeline.IFilter)
+- uid: TreeCompressionPipeline.FilterBase`2.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  id: AddObserver(TreeCompressionPipeline.IProcessObserver)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: AddObserver(IProcessObserver)
+  nameWithType: FilterBase<T, TO>.AddObserver(IProcessObserver)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: AddObserver
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 78
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Přidání observeru, který bude sledovat průběh procesu.
+  example: []
+  syntax:
+    content: public void AddObserver(IProcessObserver observer)
+    parameters:
+    - id: observer
+      type: TreeCompressionPipeline.IProcessObserver
+      description: Observer, který bude sledovat průběh procesu.
+    content.vb: Public Sub AddObserver(observer As IProcessObserver)
+  overload: TreeCompressionPipeline.FilterBase`2.AddObserver*
+  implements:
+  - TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  nameWithType.vb: FilterBase(Of T, TO).AddObserver(IProcessObserver)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).AddObserver(TreeCompressionPipeline.IProcessObserver)
+- uid: TreeCompressionPipeline.FilterBase`2.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  id: RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: RemoveObserver(IProcessObserver)
+  nameWithType: FilterBase<T, TO>.RemoveObserver(IProcessObserver)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: RemoveObserver
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 84
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Odebrání observeru, který sledoval průběh procesu.
+  example: []
+  syntax:
+    content: public void RemoveObserver(IProcessObserver observer)
+    parameters:
+    - id: observer
+      type: TreeCompressionPipeline.IProcessObserver
+      description: Observer, který sledoval průběh procesu.
+    content.vb: Public Sub RemoveObserver(observer As IProcessObserver)
+  overload: TreeCompressionPipeline.FilterBase`2.RemoveObserver*
+  implements:
+  - TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  nameWithType.vb: FilterBase(Of T, TO).RemoveObserver(IProcessObserver)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyStart(System.String)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyStart(System.String)
+  id: NotifyStart(System.String)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: NotifyStart(string)
+  nameWithType: FilterBase<T, TO>.NotifyStart(string)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyStart(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyStart
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 90
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro oznámení observerům o začátku procesu.
+  example: []
+  syntax:
+    content: public void NotifyStart(string process)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je spuštěn.
+    content.vb: Public Sub NotifyStart(process As String)
+  overload: TreeCompressionPipeline.FilterBase`2.NotifyStart*
+  implements:
+  - TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyStart(String)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyStart(String)
+  name.vb: NotifyStart(String)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyProgress(System.String,System.Double)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyProgress(System.String,System.Double)
+  id: NotifyProgress(System.String,System.Double)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: NotifyProgress(string, double)
+  nameWithType: FilterBase<T, TO>.NotifyProgress(string, double)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyProgress(string, double)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyProgress
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 99
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda by měla sloužit pouze pro debugging a testování průběhu procesu.
+  example: []
+  syntax:
+    content: public void NotifyProgress(string process, double percentComplete)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který je sledován.
+    - id: percentComplete
+      type: System.Double
+      description: Procenta dokončení procesu.
+    content.vb: Public Sub NotifyProgress(process As String, percentComplete As Double)
+  overload: TreeCompressionPipeline.FilterBase`2.NotifyProgress*
+  implements:
+  - TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyProgress(String, Double)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyProgress(String, Double)
+  name.vb: NotifyProgress(String, Double)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyComplete(System.String,System.Object)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyComplete(System.String,System.Object)
+  id: NotifyComplete(System.String,System.Object)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: NotifyComplete(string, object)
+  nameWithType: FilterBase<T, TO>.NotifyComplete(string, object)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyComplete(string, object)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyComplete
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 108
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro oznámení observerům o dokončení procesu.
+  example: []
+  syntax:
+    content: public void NotifyComplete(string process, object result)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, který byl dokončen.
+    - id: result
+      type: System.Object
+      description: Výsledek procesu, který může být libovolného typu.
+    content.vb: Public Sub NotifyComplete(process As String, result As Object)
+  overload: TreeCompressionPipeline.FilterBase`2.NotifyComplete*
+  implements:
+  - TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyComplete(String, Object)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyComplete(String, Object)
+  name.vb: NotifyComplete(String, Object)
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyError(System.String,System.Exception)
+  commentId: M:TreeCompressionPipeline.FilterBase`2.NotifyError(System.String,System.Exception)
+  id: NotifyError(System.String,System.Exception)
+  parent: TreeCompressionPipeline.FilterBase`2
+  langs:
+  - csharp
+  - vb
+  name: NotifyError(string, Exception)
+  nameWithType: FilterBase<T, TO>.NotifyError(string, Exception)
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyError(string, System.Exception)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/FilterBase.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: NotifyError
+    path: ../src/TreeCompressionPipelineLib/FilterBase.cs
+    startLine: 117
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline
+  summary: Metoda pro oznámení observerům o chybě v průběhu procesu.
+  example: []
+  syntax:
+    content: public void NotifyError(string process, Exception error)
+    parameters:
+    - id: process
+      type: System.String
+      description: Název procesu, ve kterém došlo k chybě.
+    - id: error
+      type: System.Exception
+      description: Vyjímka, která nastala v průběhu procesu.
+    content.vb: Public Sub NotifyError(process As String, [error] As Exception)
+  overload: TreeCompressionPipeline.FilterBase`2.NotifyError*
+  implements:
+  - TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  nameWithType.vb: FilterBase(Of T, TO).NotifyError(String, Exception)
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyError(String, System.Exception)
+  name.vb: NotifyError(String, Exception)
+references:
+- uid: TreeCompressionPipeline.IFilter
+  commentId: T:TreeCompressionPipeline.IFilter
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IFilter.html
+  name: IFilter
+  nameWithType: IFilter
+  fullName: TreeCompressionPipeline.IFilter
+- uid: TreeCompressionPipeline
+  commentId: N:TreeCompressionPipeline
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline
+  nameWithType: TreeCompressionPipeline
+  fullName: TreeCompressionPipeline
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TreeCompressionPipeline.IProcessSubject
+  commentId: T:TreeCompressionPipeline.IProcessSubject
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IProcessSubject.html
+  name: IProcessSubject
+  nameWithType: IProcessSubject
+  fullName: TreeCompressionPipeline.IProcessSubject
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeCompressionPipeline.FilterBase`2.ProcessData*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.ProcessData
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_ProcessData__0_
+  name: ProcessData
+  nameWithType: FilterBase<T, TO>.ProcessData
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.ProcessData
+  nameWithType.vb: FilterBase(Of T, TO).ProcessData
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).ProcessData
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: '{TO}'
+  commentId: '!:TO'
+  definition: TO
+  name: TO
+  nameWithType: TO
+  fullName: TO
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TO
+  commentId: '!:TO'
+  name: TO
+  nameWithType: TO
+  fullName: TO
+- uid: System.ArgumentException
+  commentId: T:System.ArgumentException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.argumentexception
+  name: ArgumentException
+  nameWithType: ArgumentException
+  fullName: System.ArgumentException
+- uid: System.InvalidOperationException
+  commentId: T:System.InvalidOperationException
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.invalidoperationexception
+  name: InvalidOperationException
+  nameWithType: InvalidOperationException
+  fullName: System.InvalidOperationException
+- uid: TreeCompressionPipeline.FilterBase`2.Process*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.Process
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_Process_System_Object_
+  name: Process
+  nameWithType: FilterBase<T, TO>.Process
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Process
+  nameWithType.vb: FilterBase(Of T, TO).Process
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Process
+- uid: TreeCompressionPipeline.IFilter.Process(System.Object)
+  commentId: M:TreeCompressionPipeline.IFilter.Process(System.Object)
+  parent: TreeCompressionPipeline.IFilter
+  isExternal: true
+  href: TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Process_System_Object_
+  name: Process(object)
+  nameWithType: IFilter.Process(object)
+  fullName: TreeCompressionPipeline.IFilter.Process(object)
+  nameWithType.vb: IFilter.Process(Object)
+  fullName.vb: TreeCompressionPipeline.IFilter.Process(Object)
+  name.vb: Process(Object)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IFilter.Process(System.Object)
+    name: Process
+    href: TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Process_System_Object_
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IFilter.Process(System.Object)
+    name: Process
+    href: TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Process_System_Object_
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: TreeCompressionPipeline.FilterBase`2.Chain*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.Chain
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_Chain_TreeCompressionPipeline_IFilter_
+  name: Chain
+  nameWithType: FilterBase<T, TO>.Chain
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.Chain
+  nameWithType.vb: FilterBase(Of T, TO).Chain
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).Chain
+- uid: TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  commentId: M:TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  parent: TreeCompressionPipeline.IFilter
+  href: TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Chain_TreeCompressionPipeline_IFilter_
+  name: Chain(IFilter)
+  nameWithType: IFilter.Chain(IFilter)
+  fullName: TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+    name: Chain
+    href: TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Chain_TreeCompressionPipeline_IFilter_
+  - name: (
+  - uid: TreeCompressionPipeline.IFilter
+    name: IFilter
+    href: TreeCompressionPipeline.IFilter.html
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)
+    name: Chain
+    href: TreeCompressionPipeline.IFilter.html#TreeCompressionPipeline_IFilter_Chain_TreeCompressionPipeline_IFilter_
+  - name: (
+  - uid: TreeCompressionPipeline.IFilter
+    name: IFilter
+    href: TreeCompressionPipeline.IFilter.html
+  - name: )
+- uid: TreeCompressionPipeline.FilterBase`2.AddObserver*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.AddObserver
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  name: AddObserver
+  nameWithType: FilterBase<T, TO>.AddObserver
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.AddObserver
+  nameWithType.vb: FilterBase(Of T, TO).AddObserver
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).AddObserver
+- uid: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  parent: TreeCompressionPipeline.IProcessSubject
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  name: AddObserver(IProcessObserver)
+  nameWithType: IProcessSubject.AddObserver(IProcessObserver)
+  fullName: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+    name: AddObserver
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  - name: (
+  - uid: TreeCompressionPipeline.IProcessObserver
+    name: IProcessObserver
+    href: TreeCompressionPipeline.IProcessObserver.html
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessSubject.AddObserver(TreeCompressionPipeline.IProcessObserver)
+    name: AddObserver
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_TreeCompressionPipeline_IProcessObserver_
+  - name: (
+  - uid: TreeCompressionPipeline.IProcessObserver
+    name: IProcessObserver
+    href: TreeCompressionPipeline.IProcessObserver.html
+  - name: )
+- uid: TreeCompressionPipeline.IProcessObserver
+  commentId: T:TreeCompressionPipeline.IProcessObserver
+  parent: TreeCompressionPipeline
+  href: TreeCompressionPipeline.IProcessObserver.html
+  name: IProcessObserver
+  nameWithType: IProcessObserver
+  fullName: TreeCompressionPipeline.IProcessObserver
+- uid: TreeCompressionPipeline.FilterBase`2.RemoveObserver*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.RemoveObserver
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  name: RemoveObserver
+  nameWithType: FilterBase<T, TO>.RemoveObserver
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.RemoveObserver
+  nameWithType.vb: FilterBase(Of T, TO).RemoveObserver
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).RemoveObserver
+- uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  parent: TreeCompressionPipeline.IProcessSubject
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  name: RemoveObserver(IProcessObserver)
+  nameWithType: IProcessSubject.RemoveObserver(IProcessObserver)
+  fullName: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+    name: RemoveObserver
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  - name: (
+  - uid: TreeCompressionPipeline.IProcessObserver
+    name: IProcessObserver
+    href: TreeCompressionPipeline.IProcessObserver.html
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessSubject.RemoveObserver(TreeCompressionPipeline.IProcessObserver)
+    name: RemoveObserver
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_TreeCompressionPipeline_IProcessObserver_
+  - name: (
+  - uid: TreeCompressionPipeline.IProcessObserver
+    name: IProcessObserver
+    href: TreeCompressionPipeline.IProcessObserver.html
+  - name: )
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyStart*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyStart
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyStart_System_String_
+  name: NotifyStart
+  nameWithType: FilterBase<T, TO>.NotifyStart
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyStart
+  nameWithType.vb: FilterBase(Of T, TO).NotifyStart
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyStart
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+  parent: TreeCompressionPipeline.IProcessSubject
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_System_String_
+  name: NotifyStart(string)
+  nameWithType: IProcessSubject.NotifyStart(string)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyStart(string)
+  nameWithType.vb: IProcessSubject.NotifyStart(String)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyStart(String)
+  name.vb: NotifyStart(String)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+    name: NotifyStart
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyStart(System.String)
+    name: NotifyStart
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyProgress*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyProgress
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyProgress_System_String_System_Double_
+  name: NotifyProgress
+  nameWithType: FilterBase<T, TO>.NotifyProgress
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyProgress
+  nameWithType.vb: FilterBase(Of T, TO).NotifyProgress
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyProgress
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+  parent: TreeCompressionPipeline.IProcessSubject
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_System_String_System_Double_
+  name: NotifyProgress(string, double)
+  nameWithType: IProcessSubject.NotifyProgress(string, double)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyProgress(string, double)
+  nameWithType.vb: IProcessSubject.NotifyProgress(String, Double)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyProgress(String, Double)
+  name.vb: NotifyProgress(String, Double)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+    name: NotifyProgress
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_System_String_System_Double_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyProgress(System.String,System.Double)
+    name: NotifyProgress
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_System_String_System_Double_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Double
+    name: Double
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.double
+  - name: )
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.double
+  name: double
+  nameWithType: double
+  fullName: double
+  nameWithType.vb: Double
+  fullName.vb: Double
+  name.vb: Double
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyComplete*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyComplete
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyComplete_System_String_System_Object_
+  name: NotifyComplete
+  nameWithType: FilterBase<T, TO>.NotifyComplete
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyComplete
+  nameWithType.vb: FilterBase(Of T, TO).NotifyComplete
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyComplete
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+  parent: TreeCompressionPipeline.IProcessSubject
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_System_String_System_Object_
+  name: NotifyComplete(string, object)
+  nameWithType: IProcessSubject.NotifyComplete(string, object)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyComplete(string, object)
+  nameWithType.vb: IProcessSubject.NotifyComplete(String, Object)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyComplete(String, Object)
+  name.vb: NotifyComplete(String, Object)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+    name: NotifyComplete
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyComplete(System.String,System.Object)
+    name: NotifyComplete
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_System_String_System_Object_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: TreeCompressionPipeline.FilterBase`2.NotifyError*
+  commentId: Overload:TreeCompressionPipeline.FilterBase`2.NotifyError
+  href: TreeCompressionPipeline.FilterBase-2.html#TreeCompressionPipeline_FilterBase_2_NotifyError_System_String_System_Exception_
+  name: NotifyError
+  nameWithType: FilterBase<T, TO>.NotifyError
+  fullName: TreeCompressionPipeline.FilterBase<T, TO>.NotifyError
+  nameWithType.vb: FilterBase(Of T, TO).NotifyError
+  fullName.vb: TreeCompressionPipeline.FilterBase(Of T, TO).NotifyError
+- uid: TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  commentId: M:TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+  parent: TreeCompressionPipeline.IProcessSubject
+  isExternal: true
+  href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_System_String_System_Exception_
+  name: NotifyError(string, Exception)
+  nameWithType: IProcessSubject.NotifyError(string, Exception)
+  fullName: TreeCompressionPipeline.IProcessSubject.NotifyError(string, System.Exception)
+  nameWithType.vb: IProcessSubject.NotifyError(String, Exception)
+  fullName.vb: TreeCompressionPipeline.IProcessSubject.NotifyError(String, System.Exception)
+  name.vb: NotifyError(String, Exception)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+    name: NotifyError
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.IProcessSubject.NotifyError(System.String,System.Exception)
+    name: NotifyError
+    href: TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_System_String_System_Exception_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: ','
+  - name: " "
+  - uid: System.Exception
+    name: Exception
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.exception
+  - name: )
+- uid: System.Exception
+  commentId: T:System.Exception
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.exception
+  name: Exception
+  nameWithType: Exception
+  fullName: System.Exception

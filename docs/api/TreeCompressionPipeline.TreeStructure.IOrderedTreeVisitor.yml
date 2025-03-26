@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  id: IOrderedTreeVisitor
+  parent: TreeCompressionPipeline.TreeStructure
+  children:
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  langs:
+  - csharp
+  - vb
+  name: IOrderedTreeVisitor
+  nameWithType: IOrderedTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeVisitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: IOrderedTreeVisitor
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeVisitor.cs
+    startLine: 5
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Visitor pro zpracování uzlu stromu.
+  example: []
+  syntax:
+    content: public interface IOrderedTreeVisitor
+    content.vb: Public Interface IOrderedTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  commentId: M:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  id: Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  parent: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  langs:
+  - csharp
+  - vb
+  name: Visit(IOrderedTreeNode)
+  nameWithType: IOrderedTreeVisitor.Visit(IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeVisitor.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Visit
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeVisitor.cs
+    startLine: 8
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  syntax:
+    content: void Visit(IOrderedTreeNode node)
+    parameters:
+    - id: node
+      type: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    content.vb: Sub Visit(node As IOrderedTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit*
+references:
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_Visit_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  name: Visit
+  nameWithType: IOrderedTreeVisitor.Visit
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.Visit
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  name: IOrderedTreeNode
+  nameWithType: IOrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode

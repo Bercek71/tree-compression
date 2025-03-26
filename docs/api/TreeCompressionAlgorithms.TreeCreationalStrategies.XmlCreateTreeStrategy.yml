@@ -1,0 +1,526 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  commentId: T:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  id: XmlCreateTreeStrategy
+  parent: TreeCompressionAlgorithms.TreeCreationalStrategies
+  children:
+  - TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(System.String)
+  langs:
+  - csharp
+  - vb
+  name: XmlCreateTreeStrategy
+  nameWithType: XmlCreateTreeStrategy
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  type: Class
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/TreeCreationalStrategies/XmlCreateTreeStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: XmlCreateTreeStrategy
+    path: ../src/TreeCompressionAlgorithms/TreeCreationalStrategies/XmlCreateTreeStrategy.cs
+    startLine: 6
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms.TreeCreationalStrategies
+  syntax:
+    content: 'public class XmlCreateTreeStrategy : ITreeCreationStrategy<IOrderedTreeNode>'
+    content.vb: Public Class XmlCreateTreeStrategy Implements ITreeCreationStrategy(Of IOrderedTreeNode)
+  inheritance:
+  - System.Object
+  implements:
+  - TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(System.String)
+  commentId: M:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(System.String)
+  id: CreateTree(System.String)
+  parent: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy
+  langs:
+  - csharp
+  - vb
+  name: CreateTree(string)
+  nameWithType: XmlCreateTreeStrategy.CreateTree(string)
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(string)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionAlgorithms/TreeCreationalStrategies/XmlCreateTreeStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: CreateTree
+    path: ../src/TreeCompressionAlgorithms/TreeCreationalStrategies/XmlCreateTreeStrategy.cs
+    startLine: 8
+  assemblies:
+  - TreeCompressionAlgorithms
+  namespace: TreeCompressionAlgorithms.TreeCreationalStrategies
+  summary: Metoda pro vytvoření stromové struktury z textu.
+  example: []
+  syntax:
+    content: public IOrderedTreeNode CreateTree(string text)
+    parameters:
+    - id: text
+      type: System.String
+      description: Text, který by se měl převést do stromové struktury.
+    return:
+      type: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+      description: Vrací vytvořenou stromovou strukturu daného typu.
+    content.vb: Public Function CreateTree(text As String) As IOrderedTreeNode
+  overload: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree*
+  implements:
+  - TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CreateTree(System.String)
+  nameWithType.vb: XmlCreateTreeStrategy.CreateTree(String)
+  fullName.vb: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree(String)
+  name.vb: CreateTree(String)
+references:
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies
+  commentId: N:TreeCompressionAlgorithms.TreeCreationalStrategies
+  href: TreeCompressionAlgorithms.html
+  name: TreeCompressionAlgorithms.TreeCreationalStrategies
+  nameWithType: TreeCompressionAlgorithms.TreeCreationalStrategies
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies
+  spec.csharp:
+  - uid: TreeCompressionAlgorithms
+    name: TreeCompressionAlgorithms
+    href: TreeCompressionAlgorithms.html
+  - name: .
+  - uid: TreeCompressionAlgorithms.TreeCreationalStrategies
+    name: TreeCreationalStrategies
+    href: TreeCompressionAlgorithms.TreeCreationalStrategies.html
+  spec.vb:
+  - uid: TreeCompressionAlgorithms
+    name: TreeCompressionAlgorithms
+    href: TreeCompressionAlgorithms.html
+  - name: .
+  - uid: TreeCompressionAlgorithms.TreeCreationalStrategies
+    name: TreeCreationalStrategies
+    href: TreeCompressionAlgorithms.TreeCreationalStrategies.html
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  commentId: T:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  parent: TreeCompressionPipeline.TreeCreationStrategies
+  definition: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  name: ITreeCreationStrategy<IOrderedTreeNode>
+  nameWithType: ITreeCreationStrategy<IOrderedTreeNode>
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>
+  nameWithType.vb: ITreeCreationStrategy(Of IOrderedTreeNode)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name.vb: ITreeCreationStrategy(Of IOrderedTreeNode)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  - name: <
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  commentId: T:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+  href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  name: ITreeCreationStrategy<T>
+  nameWithType: ITreeCreationStrategy<T>
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>
+  nameWithType.vb: ITreeCreationStrategy(Of T)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T)
+  name.vb: ITreeCreationStrategy(Of T)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1
+    name: ITreeCreationStrategy
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeCompressionPipeline.TreeCreationStrategies
+  commentId: N:TreeCompressionPipeline.TreeCreationStrategies
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeCreationStrategies
+  nameWithType: TreeCompressionPipeline.TreeCreationStrategies
+  fullName: TreeCompressionPipeline.TreeCreationStrategies
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeCreationStrategies
+    name: TreeCreationStrategies
+    href: TreeCompressionPipeline.TreeCreationStrategies.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeCreationStrategies
+    name: TreeCreationStrategies
+    href: TreeCompressionPipeline.TreeCreationStrategies.html
+- uid: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree*
+  commentId: Overload:TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree
+  href: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.html#TreeCompressionAlgorithms_TreeCreationalStrategies_XmlCreateTreeStrategy_CreateTree_System_String_
+  name: CreateTree
+  nameWithType: XmlCreateTreeStrategy.CreateTree
+  fullName: TreeCompressionAlgorithms.TreeCreationalStrategies.XmlCreateTreeStrategy.CreateTree
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CreateTree(System.String)
+  commentId: M:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CreateTree(System.String)
+  parent: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  definition: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  name: CreateTree(string)
+  nameWithType: ITreeCreationStrategy<IOrderedTreeNode>.CreateTree(string)
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>.CreateTree(string)
+  nameWithType.vb: ITreeCreationStrategy(Of IOrderedTreeNode).CreateTree(String)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode).CreateTree(String)
+  name.vb: CreateTree(String)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CreateTree(System.String)
+    name: CreateTree
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}.CreateTree(System.String)
+    name: CreateTree
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  name: IOrderedTreeNode
+  nameWithType: IOrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+- uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  commentId: M:TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+  isExternal: true
+  href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  name: CreateTree(string)
+  nameWithType: ITreeCreationStrategy<T>.CreateTree(string)
+  fullName: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy<T>.CreateTree(string)
+  nameWithType.vb: ITreeCreationStrategy(Of T).CreateTree(String)
+  fullName.vb: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy(Of T).CreateTree(String)
+  name.vb: CreateTree(String)
+  spec.csharp:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+    name: CreateTree
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  - name: (
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+  spec.vb:
+  - uid: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy`1.CreateTree(System.String)
+    name: CreateTree
+    href: TreeCompressionPipeline.TreeCreationStrategies.ITreeCreationStrategy-1.html#TreeCompressionPipeline_TreeCreationStrategies_ITreeCreationStrategy_1_CreateTree_System_String_
+  - name: (
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html

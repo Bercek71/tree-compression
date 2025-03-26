@@ -1,0 +1,30 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionAlgorithms.CompressionStrategies
+  commentId: N:TreeCompressionAlgorithms.CompressionStrategies
+  id: TreeCompressionAlgorithms.CompressionStrategies
+  children:
+  - TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+  - TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+  langs:
+  - csharp
+  - vb
+  name: TreeCompressionAlgorithms.CompressionStrategies
+  nameWithType: TreeCompressionAlgorithms.CompressionStrategies
+  fullName: TreeCompressionAlgorithms.CompressionStrategies
+  type: Namespace
+  assemblies:
+  - TreeCompressionAlgorithms
+references:
+- uid: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+  commentId: T:TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+  href: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor.html
+  name: DictionaryTreeCompressor
+  nameWithType: DictionaryTreeCompressor
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.DictionaryTreeCompressor
+- uid: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+  commentId: T:TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy
+  href: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy.html
+  name: TreeRePairStrategy
+  nameWithType: TreeRePairStrategy
+  fullName: TreeCompressionAlgorithms.CompressionStrategies.TreeRePairStrategy

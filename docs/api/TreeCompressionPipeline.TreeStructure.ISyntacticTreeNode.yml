@@ -1,0 +1,409 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  id: ISyntacticTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  children:
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  - TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  langs:
+  - csharp
+  - vb
+  name: ISyntacticTreeNode
+  nameWithType: ISyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ISyntacticTreeNode
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 5
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Uzel syntaktického stromu.
+  example: []
+  syntax:
+    content: 'public interface ISyntacticTreeNode : ITreeNode'
+    content.vb: Public Interface ISyntacticTreeNode Inherits ITreeNode
+  inheritedMembers:
+  - TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  commentId: P:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  id: LeftChildren
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  langs:
+  - csharp
+  - vb
+  name: LeftChildren
+  nameWithType: ISyntacticTreeNode.LeftChildren
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: LeftChildren
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 11
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Leví potomci uzlu, uspořádaní zleva doprava.
+  example: []
+  syntax:
+    content: List<ISyntacticTreeNode> LeftChildren { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode}
+    content.vb: ReadOnly Property LeftChildren As List(Of ISyntacticTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren*
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  commentId: P:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  id: RightChildren
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  langs:
+  - csharp
+  - vb
+  name: RightChildren
+  nameWithType: ISyntacticTreeNode.RightChildren
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: RightChildren
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 16
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Praví potomci uzlu, uspořádaní zleva doprava.
+  example: []
+  syntax:
+    content: List<ISyntacticTreeNode> RightChildren { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode}
+    content.vb: ReadOnly Property RightChildren As List(Of ISyntacticTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren*
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  id: AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  langs:
+  - csharp
+  - vb
+  name: AddLeftChild(ISyntacticTreeNode)
+  nameWithType: ISyntacticTreeNode.AddLeftChild(ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: AddLeftChild
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 24
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Přidání potomka do levého podstromu.
+  example: []
+  syntax:
+    content: void AddLeftChild(ISyntacticTreeNode child)
+    parameters:
+    - id: child
+      type: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+      description: potomek, který bude přidán do levého podstromu.
+    content.vb: Sub AddLeftChild(child As ISyntacticTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild*
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  id: AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  langs:
+  - csharp
+  - vb
+  name: AddRightChild(ISyntacticTreeNode)
+  nameWithType: ISyntacticTreeNode.AddRightChild(ISyntacticTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild(TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: AddRightChild
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 32
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Přidání potomka do pravého podstromu.
+  example: []
+  syntax:
+    content: void AddRightChild(ISyntacticTreeNode child)
+    parameters:
+    - id: child
+      type: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+      description: Potomek, který bude přidán do pravého podstromu.
+    content.vb: Sub AddRightChild(child As ISyntacticTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild*
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  commentId: M:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  id: Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  langs:
+  - csharp
+  - vb
+  name: Accept(ISyntacticTreeVisitor)
+  nameWithType: ISyntacticTreeNode.Accept(ISyntacticTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept(TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Accept
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 34
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  syntax:
+    content: void Accept(ISyntacticTreeVisitor visitor)
+    parameters:
+    - id: visitor
+      type: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+    content.vb: Sub Accept(visitor As ISyntacticTreeVisitor)
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept*
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  id: Parent
+  parent: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: ISyntacticTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Parent
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/ISyntacticTreeNode.cs
+    startLine: 39
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Rodič uzlu.
+  example: []
+  syntax:
+    content: ISyntacticTreeNode? Parent { get; set; }
+    parameters: []
+    return:
+      type: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+    content.vb: Property Parent As ISyntacticTreeNode
+  overload: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent*
+references:
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  parent: TreeCompressionPipeline.TreeStructure.ITreeNode
+  href: TreeCompressionPipeline.TreeStructure.ITreeNode.html#TreeCompressionPipeline_TreeStructure_ITreeNode_Value
+  name: Value
+  nameWithType: ITreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ITreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ITreeNode.html
+  name: ITreeNode
+  nameWithType: ITreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_LeftChildren
+  name: LeftChildren
+  nameWithType: ISyntacticTreeNode.LeftChildren
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.LeftChildren
+- uid: System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode}
+  commentId: T:System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<ISyntacticTreeNode>
+  nameWithType: List<ISyntacticTreeNode>
+  fullName: System.Collections.Generic.List<TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode>
+  nameWithType.vb: List(Of ISyntacticTreeNode)
+  fullName.vb: System.Collections.Generic.List(Of TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode)
+  name.vb: List(Of ISyntacticTreeNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+    name: ISyntacticTreeNode
+    href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+    name: ISyntacticTreeNode
+    href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_RightChildren
+  name: RightChildren
+  nameWithType: ISyntacticTreeNode.RightChildren
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.RightChildren
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_AddLeftChild_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  name: AddLeftChild
+  nameWithType: ISyntacticTreeNode.AddLeftChild
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddLeftChild
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html
+  name: ISyntacticTreeNode
+  nameWithType: ISyntacticTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_AddRightChild_TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_
+  name: AddRightChild
+  nameWithType: ISyntacticTreeNode.AddRightChild
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.AddRightChild
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_Accept_TreeCompressionPipeline_TreeStructure_ISyntacticTreeVisitor_
+  name: Accept
+  nameWithType: ISyntacticTreeNode.Accept
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Accept
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor.html
+  name: ISyntacticTreeVisitor
+  nameWithType: ISyntacticTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent
+  href: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.html#TreeCompressionPipeline_TreeStructure_ISyntacticTreeNode_Parent
+  name: Parent
+  nameWithType: ISyntacticTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.ISyntacticTreeNode.Parent

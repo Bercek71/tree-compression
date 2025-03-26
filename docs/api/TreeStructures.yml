@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeStructures
+  commentId: N:TreeStructures
+  id: TreeStructures
+  children:
+  - TreeStructures.Direction
+  - TreeStructures.TreeBuilder
+  - TreeStructures.TreeNode`1
+  - TreeStructures.Tree`1
+  langs:
+  - csharp
+  - vb
+  name: TreeStructures
+  nameWithType: TreeStructures
+  fullName: TreeStructures
+  type: Namespace
+  assemblies:
+  - TreeStructures
+references:
+- uid: TreeStructures.Direction
+  commentId: T:TreeStructures.Direction
+  parent: TreeStructures
+  href: TreeStructures.Direction.html
+  name: Direction
+  nameWithType: Direction
+  fullName: TreeStructures.Direction
+- uid: TreeStructures.Tree`1
+  commentId: T:TreeStructures.Tree`1
+  href: TreeStructures.Tree-1.html
+  name: Tree<T>
+  nameWithType: Tree<T>
+  fullName: TreeStructures.Tree<T>
+  nameWithType.vb: Tree(Of T)
+  fullName.vb: TreeStructures.Tree(Of T)
+  name.vb: Tree(Of T)
+  spec.csharp:
+  - uid: TreeStructures.Tree`1
+    name: Tree
+    href: TreeStructures.Tree-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.Tree`1
+    name: Tree
+    href: TreeStructures.Tree-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures.TreeBuilder
+  commentId: T:TreeStructures.TreeBuilder
+  href: TreeStructures.TreeBuilder.html
+  name: TreeBuilder
+  nameWithType: TreeBuilder
+  fullName: TreeStructures.TreeBuilder
+- uid: TreeStructures.TreeNode`1
+  commentId: T:TreeStructures.TreeNode`1
+  parent: TreeStructures
+  href: TreeStructures.TreeNode-1.html
+  name: TreeNode<T>
+  nameWithType: TreeNode<T>
+  fullName: TreeStructures.TreeNode<T>
+  nameWithType.vb: TreeNode(Of T)
+  fullName.vb: TreeStructures.TreeNode(Of T)
+  name.vb: TreeNode(Of T)
+  spec.csharp:
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode
+    href: TreeStructures.TreeNode-1.html
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: TreeStructures.TreeNode`1
+    name: TreeNode
+    href: TreeStructures.TreeNode-1.html
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: TreeStructures
+  commentId: N:TreeStructures
+  href: TreeStructures.html
+  name: TreeStructures
+  nameWithType: TreeStructures
+  fullName: TreeStructures

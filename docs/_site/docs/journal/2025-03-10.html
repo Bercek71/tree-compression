@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>&#128197; 2025-02-25 - V&#253;zkum a implementace algoritmů pro kompresi stromov&#253;ch struktur | Komprese stromov&#253;ch struktur </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="&#128197; 2025-02-25 - V&#253;zkum a implementace algoritmů pro kompresi stromov&#253;ch struktur | Komprese stromov&#253;ch struktur ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bercek71/tree-compression/blob/main/docs/docs/journal/2025-03-10.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="Komprese stromov&#253;ch struktur">
+            Komprese stromov&#253;ch struktur
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="-2025-02-25---výzkum-a-implementace-algoritmů-pro-kompresi-stromových-struktur">📅 2025-02-25 - Výzkum a implementace algoritmů pro kompresi stromových struktur</h1>
+
+<p>Dnes jsem se zaměřil na implementaci a výzkum různých existujících algoritmů pro kompresi stromových struktur. Prozkoumal jsem tři hlavní algoritmy: <strong>DictionaryTreeCompression</strong>, <strong>FrequentSubtreeCompression</strong> a <strong>RePairTreeCompressor</strong>. Každý z těchto algoritmů má své výhody a specifické využití v závislosti na druhu dat, která se komprimují. Tento výzkum mi pomohl lépe pochopit, jak každý z těchto přístupů funguje a jak je možné je využít pro optimalizaci komprese stromů ve svém projektu.</p>
+<h2 id="-algoritmy-pro-kompresi-stromových-struktur">📚 Algoritmy pro kompresi stromových struktur</h2>
+<h3 id="1-dictionarytreecompression">1. <strong>DictionaryTreeCompression</strong></h3>
+<p>Tento algoritmus je známý svou efektivitou při kompresi dat ve stromových strukturách, přičemž je běžně používán pro <strong>kompresi XML dat</strong> a dalších hierarchických datových formátů. Funguje tak, že vytváří slovník, který obsahuje opakující se podstromy. Každý podstrom je reprezentován klíčem ve slovníku, což umožňuje kompresi tím, že místo opakovaných podstromů se používá pouze jejich klíč. Tento přístup výrazně snižuje velikost dat, zejména pokud existují rekurentní vzory.</p>
+<p><strong>Možnosti využití:</strong></p>
+<ul>
+<li>Tento algoritmus bych mohl použít pro kompresi stromových struktur, které vykazují vysokou míru opakování v jejich podstrukturoch.</li>
+<li>V budoucnu by se mohl ukázat jako efektivní pro kompresi syntaktických stromů, pokud se budou vyskytovat opakující se vzory, například v dlouhých větách nebo textových blocích.</li>
+</ul>
+<h3 id="2-frequentsubtreecompression">2. <strong>FrequentSubtreeCompression</strong></h3>
+<p>Tento algoritmus se zaměřuje na <strong>kompresi častých podstromů</strong>, což znamená, že hledá podstromy, které se vyskytují často v celém stromu, a nahrazuje je jedinečnými identifikátory. Tento přístup je často používán v <strong>bioinformatice</strong> pro kompresi dat, jako jsou filogenetické stromy, a v dalších oblastech, kde se často opakují určité struktury.</p>
+<p><strong>Možnosti využití:</strong></p>
+<ul>
+<li>Tento algoritmus by mohl být užitečný, pokud budu pracovat s rozsáhlými daty, kde některé podstromy nebo vzory struktury stromu mohou být velmi časté.</li>
+<li>V budoucnu se ukáže jako vhodný pro kompresi složitějších stromových struktur s vysokou mírou opakování, což je typické pro texty s mnoha podobnými větami.</li>
+</ul>
+<h3 id="3-repairtreecompressor">3. <strong>RePairTreeCompressor</strong></h3>
+<p><strong>RePair</strong> je algoritmus, který se zaměřuje na <strong>nalezení opakujících se vzorců</strong> v datech a jejich nahrazení symboly, což vede k výrazné redukci velikosti. Tento algoritmus je oblíbený pro kompresi textů a <strong>XML dat</strong> a je známý svou efektivitou při hledání a nahrazování opakujících se podstruktur.</p>
+<p><strong>Možnosti využití:</strong></p>
+<ul>
+<li>RePair je vhodný pro situace, kdy je potřeba efektivně komprimovat velké množství dat, a to zejména když se v datech nachází podobné podstruktury.</li>
+<li>Tento algoritmus by mohl být jedním z klíčových nástrojů pro mojí implementaci kompresního algoritmu, zejména pokud budu mít problém s velkým množstvím opakujících se vzorců v syntaktických stromech.</li>
+</ul>
+<h2 id="-implementace-a-experimenty">🛠️ Implementace a experimenty</h2>
+<p>V rámci implementace jsem se nejprve zaměřil na základní verzi každého algoritmu:</p>
+<ul>
+<li><p><strong>DictionaryTreeCompression</strong>: Začal jsem implementací jednoduchého slovníku pro ukládání opakujících se podstromů. Testoval jsem ho na několika příkladech textu, kde jsem hledal opakující se fráze.</p>
+</li>
+<li><p><strong>FrequentSubtreeCompression</strong>: Tento algoritmus jsem implementoval tak, že jsem prohledával strom a identifikoval podstromy, které se vyskytovaly častěji než ostatní. Tyto podstromy jsem nahradil identifikátory.</p>
+</li>
+<li><p><strong>RePairTreeCompressor</strong>: Tento algoritmus jsem implementoval s využitím principu iterativní komprese, kde se v každé iteraci hledají a nahrazují opakující se vzory. Implementace vyžadovala dostatečně efektivní způsob, jak zpracovávat a ukládat nalezené vzory.</p>
+</li>
+</ul>
+<h2 id="-výsledky-a-zhodnocení">🚀 Výsledky a zhodnocení</h2>
+<p>Během implementace jsem se hodně naučil o těchto algoritmech a jejich výhodách:</p>
+<ul>
+<li><strong>DictionaryTreeCompression</strong> se osvědčil jako efektivní pro kompresi textových stromů, ale je méně efektivní při zpracování stromů s nižšími mírami opakování.</li>
+<li><strong>FrequentSubtreeCompression</strong> je velmi silný při kompresi dat, kde se vyskytují časté vzory. Může být užitečný pro struktury s výrazným opakováním.</li>
+<li><strong>RePairTreeCompressor</strong> se ukázal jako nejlepší pro moji aplikaci, protože je schopný najít opakující se vzory a komprimovat je velmi efektivně, zejména u velkých stromů.</li>
+</ul>
+<h3 id="-co-dál">💡 Co dál?</h3>
+<p>V budoucnu bych chtěl:</p>
+<ul>
+<li><strong>Porovnat výkon</strong> těchto algoritmů na reálných datech.</li>
+<li><strong>Vytvořit hybridní metodu</strong>, která by kombinovala výhody jednotlivých algoritmů.</li>
+<li><strong>Testovat na větších datech</strong>, abych zjistil, jak se chovají při vyšší složitosti a větší velikosti stromu.</li>
+</ul>
+<p>Celkově jsem se naučil hodně o tom, jak algoritmy pro kompresi stromů fungují a jak je lze aplikovat na různé typy dat. Zatím se mi nejvíce osvědčil <strong>RePair</strong>, ale stále je prostor pro optimalizace a zlepšení.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bercek71/tree-compression/blob/main/docs/docs/journal/2025-03-10.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

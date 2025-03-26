@@ -1,0 +1,190 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  commentId: T:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  id: ICompressionStrategy`1
+  parent: TreeCompressionPipeline.CompressionStrategies
+  children:
+  - TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress(`0)
+  - TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  langs:
+  - csharp
+  - vb
+  name: ICompressionStrategy<T>
+  nameWithType: ICompressionStrategy<T>
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/CompressionStrategies/ICompressionStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: ICompressionStrategy
+    path: ../src/TreeCompressionPipelineLib/CompressionStrategies/ICompressionStrategy.cs
+    startLine: 10
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.CompressionStrategies
+  summary: Kompresní strategie pro kompresi a dekompresi stromové struktury.
+  example: []
+  syntax:
+    content: public interface ICompressionStrategy<T>
+    typeParameters:
+    - id: T
+      description: Typ stromové struktury, která je komprimována a dekomprimována.
+    content.vb: Public Interface ICompressionStrategy(Of T)
+  nameWithType.vb: ICompressionStrategy(Of T)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T)
+  name.vb: ICompressionStrategy(Of T)
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress(`0)
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress(`0)
+  id: Compress(`0)
+  parent: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  langs:
+  - csharp
+  - vb
+  name: Compress(T)
+  nameWithType: ICompressionStrategy<T>.Compress(T)
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Compress(T)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/CompressionStrategies/ICompressionStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Compress
+    path: ../src/TreeCompressionPipelineLib/CompressionStrategies/ICompressionStrategy.cs
+    startLine: 21
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.CompressionStrategies
+  summary: Komprimuje stromovou strukturu.
+  example: []
+  syntax:
+    content: CompressedTree Compress(T tree)
+    parameters:
+    - id: tree
+      type: '{T}'
+      description: Strom pro kompresi.
+    return:
+      type: TreeCompressionPipeline.TreeStructure.CompressedTree
+      description: Komprimovaný strom.
+    content.vb: Function Compress(tree As T) As CompressedTree
+  overload: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress*
+  nameWithType.vb: ICompressionStrategy(Of T).Compress(T)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Compress(T)
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  commentId: M:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  id: Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  parent: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1
+  langs:
+  - csharp
+  - vb
+  name: Decompress(CompressedTree)
+  nameWithType: ICompressionStrategy<T>.Decompress(CompressedTree)
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/CompressionStrategies/ICompressionStrategy.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Decompress
+    path: ../src/TreeCompressionPipelineLib/CompressionStrategies/ICompressionStrategy.cs
+    startLine: 32
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.CompressionStrategies
+  summary: Dekomprimuje stromovou strukturu.
+  example: []
+  syntax:
+    content: T Decompress(CompressedTree compressedTree)
+    parameters:
+    - id: compressedTree
+      type: TreeCompressionPipeline.TreeStructure.CompressedTree
+      description: Dekomprimovaný strom.
+    return:
+      type: '{T}'
+      description: Původní stromová struktura.
+    content.vb: Function Decompress(compressedTree As CompressedTree) As T
+  overload: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress*
+  nameWithType.vb: ICompressionStrategy(Of T).Decompress(CompressedTree)
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Decompress(TreeCompressionPipeline.TreeStructure.CompressedTree)
+references:
+- uid: TreeCompressionPipeline.CompressionStrategies
+  commentId: N:TreeCompressionPipeline.CompressionStrategies
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.CompressionStrategies
+  nameWithType: TreeCompressionPipeline.CompressionStrategies
+  fullName: TreeCompressionPipeline.CompressionStrategies
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.CompressionStrategies
+    name: CompressionStrategies
+    href: TreeCompressionPipeline.CompressionStrategies.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.CompressionStrategies
+    name: CompressionStrategies
+    href: TreeCompressionPipeline.CompressionStrategies.html
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress*
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Compress
+  href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html#TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_1_Compress__0_
+  name: Compress
+  nameWithType: ICompressionStrategy<T>.Compress
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Compress
+  nameWithType.vb: ICompressionStrategy(Of T).Compress
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Compress
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TreeCompressionPipeline.TreeStructure.CompressedTree
+  commentId: T:TreeCompressionPipeline.TreeStructure.CompressedTree
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.CompressedTree.html
+  name: CompressedTree
+  nameWithType: CompressedTree
+  fullName: TreeCompressionPipeline.TreeStructure.CompressedTree
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress*
+  commentId: Overload:TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy`1.Decompress
+  href: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy-1.html#TreeCompressionPipeline_CompressionStrategies_ICompressionStrategy_1_Decompress_TreeCompressionPipeline_TreeStructure_CompressedTree_
+  name: Decompress
+  nameWithType: ICompressionStrategy<T>.Decompress
+  fullName: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy<T>.Decompress
+  nameWithType.vb: ICompressionStrategy(Of T).Decompress
+  fullName.vb: TreeCompressionPipeline.CompressionStrategies.ICompressionStrategy(Of T).Decompress

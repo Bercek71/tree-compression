@@ -1,0 +1,338 @@
+### YamlMime:ManagedReference
+items:
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  id: IOrderedTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  children:
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  - TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  langs:
+  - csharp
+  - vb
+  name: IOrderedTreeNode
+  nameWithType: IOrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  type: Interface
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: IOrderedTreeNode
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+    startLine: 5
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Rozhraní stromové struktury, která definuje základní metody pro klasický jakýsi uspořádaný strom.
+  example: []
+  syntax:
+    content: 'public interface IOrderedTreeNode : ITreeNode'
+    content.vb: Public Interface IOrderedTreeNode Inherits ITreeNode
+  inheritedMembers:
+  - TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  commentId: P:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  id: Children
+  parent: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  langs:
+  - csharp
+  - vb
+  name: Children
+  nameWithType: IOrderedTreeNode.Children
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Children
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+    startLine: 10
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Potomci uzlu.
+  example: []
+  syntax:
+    content: List<IOrderedTreeNode> Children { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+    content.vb: ReadOnly Property Children As List(Of IOrderedTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children*
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  commentId: P:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  id: Parent
+  parent: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  langs:
+  - csharp
+  - vb
+  name: Parent
+  nameWithType: IOrderedTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  type: Property
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Parent
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+    startLine: 15
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Rodič uzlu.
+  example: []
+  syntax:
+    content: IOrderedTreeNode? Parent { get; set; }
+    parameters: []
+    return:
+      type: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    content.vb: Property Parent As IOrderedTreeNode
+  overload: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent*
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  commentId: M:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  id: AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  parent: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  langs:
+  - csharp
+  - vb
+  name: AddChild(IOrderedTreeNode)
+  nameWithType: IOrderedTreeNode.AddChild(IOrderedTreeNode)
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild(TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: AddChild
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+    startLine: 23
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Přidání potomka do uzlu.
+  example: []
+  syntax:
+    content: void AddChild(IOrderedTreeNode child)
+    parameters:
+    - id: child
+      type: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+      description: Potomek, který bude přidán do uzlu.
+    content.vb: Sub AddChild(child As IOrderedTreeNode)
+  overload: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild*
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  commentId: M:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  id: Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  parent: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  langs:
+  - csharp
+  - vb
+  name: Accept(IOrderedTreeVisitor)
+  nameWithType: IOrderedTreeNode.Accept(IOrderedTreeVisitor)
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept(TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor)
+  type: Method
+  source:
+    remote:
+      path: src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+      branch: main
+      repo: git@github.com:Bercek71/tree-compression.git
+    id: Accept
+    path: ../src/TreeCompressionPipelineLib/TreeStructure/IOrderedTreeNode.cs
+    startLine: 32
+  assemblies:
+  - TreeCompressionPipelineLib
+  namespace: TreeCompressionPipeline.TreeStructure
+  summary: Přijímání visitora pro zpracování uzlu.
+  example: []
+  syntax:
+    content: void Accept(IOrderedTreeVisitor visitor)
+    parameters:
+    - id: visitor
+      type: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+      description: Visitor, který bude zpracovávat uzel.
+    content.vb: Sub Accept(visitor As IOrderedTreeVisitor)
+  overload: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept*
+  seealso:
+  - linkId: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+    commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+references:
+- uid: TreeCompressionPipeline.TreeStructure
+  commentId: N:TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.html
+  name: TreeCompressionPipeline.TreeStructure
+  nameWithType: TreeCompressionPipeline.TreeStructure
+  fullName: TreeCompressionPipeline.TreeStructure
+  spec.csharp:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+  spec.vb:
+  - uid: TreeCompressionPipeline
+    name: TreeCompressionPipeline
+    href: TreeCompressionPipeline.html
+  - name: .
+  - uid: TreeCompressionPipeline.TreeStructure
+    name: TreeStructure
+    href: TreeCompressionPipeline.TreeStructure.html
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  commentId: P:TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+  parent: TreeCompressionPipeline.TreeStructure.ITreeNode
+  href: TreeCompressionPipeline.TreeStructure.ITreeNode.html#TreeCompressionPipeline_TreeStructure_ITreeNode_Value
+  name: Value
+  nameWithType: ITreeNode.Value
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode.Value
+- uid: TreeCompressionPipeline.TreeStructure.ITreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.ITreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.ITreeNode.html
+  name: ITreeNode
+  nameWithType: ITreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.ITreeNode
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Children
+  name: Children
+  nameWithType: IOrderedTreeNode.Children
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Children
+- uid: System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  commentId: T:System.Collections.Generic.List{TreeCompressionPipeline.TreeStructure.IOrderedTreeNode}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<IOrderedTreeNode>
+  nameWithType: List<IOrderedTreeNode>
+  fullName: System.Collections.Generic.List<TreeCompressionPipeline.TreeStructure.IOrderedTreeNode>
+  nameWithType.vb: List(Of IOrderedTreeNode)
+  fullName.vb: System.Collections.Generic.List(Of TreeCompressionPipeline.TreeStructure.IOrderedTreeNode)
+  name.vb: List(Of IOrderedTreeNode)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+    name: IOrderedTreeNode
+    href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  - name: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.list-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Parent
+  name: Parent
+  nameWithType: IOrderedTreeNode.Parent
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Parent
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html
+  name: IOrderedTreeNode
+  nameWithType: IOrderedTreeNode
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_AddChild_TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_
+  name: AddChild
+  nameWithType: IOrderedTreeNode.AddChild
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.AddChild
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  commentId: T:TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+  parent: TreeCompressionPipeline.TreeStructure
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor.html
+  name: IOrderedTreeVisitor
+  nameWithType: IOrderedTreeVisitor
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeVisitor
+- uid: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept*
+  commentId: Overload:TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept
+  href: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.html#TreeCompressionPipeline_TreeStructure_IOrderedTreeNode_Accept_TreeCompressionPipeline_TreeStructure_IOrderedTreeVisitor_
+  name: Accept
+  nameWithType: IOrderedTreeNode.Accept
+  fullName: TreeCompressionPipeline.TreeStructure.IOrderedTreeNode.Accept

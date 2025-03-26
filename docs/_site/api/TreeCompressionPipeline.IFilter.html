@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Interface IFilter | Komprese stromov&#253;ch struktur </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Interface IFilter | Komprese stromov&#253;ch struktur ">
+      
+      <meta name="description" content="Rozhran&#237; pro vytvořen&#237; filtru v r&#225;mci pipeline. Projekt využ&#237;v&#225; architekturu Pipes and Filters. Filtr představuje jednotku zpracov&#225;n&#237; dat. Děd&#237; z rozhran&#237; IProcessSubject, kter&#233; definuje metody pro přid&#225;n&#237; a odebr&#225;n&#237; observerů.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Bercek71/tree-compression/new/main/apiSpec/new?filename=TreeCompressionPipeline_IFilter.md&amp;value=---%0Auid%3A%20TreeCompressionPipeline.IFilter%0Asummary%3A%20&#39;*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax&#39;%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="ManagedReference">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="Komprese stromov&#253;ch struktur">
+            Komprese stromov&#253;ch struktur
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="TreeCompressionPipeline.IFilter">
+
+
+
+  <h1 id="TreeCompressionPipeline_IFilter" data-uid="TreeCompressionPipeline.IFilter" class="text-break">
+Interface IFilter  <a class="header-action link-secondary" title="View source" href="https://github.com/Bercek71/tree-compression/blob/main/src/TreeCompressionPipelineLib/IFilter.cs/#L9"><i class="bi bi-code-slash"></i></a>
+  </h1>
+
+  <div class="facts text-secondary">
+    <dl><dt>Namespace</dt><dd><a class="xref" href="TreeCompressionPipeline.html">TreeCompressionPipeline</a></dd></dl>
+  <dl><dt>Assembly</dt><dd>TreeCompressionPipelineLib.dll</dd></dl>
+  </div>
+
+  <div class="markdown summary"><p>Rozhraní pro vytvoření filtru v rámci pipeline.
+Projekt využívá architekturu Pipes and Filters.
+Filtr představuje jednotku zpracování dat.
+Dědí z rozhraní IProcessSubject, které definuje metody pro přidání a odebrání observerů.</p>
+</div>
+  <div class="markdown conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public interface IFilter : IProcessSubject</code></pre>
+  </div>
+
+
+
+
+
+
+
+  <dl class="typelist inheritedMembers">
+    <dt>Inherited Members</dt>
+    <dd>
+    <div>
+      <a class="xref" href="TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_AddObserver_TreeCompressionPipeline_IProcessObserver_">IProcessSubject.AddObserver(IProcessObserver)</a>
+    </div>
+    <div>
+      <a class="xref" href="TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_RemoveObserver_TreeCompressionPipeline_IProcessObserver_">IProcessSubject.RemoveObserver(IProcessObserver)</a>
+    </div>
+    <div>
+      <a class="xref" href="TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyStart_System_String_">IProcessSubject.NotifyStart(string)</a>
+    </div>
+    <div>
+      <a class="xref" href="TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyProgress_System_String_System_Double_">IProcessSubject.NotifyProgress(string, double)</a>
+    </div>
+    <div>
+      <a class="xref" href="TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyComplete_System_String_System_Object_">IProcessSubject.NotifyComplete(string, object)</a>
+    </div>
+    <div>
+      <a class="xref" href="TreeCompressionPipeline.IProcessSubject.html#TreeCompressionPipeline_IProcessSubject_NotifyError_System_String_System_Exception_">IProcessSubject.NotifyError(string, Exception)</a>
+    </div>
+  </dd></dl>
+
+
+
+
+
+
+  <h2 class="section" id="methods">Methods
+</h2>
+
+
+  <a id="TreeCompressionPipeline_IFilter_Chain_" data-uid="TreeCompressionPipeline.IFilter.Chain*"></a>
+
+  <h3 id="TreeCompressionPipeline_IFilter_Chain_TreeCompressionPipeline_IFilter_" data-uid="TreeCompressionPipeline.IFilter.Chain(TreeCompressionPipeline.IFilter)">
+  Chain(IFilter)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Bercek71/tree-compression/blob/main/src/TreeCompressionPipelineLib/IFilter.cs/#L31"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Metoda pro přidání dalšího filtru do řetězce filtrů pro zpracování dat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">IFilter Chain(IFilter nextFilter)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>nextFilter</code> <a class="xref" href="TreeCompressionPipeline.IFilter.html">IFilter</a></dt>
+    <dd><p>Další filtr, který bude následovat po aktuálním filtru.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="TreeCompressionPipeline.IFilter.html">IFilter</a></dt>
+    <dd><p>Vrací odkaz na aktuální filtr, pro fluent chaining.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+  <a id="TreeCompressionPipeline_IFilter_Process_" data-uid="TreeCompressionPipeline.IFilter.Process*"></a>
+
+  <h3 id="TreeCompressionPipeline_IFilter_Process_System_Object_" data-uid="TreeCompressionPipeline.IFilter.Process(System.Object)">
+  Process(object)
+  <a class="header-action link-secondary" title="View source" href="https://github.com/Bercek71/tree-compression/blob/main/src/TreeCompressionPipelineLib/IFilter.cs/#L20"><i class="bi bi-code-slash"></i></a>
+  </h3>
+
+  <div class="markdown level1 summary"><p>Metoda pro zpracování dat v rámci filtru.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">object Process(object data)</code></pre>
+  </div>
+
+  <h4 class="section">Parameters</h4>
+  <dl class="parameters">
+    <dt><code>data</code> <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Přijatá data pro zpracování ve formě objektu, který může být libovolného typu.</p>
+</dd>
+  </dl>
+
+  <h4 class="section">Returns</h4>
+  <dl class="parameters">
+    <dt><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object">object</a></dt>
+    <dd><p>Vrací zpracovaná data ve formě objektu, který může být libovolného typu.</p>
+</dd>
+  </dl>
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Bercek71/tree-compression/blob/main/src/TreeCompressionPipelineLib/IFilter.cs/#L9" class="edit-link">Edit this page</a>
+        </div>
+
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
