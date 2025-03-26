@@ -29,6 +29,11 @@ public static class Program
         ];
         #endif
 
+        if (args.Length < 1)
+        {
+            new Help().Execute();
+            return;
+        }
             //ExecuteCommand(args);
             var commandName = args[0];
             var commandArgs = args.Skip(1).ToArray();

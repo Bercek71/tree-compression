@@ -27,7 +27,7 @@ namespace ConsoleApp.Framework
             if (!Commands.TryGetValue(commandName.ToLower(), out var commandType))
             {
                 Console.WriteLine($"Unknown command: {commandName}");
-                Console.WriteLine(HelpHelper.GetHelp());
+                new Help().Execute();
                 return null;
                 //throw new ArgumentException($"Command {commandName} not found");
             }

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace ConsoleApp.Framework;
 
-public class HelpHelper
+public class Help : ICommand
 {
     //load all the commands and arguments from the assembly and return a description of the commands
-    public static string GetHelp()
+    private static string GetHelp()
     {
         var assembly = Assembly.GetExecutingAssembly();
         var types = assembly.GetTypes();
@@ -31,5 +31,10 @@ public class HelpHelper
         }
 
         return help.ToString();
+    }
+
+    public void Execute()
+    {
+        Console.WriteLine(GetHelp());
     }
 }

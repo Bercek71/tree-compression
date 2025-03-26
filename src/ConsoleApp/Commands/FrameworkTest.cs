@@ -12,7 +12,7 @@ namespace ConsoleApp.Commands;
 public class FrameworkTest : ICommand
 {
     [RequireArgument("input", "The input string to compress")]
-    public string InputFile { get; set; }
+    public required string InputFile { get; set; }
 
     public void Execute()
     {

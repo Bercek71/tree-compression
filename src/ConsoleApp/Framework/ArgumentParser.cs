@@ -43,7 +43,7 @@ namespace ConsoleApp.Framework
                 else 
                 {
                     Console.WriteLine($"Missing required argument: --{attr.Name} ({attr.Description})");
-                    Console.WriteLine(HelpHelper.GetHelp());
+                    new Help().Execute();
                 }
             }
         }
