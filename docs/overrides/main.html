@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  {% if page and page.url == "" %}  <!-- Apply only on the homepage -->
+  
+  <div class="landing-page">
+    
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1>🌲 Komprese stromových struktur</h1>
+      <p class="subtitle">Efektivní algoritmy pro analýzu a kompresi stromových struktur</p>
+      <a href="https://github.com/Bercek71/tree-compression" class="md-button md-button--primary">
+        <i class="fab fa-github"></i> GitHub Repo
+      </a>
+      <a href="architecture/" class="md-button md-button--secondary">
+        <i class="mdi mdi-book-open"></i> Dokumentace
+      </a>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="feature">
+        <i class="mdi mdi-chart-tree"></i>
+        <h2>Analýza textů</h2>
+        <p>Přeměna vět na stromové struktury pro další zpracování.</p>
+      </div>
+      <div class="feature">
+        <i class="mdi mdi-pattern"></i>
+        <h2>Detekce vzorců</h2>
+        <p>Identifikace opakujících se prvků a jejich efektivní komprese.</p>
+      </div>
+      <div class="feature">
+        <i class="mdi mdi-rocket-launch"></i>
+        <h2>Optimalizace výkonu</h2>
+        <p>Zrychlení výpočtů a minimalizace datové velikosti.</p>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="call-to-action">
+      <h2>📖 Přečtěte si více</h2>
+      <p>Projděte si podrobnější informace v dokumentaci.</p>
+      <a href="architecture/" class="md-button md-button--primary">
+        <i class="mdi mdi-book-open"></i> Otevřít dokumentaci
+      </a>
+    </section>
+
+  </div>
+
+  <!-- Theme-Aware Styles -->
+  <style>
+    .landing-page {
+      text-align: center;
+      padding: 4rem 2rem;
+      animation: fadeIn 1s ease-in-out;
+    }
+    
+    /* Hero Section */
+    .hero {
+      background: var(--md-primary-fg-color);
+      color: var(--md-primary-bg-color);
+      padding: 3rem;
+      border-radius: 15px;
+      box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+      margin-bottom: 3rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+    }
+    .hero .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+      margin-bottom: 1rem;
+    }
+    .hero .md-button {
+      margin-top: 1.5rem;
+      transition: transform 0.2s ease;
+    }
+    .hero .md-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Features Section */
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+    .feature {
+      flex: 1;
+      min-width: 280px;
+      max-width: 320px;
+      padding: 1.5rem;
+      background: var(--md-default-bg-color);
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .feature:hover {
+      transform: translateY(-5px);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .feature i {
+      font-size: 2.5rem;
+      color: var(--md-primary-fg-color);
+    }
+    
+    /* Call to Action */
+    .call-to-action {
+      margin-top: 3rem;
+      background: var(--md-default-bg-color);
+      padding: 2rem;
+      border-radius: 10px;
+    }
+
+    /* Fade-in Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+
+  {% else %}
+    {{ super() }}  <!-- Keep default layout for other pages -->
+  {% endif %}
+
+{% endblock %}

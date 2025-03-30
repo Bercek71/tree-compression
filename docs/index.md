@@ -1,46 +1,39 @@
-# Vítejte v dokumentaci projektu **Komprese stromových struktur**  
+---
+hide:
+  - navigation
+  - toc
+---
 
-> :material-tree: **Efektivní komprese stromových struktur z analýzy textových vět**  
+# 🌲 Komprese stromových struktur  
 
-Tento projekt se zaměřuje na **detekci vzorců, jejich kompresi a optimalizaci** pro práci s rozsáhlými daty.  
+🚀 **Vítejte v dokumentaci projektu!**  
 
-[:fontawesome-brands-github: GitHub Repo](https://github.com/Bercek71/tree-compression){ .md-button .md-button--primary }  
+Tento projekt se zaměřuje na **analýzu textových vět, transformaci do stromových struktur a efektivní kompresi**.  
+
+<div class="landing-buttons">
+  <a href="https://github.com/Bercek71/tree-compression" class="md-button md-button--primary">
+    <i class="fab fa-github"></i> GitHub Repo
+  </a>
+  <a href="docs/" class="md-button md-button--secondary">
+    <i class="mdi mdi-book-open"></i> Přejít do dokumentace
+  </a>
+</div>
 
 ---
 
-## :rocket: Cíl projektu  
+## 🔥 Hlavní cíle  
 
-Cílem projektu je vytvořit **výkonné a efektivní řešení** pro kompresi stromových struktur generovaných z textových analýz. Hlavní oblasti projektu zahrnují:  
-
-- **Analýzu textových dat** a jejich převod do stromových struktur  
-- **Detekci opakujících se vzorců** ve stromech  
-- **Optimalizaci výkonu** pro práci s velkými objemy dat  
+✅ **Transformace textových vět** do stromových struktur  
+✅ **Detekce vzorců** a jejich efektivní komprese  
+✅ **Optimalizace výkonu** pro práci s velkými daty  
 
 ---
 
-## :books: Hlavní témata  
+## ✨ Jak to funguje?  
 
-### :material-file-tree: Analýza textů  
-**Transformace textových vět do stromových struktur** pro další zpracování a analýzu.  
+1. 📊 **Analýza textů** – přeměna vět na datové struktury  
+2. 🔍 **Detekce opakujících se vzorců**  
+3. 🎯 **Kompresní algoritmy** pro zmenšení velikosti dat  
+4. ⚡ **Rychlé dotazování a rekonstrukce stromů**  
 
-### :material-search-web: Detekce vzorců  
-**Identifikace opakujících se prvků** a jejich efektivní komprese.  
-
-### :material-speedometer: Optimalizace výkonu  
-**Minimalizace datové velikosti** a zrychlení zpracování velkých souborů.  
-
----
-
-## :wrench: Jak projekt pomáhá  
-
-✔ **Flexibilita** – snadné rozšiřování o nové metody  
-✔ **Modularita** – přehledná a rozšiřitelná architektura  
-✔ **Efektivita** – optimalizováno pro velké datové sady  
-
----
-
-### :information_source: Další informace  
-
-Pro podrobnější popis přejděte do jednotlivých sekcí dokumentace.  
-
-[:material-book-open: Dokumentace](#){ .md-button }
+💡 **Chcete se dozvědět více?** Podívejte se na další sekce dokumentace!  

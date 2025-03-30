@@ -172,6 +172,7 @@ nav:
   - Dokumentace:
     - Architektura: architecture.md
     - Požadavky: requirements.md
+    - Použití: usage.md
   - Blog: 
     - blog/index.md
 

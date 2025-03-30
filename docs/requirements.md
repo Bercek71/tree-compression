@@ -1,23 +1,42 @@
 # Požadavky na systém
 
-## ⚙️ Funkční požadavky
+## :gear: Funkční požadavky
 
-- **Analýza textu**: Systém musí generovat stromové struktury.
-- **Detekce vzorců**: Identifikace opakujících se vzorců ve stromových datech.
-- **Kompresní algoritmy**: Aplikace kompresních metod.
-- **Dekomprese**: Obnovení komprimovaných stromů.
+Systém musí splňovat následující klíčové funkce:
 
-## 📋 Systémové požadavky
+- **Analýza textu**: Generování stromových struktur na základě textových vstupů.
+- **Detekce vzorců**: Identifikace a analýza opakujících se vzorců ve stromových datech.
+- **Kompresní algoritmy**: Aplikace různých kompresních metod pro optimalizaci dat.
+- **Dekomprese**: Obnovení původních stromových struktur z komprimovaných dat.
 
-| **Komponenta**        | **Požadavek**                      |
-|-----------------------|-------------------------------------|
-| **Hardware**          | 8 GB RAM, více-jádrový procesor    |
-| **OS**                | Linux, Windows, macOS             |
+---
 
-## 🛠️ Ne-funkční požadavky
+## :clipboard: Systémové požadavky
 
-- **Výkon**: Schopnost zpracovávat soubory o velikosti několika GB.
-- **Modularita**: Snadná rozšiřitelnost o nové moduly.
-- **Bezpečnost**: Zajištění ochrany dat.
+Pro zajištění správného chodu systému je potřeba následující vybavení:
 
-> **Poznámka**: Tyto požadavky zajišťují výkon a flexibilitu pro různé velikosti dat.
+| **Komponenta**        | **Požadavek**                     |
+|-----------------------|------------------------------------|
+| **Hardware**          | 8 GB RAM, více-jádrový procesor   |
+| **Operační systém**   | Linux, Windows, macOS            |
+
+> **Tip**: Pro dosažení optimálního výkonu doporučujeme více-jádrový procesor.
+
+---
+
+## :wrench: Ne-funkční požadavky
+
+Tento systém by měl splňovat také ne-funkční požadavky pro optimální provoz:
+
+- **Výkon**: Schopnost zpracovávat soubory o velikosti až několika GB.
+- **Modularita**: Možnost snadného přidávání nových modulů bez zásahu do existující struktury.
+- **Bezpečnost**: Zajištění ochrany citlivých dat a jejich šifrování.
+
+> **Poznámka**: Tyto požadavky zajišťují efektivní a flexibilní řešení pro různé velikosti a typy dat.
+
+---
+
+### :rocket: Další požadavky
+
+- **Údržba**: Systém by měl umožnit snadnou údržbu a aktualizace bez přerušení služby.
+- **Dostupnost**: Minimální doba výpadku a vysoká spolehlivost systému.
