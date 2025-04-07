@@ -1,3 +1,4 @@
+#if EXPERIMENTAL
 using System.ComponentModel;
 using ConsoleApp.Framework;
 using Ufal.MorphoDiTa;
@@ -29,3 +30,4 @@ public class EnglishMorphoditaTagger : ICommand
 
     }
 }
+#endif

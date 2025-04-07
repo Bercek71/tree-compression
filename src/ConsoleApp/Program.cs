@@ -22,9 +22,13 @@ public static class Program
             //"EnglishMorphoditaDict"
             //"ParsitoTest"
             //"UDPipeTest"
-            "FrameworkTest",
-            "--input",
-            "Resources/Texts/old-man-and-the-sea.txt",
+            
+            
+            //"FrameworkTest",
+            //"--input",
+            //"Resources/Texts/old-man-and-the-sea.txt",
+            
+            "Benchmark"
             
         ];
         #endif

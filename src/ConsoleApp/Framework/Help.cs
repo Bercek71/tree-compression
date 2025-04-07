@@ -20,12 +20,12 @@ public class Help : ICommand
             var commandName = command.Name;
             var commandDescription = command.GetCustomAttribute<DescriptionAttribute>()?.Description;
             help.AppendLine($"\t{commandName}: {commandDescription}");
-            var arguments = command.GetProperties().Where(p => p.GetCustomAttribute<RequireArgumentAttribute>() != null);
+            var arguments = command.GetProperties().Where(p => p.GetCustomAttribute<ArgumentAttribute>() != null);
             foreach (var argument in arguments)
             {
-                var argumentName = argument.GetCustomAttribute<RequireArgumentAttribute>()?.Name;
-                var argumentDescription = argument.GetCustomAttribute<RequireArgumentAttribute>()?.Description;
-                var argumentRequired = argument.GetCustomAttribute<RequireArgumentAttribute>()?.Required;
+                var argumentName = argument.GetCustomAttribute<ArgumentAttribute>()?.Name;
+                var argumentDescription = argument.GetCustomAttribute<ArgumentAttribute>()?.Description;
+                var argumentRequired = argument.GetCustomAttribute<ArgumentAttribute>()?.Required;
                 help.AppendLine($"\t\t --{argumentName}: {argumentDescription} {((bool)argumentRequired! ? "(required)" : "")}");
             }
         }

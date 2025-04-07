@@ -21,3 +21,5 @@ public interface ITreeCreationStrategy<out T> where T : ITreeNode
     /// </returns>
     public T CreateTree(string text);
 }
+
+

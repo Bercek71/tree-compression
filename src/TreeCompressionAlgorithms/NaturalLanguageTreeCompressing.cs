@@ -29,6 +29,12 @@ public class NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeN
         return CompressingPipeline.Process(text) as CompressedTree ?? throw new InvalidOperationException();
     }
 
+    public CompressedTree Compress(Stream stream)
+    {
+        var text = new StreamReader(stream).ReadToEnd();
+        return Compress(text);
+    }
+
     public string Decompress(CompressedTree compressedTree)
     {
         var reuslt = DecompressingPipeline.Process(compressedTree) as ISyntacticTreeNode ?? throw new InvalidOperationException();

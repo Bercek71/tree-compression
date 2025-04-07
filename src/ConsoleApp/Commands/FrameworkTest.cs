@@ -1,3 +1,4 @@
+#if DEBUG
 using System.ComponentModel;
 using ConsoleApp.Framework;
 using TreeCompressionAlgorithms;
@@ -11,18 +12,13 @@ namespace ConsoleApp.Commands;
 [Description("Framework testing command")]
 public class FrameworkTest : ICommand
 {
-    [RequireArgument("input", "The input string to compress")]
+    [Argument("input", "The input string to compress")]
     public required string InputFile { get; set; }
 
     public void Execute()
     {
         Console.WriteLine($"Input file: {InputFile}");
         Console.WriteLine("FrameworkTest");
-
-        var pipeline = new Pipeline()
-        {
-            ProcessObserver = new ProcessMonitor()
-        };
 
 
         var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategy());
@@ -47,3 +43,4 @@ public class FrameworkTest : ICommand
 
     }
 }
+#endif

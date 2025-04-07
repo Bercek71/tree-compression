@@ -9,15 +9,16 @@ namespace TreeCompressionAlgorithms.TreeCreationalStrategies;
 /// </summary>
 public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode>
 {
+    
+    private readonly string _modelPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
+        "Resources",
+        "English",
+        "english-ewt-ud-2.5.udpipe"
+    );
+    
     public ISyntacticTreeNode CreateTree(string data)
     {
-             var modelPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
-                "Resources",
-                "English",
-                "english-ewt-ud-2.5.udpipe"
-            );
-
-            var model = Model.load(modelPath);
+            var model = Model.load(_modelPath);
             if (model == null)
             {
                 throw new Exception("Error loading UDPipe model.");
@@ -47,16 +48,9 @@ public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode
                 
                 docTree.AddRightChild(tree);
             }
-            
-            
-
-
             return docTree;
-                
-            
-
     }
-    
+
     private static void BuildTree(ISyntacticTreeNode parentNode, Word parentWord , List<Word> words)
     {
         var children = words.Where(x => x.head == parentWord.id).ToList();

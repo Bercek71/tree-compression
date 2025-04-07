@@ -13,6 +13,13 @@ public class CompressedTree
     public byte[] Structure { get; set; } = [];
     
     /// <summary>
+    /// Typ stromové struktury, která byla komprimována.
+    /// </summary>
+    public Type TreeType { get; set; } = typeof(ITreeNode);
+    
+    public Type NodeValueType { get; set; } = typeof(string);
+    
+    /// <summary>
     /// Metadata komprimované stromové struktury. 
     /// </summary>
     public Dictionary<string, string> Metadata { get; init; } = new();

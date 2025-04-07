@@ -1,3 +1,4 @@
+#if ENVIRONMENT
 using System.ComponentModel;
 using System.Windows.Input;
 using Ufal.MorphoDiTa;
@@ -27,3 +28,4 @@ public class EnglishMorphoditaDict : ICommand
         }
     }
 }
+#endif

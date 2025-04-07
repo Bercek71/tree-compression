@@ -29,18 +29,14 @@ namespace ConsoleApp.Framework
 
             foreach (var prop in properties)
             {
-                var attr = prop.GetCustomAttribute<RequireArgumentAttribute>();
+                var attr = prop.GetCustomAttribute<ArgumentAttribute>();
                 if (attr == null) continue;
                 var value = parser.GetArgumentValue(attr.Name);
                 if (value != null)
                 {
                     prop.SetValue(target, value);
                 }
-                else if (!attr.Required)
-                {
-                    prop.SetValue(target, null);
-                }
-                else 
+                else if (attr.Required)
                 {
                     Console.WriteLine($"Missing required argument: --{attr.Name} ({attr.Description})");
                     new Help().Execute();
