@@ -21,9 +21,7 @@ public class FrameworkTest : ICommand
         Console.WriteLine("FrameworkTest");
 
 
-        var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategy());
-
-        //Read sentence from Resources/Texts/Test.txt file
+        var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategyDynamicN(maxN: 20));
 
         if (!File.Exists(InputFile))
         {
