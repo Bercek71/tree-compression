@@ -1,10 +1,6 @@
-
-using System.Diagnostics;
-using System.Reflection;
 using ConsoleApp.Framework;
 using MorphoDita;
 using UDPipeBindings;
-using ICommand = System.Windows.Input.ICommand;
 
 namespace ConsoleApp;
 
@@ -24,11 +20,12 @@ public static class Program
             //"UDPipeTest"
             
             
-            //"FrameworkTest",
-            //"--input",
-            //"Resources/Texts/old-man-and-the-sea.txt",
+            "FrameworkTest",
+            "--input",
+            "Resources/Texts/old-man-and-the-sea.txt",
+            //"Resources/Texts/odyssey.txt",
             
-            "Benchmark"
+            //"Benchmark"
             
         ];
         #endif

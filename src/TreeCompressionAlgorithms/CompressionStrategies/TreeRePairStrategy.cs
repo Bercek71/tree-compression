@@ -4,13 +4,11 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies;
 
-/// <summary>
-/// TreeRePair kompresní strategie pro kompresi a dekompresi stromové struktury.
-/// </summary>
 public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
 {
     private readonly Dictionary<string, string> _grammarRules = new();
     private int _nextNonTerminal = 256; // Start from ASCII 256 to avoid conflicts
+    private const int MinPairFrequency = 2; // Minimum frequency for compression
 
     public CompressedTree Compress(ISyntacticTreeNode? tree)
     {
@@ -21,24 +19,8 @@ public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
         EncodeTree(tree, sequence);
 
         // Step 2: Apply RePair compression
-        while (true)
-        {
-            var pairFreq = CountFrequentPairs(sequence);
-            if (pairFreq.Count == 0) break;
+        CompressSequence(sequence);
 
-            // Find the most frequent pair
-            var mostFrequentPair = pairFreq.OrderByDescending(p => p.Value).First().Key;
-            var newSymbol = ((char)_nextNonTerminal).ToString();
-            _nextNonTerminal++;
-
-            // Store grammar rule
-            _grammarRules[newSymbol] = mostFrequentPair;
-
-            // Replace occurrences in sequence
-            sequence = ReplacePairs(sequence, mostFrequentPair, newSymbol);
-        }
-
-        // Return the compressed tree with the sequence and grammar rules
         return new CompressedTree
         {
             Structure = ConvertSequenceToByteArray(sequence),
@@ -46,121 +28,176 @@ public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
         };
     }
 
+    private void CompressSequence(List<string> sequence)
+    {
+        while (true)
+        {
+            // Find all pairs with their positions
+            var pairPositions = FindPairPositions(sequence);
+            if (pairPositions.Count == 0) break;
+
+            // Find the most frequent pair
+            var bestPair = pairPositions
+                .OrderByDescending(p => p.Value.Count)
+                .ThenBy(p => p.Key) // Deterministic tie-breaking
+                .First();
+
+            var pair = bestPair.Key;
+            var positions = bestPair.Value;
+
+            var newSymbol = ((char)_nextNonTerminal).ToString();
+            _nextNonTerminal++;
+
+            // Store grammar rule
+            _grammarRules[newSymbol] = pair;
+
+            // Replace occurrences in sequence (from right to left to maintain indices)
+            ReplacePositions(sequence, positions, newSymbol);
+        }
+    }
+
     public ISyntacticTreeNode Decompress(CompressedTree? compressedTree)
     {
         ArgumentNullException.ThrowIfNull(compressedTree);
 
-        // Step 1: Expand compressed sequence using grammar rules
-        var sequence = ConvertByteArrayToSequence(compressedTree.Structure);
-        bool expanded;
-        do
+        // Extract grammar rules from metadata
+        if (compressedTree.Metadata is Dictionary<string, string> rules)
         {
-            expanded = false;
-            for (var i = 0; i < sequence.Count; i++)
-            {
-                if (!_grammarRules.ContainsKey(sequence[i])) continue;
-                var expansion = _grammarRules[sequence[i]].Split(" ");
-                sequence.RemoveAt(i);
-                sequence.InsertRange(i, expansion);
-                expanded = true;
-                break; // Restart expansion after modification
-            }
-        } while (expanded);
+            foreach (var rule in rules)
+                _grammarRules[rule.Key] = rule.Value;
+        }
 
-        // Step 2: Convert sequence back to tree
+        // Convert byte array to sequence
+        var sequence = ConvertByteArrayToSequence(compressedTree.Structure);
+        
+        // Expand using grammar rules (bottom-up to improve efficiency)
+        ExpandSequence(sequence);
+
+        // Convert expanded sequence back to tree
         var index = 0;
         return DecodeTree(sequence, ref index);
     }
 
+    private void ExpandSequence(List<string> sequence)
+    {
+        // Process rules in reverse order of creation (from complex to simple)
+        var orderedRules = _grammarRules.OrderByDescending(r => Convert.ToInt32(r.Key[0]));
+        
+        foreach (var rule in orderedRules)
+        {
+            for (int i = 0; i < sequence.Count; i++)
+            {
+                if (sequence[i] != rule.Key) continue;
+                
+                var expansion = rule.Value.Split(' ');
+                sequence.RemoveAt(i);
+                sequence.InsertRange(i, expansion);
+                i += expansion.Length - 1; // Skip the newly inserted elements
+            }
+        }
+    }
+
     private static void EncodeTree(ISyntacticTreeNode node, List<string> sequence)
     {
-        // Add the node value to the sequence
         sequence.Add(node.Value.ToString() ?? "");
 
-        // Encode left children
-        if (node.LeftChildren.Count != 0)
-            foreach (var child in node.LeftChildren)
-                EncodeTree(child, sequence);
+        foreach (var child in node.LeftChildren)
+            EncodeTree(child, sequence);
 
-        // Add separator between left and right children
         sequence.Add("|");
 
-        // Encode right children
-        if (node.RightChildren.Count != 0)
-            foreach (var child in node.RightChildren)
-                EncodeTree(child, sequence);
+        foreach (var child in node.RightChildren)
+            EncodeTree(child, sequence);
 
-        sequence.Add("]"); // Marks end of this node
+        sequence.Add("]");
     }
 
     private static ISyntacticTreeNode DecodeTree(List<string> sequence, ref int index)
     {
-        if (index >= sequence.Count || sequence[index] == "]") return null!;
+        if (index >= sequence.Count || sequence[index] == "]")
+            return null!;
 
         var value = sequence[index++];
         var node = new SyntacticTreeNode(value);
 
-        // Decode left children for the current node
+        // Left children
         while (index < sequence.Count && sequence[index] != "]" && sequence[index] != "|")
         {
             var child = DecodeTree(sequence, ref index);
-            if (child != null) node.AddLeftChild(child);
+            if (child != null)
+                node.AddLeftChild(child);
         }
 
-        // Skip the separator between left and right children
-        if (index < sequence.Count && sequence[index] == "|") index++;
+        // Skip separator
+        if (index < sequence.Count && sequence[index] == "|")
+            index++;
 
-        // Decode right children for the current node
+        // Right children
         while (index < sequence.Count && sequence[index] != "]")
         {
             var child = DecodeTree(sequence, ref index);
-            if (child != null) node.AddRightChild(child);
+            if (child != null)
+                node.AddRightChild(child);
         }
 
-        if (index < sequence.Count && sequence[index] == "]") index++; // Skip end marker
+        if (index < sequence.Count && sequence[index] == "]")
+            index++;
+
         return node;
     }
 
-    private static Dictionary<string, int> CountFrequentPairs(List<string> sequence)
+    private static Dictionary<string, List<int>> FindPairPositions(List<string> sequence)
     {
-        Dictionary<string, int> pairFreq = new();
+        var pairPositions = new Dictionary<string, List<int>>();
+        var pairFrequency = new Dictionary<string, int>();
+
+        // First pass: count frequencies
         for (var i = 0; i < sequence.Count - 1; i++)
         {
-            var pair = sequence[i] + " " + sequence[i + 1];
-            if (!pairFreq.TryAdd(pair, 1))
-                pairFreq[pair]++;
+            var pair = $"{sequence[i]} {sequence[i + 1]}";
+            if (!pairFrequency.TryAdd(pair, 1))
+                pairFrequency[pair]++;
         }
 
-        return pairFreq.Where(p => p.Value > 1).ToDictionary(p => p.Key, p => p.Value);
+        // Second pass: collect positions for frequent pairs
+        for (var i = 0; i < sequence.Count - 1; i++)
+        {
+            var pair = $"{sequence[i]} {sequence[i + 1]}";
+            if (pairFrequency[pair] < MinPairFrequency) continue;
+            if (!pairPositions.ContainsKey(pair))
+                pairPositions[pair] = new List<int>();
+            pairPositions[pair].Add(i);
+        }
+
+        return pairPositions;
     }
 
-    private static List<string> ReplacePairs(List<string> sequence, string targetPair, string newSymbol)
+    private static void ReplacePositions(List<string> sequence, List<int> positions, string newSymbol)
     {
-        var newSequence = new List<string>();
-        var i = 0;
-
-        while (i < sequence.Count)
-            if (i < sequence.Count - 1 && sequence[i] + " " + sequence[i + 1] == targetPair)
-            {
-                newSequence.Add(newSymbol);
-                i += 2; // Skip replaced pair
-            }
-            else
-            {
-                newSequence.Add(sequence[i]);
-                i++;
-            }
-
-        return newSequence;
+        // Process positions from right to left to avoid index shifting issues
+        for (var i = positions.Count - 1; i >= 0; i--)
+        {
+            var pos = positions[i];
+            sequence.RemoveRange(pos, 2);
+            sequence.Insert(pos, newSymbol);
+        }
     }
 
     private static byte[] ConvertSequenceToByteArray(List<string> sequence)
     {
-        return Encoding.UTF8.GetBytes(string.Join(" ", sequence));
+        // Use StringBuilder for better performance with large sequences
+        var sb = new StringBuilder();
+        for (var i = 0; i < sequence.Count; i++)
+        {
+            sb.Append(sequence[i]);
+            if (i < sequence.Count - 1)
+                sb.Append(' ');
+        }
+        return Encoding.UTF8.GetBytes(sb.ToString());
     }
 
     private static List<string> ConvertByteArrayToSequence(byte[] byteArray)
     {
-        return Encoding.UTF8.GetString(byteArray).Split(" ").ToList();
+        return Encoding.UTF8.GetString(byteArray).Split(' ').ToList();
     }
 }
