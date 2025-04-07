@@ -14,10 +14,21 @@ public class SyntacticTreeNode(string value) : ISyntacticTreeNode
         foreach (var leftChild in LeftChildren)
         {
             stringBuilder.Append(leftChild.ToString());
+            if (leftChild is SyntacticTreeNode node)
+            {
+                if(((List<string>)[".", ",", "\""]).Contains((string)leftChild.Value))
+                {
+                    continue;
+                }
+            }
             stringBuilder.Append(' ');
         }
 
-        stringBuilder.Append(Value);
+        if ((string)Value != "<DocumentRoot>" && (string)Value != "<root>")
+        {
+            stringBuilder.Append(Value);
+        }
+
         if (RightChildren.Count > 0)
         {
             stringBuilder.Append(' ');
