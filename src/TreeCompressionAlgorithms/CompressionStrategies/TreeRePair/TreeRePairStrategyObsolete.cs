@@ -4,7 +4,8 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 
-public class TreeRePairStrategy : ICompressionStrategy<IDependencyTreeNode>
+[Obsolete("Nepoužívá se v aktuální verzi. Použijte TreeRePairStrategy.")]
+public class TreeRePairStrategyObsolete : ICompressionStrategy<IDependencyTreeNode>
 {
     private readonly Dictionary<string, string> _grammarRules = new();
     private int _nextNonTerminal = 256; // Start from ASCII 256 to avoid conflicts

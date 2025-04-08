@@ -26,7 +26,7 @@ public class Benchmark : ICommand
 
         if (string.Equals(CompressionStrategy, "TreeRePair", StringComparison.CurrentCultureIgnoreCase))
         {
-            strategy = new TreeRePairStrategy();
+            strategy = new TreeRePairStrategyObsolete();
         }
         else
         {

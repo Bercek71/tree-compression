@@ -1,4 +1,4 @@
-#if DEBUG
+//#if DEBUG
 using System.ComponentModel;
 using ConsoleApp.Framework;
 using TreeCompressionAlgorithms;
@@ -22,7 +22,7 @@ public class FrameworkTest : ICommand
         Console.WriteLine("FrameworkTest");
 
 
-        var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategyDynamicN(maxN: 20));
+        var compressor = new NaturalLanguageTreeCompressing(new TreeRepairStrategy(maxN: 10));
 
         if (!File.Exists(InputFile))
         {
@@ -35,11 +35,15 @@ public class FrameworkTest : ICommand
         
         var decompressedText = compressor.Decompress(compressedTree);
         
+        
         Console.WriteLine($"Decompressed Text: {decompressedText}");
-        Console.WriteLine($"Original Sentence size: {testingSentence.Length}");
+        
+        Console.WriteLine("Compressed tree size: " + compressedTree.Structure.Length);
+        Console.WriteLine("Uncompressed tree size: " + testingSentence.Length);
+        Console.WriteLine("Compressing ratio: " + (double)compressedTree.Structure.Length / testingSentence.Length);
         
 
 
     }
 }
-#endif
+//#endif
