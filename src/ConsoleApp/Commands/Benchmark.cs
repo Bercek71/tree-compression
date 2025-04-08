@@ -2,6 +2,7 @@ using System.ComponentModel;
 using ConsoleApp.Framework;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies;
+using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 using TreeCompressionPipeline.CompressionStrategies;
 using TreeCompressionPipeline.TreeStructure;
 
@@ -21,7 +22,7 @@ public class Benchmark : ICommand
         Console.WriteLine("Benchmarking command executed.");
         Console.WriteLine($"Compression strategy: {CompressionStrategy}");
 
-        ICompressionStrategy<ISyntacticTreeNode> strategy;
+        ICompressionStrategy<IDependencyTreeNode> strategy;
 
         if (string.Equals(CompressionStrategy, "TreeRePair", StringComparison.CurrentCultureIgnoreCase))
         {

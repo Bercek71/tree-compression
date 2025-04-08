@@ -7,7 +7,7 @@ namespace TreeCompressionAlgorithms.TreeCreationalStrategies;
 /// <summary>
 /// Využití UDPipe pro vytvoření stromové struktury.
 /// </summary>
-public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode>
+public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<IDependencyTreeNode>
 {
     
     private readonly string _modelPath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory,
@@ -16,7 +16,7 @@ public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode
         "english-ewt-ud-2.5.udpipe"
     );
     
-    public ISyntacticTreeNode CreateTree(string data)
+    public IDependencyTreeNode CreateTree(string data)
     {
             var model = Model.load(_modelPath);
             if (model == null)
@@ -34,13 +34,13 @@ public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode
             tokenizer.setText(data);
 
             var sentence = new Sentence();
-            var docTree = new SyntacticTreeNode("<DocumentRoot>");
+            var docTree = new DependencyTreeNode("<DocumentRoot>");
             while (tokenizer.nextSentence(sentence))
             {
                 model.tag(sentence, Model.DEFAULT);
                 model.parse(sentence, Model.DEFAULT);
                 var rootWord = sentence.words[0];
-                var tree = new SyntacticTreeNode(rootWord.form);
+                var tree = new DependencyTreeNode(rootWord.form);
 
                 var words = sentence.words;
 
@@ -51,13 +51,13 @@ public class UdPipeCreateTreeStrategy : ITreeCreationStrategy<ISyntacticTreeNode
             return docTree;
     }
 
-    private static void BuildTree(ISyntacticTreeNode parentNode, Word parentWord , List<Word> words)
+    private static void BuildTree(IDependencyTreeNode parentNode, Word parentWord , List<Word> words)
     {
         var children = words.Where(x => x.head == parentWord.id).ToList();
 
         foreach (var word in children)
         {
-            var newNode = new SyntacticTreeNode(word.form);
+            var newNode = new DependencyTreeNode(word.form);
             if(word.id > parentWord.id)
                 parentNode.AddRightChild(newNode);
             else

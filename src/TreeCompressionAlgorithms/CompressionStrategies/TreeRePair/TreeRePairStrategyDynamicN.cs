@@ -2,21 +2,22 @@ using System.Text;
 using TreeCompressionPipeline.CompressionStrategies;
 using TreeCompressionPipeline.TreeStructure;
 
-namespace TreeCompressionAlgorithms.CompressionStrategies;
+namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 
-public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
+public class TreeRePairStrategyDynamicN(ITreeRePairEncoder? encoder = null , int minFrequency = 2, int maxN = 10, int minN = 2) : ICompressionStrategy<IDependencyTreeNode>
 {
+    private readonly ITreeRePairEncoder _encoder = encoder ?? new DepthFirstEncoder();
     private readonly Dictionary<string, string> _grammarRules = new();
     private int _nextNonTerminal = 256; // Start from ASCII 256 to avoid conflicts
-    private const int MinPairFrequency = 2; // Minimum frequency for compression
 
-    public CompressedTree Compress(ISyntacticTreeNode? tree)
+    // Minimum frequency for compression
+
+    public CompressedTree Compress(IDependencyTreeNode? tree)
     {
         ArgumentNullException.ThrowIfNull(tree);
 
         // Step 1: Convert tree to linearized sequence
-        var sequence = new List<string>();
-        EncodeTree(tree, sequence);
+        var sequence = _encoder.EncodeTree(tree).ToList();
 
         // Step 2: Apply RePair compression
         CompressSequence(sequence);
@@ -30,38 +31,42 @@ public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
 
     private void CompressSequence(List<string> sequence)
     {
-        while (true)
+        var n = maxN; // Start with n-grams of size 5
+        while (n >= minN)
         {
-            // Find all pairs with their positions
-            var pairPositions = FindPairPositions(sequence);
-            if (pairPositions.Count == 0) break;
+            var nGramPositions = FindNGramPositions(sequence, n);
+            if (nGramPositions.Count == 0)
+            {
+                n--;
+                continue;
+            }
 
-            // Find the most frequent pair
-            var bestPair = pairPositions
+            // Find the most frequent n-gram
+            var bestNGram = nGramPositions
                 .OrderByDescending(p => p.Value.Count)
                 .ThenBy(p => p.Key) // Deterministic tie-breaking
                 .First();
 
-            var pair = bestPair.Key;
-            var positions = bestPair.Value;
+            var nGram = bestNGram.Key;
+            var positions = bestNGram.Value;
 
             var newSymbol = ((char)_nextNonTerminal).ToString();
             _nextNonTerminal++;
 
             // Store grammar rule
-            _grammarRules[newSymbol] = pair;
+            _grammarRules[newSymbol] = nGram;
 
             // Replace occurrences in sequence (from right to left to maintain indices)
-            ReplacePositions(sequence, positions, newSymbol);
+            ReplacePositions(sequence, positions, newSymbol, n);
         }
     }
 
-    public ISyntacticTreeNode Decompress(CompressedTree? compressedTree)
+    public IDependencyTreeNode Decompress(CompressedTree? compressedTree)
     {
         ArgumentNullException.ThrowIfNull(compressedTree);
 
         // Extract grammar rules from metadata
-        if (compressedTree.Metadata is Dictionary<string, string> rules)
+        if (compressedTree.Metadata is { } rules)
         {
             foreach (var rule in rules)
                 _grammarRules[rule.Key] = rule.Value;
@@ -85,7 +90,7 @@ public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
         
         foreach (var rule in orderedRules)
         {
-            for (int i = 0; i < sequence.Count; i++)
+            for (var i = 0; i < sequence.Count; i++)
             {
                 if (sequence[i] != rule.Key) continue;
                 
@@ -97,28 +102,13 @@ public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
         }
     }
 
-    private static void EncodeTree(ISyntacticTreeNode node, List<string> sequence)
-    {
-        sequence.Add(node.Value.ToString() ?? "");
-
-        foreach (var child in node.LeftChildren)
-            EncodeTree(child, sequence);
-
-        sequence.Add("|");
-
-        foreach (var child in node.RightChildren)
-            EncodeTree(child, sequence);
-
-        sequence.Add("]");
-    }
-
-    private static ISyntacticTreeNode DecodeTree(List<string> sequence, ref int index)
+    private static IDependencyTreeNode DecodeTree(List<string> sequence, ref int index)
     {
         if (index >= sequence.Count || sequence[index] == "]")
             return null!;
 
         var value = sequence[index++];
-        var node = new SyntacticTreeNode(value);
+        var node = new DependencyTreeNode(value);
 
         // Left children
         while (index < sequence.Count && sequence[index] != "]" && sequence[index] != "|")
@@ -146,39 +136,39 @@ public class TreeRePairStrategy : ICompressionStrategy<ISyntacticTreeNode>
         return node;
     }
 
-    private static Dictionary<string, List<int>> FindPairPositions(List<string> sequence)
+    private Dictionary<string, List<int>> FindNGramPositions(List<string> sequence, int n)
     {
-        var pairPositions = new Dictionary<string, List<int>>();
-        var pairFrequency = new Dictionary<string, int>();
+        var nGramPositions = new Dictionary<string, List<int>>();
+        var nGramFrequency = new Dictionary<string, int>();
 
         // First pass: count frequencies
-        for (var i = 0; i < sequence.Count - 1; i++)
+        for (var i = 0; i <= sequence.Count - n; i++)
         {
-            var pair = $"{sequence[i]} {sequence[i + 1]}";
-            if (!pairFrequency.TryAdd(pair, 1))
-                pairFrequency[pair]++;
+            var nGram = string.Join(" ", sequence.Skip(i).Take(n));
+            if (!nGramFrequency.TryAdd(nGram, 1))
+                nGramFrequency[nGram]++;
         }
 
-        // Second pass: collect positions for frequent pairs
-        for (var i = 0; i < sequence.Count - 1; i++)
+        // Second pass: collect positions for frequent n-grams
+        for (var i = 0; i <= sequence.Count - n; i++)
         {
-            var pair = $"{sequence[i]} {sequence[i + 1]}";
-            if (pairFrequency[pair] < MinPairFrequency) continue;
-            if (!pairPositions.ContainsKey(pair))
-                pairPositions[pair] = new List<int>();
-            pairPositions[pair].Add(i);
+            var nGram = string.Join(" ", sequence.Skip(i).Take(n));
+            if (nGramFrequency[nGram] < minFrequency) continue;
+            if (!nGramPositions.ContainsKey(nGram))
+                nGramPositions[nGram] = new List<int>();
+            nGramPositions[nGram].Add(i);
         }
 
-        return pairPositions;
+        return nGramPositions;
     }
 
-    private static void ReplacePositions(List<string> sequence, List<int> positions, string newSymbol)
+    private static void ReplacePositions(List<string> sequence, List<int> positions, string newSymbol, int n)
     {
         // Process positions from right to left to avoid index shifting issues
         for (var i = positions.Count - 1; i >= 0; i--)
         {
             var pos = positions[i];
-            sequence.RemoveRange(pos, 2);
+            sequence.RemoveRange(pos, n);
             sequence.Insert(pos, newSymbol);
         }
     }

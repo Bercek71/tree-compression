@@ -6,22 +6,22 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms;
 
-public class NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeNode> compressionStrategy) : ITreeCompressor<ISyntacticTreeNode>
+public class NaturalLanguageTreeCompressing(ICompressionStrategy<IDependencyTreeNode> compressionStrategy) : ITreeCompressor<IDependencyTreeNode>
 {
-    public ICompressionStrategy<ISyntacticTreeNode> CompressionStrategy { get; } = compressionStrategy;
+    public ICompressionStrategy<IDependencyTreeNode> CompressionStrategy { get; } = compressionStrategy;
     
     public Pipeline CompressingPipeline { get; } = new Pipeline()
         {
             ProcessObserver = new ProcessMonitor()
         }
-        .AddFilter(FilterFactory<ISyntacticTreeNode>.CreateTextToTreeFilter(new UdPipeCreateTreeStrategy()))
-        .AddFilter(FilterFactory<ISyntacticTreeNode>.CreateCompressionFilter(compressionStrategy));
+        .AddFilter(FilterFactory<IDependencyTreeNode>.CreateTextToTreeFilter(new UdPipeCreateTreeStrategy()))
+        .AddFilter(FilterFactory<IDependencyTreeNode>.CreateCompressionFilter(compressionStrategy));
     
     public Pipeline DecompressingPipeline { get; } = new Pipeline()
             {
                 ProcessObserver = new ProcessMonitor()
             }
-            .AddFilter(FilterFactory<ISyntacticTreeNode>.CreateDecompressionFilter(compressionStrategy));
+            .AddFilter(FilterFactory<IDependencyTreeNode>.CreateDecompressionFilter(compressionStrategy));
     
     
     public CompressedTree Compress(string text)
@@ -37,7 +37,7 @@ public class NaturalLanguageTreeCompressing(ICompressionStrategy<ISyntacticTreeN
 
     public string Decompress(CompressedTree compressedTree)
     {
-        var reuslt = DecompressingPipeline.Process(compressedTree) as ISyntacticTreeNode ?? throw new InvalidOperationException();
+        var reuslt = DecompressingPipeline.Process(compressedTree) as IDependencyTreeNode ?? throw new InvalidOperationException();
         return reuslt.ToString() ?? "";
     }
 }

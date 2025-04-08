@@ -3,13 +3,13 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies
 {
-    public class DictionaryTreeCompressor : ICompressionStrategy<ISyntacticTreeNode>
+    public class DictionaryTreeCompressor : ICompressionStrategy<IDependencyTreeNode>
     {
         private readonly Dictionary<string, string> _dictionary = new();
         private int _idCounter = 1;
 
         // Compressing the tree
-        public CompressedTree Compress(ISyntacticTreeNode? tree)
+        public CompressedTree Compress(IDependencyTreeNode? tree)
         {
             if (tree == null) throw new ArgumentNullException(nameof(tree));
             var compressedStructure = EncodeNode(tree);
@@ -18,7 +18,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies
         }
 
         // Decompressing the tree
-        public ISyntacticTreeNode Decompress(CompressedTree? compressedTree)
+        public IDependencyTreeNode Decompress(CompressedTree? compressedTree)
         {
             if (compressedTree == null) throw new ArgumentNullException(nameof(compressedTree));
             throw new NotImplementedException();

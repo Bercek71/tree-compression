@@ -3,6 +3,7 @@ using System.ComponentModel;
 using ConsoleApp.Framework;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies;
+using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 using TreeCompressionPipeline;
 using TreeCompressionPipeline.CompressionStrategies;
 using TreeCompressionPipeline.Filters;

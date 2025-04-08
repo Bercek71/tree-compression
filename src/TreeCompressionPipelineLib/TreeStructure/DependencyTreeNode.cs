@@ -2,11 +2,11 @@ using System.Text;
 
 namespace TreeCompressionPipeline.TreeStructure;
 
-public class SyntacticTreeNode(string value) : ISyntacticTreeNode
+public class DependencyTreeNode(string value) : IDependencyTreeNode
 {
     public object Value { get; } = value;
-    public List<ISyntacticTreeNode> LeftChildren { get; } = [];
-    public List<ISyntacticTreeNode> RightChildren { get; } = [];
+    public List<IDependencyTreeNode> LeftChildren { get; } = [];
+    public List<IDependencyTreeNode> RightChildren { get; } = [];
 
     public override string ToString()
     {
@@ -14,7 +14,7 @@ public class SyntacticTreeNode(string value) : ISyntacticTreeNode
         foreach (var leftChild in LeftChildren)
         {
             stringBuilder.Append(leftChild.ToString());
-            if (leftChild is SyntacticTreeNode node)
+            if (leftChild is DependencyTreeNode node)
             {
                 if(((List<string>)[".", ",", "\""]).Contains((string)leftChild.Value))
                 {
@@ -43,13 +43,13 @@ public class SyntacticTreeNode(string value) : ISyntacticTreeNode
         return stringBuilder.ToString();
     }
 
-    public void AddLeftChild(ISyntacticTreeNode child)
+    public void AddLeftChild(IDependencyTreeNode child)
     {
         child.Parent = this;
         LeftChildren.Add(child);
     }
 
-    public void AddRightChild(ISyntacticTreeNode child)
+    public void AddRightChild(IDependencyTreeNode child)
     {
         child.Parent = this;
         RightChildren.Add(child);
@@ -60,5 +60,5 @@ public class SyntacticTreeNode(string value) : ISyntacticTreeNode
         visitor.Visit(this);
     }
 
-    public ISyntacticTreeNode? Parent { get; set; }
+    public IDependencyTreeNode? Parent { get; set; }
 }

@@ -2,5 +2,5 @@ namespace TreeCompressionPipeline.TreeStructure;
 
 public interface ISyntacticTreeVisitor
 {
-    void Visit(ISyntacticTreeNode node);
+    void Visit(IDependencyTreeNode node);
 }
