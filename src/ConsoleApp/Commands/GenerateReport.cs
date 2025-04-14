@@ -29,7 +29,7 @@ public class GenerateReport : ICommand
     public void Execute()
     {
 
-        var NLPCompressor = new NaturalLanguageTreeCompressing(new TreeRepairStrategy(maxN: 10));
+        var NLPCompressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10));
         
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
             .Select(file => new FileInfo(file))
