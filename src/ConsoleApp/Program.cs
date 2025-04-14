@@ -20,17 +20,17 @@ public static class Program
             //"UDPipeTest"
             
             
-            //"FrameworkTest",
-            //"--input",
-            //"Resources/Texts/old-man-and-the-sea.txt",
+            "FrameworkTest",
+            "--input",
+            "Resources/Texts/prose/old-man-and-the-sea.txt",
             
             //"Resources/Texts/odyssey.txt",
             
             //"Benchmark"
             
-            "GenerateReport",
-            "--directory",
-            "Resources/Texts",
+            //"GenerateReport",
+            //"--directory",
+            //"Resources/Texts/technical_docs",
         ];
         #endif
 
