@@ -42,7 +42,7 @@ iw dev mlan0 scan
 	This command will trigger a scan.
 	The command will then display the scan table entries
 
-iw dev mlan0 connect -w <SSID> [<freq in MHz>] [<bssid>] [key 0:abcde d:1123456789a]
+iw dev mlan0 connect -w <SSID>   
 	The above command can be used to connect to an AP with a particular SSID.
 	Ap's operating frequency can be specified or even the bssid. If the AP is using
 	WEP encryption, wep keys can be specified in the command.
@@ -52,7 +52,7 @@ iw dev mlan0 disconnect
 	This command will be used to disconnect from an AP.
 
 
-iw dev mlan0 ibss join <SSID> <freq in MHz> [fixed-freq] [fixed-bssid] [key 0:abcde]
+iw dev mlan0 ibss join <SSID> <freq in MHz>   
 	The command will be used to join or create an ibss. Optionally, operating frequency,
 	bssid and the security related parameters can be specified while joining/creating
 	and ibss.
@@ -95,15 +95,15 @@ info
 	driver_name = "mwifiex"
 	driver_version = <driver_name, driver_version, (firmware_version)>
 	interface_name = "mlanX"
-	bss_mode = "Ad-hoc" | "Managed" | "Auto" | "Unknown"
-	media_state = "Disconnected" | "Connected"
+	bss_mode = "Ad-hoc"  "Managed"  "Auto"  "Unknown"
+	media_state = "Disconnected"  "Connected"
 	mac_address = <6-byte adapter MAC address>
 	multicase_count = <multicast address count>
 	essid = <current SSID>
 	bssid = <current BSSID>
 	channel = <current channel>
 	region_code = <current region code>
-	multicasr_address[n] = <multicast address>
+	multicasr_address = <multicast address>
 	num_tx_bytes = <number of bytes sent to device>
 	num_rx_bytes = <number of bytes received from device and sent to kernel>
 	num_tx_pkts = <number of packets sent to device>
@@ -112,8 +112,8 @@ info
 	num_rx_pkts_dropped = <number of Rx packets dropped by driver>
 	num_tx_pkts_err = <number of Tx packets failed to send to device>
 	num_rx_pkts_err = <number of Rx packets failed to receive from device>
-	carrier "on" | "off"
-	tx queue "stopped" | "started"
+	carrier "on"  "off"
+	tx queue "stopped"  "started"
 
 	The following debug info are provided in /debugfs/mwifiex/mlanX/debug:
 
@@ -168,13 +168,13 @@ regrdwr
 	This command is used to read/write the adapter register.
 
 	Usage:
-		echo " <type> <offset> [value]" > regrdwr
+		echo " <type> <offset> " > regrdwr
 		cat regrdwr
 
 	where the parameters are,
 		<type>:     1:MAC/SOC, 2:BBP, 3:RF, 4:PMIC, 5:CAU
 		<offset>:   offset of register
-		[value]:    value to be written
+		:    value to be written
 
 	Examples:
 		echo "1 0xa060" > regrdwr           : Read the MAC register
@@ -190,11 +190,11 @@ memrw
 			echo r <address> 0 > /sys/kernel/debug/mwifiex/mlan0/memrw
 			cat /sys/kernel/debug/mwifiex/mlan0/memrw
 		2) For writing value to firmware memory location.
-			echo w <address> [value] > /sys/kernel/debug/mwifiex/mlan0/memrw
+			echo w <address>  > /sys/kernel/debug/mwifiex/mlan0/memrw
 
 	where the parameters are,
 		<address>:  memory address
-		[value]:    value to be written
+		:    value to be written
 
 	Examples:
 		echo r 0x4cf70 0 > /sys/kernel/debug/mwifiex/mlan0/memrw
@@ -223,7 +223,7 @@ hscfg
 	different configuration parameters.
 
 	Usage:
-		echo "<condition> [GPIO# [gap]]]" > hscfg
+		echo "<condition> ]]" > hscfg
 		cat hscfg
 
 	where the parameters are,
@@ -231,10 +231,10 @@ hscfg
 			     bit 1 = 1   -- unicast data
 			     bit 2 = 1   -- mac event
 			     bit 3 = 1   -- multicast data
-		[GPIO#]: pin number of GPIO used to wakeup the host.
+		: pin number of GPIO used to wakeup the host.
 			 GPIO pin# (e.g. 0-7) or 0xff (interface, e.g. SDIO
 			 will be used instead).
-		[gap]:   the gap in milliseconds between wakeup signal and
+		:   the gap in milliseconds between wakeup signal and
 			 wakeup event or 0xff for special setting (host
 			 acknowledge required) when GPIO is used to wakeup host.
 
@@ -266,9 +266,9 @@ verext
 	different configuration parameters.
 
 	Usage:
-		echo "[version_str_sel]" > verext
+		echo "" > verext
 		cat verext
 
-		[version_str_sel]: firmware support several extend version
+		: firmware support several extend version
 				   string cases, include 0/1/10/20/21/99
 ===============================================================================

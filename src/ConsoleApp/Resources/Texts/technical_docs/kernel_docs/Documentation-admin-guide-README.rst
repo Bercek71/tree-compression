@@ -63,7 +63,7 @@ Installing the kernel source
    directory where you have permissions (e.g. your home directory) and
    unpack it::
 
-     xz -cd linux-6.x.tar.xz | tar xvf -
+     xz -cd linux-6.x.tar.xz  tar xvf -
 
    Replace "X" with the version number of the latest kernel.
 
@@ -77,7 +77,7 @@ Installing the kernel source
    newer patch files, enter the top level directory of the kernel source
    (linux-6.x) and execute::
 
-     xz -cd ../patch-6.x.xz | patch -p1
+     xz -cd ../patch-6.x.xz  patch -p1
 
    Replace "x" for all versions bigger than the version "x" of your current
    source tree, **in_order**, and you should be ok.  You may want to remove

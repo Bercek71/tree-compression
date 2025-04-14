@@ -468,7 +468,7 @@ A partial list of the supported mount options follows:
 		setfattr and getfattr utilities. (default)
   nouser_xattr  Do not allow getfattr/setfattr to get/set/list xattrs 
   mapchars      Translate six of the seven reserved characters (not backslash)
-			*?<>|:
+			*?<>:
 		to the remap range (above 0xF000), which also
 		allows the CIFS client to recognize files created with
 		such characters by Windows's POSIX emulation. This can
@@ -739,5 +739,5 @@ module loading or during the runtime by using the interface
 i.e. echo "value" > /sys/module/cifs/parameters/<param>
 
 1. enable_oplocks - Enable or disable oplocks. Oplocks are enabled by default.
-		    [Y/y/1]. To disable use any of [N/n/0].
+		    . To disable use any of .
 

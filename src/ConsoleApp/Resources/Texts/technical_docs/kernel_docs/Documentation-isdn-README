@@ -87,7 +87,7 @@ README for the ISDN-subsystem
 
                ATA      Answer incoming call.
                ATD<No.> Dial, the number may contain:
-                        [0-9] and [,#.*WPT-S]
+                         and 
                         the latter are ignored until 'S'.
                         The 'S' must precede the number, if
                         the line is a SPV (German 1TR6).
@@ -434,28 +434,28 @@ README for the ISDN-subsystem
 
      ?     one arbitrary digit
      *     zero or arbitrary many digits
-     [123] one of the digits in the list
-     [1-5] one digit between '1' and '5'
+      one of the digits in the list
+      one digit between '1' and '5'
            a '^' as the first character in a list inverts the list
 
 
    "isdnctrl secure <InterfaceName> off"
    Switch off secure operation (default).
 
-   "isdnctrl ihup <InterfaceName> [on|off]"
+   "isdnctrl ihup <InterfaceName> "
    Switch the hang-up-timer for incoming calls on or off.
 
    "isdnctrl eaz <InterfaceName>"
    Returns the EAZ of an interface.
 
-   "isdnctrl delphone <InterfaceName> in|out <number>"
+   "isdnctrl delphone <InterfaceName> inout <number>"
    Deletes a number from one of the access-lists of the interface.
 
    "isdnctrl delif <InterfaceName>"
    Removes the interface (and possible slaves) from the kernel.
    (You have to unregister it with "ifconfig <InterfaceName> down" before).
 
-   "isdnctrl callback <InterfaceName> [on|off]"
+   "isdnctrl callback <InterfaceName> "
    Switches an interface to callback-mode. In this mode, an incoming call
    will be rejected and after this the remote-station will be called. If
    you test this feature by using ping, some routers will re-dial very
@@ -463,11 +463,11 @@ README for the ISDN-subsystem
    In this case use ping with the option -i <sec> to increase the interval
    between echo-packets.
 
-   "isdnctrl cbdelay <InterfaceName> [seconds]"
+   "isdnctrl cbdelay <InterfaceName> "
    Sets the delay (default 5 sec) between an incoming call and start of
    dialing when callback is enabled.
 
-   "isdnctrl cbhup <InterfaceName> [on|off]"
+   "isdnctrl cbhup <InterfaceName> "
    This enables (default) or disables an active hangup (reject) when getting an
    incoming call for an interface which is configured for callback.
 
@@ -519,7 +519,7 @@ README for the ISDN-subsystem
    "isdnctrl hangup <InterfaceName>"
    Forces hangup of an interface.
 
-   "isdnctrl bind <InterfaceName> <DriverId>,<ChannelNumber> [exclusive]"
+   "isdnctrl bind <InterfaceName> <DriverId>,<ChannelNumber> "
    If you are using more than one ISDN card, it is sometimes necessary to
    dial out using a specific card or even preserve a specific channel for
    dialout of a specific net-interface. This can be done with the above
@@ -531,7 +531,7 @@ README for the ISDN-subsystem
    "isdnctrl unbind <InterfaceName>"
    unbinds a previously bound interface.
 
-   "isdnctrl busreject <DriverId> on|off"
+   "isdnctrl busreject <DriverId> onoff"
    If switched on, isdn4linux replies a REJECT to incoming calls, it
    cannot match to any configured interface.
    If switched off, nothing happens in this case.

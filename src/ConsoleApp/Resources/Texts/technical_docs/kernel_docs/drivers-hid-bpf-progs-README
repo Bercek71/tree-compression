@@ -59,7 +59,7 @@ $> udev-hid-bpf inspect xppen-ArtistPro16Gen2.bpf.o
     ],
 ...
 $> cat <EOF > /etc/udev/rules.d/99-load-hid-bpf-xppen-ArtistPro16Gen2.rules
-ACTION!="add|remove", GOTO="hid_bpf_end"
+ACTION!="addremove", GOTO="hid_bpf_end"
 SUBSYSTEM!="hid", GOTO="hid_bpf_end"
 
 # xppen-ArtistPro16Gen2.bpf.o

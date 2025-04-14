@@ -16,7 +16,7 @@ libcpupower
 tools and programs to the cpufreq core and drivers in the Linux kernel. This
 allows for code reduction in userspace tools, a clean implementation of
 the interaction to the cpufreq core, and support for both the sysfs and proc
-interfaces [depending on configuration, see below].
+interfaces .
 
 
 compilation and installation
@@ -49,15 +49,15 @@ $ sudo make install
 'make install' command puts targets to default system dirs:
 
 -----------------------------------------------------------------------
-| Installing file        |               System dir                   |
+ Installing file                       System dir                   
 -----------------------------------------------------------------------
-| libcpupower            | /usr/lib                                   |
+ libcpupower             /usr/lib                                   
 -----------------------------------------------------------------------
-| cpupower               | /usr/bin                                   |
+ cpupower                /usr/bin                                   
 -----------------------------------------------------------------------
-| cpufreq-bench_plot.sh  | /usr/bin                                   |
+ cpufreq-bench_plot.sh   /usr/bin                                   
 -----------------------------------------------------------------------
-| man pages              | /usr/man                                   |
+ man pages               /usr/man                                   
 -----------------------------------------------------------------------
 
 To put it in other words it makes build results available system-wide,
@@ -99,15 +99,15 @@ from the current dir.
 The files will be installed to the following dirs:
 
 -----------------------------------------------------------------------
-| Installing file        |               System dir                   |
+ Installing file                       System dir                   
 -----------------------------------------------------------------------
-| libcpupower            | ${DESTDIR}/usr/lib                         |
+ libcpupower             ${DESTDIR}/usr/lib                         
 -----------------------------------------------------------------------
-| cpupower               | ${DESTDIR}/usr/bin                         |
+ cpupower                ${DESTDIR}/usr/bin                         
 -----------------------------------------------------------------------
-| cpufreq-bench_plot.sh  | ${DESTDIR}/usr/bin                         |
+ cpufreq-bench_plot.sh   ${DESTDIR}/usr/bin                         
 -----------------------------------------------------------------------
-| man pages              | ${DESTDIR}/usr/man                         |
+ man pages               ${DESTDIR}/usr/man                         
 -----------------------------------------------------------------------
 
 If you look at the table for the default 'make' output dirs you will

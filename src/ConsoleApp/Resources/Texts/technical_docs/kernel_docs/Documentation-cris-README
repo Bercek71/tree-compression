@@ -137,7 +137,7 @@ Default gateway is 10.13.9.1
 Hostname is bbox1
 Telnetd starting, using port 23.
   using /bin/sash as shell.
-sftpd[15]: sftpd $Revision: 1.7 $ starting up
+sftpd: sftpd $Revision: 1.7 $ starting up
 
 
 

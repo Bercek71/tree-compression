@@ -45,7 +45,7 @@ Using the JSON files and the mapfile, 'jevents' generates the C source file,
 	  (one table like the following, per JSON file; table name 'pme_power8'
 	  is derived from JSON file name, 'power8.json').
 
-		struct pmu_event pme_power8[] = {
+		struct pmu_event pme_power8 = {
 
 			...
 
@@ -61,7 +61,7 @@ Using the JSON files and the mapfile, 'jevents' generates the C source file,
 	- A 'mapping table' that maps each CPU of the architecture, to its
 	  'PMU events table'
 
-		struct pmu_events_map pmu_events_map[] = {
+		struct pmu_events_map pmu_events_map = {
 		{
 			.cpuid = "004b0000",
 			.version = "1",
@@ -77,7 +77,7 @@ After the 'pmu-events.c' is generated, it is compiled and the resulting
 
 NOTES:
 	1. Several CPUs can support same set of events and hence use a common
-	   JSON file. Hence several entries in the pmu_events_map[] could map
+	   JSON file. Hence several entries in the pmu_events_map could map
 	   to a single 'PMU events table'.
 
 	2. The 'pmu-events.h' has an extern declaration for the mapping table

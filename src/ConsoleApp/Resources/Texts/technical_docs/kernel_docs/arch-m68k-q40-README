@@ -112,7 +112,7 @@ because only irq's 4-15 can be disabled - and only all of them at once.
 Thus disable_irq() can effectively block the machine if the driver goes
 asleep.
 One thing to keep in mind when hacking around the interrupt code is
-that there is no way to find out which IRQ caused a request, [EI]IRQ_REG
+that there is no way to find out which IRQ caused a request, IRQ_REG
 displays current state of the various IRQ lines.
 
 Keyboard

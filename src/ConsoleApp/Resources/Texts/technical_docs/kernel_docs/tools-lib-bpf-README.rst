@@ -145,7 +145,7 @@ For example, if current state of ``libbpf.map`` is:
 ``LIBBPF_0.0.1``.
 
 Format of version script and ways to handle ABI changes, including
-incompatible ones, described in details in [1].
+incompatible ones, described in details in .
 
 Stand-alone build
 =================
@@ -164,5 +164,5 @@ libbpf is dual-licensed under LGPL 2.1 and BSD 2-Clause.
 Links
 =====
 
-[1] https://www.akkadia.org/drepper/dsohowto.pdf
+ https://www.akkadia.org/drepper/dsohowto.pdf
     (Chapter 3. Maintaining APIs and ABIs).

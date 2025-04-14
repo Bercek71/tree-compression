@@ -88,7 +88,7 @@ It can be configured using the command line feature while loading the kernel
 with LILO or LOADLIN or, if built as a module, using insmod/modprobe with
 parameters.
 There is also some config needed before you compile the kernel and/or
-modules. It is included in the normal "make [menu]config" target at the
+modules. It is included in the normal "make config" target at the
 kernel. Don't forget it, especially to select the right D-channel protocol.
 
 Please note: In older versions of the HiSax driver, all PnP cards
@@ -249,7 +249,7 @@ b) using LILO/LOADLIN, with the driver compiled directly into the kernel
 ------------------------------------------------------------------------
 
 hisax=typ1,dp1,pa_1,pb_1,pc_1[,typ2,dp2,pa_2 ... \
-      typn,dpn,pa_n,pb_n,pc_n][,idstring1[,idstring2,...,idstringn]]
+      typn,dpn,pa_n,pb_n,pc_n]]
 
 where
      typ1 = type of 1st card (default depends on kernel settings)
@@ -590,20 +590,20 @@ REMOTE_IP=192.168.2.1
 case "$1" in
     start)
 	echo "Starting ISDN ..."
-        if [ ${I4L_AS_MODULE} = "yes" ]; then
+        if ; then
 		echo "loading modules..."
 		/sbin/modprobe hisax ${I4L_MODULE_PARAMS}
 	fi
 	# configure interface
 	/sbin/isdnctrl addif isdn0
 	/sbin/isdnctrl secure isdn0 on
-	if [ ${I4L_DEBUG} = "yes" ]; then
+	if ; then
 		/sbin/isdnctrl verbose 7
 		/sbin/hisaxctrl HiSax 1 0xffff
 		/sbin/hisaxctrl HiSax 11 0xff
 		cat  /dev/isdnctrl >/tmp/lea.log &
 	fi
-	if [ ${I4L_REMOTE_IS_CISCO} = "yes" ]; then
+	if ; then
 		/sbin/isdnctrl encap isdn0 cisco-h
 	fi
 	/sbin/isdnctrl huptimeout isdn0 0
@@ -612,7 +612,7 @@ case "$1" in
 	/sbin/isdnctrl l2_prot isdn0 hdlc
 	# 1. card
 	/sbin/isdnctrl addphone isdn0 in LEASED0
-        if [ ${I4L_LEASED_128K} = "yes" ]; then
+        if ; then
 		/sbin/isdnctrl addslave isdn0 isdn0s
 		/sbin/isdnctrl secure isdn0s on
 		/sbin/isdnctrl huptimeout isdn0s 0
@@ -621,7 +621,7 @@ case "$1" in
 		/sbin/isdnctrl l2_prot isdn0s hdlc
 		# 1. card
 		/sbin/isdnctrl addphone isdn0s in LEASED0
-		if [ ${I4L_REMOTE_IS_CISCO} = "yes" ]; then
+		if ; then
 			/sbin/isdnctrl encap isdn0s cisco-h
 		fi
 	fi
@@ -633,7 +633,7 @@ case "$1" in
 	# switch to leased mode
 	# B-CHANNEL 1
 	/sbin/hisaxctrl HiSax 5 1
-        if [ ${I4L_LEASED_128K} = "yes" ]; then
+        if ; then
 		# B-CHANNEL 2
 		sleep 10; /* Wait for master */
 		/sbin/hisaxctrl HiSax 5 2
@@ -642,10 +642,10 @@ case "$1" in
     stop)
 	/sbin/ifconfig isdn0 down
 	/sbin/isdnctrl delif isdn0
-	if [ ${I4L_DEBUG} = "yes" ]; then
+	if ; then
 		killall cat
 	fi
-	if [ ${I4L_AS_MODULE} = "yes" ]; then
+	if ; then
 		/sbin/rmmod hisax
 		/sbin/rmmod isdn
 		/sbin/rmmod ppp
@@ -653,7 +653,7 @@ case "$1" in
 	fi
 	;;
     *)
-	echo "Usage: $0 {start|stop}"
+	echo "Usage: $0 {startstop}"
 	exit 1
 esac
 exit 0

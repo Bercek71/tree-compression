@@ -14,8 +14,8 @@ GigaSet 307x Device Driver
         Siemens Gigaset 4170/4175 isdn
         Siemens Gigaset SX205/255
         Siemens Gigaset SX353
-        T-Com Sinus 45 [AB] isdn
-        T-Com Sinus 721X[A] [SE]
+        T-Com Sinus 45  isdn
+        T-Com Sinus 721X 
         Vox Chicago 390 ISDN (KPN Telecom)
 
      RS232 data boxes:
@@ -138,18 +138,18 @@ GigaSet 307x Device Driver
      mode and returning to regular operation. In order to leave adapter
      configuration mode, write the command ATO to the device.
 
-     ioctl(int fd, GIGASET_BRKCHARS, unsigned char brkchars[6]);
+     ioctl(int fd, GIGASET_BRKCHARS, unsigned char brkchars);
      (usb_gigaset only)
      Set the break characters on an M105's internal serial adapter to the six
-     bytes stored in brkchars[]. Unused bytes should be set to zero.
+     bytes stored in brkchars. Unused bytes should be set to zero.
 
-     ioctl(int fd, GIGASET_VERSION, unsigned version[4]);
-     Retrieve version information from the driver. version[0] must be set to
+     ioctl(int fd, GIGASET_VERSION, unsigned version);
+     Retrieve version information from the driver. version must be set to
      one of:
      - GIGVER_DRIVER: retrieve driver version
      - GIGVER_COMPAT: retrieve interface compatibility version
      - GIGVER_FWBASE: retrieve the firmware version of the base
-     Upon return, version[] is filled with the requested version information.
+     Upon return, version is filled with the requested version information.
 
 2.3. CAPI
      ----
@@ -196,7 +196,7 @@ GigaSet 307x Device Driver
      to an appropriate module configuration file, like
      /etc/modprobe.d/gigaset.conf.
 
-     Unimodem mode is needed for making some devices [e.g. SX100] work which
+     Unimodem mode is needed for making some devices  work which
      do not support the regular Gigaset command set. If debug output (see
      section 3.2.) shows something like this when dialing:
          CMD Received: ERROR

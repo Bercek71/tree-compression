@@ -16,8 +16,8 @@ In this document you will find a lot of references about OSS/Lite or ossfree:
 they are gone forever. Keeping this in mind and with a grain of salt this
 document can be still interesting and very helpful.
 
-[ File edited 17.01.1999 - Riccardo Facchetti ]
-[ Edited miroSOUND section 19.04.2001 - Robert Siemer ]
+
+
 
 OSS/Free version 3.8 release notes
 ----------------------------------
@@ -1168,7 +1168,7 @@ Running ssinit with a wrong version of the sndscape.co? file is not
 dangerous as long as you don't try to use a file called sndscape.cod.
 If you have initialized the card using a wrong microcode file (sounds
 are terrible), just modify ssinit.c to use another microcode file and try
-again. It's possible to use an earlier version of sndscape.co[01] but it
+again. It's possible to use an earlier version of sndscape.co but it
 may sound weird.
 
 MAD16 (Pro) and Mozart
@@ -1356,7 +1356,7 @@ miropcm20.o module. Also the 7-band equalizer is integrated
 finished for the RDS decoder on this card, too. You will be able to
 read RadioText, the Programme Service name, Programme TYpe and
 others. Even the v4l radio module benefits from it with a refined
-strength value. See aci.[ch] and miropcm20*.[ch] for more details.
+strength value. See aci. and miropcm20*. for more details.
 
 The following configuration parameters have worked fine for the PCM12
 in Markus Kuhn's system, many other configurations might work, too:

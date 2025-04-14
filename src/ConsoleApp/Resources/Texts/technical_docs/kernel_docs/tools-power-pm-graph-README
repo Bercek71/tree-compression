@@ -1,9 +1,9 @@
                                                 _
-    _ __  _ __ ___         __ _ _ __ __ _ _ __ | |__
-   | '_ \| '_ ` _ \ _____ / _` | '__/ _` | '_ \| '_ \
-   | |_) | | | | | |_____| (_| | | | (_| | |_) | | | |
-   | .__/|_| |_| |_|      \__, |_|  \__,_| .__/|_| |_|
-   |_|                    |___/          |_|
+    _ __  _ __ ___         __ _ _ __ __ _ _ __  __
+    '_ \ '_ ` _ \ _____ / _`  '__/ _`  '_ \ '_ \
+    _)      _____ (_    (_  _)    
+    .__/_ _ _      \__, _  \__,_ .__/_ _
+   _                    ___/          _
 
    pm-graph: suspend/resume/boot timing analysis tools
     Version: 5.11
@@ -43,7 +43,7 @@
 		- Android
 
 ------------------------------------------------------------------
-|                          OVERVIEW                              |
+                          OVERVIEW                              
 ------------------------------------------------------------------
 
  This tool suite is designed to assist kernel and OS developers in optimizing
@@ -54,7 +54,7 @@
  and kernel processes are taking the most time in suspend/resume & boot.
 
 ------------------------------------------------------------------
-|                            SETUP                               |
+                            SETUP                               
 ------------------------------------------------------------------
 
     Package Requirements
@@ -115,7 +115,7 @@
 
 
 ------------------------------------------------------------------
-|                            USAGE                               |
+                            USAGE                               
 ------------------------------------------------------------------
 
 Basic Usage
@@ -126,7 +126,7 @@ ___________
  2) Open up a terminal window and execute the mode list command:
 
 	%> sudo ./sleepgraph.py -modes
-		['freeze', 'mem', 'disk']
+		
 
  Execute a test using one of the available power modes, e.g. mem (S3):
 
@@ -197,7 +197,7 @@ _______________
  %> sudo ./sleepgraph.py -config config/suspend-proc.cfg
 
 ------------------------------------------------------------------
-|                     ENDURANCE TESTING                          |
+                     ENDURANCE TESTING                          
 ------------------------------------------------------------------
 
  The best way to gauge the health of a system is to run a series of
@@ -296,7 +296,7 @@ _______________
   %> sleepgraph.py -summary . -genhtml
 
 ------------------------------------------------------------------
-|                    CONFIGURATION FILES                         |
+                    CONFIGURATION FILES                         
 ------------------------------------------------------------------
 
  Since 4.0 we've moved to using config files in lieu of command line options.
@@ -344,7 +344,7 @@ ______________
 Config File Options
 ___________________
 
- [Settings]
+ 
 
  # Verbosity: print verbose messages (def: false)
  verbose: false
@@ -397,7 +397,7 @@ ___________________
  # Min Callgraph Length: show callgraphs only if longer than min (def: 1 ms)
  mincg: 1
 
- # Timestamp Precision: number of sig digits in timestamps (0:S, [3:ms], 6:us)
+ # Timestamp Precision: number of sig digits in timestamps (0:S, , 6:us)
  timeprec: 3
 
  # Device Filter: show only devs whose name/driver includes one of these strings
@@ -422,7 +422,7 @@ ___________________
  callloop-maxlen: 0.005
 
 ------------------------------------------------------------------
-|                   CUSTOM TIMELINE ENTRIES                      |
+                   CUSTOM TIMELINE ENTRIES                      
 ------------------------------------------------------------------
 
 Adding or Editing Timeline Functions
@@ -438,7 +438,7 @@ ____________________________________
  the config. It's also possible to copy the internal timeline functions into
  the config so that you can override and edit them. Place them in the
  timeline_functions_ARCH section with the name of your architecture appended.
- i.e. for x86_64: [timeline_functions_x86_64]
+ i.e. for x86_64: 
 
  Use the override-timeline-functions option if you only want to use your
  custom calls, or leave it false to append them to the internal ones.
@@ -455,7 +455,7 @@ ____________________________________
 
   Entry format:
 
-    function: format{fn_arg1}_{fn_arg2} fn_arg1 fn_arg2 ... [color=purple]
+    function: format{fn_arg1}_{fn_arg2} fn_arg1 fn_arg2 ... 
 
   Required Arguments:
 
@@ -470,13 +470,13 @@ ____________________________________
     format: The format to display the data on the timeline in. Use braces to
             enclose the arg names.
 
-        example: CPU_ON[{cpu}]
+        example: CPU_ON
 
     color: The color of the entry block in the timeline. The default color is
            transparent, so the entry shares the phase color. The color is an
            html color string, either a word, or an RGB.
 
-        example: [color=#CC00CC]
+        example: 
 
     arglist: A list of arguments from registers/stack addresses. See URL:
              https://www.kernel.org/doc/Documentation/trace/kprobetrace.txt
@@ -484,10 +484,10 @@ ____________________________________
         example: cpu=%di:s32
 
  Here is a full example entry. It displays cpu resume calls in the timeline
- in orange. They will appear as CPU_ON[0], CPU_ON[1], etc.
+ in orange. They will appear as CPU_ON, CPU_ON, etc.
 
-  [timeline_functions_x86_64]
-  _cpu_up: CPU_ON[{cpu}] cpu=%di:s32 [color=orange]
+  
+  _cpu_up: CPU_ON cpu=%di:s32 
 
 
 Adding or Editing Dev Mode Timeline Source Functions
@@ -512,7 +512,7 @@ ____________________________________________________
  to the config. It's also possible to copy the internal dev timeline
  functions into the config so that you can override and edit them. Place them
  in the dev_timeline_functions_ARCH section with the name of your architecture
- appended. i.e. for x86_64: [dev_timeline_functions_x86_64]
+ appended. i.e. for x86_64: 
 
  Use the override-dev-timeline-functions option if you only want to use your
  custom calls, or leave it false to append them to the internal ones.
@@ -532,8 +532,8 @@ ____________________________________________________
  ataN_port_reset in the timeline. This is where most of the SATA disk resume
  time goes, so it can be helpful to see the low level call.
 
-  [dev_timeline_functions_x86_64]
-  ata_eh_recover: ata{port}_port_reset port=+36(%di):s32 [color=#CC00CC]
+  
+  ata_eh_recover: ata{port}_port_reset port=+36(%di):s32 
 
 
 Verifying your custom functions
@@ -584,7 +584,7 @@ _______________________________
 
 
 ------------------------------------------------------------------
-|           TESTING ON CONSUMER LINUX OPERATING SYSTEMS          |
+           TESTING ON CONSUMER LINUX OPERATING SYSTEMS          
 ------------------------------------------------------------------
 
 Android
@@ -596,7 +596,7 @@ _______
 
  Here are the steps:
 
- [download and install the tool on the device]
+ 
 
 	host%> wget https://raw.githubusercontent.com/intel/pm-graph/master/tools/android.sh
 	host%> adb connect 192.168.1.6
@@ -604,7 +604,7 @@ _______
 	# push the script to a writeable location
 	host%> adb push android.sh /sdcard/
 
- [check whether the tool will run on your device]
+ 
 
 	host%> adb shell
 	dev%> cd /sdcard
@@ -621,7 +621,7 @@ _______
 		}
 	# the above is what you see on a system that's properly patched
 
- [execute the suspend]
+ 
 
 	# NOTE: The suspend will only work if the screen isn't timed out,
 	# so you have to press some keys first to wake it up b4 suspend)
@@ -641,7 +641,7 @@ _______
 	SUSPEND START @ 21:24:02 (rtcwake in 10 seconds)
 	<adb connection will now terminate>
 
- [retrieve the data from the device]
+ 
 
 	# I find that you have to actually kill the adb process and
 	# reconnect sometimes in order for the connection to work post-suspend
@@ -653,7 +653,7 @@ _______
 	# (optional) get the log, which just lists some test times for comparison
 	host%> adb pull /sdcard/log.txt
 
- [create an output html file using sleepgraph.py]
+ 
 
 	host%> sleepgraph.py -ftrace ftrace.txt
 

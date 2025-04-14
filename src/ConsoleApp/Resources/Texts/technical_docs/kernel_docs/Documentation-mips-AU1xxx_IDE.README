@@ -65,8 +65,8 @@ The AU1XXX IDE driver supported all PIO modes - PIO mode 0/1/2/3/4 - and all
 MWDMA modes - MWDMA 0/1/2 -. There is no support for SWDMA and UDMA mode.
 
 To change the PIO mode use the program hdparm with option -p, e.g.
-'hdparm -p0 [device]' for PIO mode 0. To enable the MWDMA mode use the option
--X, e.g. 'hdparm -X32 [device]' for MWDMA mode 0.
+'hdparm -p0 ' for PIO mode 0. To enable the MWDMA mode use the option
+-X, e.g. 'hdparm -X32 ' for MWDMA mode 0.
 
 
 PERFORMANCE CONFIGURATIONS

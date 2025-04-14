@@ -50,36 +50,36 @@ and peripherial chip-selets).
 The kernel-mode segmentation map:
 
         ------------------------                ------------------------
-FFFFFFFF|                      | => cached      |                      | 
-        |    kernel seg_f      |    flash       |                      |
-F0000000|______________________|                |                      |
-EFFFFFFF|                      | => uncached    |                      | 
-        |    kernel seg_e      |    flash       |                      |
-E0000000|______________________|                |        DRAM          |
-DFFFFFFF|                      |  paged to any  |      Un-cached       | 
-        |    kernel seg_d      |    =======>    |                      |
-D0000000|______________________|                |                      |
-CFFFFFFF|                      |                |                      | 
-        |    kernel seg_c      |==\             |                      |
-C0000000|______________________|   \            |______________________|
-BFFFFFFF|                      |  uncached      |                      |
-        |    kernel seg_b      |=====\=========>|       Registers      |
-B0000000|______________________|      \c        |______________________|
-AFFFFFFF|                      |       \a       |                      |
-        |                      |        \c      | FLASH/SRAM/Peripheral|
-        |                      |         \h     |______________________|
-        |                      |          \e    |                      |
-        |                      |           \d   |                      |
-        | kernel seg_0 - seg_a |            \==>|         DRAM         | 
-        |                      |                |        Cached        |
-        |                      |  paged to any  |                      |
-        |                      |    =======>    |______________________| 
-        |                      |                |                      |
-        |                      |                |        Illegal       |
-        |                      |                |______________________|
-        |                      |                |                      |      
-        |                      |                | FLASH/SRAM/Peripheral|
-00000000|______________________|                |______________________|
+FFFFFFFF                       => cached                             
+            kernel seg_f          flash                             
+F0000000______________________                                      
+EFFFFFFF                       => uncached                           
+            kernel seg_e          flash                             
+E0000000______________________                        DRAM          
+DFFFFFFF                        paged to any        Un-cached        
+            kernel seg_d          =======>                          
+D0000000______________________                                      
+CFFFFFFF                                                             
+            kernel seg_c      ==\                                   
+C0000000______________________   \            ______________________
+BFFFFFFF                        uncached                            
+            kernel seg_b      =====\=========>       Registers      
+B0000000______________________      \c        ______________________
+AFFFFFFF                             \a                             
+                                      \c       FLASH/SRAM/Peripheral
+                                       \h     ______________________
+                                        \e                          
+                                         \d                         
+         kernel seg_0 - seg_a             \==>         DRAM          
+                                                      Cached        
+                                paged to any                        
+                                  =======>    ______________________ 
+                                                                    
+                                                      Illegal       
+                                              ______________________
+                                                                          
+                                               FLASH/SRAM/Peripheral
+00000000______________________                ______________________
 
 In user-mode it looks the same except that only the space 0-AFFFFFFF is
 available. Therefore, in this model, the virtual address space per process
@@ -106,39 +106,39 @@ allocator.
 The setting of the actual MMU control registers to use this layout would
 be something like this:
 
-R_MMU_KSEG = ( ( seg_f, seg     ) |   // Flash cached
-               ( seg_e, seg     ) |   // Flash uncached
-               ( seg_d, page    ) |   // kernel vmalloc area    
-               ( seg_c, seg     ) |   // kernel linear segment
-               ( seg_b, seg     ) |   // kernel linear segment
-               ( seg_a, page    ) |
-               ( seg_9, page    ) |
-               ( seg_8, page    ) |
-               ( seg_7, page    ) |
-               ( seg_6, page    ) |
-               ( seg_5, page    ) |
-               ( seg_4, page    ) |
-               ( seg_3, page    ) |
-               ( seg_2, page    ) |
-               ( seg_1, page    ) |
+R_MMU_KSEG = ( ( seg_f, seg     )    // Flash cached
+               ( seg_e, seg     )    // Flash uncached
+               ( seg_d, page    )    // kernel vmalloc area    
+               ( seg_c, seg     )    // kernel linear segment
+               ( seg_b, seg     )    // kernel linear segment
+               ( seg_a, page    ) 
+               ( seg_9, page    ) 
+               ( seg_8, page    ) 
+               ( seg_7, page    ) 
+               ( seg_6, page    ) 
+               ( seg_5, page    ) 
+               ( seg_4, page    ) 
+               ( seg_3, page    ) 
+               ( seg_2, page    ) 
+               ( seg_1, page    ) 
                ( seg_0, page    ) );
 
-R_MMU_KBASE_HI = ( ( base_f, 0x0 ) |   // flash/sram/periph cached
-                   ( base_e, 0x8 ) |   // flash/sram/periph uncached
-                   ( base_d, 0x0 ) |   // don't care
-                   ( base_c, 0x4 ) |   // physical RAM cached area
-                   ( base_b, 0xb ) |   // uncached on-chip registers
-                   ( base_a, 0x0 ) |   // don't care
-                   ( base_9, 0x0 ) |   // don't care
+R_MMU_KBASE_HI = ( ( base_f, 0x0 )    // flash/sram/periph cached
+                   ( base_e, 0x8 )    // flash/sram/periph uncached
+                   ( base_d, 0x0 )    // don't care
+                   ( base_c, 0x4 )    // physical RAM cached area
+                   ( base_b, 0xb )    // uncached on-chip registers
+                   ( base_a, 0x0 )    // don't care
+                   ( base_9, 0x0 )    // don't care
                    ( base_8, 0x0 ) );  // don't care
 
-R_MMU_KBASE_LO = ( ( base_7, 0x0 ) |   // don't care
-                   ( base_6, 0x0 ) |   // don't care
-                   ( base_5, 0x0 ) |   // don't care
-                   ( base_4, 0x0 ) |   // don't care
-                   ( base_3, 0x0 ) |   // don't care
-                   ( base_2, 0x0 ) |   // don't care
-                   ( base_1, 0x0 ) |   // don't care
+R_MMU_KBASE_LO = ( ( base_7, 0x0 )    // don't care
+                   ( base_6, 0x0 )    // don't care
+                   ( base_5, 0x0 )    // don't care
+                   ( base_4, 0x0 )    // don't care
+                   ( base_3, 0x0 )    // don't care
+                   ( base_2, 0x0 )    // don't care
+                   ( base_1, 0x0 )    // don't care
                    ( base_0, 0x0 ) );  // don't care
 
 NOTE: while setting up the MMU, we run in a non-mapped mode in the DRAM (0x40
@@ -150,7 +150,7 @@ is done in head.S temporarily, but fixed by the kernel later in paging_init.
 Paging - PTE's, PMD's and PGD's
 -------------------------------
 
-[ References: asm/pgtable.h, asm/page.h, asm/mmu.h ]
+
 
 The paging mechanism uses virtual addresses to split a process memory-space into
 pages, a page being the smallest unit that can be freely remapped in memory. On
@@ -171,7 +171,7 @@ The example address is 0xd004000c; in binary this is:
 31       23       15       7      0
 11010000 00000100 00000000 00001100
 
-|______| |__________||____________|
+______ ______________________
   PGD        PTE       page offset
 
 Given the top-level Page Directory, the offset in that directory is calculated

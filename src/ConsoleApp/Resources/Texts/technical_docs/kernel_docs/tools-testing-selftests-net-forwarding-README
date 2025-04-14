@@ -14,13 +14,13 @@ by looping the switch ports together. For example:
 
                              br0
                               +
-               vrf-h1         |           vrf-h2
+               vrf-h1                    vrf-h2
                  +        +---+----+        +
-                 |        |        |        |
+                                         
     192.0.2.1/24 +        +        +        + 192.0.2.2/24
                swp1     swp2     swp3     swp4
                  +        +        +        +
-                 |        |        |        |
+                                         
                  +--------+        +--------+
 
 The VRFs act as lightweight namespaces representing hosts connected to
@@ -53,7 +53,7 @@ o Where possible, IPv6 and IPv4 addresses shall conform to RFC 3849 and
 o Where possible, tests shall be written so that they can be reused by
   multiple topologies and added to lib.sh.
 o Checks shall be added to lib.sh for any external dependencies.
-o Code shall be checked using ShellCheck [1] prior to submission.
+o Code shall be checked using ShellCheck  prior to submission.
 
 1. https://www.shellcheck.net/
 

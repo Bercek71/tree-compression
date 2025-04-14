@@ -166,4 +166,4 @@ Naming conventions and best practice:
   or sama5d3_gmac.dtsi for example).
 - board Device Tree Source files (.dts) are prefixed by the string "at91-" so
   that they can be identified easily. Note that some files are historical exceptions
-  to this rule (sama5d3[13456]ek.dts, usb_a9g20.dts or animeo_ip.dts for example).
+  to this rule (sama5d3ek.dts, usb_a9g20.dts or animeo_ip.dts for example).

@@ -18,9 +18,9 @@ Note that while SWIG itself is GPL v3+ licensed; the resulting output,
 the bindings code: is permissively licensed + the license of libcpupower's .o
 files. For these bindings that means GPL v2.
 
-Please see https://swig.org/legal.html and the discussion [1] for more details.
+Please see https://swig.org/legal.html and the discussion  for more details.
 
-[1]
+
 https://lore.kernel.org/linux-pm/Zqv9BOjxLAgyNP5B@hatbackup/
 
 

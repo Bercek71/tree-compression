@@ -109,10 +109,10 @@ RTRS_MSG_CON_REQ  ------------------->
 RTRS_MSG_INFO_REQ ------------------->
                    <------------------- RTRS_MSG_INFO_RSP
 *heartbeat is started from both sides:
-                   -------------------> [RTRS_HB_MSG_IMM]
-[RTRS_HB_MSG_ACK] <-------------------
-[RTRS_HB_MSG_IMM] <-------------------
-                   -------------------> [RTRS_HB_MSG_ACK]
+                   -------------------> 
+ <-------------------
+ <-------------------
+                   -------------------> 
 
 IO path
 -------
@@ -131,8 +131,8 @@ an immediate field. The 32 bit field is used to specify the outstanding
 inflight IO and for the error code.
 
 CLT                                                          SRV
-usr_data + usr_hdr + rtrs_msg_rdma_write -----------------> [RTRS_IO_REQ_IMM]
-[RTRS_IO_RSP_IMM]                        <----------------- (id + errno)
+usr_data + usr_hdr + rtrs_msg_rdma_write -----------------> 
+                        <----------------- (id + errno)
 
 * Write (always_invalidate=Y) *
 
@@ -152,9 +152,9 @@ the message and finished IO after update rkey for the rbuffer, then post
 back the recv buffer for later use.
 
 CLT                                                          SRV
-usr_data + usr_hdr + rtrs_msg_rdma_write -----------------> [RTRS_IO_REQ_IMM]
-[RTRS_MSG_RKEY_RSP]                     <----------------- (RTRS_MSG_RKEY_RSP)
-[RTRS_IO_RSP_IMM]                        <----------------- (id + errno)
+usr_data + usr_hdr + rtrs_msg_rdma_write -----------------> 
+                     <----------------- (RTRS_MSG_RKEY_RSP)
+                        <----------------- (id + errno)
 
 
 * Read (always_invalidate=N)*
@@ -171,10 +171,10 @@ message with an immediate field. The 32 bit field is used to specify the
 outstanding inflight IO and the error code.
 
 CLT                                           SRV
-usr_hdr + rtrs_msg_rdma_read --------------> [RTRS_IO_REQ_IMM]
-[RTRS_IO_RSP_IMM]            <-------------- usr_data + (id + errno)
+usr_hdr + rtrs_msg_rdma_read --------------> 
+            <-------------- usr_data + (id + errno)
 or in case client requested invalidation:
-[RTRS_IO_RSP_IMM_W_INV]      <-------------- usr_data + (INV) + (id + errno)
+      <-------------- usr_data + (INV) + (id + errno)
 
 * Read (always_invalidate=Y)*
 
@@ -195,11 +195,11 @@ the message and finished IO after update rkey for the rbuffer, then post
 back the recv buffer for later use.
 
 CLT                                           SRV
-usr_hdr + rtrs_msg_rdma_read --------------> [RTRS_IO_REQ_IMM]
-[RTRS_IO_RSP_IMM]            <-------------- usr_data + (id + errno)
-[RTRS_MSG_RKEY_RSP]	     <----------------- (RTRS_MSG_RKEY_RSP)
+usr_hdr + rtrs_msg_rdma_read --------------> 
+            <-------------- usr_data + (id + errno)
+	     <----------------- (RTRS_MSG_RKEY_RSP)
 or in case client requested invalidation:
-[RTRS_IO_RSP_IMM_W_INV]      <-------------- usr_data + (INV) + (id + errno)
+      <-------------- usr_data + (INV) + (id + errno)
 =========================================
 Contributors List(in alphabetical order)
 =========================================

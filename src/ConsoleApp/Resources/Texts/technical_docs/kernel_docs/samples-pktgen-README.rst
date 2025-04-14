@@ -15,7 +15,7 @@ Common parameters
 The parameters.sh file support easy and consistant parameter parsing
 across the sample scripts.  Usage example is printed on errors::
 
- Usage: ./pktgen_sample01_simple.sh [-vx] -i ethX
+ Usage: ./pktgen_sample01_simple.sh  -i ethX
   -i : ($DEV)       output interface/device (required)
   -s : ($PKT_SIZE)  packet size
   -d : ($DEST_IP)   destination IP. CIDR (e.g. 198.18.0.0/15) is also allowed

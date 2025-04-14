@@ -12,7 +12,7 @@ Title: The Great Gatsby
 
 Author: F. Scott Fitzgerald
 
-Release date: January 17, 2021 [eBook #64317]
+Release date: January 17, 2021 
                 Most recently updated: January 26, 2025
 
 Language: English
@@ -6155,7 +6155,7 @@ the last flyleaf was printed the word schedule, and the date September
 
                General Resolves
 
-  * No wasting time at Shafters or [a name, indecipherable]
+  * No wasting time at Shafters or 
 
   * No more smokeing or chewing.
 
@@ -6163,7 +6163,7 @@ the last flyleaf was printed the word schedule, and the date September
 
   * Read one improving book or magazine per week
 
-  * Save $5.00 [crossed out] $3.00 per week
+  * Save $5.00  $3.00 per week
 
   * Be better to parents
 

@@ -5,7 +5,7 @@ Memblock simulator
 Introduction
 ============
 
-Memblock is a boot time memory allocator[1] that manages memory regions before
+Memblock is a boot time memory allocator that manages memory regions before
 the actual memory management is initialized. Its APIs allow to register physical
 memory regions, mark them as available or reserved, allocate a block of memory
 within the requested range and/or in specific NUMA node, and many more.
@@ -59,22 +59,22 @@ allocation functions. Tests for each group are defined in dedicated files, as it
 can be seen here:
 
 memblock
-|-- asm       ------------------,
-|-- lib                         |-- implement function and struct stubs
-|-- linux     ------------------'
-|-- scripts
-|    |-- Makefile.include        -- handles `make` parameters
-|-- tests
-|    |-- alloc_api.(c|h)         -- memblock_alloc tests
-|    |-- alloc_helpers_api.(c|h) -- memblock_alloc_from tests
-|    |-- alloc_nid_api.(c|h)     -- memblock_alloc_try_nid tests
-|    |-- basic_api.(c|h)         -- memblock_add/memblock_reserve/... tests
-|    |-- common.(c|h)            -- helper functions for resetting memblock;
-|-- main.c        --------------.   dummy physical memory definition
-|-- Makefile                     `- test runner
-|-- README
-|-- TODO
-|-- .gitignore
+-- asm       ------------------,
+-- lib                         -- implement function and struct stubs
+-- linux     ------------------'
+-- scripts
+    -- Makefile.include        -- handles `make` parameters
+-- tests
+    -- alloc_api.(ch)         -- memblock_alloc tests
+    -- alloc_helpers_api.(ch) -- memblock_alloc_from tests
+    -- alloc_nid_api.(ch)     -- memblock_alloc_try_nid tests
+    -- basic_api.(ch)         -- memblock_add/memblock_reserve/... tests
+    -- common.(ch)            -- helper functions for resetting memblock;
+-- main.c        --------------.   dummy physical memory definition
+-- Makefile                     `- test runner
+-- README
+-- TODO
+-- .gitignore
 
 Simulating physical memory
 ==========================

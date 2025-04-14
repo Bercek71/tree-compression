@@ -11,8 +11,8 @@ can be used to compile the kernel with the necessary gcov options.  The
 kernel may optionally be configured to omit the coverage report as well.
 
 USAGE:
-	run.sh [-d logdir] [-l packet_loss] [-c packet_corruption]
-	       [-u packet_duplcate]
+	run.sh   
+	       
 
 OPTIONS:
 	-d	Log directory.  Defaults to tools/testing/selftests/net/rds/rds_logs

@@ -64,7 +64,7 @@ Linux內核6.x版本 <http://kernel.org/>
  - 如果您要安裝完整的源代碼，請把內核tar檔案包放在您有權限的目錄中（例如您
    的主目錄）並將其解包::
 
-     xz -cd linux-6.x.tar.xz | tar xvf -
+     xz -cd linux-6.x.tar.xz  tar xvf -
 
    將“X”替換成最新內核的版本號。
 
@@ -75,7 +75,7 @@ Linux內核6.x版本 <http://kernel.org/>
    安裝，請獲取所有較新的補丁文件，進入內核源代碼（linux-6.x）的目錄並
    執行::
 
-     xz -cd ../patch-6.x.xz | patch -p1
+     xz -cd ../patch-6.x.xz  patch -p1
 
    請【按順序】替換所有大於當前源代碼樹版本的“x”，這樣就可以了。您可能想要
    刪除備份文件（文件名類似xxx~ 或 xxx.orig)，並確保沒有失敗的補丁（文件名

@@ -45,7 +45,7 @@ object and uses Buffer Pools (DPBPs), I/O Portals (DPIOs) and Concentrators
 Configuration interface:
 
                  -----------------------
-                | DPAA2 Ethernet Driver |
+                 DPAA2 Ethernet Driver 
                  -----------------------
                      .      .      .
                      .      .      .
@@ -53,18 +53,18 @@ Configuration interface:
              .              .                .
              .              .                .
          ----------     ----------      -----------
-        | DPBP API |   | DPNI API |    | DPCON API |
+         DPBP API     DPNI API      DPCON API 
          ----------     ----------      -----------
              .              .                .             software
 ===========  .  ==========  .  ============  .  ===================
              .              .                .             hardware
          ------------------------------------------
-        |            MC hardware portals           |
+                    MC hardware portals           
          ------------------------------------------
              .              .                .
              .              .                .
           ------         ------            -------
-         | DPBP |       | DPNI |          | DPCON |
+          DPBP         DPNI            DPCON 
           ------         ------            -------
 
 The DPNIs are network interfaces without a direct one-on-one mapping to PHYs.
@@ -75,31 +75,31 @@ hardware resources.
 Datapath (I/O) interface:
 
          -----------------------------------------------
-        |           DPAA2 Ethernet Driver               |
+                   DPAA2 Ethernet Driver               
           -----------------------------------------------
-          |          ^        ^         |            |
-          |          |        |         |            |
-   enqueue|   dequeue|   data |  dequeue|       seed |
-    (Tx)  | (Rx, TxC)|  avail.|  request|     buffers|
-          |          |  notify|         |            |
-          |          |        |         |            |
-          V          |        |         V            V
+                    ^        ^                     
+                                                 
+   enqueue   dequeue   data   dequeue       seed 
+    (Tx)   (Rx, TxC)  avail.  request     buffers
+                      notify                     
+                                                 
+          V                           V            V
          -----------------------------------------------
-        |                 DPIO Driver                   |
+                         DPIO Driver                   
          -----------------------------------------------
-          |          |        |         |            |          software
-          |          |        |         |            |  ================
-          |          |        |         |            |          hardware
+                                                           software
+                                                   ================
+                                                           hardware
          -----------------------------------------------
-        |               I/O hardware portals            |
+                       I/O hardware portals            
          -----------------------------------------------
-          |          ^        ^         |            |
-          |          |        |         |            |
-          |          |        |         V            |
-          V          |    ================           V
-        ----------------------           |      -------------
- queues  ----------------------          |     | Buffer pool |
-          ----------------------         |      -------------
+                    ^        ^                     
+                                                 
+                                     V            
+          V              ================           V
+        ----------------------                 -------------
+ queues  ----------------------                Buffer pool 
+          ----------------------               -------------
                    =======================
                                 Channel
 
@@ -133,23 +133,23 @@ object or to another DPNI through an internal link, but the connection is
 managed by MC and completely transparent to the Ethernet driver.
 
      ---------     ---------     ---------
-    | eth if1 |   | eth if2 |   | eth ifn |
+     eth if1     eth if2     eth ifn 
      ---------     ---------     ---------
           .           .          .
           .           .          .
           .           .          .
          ---------------------------
-        |   DPAA2 Ethernet Driver   |
+           DPAA2 Ethernet Driver   
          ---------------------------
           .           .          .
           .           .          .
           .           .          .
        ------      ------      ------            -------
-      | DPNI |    | DPNI |    | DPNI |          | DPMAC |----+
-       ------      ------      ------            -------     |
-         |           |           |                  |        |
-         |           |           |                  |      -----
-          ===========             ==================      | PHY |
+       DPNI      DPNI      DPNI            DPMAC ----+
+       ------      ------      ------            -------     
+                                                         
+                                                       -----
+          ===========             ==================       PHY 
                                                            -----
 
 Creating a Network Interface

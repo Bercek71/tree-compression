@@ -1,23 +1,23 @@
  +---------------------------------------------------------------------------+
- |  wm-FPU-emu   an FPU emulator for 80386 and 80486SX microprocessors.      |
- |                                                                           |
- | Copyright (C) 1992,1993,1994,1995,1996,1997,1999                          |
- |                       W. Metzenthen, 22 Parker St, Ormond, Vic 3163,      |
- |                       Australia.  E-mail billm@melbpc.org.au              |
- |                                                                           |
- |    This program is free software; you can redistribute it and/or modify   |
- |    it under the terms of the GNU General Public License version 2 as      |
- |    published by the Free Software Foundation.                             |
- |                                                                           |
- |    This program is distributed in the hope that it will be useful,        |
- |    but WITHOUT ANY WARRANTY; without even the implied warranty of         |
- |    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          |
- |    GNU General Public License for more details.                           |
- |                                                                           |
- |    You should have received a copy of the GNU General Public License      |
- |    along with this program; if not, write to the Free Software            |
- |    Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.              |
- |                                                                           |
+   wm-FPU-emu   an FPU emulator for 80386 and 80486SX microprocessors.      
+                                                                            
+  Copyright (C) 1992,1993,1994,1995,1996,1997,1999                          
+                        W. Metzenthen, 22 Parker St, Ormond, Vic 3163,      
+                        Australia.  E-mail billm@melbpc.org.au              
+                                                                            
+     This program is free software; you can redistribute it and/or modify   
+     it under the terms of the GNU General Public License version 2 as      
+     published by the Free Software Foundation.                             
+                                                                            
+     This program is distributed in the hope that it will be useful,        
+     but WITHOUT ANY WARRANTY; without even the implied warranty of         
+     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          
+     GNU General Public License for more details.                           
+                                                                            
+     You should have received a copy of the GNU General Public License      
+     along with this program; if not, write to the Free Software            
+     Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.              
+                                                                            
  +---------------------------------------------------------------------------+
 
 
@@ -129,7 +129,7 @@ detail from the way an 80486 does.
 
 Self modifying code can cause the emulator to fail. An example of such
 code is:
-          movl %esp,[%ebx]
+          movl %esp,
 	  fld1
 The FPU instruction may be (usually will be) loaded into the pre-fetch
 queue of the CPU before the mov instruction is executed. If the

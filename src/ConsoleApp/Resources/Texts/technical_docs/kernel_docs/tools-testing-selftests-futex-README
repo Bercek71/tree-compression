@@ -46,7 +46,7 @@ test_name: Description of the test
 	# FIXME: Perhaps an " INFO: informational message" option would be
 	#        useful here. Using -v to toggle it them on and off, as with -c.
 	# there may be multiple ERROR or FAIL messages
-Result: (PASS|FAIL|ERROR)
+Result: (PASSFAILERROR)
 
 Naming
 ------

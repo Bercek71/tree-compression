@@ -12,7 +12,7 @@ Title: The Declaration of Independence of the United States of America
 
 Author: Thomas Jefferson
 
-Release date: December 1, 1971 [eBook #1]
+Release date: December 1, 1971 
                 Most recently updated: December 6, 2024
 
 Language: English
@@ -100,10 +100,10 @@ codes that damage or cannot be read by your equipment.
 
 LIMITED WARRANTY; DISCLAIMER OF DAMAGES
 But for the "Right of Replacement or Refund" described below,
-[1] the Project (and any other party you may receive this
+ the Project (and any other party you may receive this
 etext from as a PROJECT GUTENBERG-tm etext) disclaims all
 liability to you for damages, costs and expenses, including
-legal fees, and [2] YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
+legal fees, and  YOU HAVE NO REMEDIES FOR NEGLIGENCE OR
 UNDER STRICT LIABILITY, OR FOR BREACH OF WARRANTY OR CONTRACT,
 INCLUDING BUT NOT LIMITED TO INDIRECT, CONSEQUENTIAL, PUNITIVE
 OR INCIDENTAL DAMAGES, EVEN IF YOU GIVE NOTICE OF THE
@@ -135,8 +135,8 @@ You will indemnify and hold the Project, its directors,
 officers, members and agents harmless from all liability, cost
 and expense, including legal fees, that arise directly or
 indirectly from any of the following that you do or cause:
-[1] distribution of this etext, [2] alteration, modification,
-or addition to the etext, or [3] any Defect.
+ distribution of this etext,  alteration, modification,
+or addition to the etext, or  any Defect.
 
 DISTRIBUTION UNDER "PROJECT GUTENBERG-tm"
 You may distribute copies of this etext electronically, or by
@@ -144,7 +144,7 @@ disk, book or any other medium if you either delete this
 "Small Print!" and all other references to Project Gutenberg,
 or:
 
-[1]  Only give exact copies of it.  Among other things, this
+  Only give exact copies of it.  Among other things, this
      requires that you do not remove, alter or modify the
      etext or this "small print!" statement.  You may however,
      if you wish, distribute this etext in machine readable
@@ -153,7 +153,7 @@ or:
      cessing or hypertext software, but only so long as
      *EITHER*:
 
-     [*]  The etext, when displayed, is clearly readable, and
+       The etext, when displayed, is clearly readable, and
           does *not* contain characters other than those
           intended by the author of the work, although tilde
           (~), asterisk (*) and underline (_) characters may
@@ -161,21 +161,21 @@ or:
           author, and additional characters may be used to
           indicate hypertext links; OR
 
-     [*]  The etext may be readily converted by the reader at
+       The etext may be readily converted by the reader at
           no expense into plain ASCII, EBCDIC or equivalent
           form by the program that displays the etext (as is
           the case, for instance, with most word processors);
           OR
 
-     [*]  You provide, or agree to also provide on request at
+       You provide, or agree to also provide on request at
           no additional cost, fee or expense, a copy of the
           etext in its original plain ASCII form (or in EBCDIC
           or other equivalent proprietary form).
 
-[2]  Honor the etext refund and replacement provisions of this
+  Honor the etext refund and replacement provisions of this
      "Small Print!" statement.
 
-[3]  Pay a trademark license fee to the Project of 20% of the
+  Pay a trademark license fee to the Project of 20% of the
      net profits you derive calculated using the method you
      already use to calculate your applicable taxes.  If you
      don't derive profits, no royalty is due.  Royalties are
@@ -197,7 +197,7 @@ Internet (72600.2026@compuserve.com); TEL: (212-254-5093)
 
 
 
-December, 1971  [Etext #1]
+December, 1971  
 
 
 The Project Gutenberg Etext of The Declaration of Independence.
@@ -231,7 +231,7 @@ documentation provided by the United States] to conclude that even
 "facsimiles" of the Declaration of Indendence will NOT going to be
 all the same as the original, nor of other "facsimiles."  There is
 a plethora of variations in capitalization, punctuation, and, even
-where names appear on the documents [which names I have left out].
+where names appear on the documents .
 
 The resulting document has several misspellings removed from those
 parchment "facsimiles" I used back in 1971, and which I should not
@@ -410,7 +410,7 @@ to each other our Lives, our Fortunes and our sacred Honor.
 
 
 
-December, 1972  [Etext #2]
+December, 1972  
 
 
 ****The Project Gutenberg Etext of The U. S. Bill of Rights****
@@ -528,8 +528,8 @@ or to the people.
 
 
 
-[Etext #3] November 22, 1973, 10th Anniversary of Assassination
-[Officially rereleased for November 22, 1993, 30th Anniversary]
+ November 22, 1973, 10th Anniversary of Assassination
+
 
 
 
@@ -682,7 +682,7 @@ here on earth God's work must truly be our own.
 
 
 
-December, 1974  [Etext #4]
+December, 1974  
 
 
 **The Project Gutenberg Etext of Lincoln's Gettysburg Address**
@@ -733,7 +733,7 @@ shall not perish from this earth.
 
 
 
-December, 1975  [Etext #5]
+December, 1975  
 
 
 *****The Project Gutenberg Etext of The U. S. Constitution*****
@@ -1358,7 +1358,7 @@ William Jackson, Secretary
 
 
 
-December, 1975  [Etext #6]
+December, 1975  
 
 
 The Project Gutenberg Etext of Give Me LIberty Or Give Me Death
@@ -1472,7 +1472,7 @@ but as for me, give me liberty or give me death!
 
 
 
-Officially released December 31, 1977  [Etext #7]
+Officially released December 31, 1977  
 Officially re-released November 25, 1993
 In honor of Thanksgiving
 
@@ -1482,7 +1482,7 @@ In honor of Thanksgiving
 
 The Mayflower Compact
 
-November 11, 1620  [This was November 21, old style calendar]
+November 11, 1620  
 
 In the name of God, Amen.  We, whose names are underwritten,
 the Loyal Subjects of our dread Sovereigne Lord, King James,
@@ -1533,7 +1533,7 @@ Edward Liester
 
 
 
-December, 1978  [Etext #8]
+December, 1978  
 
 **The Project Gutenberg Etext of Lincoln's 2nd Inaugural Address**
 
@@ -1615,7 +1615,7 @@ and lasting peace among ourselves, and with all nations.
 
 
 
-December, 1979  [Etext #9]
+December, 1979  
 
 The Project Gutenberg Etext of Lincoln's 1st Inaugural Address
 
@@ -2031,8 +2031,8 @@ donation to Project Gutenberg, and how to get involved.
 
 Title: The Declaration of Independence
 
-Release Date: December, 1971  [EBook #1]
-[Most recently updated: November 25, 2004]
+Release Date: December, 1971  
+
 
 Edition: 12
 
@@ -2062,13 +2062,13 @@ documentation provided by the United States] to conclude that even
 "facsimiles" of the Declaration of Indendence will NOT going to be
 all the same as the original, nor of other "facsimiles."  There is
 a plethora of variations in capitalization, punctuation, and, even
-where names appear on the documents [which names I have left out].
+where names appear on the documents .
 
 The resulting document has several misspellings removed from those
 parchment "facsimiles" I used back in 1971, and which I should not
 be able to easily find at this time, including "Brittain."
 
-[JT, Apr 05: "Brittish", however, is spelled as in the original.]
+
 
 
 **The Project Gutenberg Etext of The Declaration of Independence**

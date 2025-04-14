@@ -66,9 +66,9 @@ Example of expected results with ondemand governor:
 This shows expected results of the first two test run rounds from
 above config, you there have:
 
-100% CPU load (load) | 0 % CPU load (sleep)  | round
-   25 ms             |    25 ms              |   1
-   50 ms             |    50 ms              |   2
+100% CPU load (load)  0 % CPU load (sleep)   round
+   25 ms                 25 ms                 1
+   50 ms                 50 ms                 2
 
 For example if ondemand governor is configured to have a 50ms
 sampling rate you get:
@@ -85,12 +85,12 @@ will always see 50% loads and you get worst performance impact never
 switching up (compare with below possible ondemand sample kick ins (2))::
 
       50     50   50   50ms ->time
-load -----|     |-----|     |-----|     |-----|
-          |     |     |     |     |     |     |
-sleep     |-----|     |-----|     |-----|     |----
-    |-----|-----|-----|-----|-----|-----|-----|----  ondemand sampling (1)
+load -----     -----     -----     -----
+                                        
+sleep     -----     -----     -----     ----
+    ---------------------------------------  ondemand sampling (1)
          100    0    100    0    100    0    100     load seen by ondemand(%)
-       |-----|-----|-----|-----|-----|-----|-----|--   ondemand sampling (2)
+       -------------------------------------   ondemand sampling (2)
       50     50    50    50    50    50    50        load seen by ondemand(%)
 
 You can easily test all kind of load/sleep times and check whether your

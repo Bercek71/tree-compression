@@ -12,7 +12,7 @@ Title: Moby Dick; Or, The Whale
 
 Author: Herman Melville
 
-Release date: July 1, 2001 [eBook #2701]
+Release date: July 1, 2001 
                 Most recently updated: January 19, 2025
 
 Language: English
@@ -6993,7 +6993,7 @@ may wedge aside. I would up heart, were it not like lead. But my whole
 clock’s run down; my heart the all-controlling weight, I have no key to
 lift again.
 
-[_A burst of revelry from the forecastle_.]
+
 
 Oh, God! to sail with such a heathen crew that have small touch of
 human mothers in them! Whelped somewhere by the sharkish sea. The white

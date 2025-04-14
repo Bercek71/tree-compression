@@ -65,7 +65,7 @@ X.25 on top of isdn might be useful with two different scenarios:
   work).
 
   This corresponds to ITU-T recommendation X.31 Case A (circuit-mode
-  access to PSPDN [packet switched public data network]).
+  access to PSPDN ).
 
   NOTE: X.31 also covers a Case B (access to PSPDN via virtual
   circuit / packet mode service). The latter mode (which in theory
@@ -122,7 +122,7 @@ To mimic an X.25 network switch (DCE side of the connection), use
 
 However, x25dte or x25dce is currently not supported by any real HL
 level driver. The main difference between x75i and x25dte/dce is that
-x25d[tc]e uses fixed lap_b addresses. With x75i, the side which
+x25de uses fixed lap_b addresses. With x75i, the side which
 initiates the isdn connection uses the DTE's lap_b address while the
 called side used the DCE's lap_b address. Thus, l2_prot x75i might
 probably work if you access a public X.25 network as long as the

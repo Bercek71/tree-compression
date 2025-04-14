@@ -12,7 +12,7 @@ Title: The Criminal Prosecution and Capital Punishment of Animals
 
 Author: E. P. Evans
 
-Release date: July 23, 2013 [eBook #43286]
+Release date: July 23, 2013 
 
 Language: English
 
@@ -58,7 +58,7 @@ LONDON: WILLIAM HEINEMANN
 
 
 
-[Illustration: Execution of a Sow.]
+
 
 
 
@@ -73,7 +73,7 @@ LONDON: WILLIAM HEINEMANN
   "EVOLUTIONAL ETHICS AND ANIMAL PSYCHOLOGY," ETC., ETC.
 
 
-  [Illustration]
+  
 
 
   LONDON
@@ -699,7 +699,7 @@ CHAPTER I
 BUGS AND BEASTS BEFORE THE LAW
 
 
-It is said that Bartholomew Chassenée,[1] a distinguished French jurist of
+It is said that Bartholomew Chassenée, a distinguished French jurist of
 the sixteenth century (born at Issy-l'Evêque in 1480), made his reputation
 at the bar as counsel for some rats, which had been put on trial before
 the ecclesiastical court of Autun on the charge of having feloniously
@@ -962,7 +962,7 @@ inhabitants of Lucerne paid four pistoles and one Roman thaler for a
 document of this kind; on Nov. 15, 1731, the municipal council of Thonou
 in Savoy resolved to join with other parishes of that province to obtain
 from Rome an excommunication against insects, the expenses for which are
-to be assessed _pro rata_;[2] in 1740 the commune of Piuro purchased from
+to be assessed _pro rata_; in 1740 the commune of Piuro purchased from
 His Holiness a similar anathema; in the same year the common council of
 Chiavenna discussed the propriety of applying to Rome for an execratory
 against beetles and bears; and in December 1752 it was proposed by the
@@ -2700,7 +2700,7 @@ of the people; in either case the prestige of the Church was preserved and
 her authority left unimpaired.
 
 In 1519, the commune of Stelvio, in Western Tyrol, instituted criminal
-proceedings against the moles or field-mice,[3] which damaged the crops
+proceedings against the moles or field-mice, which damaged the crops
 "by burrowing and throwing up the earth, so that neither grass nor green
 thing could grow." But "in order that the said mice may be able to show
 cause for their conduct by pleading their exigencies and distress," a
@@ -3857,7 +3857,7 @@ the oviduct and the consequent pain caused by the passage of the egg
 (_Mémoires de l'Académie de Sciences._ Paris, 1710, pp. 553-60.)
 
 A Greek physiologus of the twelfth century, written in verse, calls the
-animal hatched from the egg of an old cock [Greek: epteinaria], a name
+animal hatched from the egg of an old cock , a name
 which would imply some sort of winged creature. It was "sighted like the
 basilisk," and endowed also in other respects with the same fatal
 qualities.
@@ -4037,24 +4037,24 @@ by Æschines, Pausanias, Demosthenes, and other writers, and briefly
 described in the _Onomasticon_ of Julius Pollux and the _Lexicon Decem
 Oratorum Graecorum_ of Valerius Harpokration.
 
-Strictly speaking, the term [Greek: apsychon] should be applied only to an
+Strictly speaking, the term  should be applied only to an
 inanimate object and not to the brute, which was more correctly called
-[Greek: aphônon] (dumb); but this distinction was not always observed
+ (dumb); but this distinction was not always observed
 either in common parlance or in legal phraseology. The law on this point
 as formulated and expounded by Plato (_De Leg._, IX. 12) was as follows:
 "If a draught animal or any other beast kill a person, unless it be in a
 combat authorized and instituted by the state, the kinsmen of the slain
 shall prosecute the said homicide for murder, and the overseers of the
-public lands ([Greek: agronomoi]), as many as may be commissioned by the
+public lands (), as many as may be commissioned by the
 said kinsmen, shall adjudicate upon the case and send the offender beyond
-the boundaries of the country ([Greek: exorizein], exterminate in the
+the boundaries of the country (, exterminate in the
 literal and original sense of the term). If a lifeless thing shall deprive
-a person of life, provided it may not be a thunderbolt ([Greek: keraunos])
-or other missile ([Greek: belos]) hurled by a god, but an object which the
+a person of life, provided it may not be a thunderbolt ()
+or other missile () hurled by a god, but an object which the
 said person may have run against or by which he may have been struck and
 slain, then the kinsman immediate to the deceased shall appoint the
 nearest neighbour as judge in order to purify himself as well as his next
-of kin from blood-guiltiness, but the culprit ([Greek: to ophlon]) shall
+of kin from blood-guiltiness, but the culprit () shall
 be put beyond the boundaries, in the same manner as if it were an animal."
 In the same section it is enacted that if a person be found dead and the
 murderer be unknown, then proclamation shall be made by a herald on the
@@ -4066,11 +4066,11 @@ or avenging spirit of the deceased, and to avert the calamities which
 would otherwise be brought upon the land, in accordance with the strict
 law of retribution demanding blood for blood, no matter whether it may
 have been shed wilfully or accidentally. [Cf. Æschylus, _Cho._, 395, where
-this law ([Greek: nomos]) is clearly and strongly affirmed.] The same
+this law () is clearly and strongly affirmed.] The same
 superstitious feeling leads the hunters of many savage tribes to beg
 pardon of bears and other wild animals for killing them and to purify
 themselves by religious rites from the taint incurred by such an act, the
-[Greek: miasma] of murder, as the Greeks called it.
+ of murder, as the Greeks called it.
 
 Quite recently in China fifteen wooden idols were tried and condemned to
 decapitation for having caused the death of a man of high military rank.
@@ -6550,8 +6550,8 @@ supposed to produce the same results.
 
 The form of exorcism given by an Antwerp canon, Maximilian d'Eynatten, in
 his _Manuale Exorcismorum_, is as follows:--"Exorcizo et adjuro vos,
-pestiferi vermes, per Deum patrem omnipotentem [+], et per Jesum Christum
-[+] filium ejus Dominum nostrum, et Spiritum Sanctum [+] ab utroque
+pestiferi vermes, per Deum patrem omnipotentem , et per Jesum Christum
+ filium ejus Dominum nostrum, et Spiritum Sanctum  ab utroque
 procedentem, ut confestim recedatis ab his campis, pratis, hortis, vineis,
 aquis, si Dei providentia adhùc vitam vobis indulgeat, nec amplius in eis
 habitetis, sed ad illa ac talia loca transeatis, ubi nullis Dei servis
@@ -6566,7 +6566,7 @@ Exorcismorum, Coloniae_, 1626, p. 1204.
 
 B
 
-II[4]
+II
 
 DE L'EXCELLENCE DES MONITOIRES
 
@@ -7255,676 +7255,676 @@ _Vide_ Hormayr's _Taschenbuch, etc._, 1845, pp. 227-8.
 F
 
 Chronological List of Excommunications and Prosecutions of Animals from
-the Ninth to the Nineteenth Century.[5]
+the Ninth to the Nineteenth Century.
 
   ------------------------------------------------------------------------
-     Sources of Information   | Dates |   Animals   |        Places
+     Sources of Information    Dates    Animals           Places
   ----------------------------+-------+-------------+---------------------
-  Annales Ecclesiastici       |   824 |Moles        |Valley of Aosta
-    Francorum                 |       |             |
-                              |       |             |
-  Muratori: Rer. Ital.        |   886 |Locusts      |Roman Campagna
-    Scriptores, iii           |       |             |
-                              |       |             |
-  Gaspard Bailly:             |  9th  |Serpents     |Aix-les-Bains
-    Traité des Monitoires     | cent. |             |
-                              |       |             |
-  Sainte-Foix: Oeuvres, iv,   |  1120 |Field-mice   |Laon
-    p. 97, Mémoires de la     |       |and          |
-    Société Royale des        |       |Caterpillars |
-    Antiquaires de France,    |       |             |
-    viii, p. 427              |       |             |
-                              |       |             |
-  Théophile Raynaud: De       |  1121 |Flies        |Foigny near Laon
-    Monitoriis in Opusc.      |       |             |
-    missc. ejus, xiv, p. 482. |       |             |
-    Mémoires, cit., viii, p.  |       |             |
-    415. Note, Vita S.        |       |             |
-    Bernhardi, i, No. 58.     |  1121 |Horseflies   |Mayence
-    Acta., SS. Aug. iv, p. 272|       |             |
-                              |       |             |
-  Malleolus: De Exorcismis    |  1225 |Eels         |Lausanne
-                              |       |             |
-  L'Abbé Leboeuf: Hist. de    |  1266 |Pig          |Fontenay-aux-Roses
-    Paris, ix, p. 400.        |       |             |  near Paris
-    Mémoires, cit., viii,     |       |             |
-    p. 427                    |       |             |
-                              |       |             |
-  Sainte-Foix: Oeuvres        |  1314 |Bull         |Moiey-le-Temple
-  Thémis, viii                |       |             |
-                              |       |             |
-      "    "    "             |  1320 |Cockchafers  |Avignon
-                              |       |             |
-  Carpentier to Du Cange,     |  1322 |             |Not Specified
-    _vide_ Homicida           |       |             |
-                              |       |             |
-      "    "    "             |  1323 |             |Abbeville
-  Both cited by Von Amira,    |       |             |
-    p. 552                    |       |             |
-                              |       |             |
-  Zeitschrift für deutsche    |  1338 |             |Kaltern
-    Kulturgeschichte, ii, p.  |       |             |
-    544; also Germania, iv,   |       |             |
-    p. 383. Von Amira, p. 561 |       |             |
-                              |       |             |
-  Delisle: Etudes sur la      |  1356 |Pig          |Caen
-    condition de la classe    |       |             |
-    agricole, p. 107. Von     |       |             |
-    Amira, p. 552             |       |             |
-                              |       |             |
-  Carpentier to Du Cange.     |  1378 |             |Abbeville
-    _Vide_ homicida. Von      |       |             |
-    Amira, p. 552             |       |             |
-                              |       |             |
-  Garnier: Revue des Sociétés |  1379 |Three sows   |Saint-Marcel
-    Savantes, Dec. 1866, pp.  |       |and a pig.   |  les-Jussey
-    476, _sqq._ From the      |       |Rest of the  |
-    archives of Côte-d'Or     |       |two herds    |
-                              |       | pardoned    |
-                              |       |             |
-  Charange: Dict. des Titres  |  1386 |Sow          |Falaise
-    Originaux, ii, p. 72.     |       |             |
-    _Also_ statistique de     |       |             |
-    Falaise, i, p. 63.        |       |             |
-    Mémoires, cit., viii,     |       |             |
-    p. 427                    |       |             |
-                              |       |             |
-  Auranton: Annuaire de la    |  1389 |Horse        |Dijon
-    Côte-d'Or                 |       |             |
-                              |       |             |
-  Berriat-Saint-Prix in       |  1394 |Pig          |Mortaing
-    Mémoires, cit., viii, p.  |       |             |
-    427. From MSS. in la      |       |             |
-    Bibliothèque du Roi       |       |             |
-                              |       |             |
-  Malleolus: De Exorcismis,   | 14th  |Spanish flies|Mayence
-    Tract. ii, Mémoires,      | cent. |             |
-    cit., viii, p. 411        |       |             |
-                              |       |             |
-  MS. of Judge Hérisson,      |  1403 |Sow          |Meulan
-    published by Lejeune in   |       |             |
-    Mémoires, cit., viii, p.  |       |             |
-    433; _also_ Loriol:       |       |             |
-    La France Eure et Loire,  |       |             |
-    p. 108                    |       |             |
-                              |       |             |
-  Auranton: Annuaire de la    |  1404 |Pig          |Rouvre
-    Côte-d'Or                 |       |             |
-                              |       |             |
-  MS. Bibliothèque du Roi     |  1405 |Ox           |Gisors
-    Mémoires, cit., viii,     |       |             |
-    p. 427                    |       |             |
-                              |       |             |
-  MS. Bibliothèque du Roi     |  1408 |Pig          |Pont-de-l'Arche
-    Mémoires, cit., viii,     |       |             |
-    p. 428                    |       |             |
-                              |       |             |
-  Louandre: Histoire          |  1414 | "           |Abbeville
-    d'Abbeville               |       |             |
-                              |       |             |
-      "    "    "             |  1418 | "           |     "
-                              |       |             |
-  Auranton: Annuaire de la    |  1419 | "           |Labergement-le-Duc
-    Côte-d'Or                 |       |             |
-                              |       |             |
-      "    "    "             |  1420 | "           |Brochon
-                              |       |             |
-      "    "    "             |  1435 | "           |Trochères
-                              |       |             |
-  Malleolus: De Exorcismis,   |  1451 |Rats and     |Berne
-    Mémoires, cit., viii,     |       | Bloodsuckers|
-    p. 423                    |       |             |
-                              |       |             |
-  Garnier: Revue des Sociétés |  1452 |Sixteen cows |Rouvre
-    Savantes, iv, p. 476      |       | and one goat|
-    _sqq._ Dec. 1866          |       |             |
-                              |       |             |
-  Gui-Pape: Decisiones        |  1456 |Pig          |Bourgogne
-    Thémis, i, p. 196         |       |             |
-                              |       |             |
-  Mémoires, cit., viii, pp.   |  1457 |Sow          |Savigny-sur-Etang,
-    441-445. From Archives of |       |             |  Bourgogne
-    Monjeu and Dependencies   |       |             |
-                              |       |             |
-  Desnoyers: Recherches etc.  | 1460-1|Weevils      |Dijon
-                              |       |             |
-  A. Duboys: Justice et       |  1463 |Two pigs     |Amiens
-    Bourreau à Amiens         |       |             |
-                              |       |             |
-  Sauval: Histoire de Paris,  |  1466 |Sow          |Corbeil
-    iii, p. 387. Mémoires,    |       |             |
-    cit., viii, p. 428        |       |             |
-                              |       |             |
-  A. Duboys: Histoire de Paris|  1470 |Mare         |Amiens
-                              |       |             |
-  Promenades pittoresques dans|  1474 |Cock         |Bâle
-    l'Evêché de Bâle. Journal |       |             |
-    du Départment du Nord,    |       |             |
-    Nov. 1, 1813. Mémoires,   |       |             |
-    cit., viii, p. 428. Johann|       |             |
-    Gross: Kleine Baseler     |       |             |
-    Chronik.                  |       |             |
-                              |       |             |
-  Schilling: Chronica (Zurich |  1478 |Inger (sort  |Berne
-    MS.), Hottinger: Hist.    |       |  of weevil) |
-    Eccles. Pars iv, pp.      |       |             |
-    317-321                   |       |             |
-                              |       |             |
-  Ruchat: Hist. Eccles. du    |1479[6]|Inger        | "
-    Pays de Vaud              |       |             |
-                              |       |             |
-  Hist. de Nismes. Mémoires,  |  1479 |Rats and     |Nîmes
-    cit., viii, p. 428.       |       |  Moles      |
-                              |       |             |
-  Louandre: Hist. d'Abbeville |  1479 |Pig          |Abbeville
-                              |       |             |
-  Chasseneus: Consilia von    |  1481 |Caterpillars |Macon
-    Amira, p. 561             |       |             |
-                              |       |             |
-  Victor Hugo: Nôtre Dame de  |  1482 |Goat         |Paris
-    Paris                     |       |             |
-                              |       |             |
-  Chasseneus: Consilia.       |  1487 |Snails       |Macon
-    Mémoires, cit., viii,     |       |             |
-    p. 416                    |       |             |
-                              |       |             |
-      "    "    "             |  1488 |  "          |Autun
-                              |       |             |
-      "    "    "             |  1488 |Weevils      |Beaujeu
-                              |       |             |
-  Louandre: Hist. d'Abbeville |  1490 |Pig          |Abbeville
-                              |       |             |
-  Annuaire de l'Aisne 1812,   |  1494 |Pig          |Clermont-les-Moncornet
-    p. 88. Mémoires, cit.,    |       |             |  near Laon
-    viii, p. 428, 446         |       |             |
-                              |       |             |
-  Saint-Edme: Dict. de la     |  1497 |Sow          |Charonne
-    Penalité, sub verb.       |       |             |
-    Animaux                   |       |             |
-                              |       |             |
-  Voyage Littéraire de deux   |  1499 |Bull         |Beauvais
-    Bénédictins (Durand et    |       |             |
-    Martenne), 1717, ii,      |       |             |
-    p. 166-7                  |       |             |
-                              |       |             |
-  Archives de l'Abbaye de     |  1499 |Pig          |Sèves near Chartres
-    Josaphat. Mémoires, cit., |       |             |
-    viii, p. 434-5            |       |             |
-                              |       |             |
-  Mémoires, cit., viii,  p.   | 15th  |Sow          |Dunois
-    434                       | cent. |             |
-                              |       |             |
-  Malleolus: De Exorcismis    |   "   |Caterpillars |Coire
-                              |       |             |
-      "    "    "             |   "   |Worms        |Constance
-                              |       |             |
-      "    "    "             |   "   |Beetles      |Coire
-                              |       |             |
-  Louandre: L'Épopée des      |  1500 |Flies        |Mayence
-    Animaux                   |       |             |
-                              |       |             |
-  Chasseneus: Consilia        |  1500 |Snails       |Lyon
-                              |       |             |
-  Chasseneus: Consilia        | 1500- |Vermin       |Autun
-                              |  1530 | (Rats, etc.)|
-                              |       |             |
-  Mémoires et Documents, publ.|  1509 |Vermin       |Lausanne
-    par la Soc. de la Suisse  |       |             |
-    Romande, vii, No. 97, pp. |       |             |
-    675-677                   |       |             |
-                              |       |             |
-  Annuaire de la Côte-d'Or    |  1510 |Pig          |Dijon
-                              |       |             |
-  Annuaire de la Côte-d'Or.   |  1512 | "           |Arcenaux
-    Mémoires, cit., viii,     |       |             |
-    p. 447                    |       |             |
-                              |       |             |
-  Mathieu: Hist. des Évêques  |1512-13|Rats and     |Langres
-    de Langres, p. 188        |       |  Insects    |
-                              |       |             |
-  Groslée: Ephémérides, 1811, | 1516  |Weevils      |Troyes in Champagne
-    ii, p. 153, 168. _Cf._    |(1506  |             |
-    Théophile Raynaud: Opusc, | according           |
-    1665, p. 482. Mémoires,   | to some             |
-    cit., viii, p. 413, 418,  | authorities)        |
-    424                       |       |             |
-                              |       |             |
-  Habasque: Not. hist. sur le |  1516 |Locusts      |Tréguier
-    Litoral des Côtes-du-Nord,|       |             |
-    p. 89                     |       |             |
-                              |       |             |
-  Scheible: Das Kloster, xii, |  1519 |Field-mice   |Glurns (Stelvio)
-    pp. 946-48                |       |             |
-                              |       |             |
-  Saint-Edme: Dict. de la     |1522[7]|Rats         |Autun
-    Penalité. _Cf._ Chasseneus|       |             |
-                              |       |             |
-  Vernet in Thémis ou         |  1525 |Dog          |Parliament of
-    Bibliothèque des          |       |             |  Toulouse
-    Jurisconsulte, viii       |       |             |
-                              |       |             |
-  Papon and Boesius:          |  1528 |Not specified|Parliament of
-    Decisiones. _Cf._ Thémis, |       |             |  Bordeaux
-    viii                      |       |             |
-                              |       |             |
-      "    "    "             |  1528 |      "      |   "     "
-                              |       |             |
-  Ménebréa: Jugements rendus  |  1536 |Weevils      |Lutry (on Lake
-    contre les Animaux, p.    |       |             |  Leman)
-    505. From Grenier:        |       |             |
-    Documents relatifs à      |       |             |
-    l'hist. du pays de Vaud.  |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1540 |Bitch        |Meaux
-    manuscrit                 |       |             |
-                              |       |             |
-  Annuaire de la Côte-d'Or    |  1540 |Pig          |Dijon
-                              |       |             |
-  Lerouge: Registre secret    |  1541 |She-Ass      |Loudun
-    manuscrit                 |       |             |
-                              |       |             |
-  Bailly: Traité des          |  1541 |Grasshoppers |Lombardy
-    Monitoires, ii            |       |             |
-                              |       |             |
-  Malleolus: De Exorcismis    |  1541 |Vermin       |Lausanne
-                              |       |(worms, rats,|
-                              |       |bloodsuckers)|
-                              |       |             |
-  Berriat-Saint-Prix in       |  1543 |Snails and   |Grenoble
-    Thémis, i, p. 196         |       |  Locusts    |
-                              |       |             |
-  Ménebréa: Jugements rendus  |  1545 |Weevils      |St. Jean de
-    contre les Animaux, pp.   |  and  |             |  Maurienne
-    544, 545, 556. De Actis   |  1546 |             |
-    Scindicorum com. St.      |       |             |
-    Jul., etc.                |       |             |
-                              |       |             |
-  Dulaure: Hist. de Paris,    |  1546 |Cow          |Parliament of
-    iii, p. 28, Registres     |       |             |  Paris
-    manuscrits de la          |       |             |
-    Tournelle. _Cf._ Mémoires,|       |             |
-    cit., viii, p. 429        |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1550 | "           |   "     "
-    manuscrit                 |       |             |
-                              |       |             |
-      "    "    "             |  1551 |Goat         |Ile de Rhé
-                              |       |             |
-      "    "    "             |  1554 |Sheep (ewe)  |Beaugé
-                              |       |             |
-  Aldrovande: De Insectis,    |  1554 |Bloodsuckers |Lausanne
-    1602, lib. vii, 724.      |       |             |
-    Mémoires, cit. viii,      |       |             |
-    p. 429                    |       |             |
-                              |       |             |
-  Desnoyer, cited in Revue des|  1554 |Insects      |Langres
-    questions historiques, v, |       |             |
-    p. 278. Von Armira, p. 567|       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1556 |She-Ass      |Sens
-    manuscrit                 |       |             |
-                              |       |             |
-  Lecoq: Hist. de la Ville de |  1557 |Pig          |Saint-Quintin
-    Saint-Quintin, p. 143.    |       |             |
-    Sorel: Procès contre des  |       |             |
-    animaux, etc., p. 9       |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1560 |She-Ass      |Loigny near
-    manuscrit                 |       |             |  Châteaudun
-                              |       |             |
-      "    "    "             |  1561 |Cow          |Augoudessus in
-                              |       |             |  Picardy
-                              |       |             |
-  Lessona: I Nemici del       |  1562 |Weevils      |Argenteuil
-    Vino. Regist. Epir. Par.  |       |             |
-    for May 8                 |       |             |
-                              |       |             |
-  Ranchin on Gui. Pape        |  1565 |Mule         |Montpellier
-    Quaest., 74. Thémis, i,   |       |             |
-    p. 196. Mémoires, cit.,   |       |             |
-    viii, p. 429              |       |             |
-                              |       |             |
-  Papon: Decisiones. Thémis,  |  1565 |Not specified|Parliament of
-    viii                      |       |             |  Toulouse
-                              |       |             |
-  Louandre: L'Epopée des      |  1566 |She-Ass      |Parliament of
-    Animaux                   |       |             |  Paris
-                              |       |             |
-  MSS. of Bibliothèque        |  1567 |Sow          |Senlis
-    Nationale of Paris        |       |             |
-                              |       |             |
-  Lionnois: Hist. de Nancy,   |  1572 |Pig          |Moyen-Montier,
-    1811, ii, p. 374          |       |             |  near Nancy
-                              |       |             |
-  Lersner: Chronica, 1706,    |  1574 | "           |Frankfort-on-the-Main
-    p. 552                    |       |             |
-                              |       |             |
-  Brillon: Decisiones Thémis, |  1575 |She-Ass      |Parliament of
-    viii                      |       |             |  Paris
-                              |       |             |
-  Haus-Chronik von            |  1576 |Pig          |Schweinfurt
-    Schweinfurt, in           |       |             |
-    Zeitschrift für deutsche  |       |             |
-    Kulturgeschichte, i, 156  |       |             |
-                              |       |             |
-  Cannaert: Bydragen tot de   |  1578 |Pig(?)       |Ghent
-    Kennis van het oude       |       |             |
-    strafrecht in Vlandern,   |       |             |
-    1835, p. vii              |       |             |
-                              |       |             |
-  Derheims: Hist. de          |  1585 |Pig          |Saint-Omer
-    Saint-Omer, p. 327        |       |             |
-                              |       |             |
-  Chorier: Hist. du Dauphiné. |   "   |Locusts      |Valence
-    _Cf._ Thémis, i, p. 196   |       |             |
-                              |       |             |
-  Ménebréa: Jugements rendus  |  1587 |Weevils      |St. Jean-de-Maurienne
-    contre les animaux, etc., |       |             |
-    pp. 546, 549              |       |             |
-                              |       |             |
-  Fornery and Laincel         |  1596 |Dolphins     |Marseilles
-                              |       |             |
-  Théophile Raynaud: De       | 16th  |Weevils and  |Cotentin
-    Monitoriis, p. 482.       | cent. | Grasshoppers|
-    Mémoires, cit., viii,     |(first |             |
-    p. 429                    | half) |             |
-                              |       |             |
-  Chasseneus: Consilia.       |   "   |Snails       |Lyons
-    Mémoires, cit., viii,     |       |             |
-    p. 415                    |       |             |
-                              |       |             |
-      "    "    "             |   "   |Weevils      |Mâcon
-                              |       |             |
-      "    "    "             |   "   |Pig          |Dijon
-                              |       |             |
-  Louandre: L'Épopée des      |   "   |Dog          |Scotland
-    Animaux                   |       |             |
-                              |       |             |
-  Duboys: Hist. du Droit      | 16th  |Weevils      |Angers
-    Crim. de la France        | cent. |             |
-                              | second|             |
-                              | half  |             |
-                              |       |             |
-  Azpilcueta Martinus Doctor  |   "   |Rats         |Spain
-    Navarrus: Consilia seu    |       |             |
-    Responsa, 1602, ii, p.    |       |             |
-    812. Mémoires, cit., viii,|       |             |
-    p. 419. Théoph. Raynaud,  |       |             |
-    cit., p. 482              |       |             |
-                              |       |             |
-  Francesco Vivio: Decisiones,| 16th  |Divers       |Aquila in Italy
-    No. 68. Cited by          | cent. |  animals    |
-    D'Addosio: Bestie Delinq.,| second|             |
-    p. 125                    | half  |             |
-                              |       |             |
-  Archives of Obwalden        |   "   |Gadflies     |Aargau
-                              |       |             |
-  Leonardo Vairo: De Fascino. |   "   |Locusts      |Naples
-    _Cf._ D'Addosio, cit.,    |       |             |
-    p. 115.                   |       |             |
-                              |       |             |
-  Sardagna: L'uomo e le       |   "   |Horse        |Portugal
-    Bestie. Cited by D'Addosio|       |             |
-                              |       |             |
-  Mornacius to Du Cange,      |  1600 |             |Beauvais
-    _s.v._ Homicida           |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |   "   |Cow          |Thouars
-    manuscrit                 |       |             |
-                              |       |             |
-      "    "    "             |   "   | "           |Abbeville
-                              |       |             |
-  Lessona: I Nemici del Vino, |   "   |Weevils      |Vercelli
-    1890, p. 141              |       |             |
-                              |       |             |
-  Papon: Decisiones. Thémis,  |  1601 |Dog          |Brie
-    viii. Lerouge: Reg.       |       |             |
-    secret manuscrit          |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |   "   |Mare         |Provins
-    manuscrit                 |       |             |
-                              |       |             |
-  Papon: Recueil d'Arrets     |  1601 |Not          |Parliament of
-                              |       |  specified  |  Paris
-                              |       |             |
-  Charma: Leçons de           |  1604 |Ass          |Parliament of
-    Philosophie               |       |             |  Paris
-                              |       |             |
-  Guerra: Diurnali            |   "   | "           |Naples
-                              |       |             |
-  Lerouge: Registre secret    |   "   |Mare         |Joinville
-    manuscrit                 |       |             |
-                              |       |             |
-      "    "    "             |  1606 |Sheep        |Riom
-                              |       |             |
-      "    "    "             |   "   |Cow          |Châteaurenaud
-                              |       |             |
-                              |       |             |
-      "    "    "             |   "   |Mare         |Coiffy near Langres
-                              |       |             |
-                              |       |             |
-  Lejeune: Mémoires, cit.,    |   "   |Bitch        |Chartres
-    viii, p. 418              |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1607 |Mare         |Boursant near
-    manuscrit                 |       |             |  d'Epernay
-                              |       |             |
-      "    "    "             |  1609 |  "          |Montmorency
-                              |       |             |
-      "    "    "             |   "   |  "          |Niederrad
-                              |       |             |
-  Voltaire: Siècle de Louis   |   "   |Cow          |Parliament of
-    XIV, ch. i. Louandre:     |       |             |  Paris
-    Rev. des deux Mondes,     |       |             |
-    1854, i, p. 334           |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1610 |Horse        |Paris
-    manuscrit                 |       |             |
-                              |       |             |
-      "    "    "             |  1611 |Goat         |Laval
-                              |       |             |
-      "    "    "             |   "   |Cow          |St. Fergeux
-                              |       |             |  near Rethel
-                              |       |             |
-      "    "    "             |  1613 |Sow          |Montoiron near
-                              |       |             |  Chatelleraut
-                              |       |             |
-      "    "    "             |  1614 |She-Ass      |Le Mans
-                              |       |             |
-  Desnoyers: Recherches, etc.,|  1616 |Rats and     |Langres
-    p. 13                     |       |  insects    |
-                              |       |             |
-  Anzeige für Kunde der       |  1621 |Cow          |Machern near
-    deutschen Vorzeit, 1880,  |       |             |  Leipsic
-    col. 102                  |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1621 |Mare         |La Rochelle
-    manuscrit                 |       |             |
-                              |       |             |
-      "    "    "             |  1622 |  "          |Montpensier
-                              |       |             |
-      "    "    "             |  1623 |She-Ass      |Bessay near Moulins
-                              |       |             |
-      "    "    "             |  1624 |Mule         |Chefboutonne (Poitou)
-                              |       |             |
-  Döpler: Theat. pen., ii,    |  1631 |Mares and    |Greifenberg
-    p. 574                    |       |  Cows       |
-                              |       |             |
-  Marchisio Michele: Gatte    |  1633 |Weevils      |Strambino
-    ed. insetti nocivi, 1834, |       |             |  (Ivrea)
-    p. 63 _sqq._              |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |   "   |Mare         |Bellac
-    manuscrit                 |       |             |
-                              |       |             |
-  Carpentier to Du Cange,     |  1641 |Pig          |Viroflay
-    _s.v._ Homicida           |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1647 |Mare         |Parliament of
-    manuscrit                 |       |             |  Paris
-                              |       |             |
-      "    "    "             |  1650 |  "          |Fresnay near Chartres
-                              |       |             |
-  Crollolanza: Storia del     |  1659 |Caterpillars |Chiavenna
-    Contado di Chiavenna,     |       |             |
-    p. 455 _sqq._             |       |             |
-                              |       |             |
-  Perrero: Gazzetta           |  1661 |Weevils      |Turin
-    Litteraria di Torino,     |       |             |
-    Feb. 24, 1883             |       |             |
-                              |       |             |
-  Cotton Mather: Magnalia     |  1662 |Cow, two     |New Haven, Conn.
-    Christi Americana, Book   |       | Heifers,    |
-    vi. London, 1702          |       | three Sheep,|
-                              |       | and two Sows|
-                              |       |             |
-  Lerouge: Registre secret    |  1666 |Mare         |Tours
-    manuscrit                 |       |             |
-                              |       |             |
-      "    "    "             |   "   |  "          |St. P. Lemontiers
-                              |       |             |
-  Lerouge: Registre secret    |  1667 |She-Ass      |Vaudes near
-    manuscrit                 |       |             |  Bar-sur-Seine
-                              |       |             |
-      "    "    "             |  1668 |Mare         |Angers
-                              |       |             |
-  Annales scientifiques de    |  1670 |Locusts      |Clermont
-    l'Auvergne, Vol. vii,     |       |             |
-    p. 391                    |       |             |
-                              |       |             |
-  Döpler: Theatrum pen., ii,  |  1676 |Mare and Cow |Silesia
-    p. 5                      |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1678 |      "      |Beaugé
-    manuscrit                 |       |             |
-                              |       |             |
-  Perrero: Gaz. Litter. di    |   "   |Weevils      |Turin
-    Torius, Feb. 24, 1883     |       |             |
-                              |       |             |
-  Brillon: Decisiones, i,     |  1679 |Mare         |Parliament
-    p. 914. Mémoires, cit.,   |       |             |  d'Aix
-    viii, p. 431. Boniface:   |       |             |
-    Traité des matières       |       |             |
-    criminelles, 1785, p. 31  |       |             |
-                              |       |             |
-  Chorier: Hist du Dauphiné.  | Before|Worms        |Constance
-    Thémis, viii              |  1680 |             |  and Coire
-                              |       |             |
-  Lerouge: Registre secret    |  1680 |Mare         |Fourches near
-    manuscrit                 |       |             |  Provins
-                              |       |             |
-  Heinrich Roch: Schlesische  |  1681 |Mare         |Wünschelburg
-    Chronik, p. 342. Döpler:  |       |             |  in Silesia
-    Theat. pen., ii, p. 573   |       |             |
-    _sqq._                    |       |             |
-                              |       |             |
-      "    "    "             |  1684 |Mare         |Ottendorf
-                              |       |             |
-      "    "    "             |  1685 |  "          |Striga
-                              |       |             |
-  Dulaure: Description des    |  1690 |Locusts      |Pont-de-Château
-    principaux lieux de la    |       |             |  in Auvergne
-    France, 1789, v, p. 493   |       |             |
-    _sqq._ Mémoires, cit.,    |       |             |
-    viii, p. 412              |       |             |
-                              |       |             |
-  Lerouge: Registre secret    |  1692 |Mare         |Moulins
-    manuscrit                 |       |             |
-                              |       |             |
-  La Hontan: Voyages, Let. xi,| End of|Turtledoves  |Canada
-    p. 79. Mémoires, cit.,    | 17th  |             |
-    viii, p. 431              | cent. |             |
-                              |       |             |
-  Meiners: Vergleichung des   |   "   |He-Goat      |Russia
-    ältern u, neuern          |       |  banished   |
-    Russlands, p. 291.        |       |  to Siberia |
-    _Cf._ Amira, p. 573       |       |             |
-                              |       |             |
-  Registres de la Paroise de  |  1710 |Rats         |Grignon
-    Grignon                   |       |             |
-                              |       |             |
-  Sorel: Procès contre des    |  1710 |Vermin       |Autun
-    animaux, etc., p. 23      |       |             |
-                              |       |             |
-  Rinds Herreds Krönike and   |  1711 |  "          |Als in Jutland
-    other sources given by    |       |             |
-    Amira, p. 565             |       |             |
-                              |       |             |
-  Agnel: Curiosités           |  1713 |Termites     |Piedade no Maranhão
-    judiciaires et            |       |             |  in Brazil
-    historiques du moyen-âge, |       |             |
-    p. 46. _Cf._ Manoel       |       |             |
-    Bernardes: Nova Floresta  |       |             |
-    ou Sylva de varios        |       |             |
-    apophthegmas, etc. 5 tom. |       |             |
-    Lisboá, 1706-47           |       |             |
-                              |       |             |
-  MSS. of Bibliothèque        |  1726 |Not specified|Paris
-    Nationale of Paris,       |       |             |
-    No. 10,970. D'Addosio:    |       |             |
-    Best. Del., p. 107        |       |             |
-                              |       |             |
-  Ménebréa: Jugements contre  |  1731 |Insects      |Thonon
-    les animaux, p. 508       |       |             |
-                              |       |             |
-  La Tradition, 1888, p. 363  |  1733 |Vermin       |Buranton
-    _sqq._ Amira, p. 564      |       |             |
-                              |       |             |
-  Rousseaud de Lacombe:       |  1741 |Cow          |Poitou
-    Traité des matières crim. |       |             |
-    D'Addosio: Best. Del.,    |       |             |
-    p. 107                    |       |             |
-                              |       |             |
-  Ant. de Saint-Gervais:      |  1750 |She-Ass      |Vanvres
-    Hist. des Animaux         |       |             |
-                              |       |             |
-  A Report of the Case of     |  1771 |Dog          |Chichester, England
-    Farmer Carter's Dog.      |       |             |
-    Amira, p. 559             |       |             |
-                              |       |             |
-  Comparon: Hist. du          |  1793 | "           |Paris
-    Tribunal Révolutionnaire  |       |             |
-    de Paris. _Cf._ Sorel,    |       |             |
-    op. cit., p. 16           |       |             |
-                              |       |             |
-  Filangieri: Scienza della   | 18th  |Dogs         |Italy
-    Legislazione              | cent. |             |
-                              |       |             |
-  Det. Kong. Danske           |       |             |
-    Landhusholdnings-Selskabs | 1805-6|Vermin       |Lyö in Denmark
-    Skrifter. Ny Saml. ii, 1, |       |             |
-    22. Amira, p. 565         |       |             |
-                              |       |             |
-  Desnoyers: Recherches,      |  1826 |Locusts      |Clermont-Ferrand
-    etc., p. 15               |       |             |
-                              |       |             |
-  Gazette des Tribunaux,      |  1845 |Dog          |Paris
-    Jan. 23, 1845             |       |             |
-                              |       |             |
-      "    "    "             |  1864 |Pig          |Pleternica in
-                              |       |             |  Slavonia
-                              |       |             |
-  Krauss, quoted by Amira,    |  1866 |Locusts      |Pozega in
-    p. 573                    |       |             |  Slavonia
-                              |       |             |
-      "    "    "             |   "   |Grasshoppers |Vidovici in
-                              |       |             |  Slavonia
-                              |       |             |
-  Desnoyer: Recherches,       | 19th  |Locusts      |Catalonia
-    etc., p. 15               | cent. |             |
-                              |       |             |
-  Allg. deutsche              |       |             |
-    Strafrechts-zeitung,      |   "   |Cock         |Leeds in England
-    1861, No. 2. Also Pertile:|       |             |
-    Gli animali in giudizio   |       |             |
-                              |       |             |
-  Cretella: Gli Animali       |   "   |Wolf         |Calabria
-    sotto processo in Fanfulla|       |             |
-    1891, No. 65. _Cf._ Amira,|       |             |
-    p. 569                    |       |             |
-                              |       |             |
-  New York Herald and Echo    |  1906 |Dog          |Délémont in
-    de Paris, May 4, 1906[8]  |       |             |  Switzerland
+  Annales Ecclesiastici          824 Moles        Valley of Aosta
+    Francorum                                     
+                                                  
+  Muratori: Rer. Ital.           886 Locusts      Roman Campagna
+    Scriptores, iii                               
+                                                  
+  Gaspard Bailly:               9th  Serpents     Aix-les-Bains
+    Traité des Monitoires      cent.              
+                                                  
+  Sainte-Foix: Oeuvres, iv,     1120 Field-mice   Laon
+    p. 97, Mémoires de la            and          
+    Société Royale des               Caterpillars 
+    Antiquaires de France,                        
+    viii, p. 427                                  
+                                                  
+  Théophile Raynaud: De         1121 Flies        Foigny near Laon
+    Monitoriis in Opusc.                          
+    missc. ejus, xiv, p. 482.                     
+    Mémoires, cit., viii, p.                      
+    415. Note, Vita S.                            
+    Bernhardi, i, No. 58.       1121 Horseflies   Mayence
+    Acta., SS. Aug. iv, p. 272                    
+                                                  
+  Malleolus: De Exorcismis      1225 Eels         Lausanne
+                                                  
+  L'Abbé Leboeuf: Hist. de      1266 Pig          Fontenay-aux-Roses
+    Paris, ix, p. 400.                              near Paris
+    Mémoires, cit., viii,                         
+    p. 427                                        
+                                                  
+  Sainte-Foix: Oeuvres          1314 Bull         Moiey-le-Temple
+  Thémis, viii                                    
+                                                  
+      "    "    "               1320 Cockchafers  Avignon
+                                                  
+  Carpentier to Du Cange,       1322              Not Specified
+    _vide_ Homicida                               
+                                                  
+      "    "    "               1323              Abbeville
+  Both cited by Von Amira,                        
+    p. 552                                        
+                                                  
+  Zeitschrift für deutsche      1338              Kaltern
+    Kulturgeschichte, ii, p.                      
+    544; also Germania, iv,                       
+    p. 383. Von Amira, p. 561                     
+                                                  
+  Delisle: Etudes sur la        1356 Pig          Caen
+    condition de la classe                        
+    agricole, p. 107. Von                         
+    Amira, p. 552                                 
+                                                  
+  Carpentier to Du Cange.       1378              Abbeville
+    _Vide_ homicida. Von                          
+    Amira, p. 552                                 
+                                                  
+  Garnier: Revue des Sociétés   1379 Three sows   Saint-Marcel
+    Savantes, Dec. 1866, pp.         and a pig.     les-Jussey
+    476, _sqq._ From the             Rest of the  
+    archives of Côte-d'Or            two herds    
+                                      pardoned    
+                                                  
+  Charange: Dict. des Titres    1386 Sow          Falaise
+    Originaux, ii, p. 72.                         
+    _Also_ statistique de                         
+    Falaise, i, p. 63.                            
+    Mémoires, cit., viii,                         
+    p. 427                                        
+                                                  
+  Auranton: Annuaire de la      1389 Horse        Dijon
+    Côte-d'Or                                     
+                                                  
+  Berriat-Saint-Prix in         1394 Pig          Mortaing
+    Mémoires, cit., viii, p.                      
+    427. From MSS. in la                          
+    Bibliothèque du Roi                           
+                                                  
+  Malleolus: De Exorcismis,    14th  Spanish fliesMayence
+    Tract. ii, Mémoires,       cent.              
+    cit., viii, p. 411                            
+                                                  
+  MS. of Judge Hérisson,        1403 Sow          Meulan
+    published by Lejeune in                       
+    Mémoires, cit., viii, p.                      
+    433; _also_ Loriol:                           
+    La France Eure et Loire,                      
+    p. 108                                        
+                                                  
+  Auranton: Annuaire de la      1404 Pig          Rouvre
+    Côte-d'Or                                     
+                                                  
+  MS. Bibliothèque du Roi       1405 Ox           Gisors
+    Mémoires, cit., viii,                         
+    p. 427                                        
+                                                  
+  MS. Bibliothèque du Roi       1408 Pig          Pont-de-l'Arche
+    Mémoires, cit., viii,                         
+    p. 428                                        
+                                                  
+  Louandre: Histoire            1414  "           Abbeville
+    d'Abbeville                                   
+                                                  
+      "    "    "               1418  "                "
+                                                  
+  Auranton: Annuaire de la      1419  "           Labergement-le-Duc
+    Côte-d'Or                                     
+                                                  
+      "    "    "               1420  "           Brochon
+                                                  
+      "    "    "               1435  "           Trochères
+                                                  
+  Malleolus: De Exorcismis,     1451 Rats and     Berne
+    Mémoires, cit., viii,             Bloodsuckers
+    p. 423                                        
+                                                  
+  Garnier: Revue des Sociétés   1452 Sixteen cows Rouvre
+    Savantes, iv, p. 476              and one goat
+    _sqq._ Dec. 1866                              
+                                                  
+  Gui-Pape: Decisiones          1456 Pig          Bourgogne
+    Thémis, i, p. 196                             
+                                                  
+  Mémoires, cit., viii, pp.     1457 Sow          Savigny-sur-Etang,
+    441-445. From Archives of                       Bourgogne
+    Monjeu and Dependencies                       
+                                                  
+  Desnoyers: Recherches etc.   1460-1Weevils      Dijon
+                                                  
+  A. Duboys: Justice et         1463 Two pigs     Amiens
+    Bourreau à Amiens                             
+                                                  
+  Sauval: Histoire de Paris,    1466 Sow          Corbeil
+    iii, p. 387. Mémoires,                        
+    cit., viii, p. 428                            
+                                                  
+  A. Duboys: Histoire de Paris  1470 Mare         Amiens
+                                                  
+  Promenades pittoresques dans  1474 Cock         Bâle
+    l'Evêché de Bâle. Journal                     
+    du Départment du Nord,                        
+    Nov. 1, 1813. Mémoires,                       
+    cit., viii, p. 428. Johann                    
+    Gross: Kleine Baseler                         
+    Chronik.                                      
+                                                  
+  Schilling: Chronica (Zurich   1478 Inger (sort  Berne
+    MS.), Hottinger: Hist.             of weevil) 
+    Eccles. Pars iv, pp.                          
+    317-321                                       
+                                                  
+  Ruchat: Hist. Eccles. du    1479Inger         "
+    Pays de Vaud                                  
+                                                  
+  Hist. de Nismes. Mémoires,    1479 Rats and     Nîmes
+    cit., viii, p. 428.                Moles      
+                                                  
+  Louandre: Hist. d'Abbeville   1479 Pig          Abbeville
+                                                  
+  Chasseneus: Consilia von      1481 Caterpillars Macon
+    Amira, p. 561                                 
+                                                  
+  Victor Hugo: Nôtre Dame de    1482 Goat         Paris
+    Paris                                         
+                                                  
+  Chasseneus: Consilia.         1487 Snails       Macon
+    Mémoires, cit., viii,                         
+    p. 416                                        
+                                                  
+      "    "    "               1488   "          Autun
+                                                  
+      "    "    "               1488 Weevils      Beaujeu
+                                                  
+  Louandre: Hist. d'Abbeville   1490 Pig          Abbeville
+                                                  
+  Annuaire de l'Aisne 1812,     1494 Pig          Clermont-les-Moncornet
+    p. 88. Mémoires, cit.,                          near Laon
+    viii, p. 428, 446                             
+                                                  
+  Saint-Edme: Dict. de la       1497 Sow          Charonne
+    Penalité, sub verb.                           
+    Animaux                                       
+                                                  
+  Voyage Littéraire de deux     1499 Bull         Beauvais
+    Bénédictins (Durand et                        
+    Martenne), 1717, ii,                          
+    p. 166-7                                      
+                                                  
+  Archives de l'Abbaye de       1499 Pig          Sèves near Chartres
+    Josaphat. Mémoires, cit.,                     
+    viii, p. 434-5                                
+                                                  
+  Mémoires, cit., viii,  p.    15th  Sow          Dunois
+    434                        cent.              
+                                                  
+  Malleolus: De Exorcismis       "   Caterpillars Coire
+                                                  
+      "    "    "                "   Worms        Constance
+                                                  
+      "    "    "                "   Beetles      Coire
+                                                  
+  Louandre: L'Épopée des        1500 Flies        Mayence
+    Animaux                                       
+                                                  
+  Chasseneus: Consilia          1500 Snails       Lyon
+                                                  
+  Chasseneus: Consilia         1500- Vermin       Autun
+                                1530  (Rats, etc.)
+                                                  
+  Mémoires et Documents, publ.  1509 Vermin       Lausanne
+    par la Soc. de la Suisse                      
+    Romande, vii, No. 97, pp.                     
+    675-677                                       
+                                                  
+  Annuaire de la Côte-d'Or      1510 Pig          Dijon
+                                                  
+  Annuaire de la Côte-d'Or.     1512  "           Arcenaux
+    Mémoires, cit., viii,                         
+    p. 447                                        
+                                                  
+  Mathieu: Hist. des Évêques  1512-13Rats and     Langres
+    de Langres, p. 188                 Insects    
+                                                  
+  Groslée: Ephémérides, 1811,  1516  Weevils      Troyes in Champagne
+    ii, p. 153, 168. _Cf._    (1506               
+    Théophile Raynaud: Opusc,  according           
+    1665, p. 482. Mémoires,    to some             
+    cit., viii, p. 413, 418,   authorities)        
+    424                                           
+                                                  
+  Habasque: Not. hist. sur le   1516 Locusts      Tréguier
+    Litoral des Côtes-du-Nord,                    
+    p. 89                                         
+                                                  
+  Scheible: Das Kloster, xii,   1519 Field-mice   Glurns (Stelvio)
+    pp. 946-48                                    
+                                                  
+  Saint-Edme: Dict. de la     1522Rats         Autun
+    Penalité. _Cf._ Chasseneus                    
+                                                  
+  Vernet in Thémis ou           1525 Dog          Parliament of
+    Bibliothèque des                                Toulouse
+    Jurisconsulte, viii                           
+                                                  
+  Papon and Boesius:            1528 Not specifiedParliament of
+    Decisiones. _Cf._ Thémis,                       Bordeaux
+    viii                                          
+                                                  
+      "    "    "               1528       "         "     "
+                                                  
+  Ménebréa: Jugements rendus    1536 Weevils      Lutry (on Lake
+    contre les Animaux, p.                          Leman)
+    505. From Grenier:                            
+    Documents relatifs à                          
+    l'hist. du pays de Vaud.                      
+                                                  
+  Lerouge: Registre secret      1540 Bitch        Meaux
+    manuscrit                                     
+                                                  
+  Annuaire de la Côte-d'Or      1540 Pig          Dijon
+                                                  
+  Lerouge: Registre secret      1541 She-Ass      Loudun
+    manuscrit                                     
+                                                  
+  Bailly: Traité des            1541 Grasshoppers Lombardy
+    Monitoires, ii                                
+                                                  
+  Malleolus: De Exorcismis      1541 Vermin       Lausanne
+                                     (worms, rats,
+                                     bloodsuckers)
+                                                  
+  Berriat-Saint-Prix in         1543 Snails and   Grenoble
+    Thémis, i, p. 196                  Locusts    
+                                                  
+  Ménebréa: Jugements rendus    1545 Weevils      St. Jean de
+    contre les Animaux, pp.     and                 Maurienne
+    544, 545, 556. De Actis     1546              
+    Scindicorum com. St.                          
+    Jul., etc.                                    
+                                                  
+  Dulaure: Hist. de Paris,      1546 Cow          Parliament of
+    iii, p. 28, Registres                           Paris
+    manuscrits de la                              
+    Tournelle. _Cf._ Mémoires,                    
+    cit., viii, p. 429                            
+                                                  
+  Lerouge: Registre secret      1550  "              "     "
+    manuscrit                                     
+                                                  
+      "    "    "               1551 Goat         Ile de Rhé
+                                                  
+      "    "    "               1554 Sheep (ewe)  Beaugé
+                                                  
+  Aldrovande: De Insectis,      1554 Bloodsuckers Lausanne
+    1602, lib. vii, 724.                          
+    Mémoires, cit. viii,                          
+    p. 429                                        
+                                                  
+  Desnoyer, cited in Revue des  1554 Insects      Langres
+    questions historiques, v,                     
+    p. 278. Von Armira, p. 567                    
+                                                  
+  Lerouge: Registre secret      1556 She-Ass      Sens
+    manuscrit                                     
+                                                  
+  Lecoq: Hist. de la Ville de   1557 Pig          Saint-Quintin
+    Saint-Quintin, p. 143.                        
+    Sorel: Procès contre des                      
+    animaux, etc., p. 9                           
+                                                  
+  Lerouge: Registre secret      1560 She-Ass      Loigny near
+    manuscrit                                       Châteaudun
+                                                  
+      "    "    "               1561 Cow          Augoudessus in
+                                                    Picardy
+                                                  
+  Lessona: I Nemici del         1562 Weevils      Argenteuil
+    Vino. Regist. Epir. Par.                      
+    for May 8                                     
+                                                  
+  Ranchin on Gui. Pape          1565 Mule         Montpellier
+    Quaest., 74. Thémis, i,                       
+    p. 196. Mémoires, cit.,                       
+    viii, p. 429                                  
+                                                  
+  Papon: Decisiones. Thémis,    1565 Not specifiedParliament of
+    viii                                            Toulouse
+                                                  
+  Louandre: L'Epopée des        1566 She-Ass      Parliament of
+    Animaux                                         Paris
+                                                  
+  MSS. of Bibliothèque          1567 Sow          Senlis
+    Nationale of Paris                            
+                                                  
+  Lionnois: Hist. de Nancy,     1572 Pig          Moyen-Montier,
+    1811, ii, p. 374                                near Nancy
+                                                  
+  Lersner: Chronica, 1706,      1574  "           Frankfort-on-the-Main
+    p. 552                                        
+                                                  
+  Brillon: Decisiones Thémis,   1575 She-Ass      Parliament of
+    viii                                            Paris
+                                                  
+  Haus-Chronik von              1576 Pig          Schweinfurt
+    Schweinfurt, in                               
+    Zeitschrift für deutsche                      
+    Kulturgeschichte, i, 156                      
+                                                  
+  Cannaert: Bydragen tot de     1578 Pig(?)       Ghent
+    Kennis van het oude                           
+    strafrecht in Vlandern,                       
+    1835, p. vii                                  
+                                                  
+  Derheims: Hist. de            1585 Pig          Saint-Omer
+    Saint-Omer, p. 327                            
+                                                  
+  Chorier: Hist. du Dauphiné.    "   Locusts      Valence
+    _Cf._ Thémis, i, p. 196                       
+                                                  
+  Ménebréa: Jugements rendus    1587 Weevils      St. Jean-de-Maurienne
+    contre les animaux, etc.,                     
+    pp. 546, 549                                  
+                                                  
+  Fornery and Laincel           1596 Dolphins     Marseilles
+                                                  
+  Théophile Raynaud: De        16th  Weevils and  Cotentin
+    Monitoriis, p. 482.        cent.  Grasshoppers
+    Mémoires, cit., viii,     (first              
+    p. 429                     half)              
+                                                  
+  Chasseneus: Consilia.          "   Snails       Lyons
+    Mémoires, cit., viii,                         
+    p. 415                                        
+                                                  
+      "    "    "                "   Weevils      Mâcon
+                                                  
+      "    "    "                "   Pig          Dijon
+                                                  
+  Louandre: L'Épopée des         "   Dog          Scotland
+    Animaux                                       
+                                                  
+  Duboys: Hist. du Droit       16th  Weevils      Angers
+    Crim. de la France         cent.              
+                               second             
+                               half               
+                                                  
+  Azpilcueta Martinus Doctor     "   Rats         Spain
+    Navarrus: Consilia seu                        
+    Responsa, 1602, ii, p.                        
+    812. Mémoires, cit., viii,                    
+    p. 419. Théoph. Raynaud,                      
+    cit., p. 482                                  
+                                                  
+  Francesco Vivio: Decisiones, 16th  Divers       Aquila in Italy
+    No. 68. Cited by           cent.   animals    
+    D'Addosio: Bestie Delinq., second             
+    p. 125                     half               
+                                                  
+  Archives of Obwalden           "   Gadflies     Aargau
+                                                  
+  Leonardo Vairo: De Fascino.    "   Locusts      Naples
+    _Cf._ D'Addosio, cit.,                        
+    p. 115.                                       
+                                                  
+  Sardagna: L'uomo e le          "   Horse        Portugal
+    Bestie. Cited by D'Addosio                    
+                                                  
+  Mornacius to Du Cange,        1600              Beauvais
+    _s.v._ Homicida                               
+                                                  
+  Lerouge: Registre secret       "   Cow          Thouars
+    manuscrit                                     
+                                                  
+      "    "    "                "    "           Abbeville
+                                                  
+  Lessona: I Nemici del Vino,    "   Weevils      Vercelli
+    1890, p. 141                                  
+                                                  
+  Papon: Decisiones. Thémis,    1601 Dog          Brie
+    viii. Lerouge: Reg.                           
+    secret manuscrit                              
+                                                  
+  Lerouge: Registre secret       "   Mare         Provins
+    manuscrit                                     
+                                                  
+  Papon: Recueil d'Arrets       1601 Not          Parliament of
+                                       specified    Paris
+                                                  
+  Charma: Leçons de             1604 Ass          Parliament of
+    Philosophie                                     Paris
+                                                  
+  Guerra: Diurnali               "    "           Naples
+                                                  
+  Lerouge: Registre secret       "   Mare         Joinville
+    manuscrit                                     
+                                                  
+      "    "    "               1606 Sheep        Riom
+                                                  
+      "    "    "                "   Cow          Châteaurenaud
+                                                  
+                                                  
+      "    "    "                "   Mare         Coiffy near Langres
+                                                  
+                                                  
+  Lejeune: Mémoires, cit.,       "   Bitch        Chartres
+    viii, p. 418                                  
+                                                  
+  Lerouge: Registre secret      1607 Mare         Boursant near
+    manuscrit                                       d'Epernay
+                                                  
+      "    "    "               1609   "          Montmorency
+                                                  
+      "    "    "                "     "          Niederrad
+                                                  
+  Voltaire: Siècle de Louis      "   Cow          Parliament of
+    XIV, ch. i. Louandre:                           Paris
+    Rev. des deux Mondes,                         
+    1854, i, p. 334                               
+                                                  
+  Lerouge: Registre secret      1610 Horse        Paris
+    manuscrit                                     
+                                                  
+      "    "    "               1611 Goat         Laval
+                                                  
+      "    "    "                "   Cow          St. Fergeux
+                                                    near Rethel
+                                                  
+      "    "    "               1613 Sow          Montoiron near
+                                                    Chatelleraut
+                                                  
+      "    "    "               1614 She-Ass      Le Mans
+                                                  
+  Desnoyers: Recherches, etc.,  1616 Rats and     Langres
+    p. 13                              insects    
+                                                  
+  Anzeige für Kunde der         1621 Cow          Machern near
+    deutschen Vorzeit, 1880,                        Leipsic
+    col. 102                                      
+                                                  
+  Lerouge: Registre secret      1621 Mare         La Rochelle
+    manuscrit                                     
+                                                  
+      "    "    "               1622   "          Montpensier
+                                                  
+      "    "    "               1623 She-Ass      Bessay near Moulins
+                                                  
+      "    "    "               1624 Mule         Chefboutonne (Poitou)
+                                                  
+  Döpler: Theat. pen., ii,      1631 Mares and    Greifenberg
+    p. 574                             Cows       
+                                                  
+  Marchisio Michele: Gatte      1633 Weevils      Strambino
+    ed. insetti nocivi, 1834,                       (Ivrea)
+    p. 63 _sqq._                                  
+                                                  
+  Lerouge: Registre secret       "   Mare         Bellac
+    manuscrit                                     
+                                                  
+  Carpentier to Du Cange,       1641 Pig          Viroflay
+    _s.v._ Homicida                               
+                                                  
+  Lerouge: Registre secret      1647 Mare         Parliament of
+    manuscrit                                       Paris
+                                                  
+      "    "    "               1650   "          Fresnay near Chartres
+                                                  
+  Crollolanza: Storia del       1659 Caterpillars Chiavenna
+    Contado di Chiavenna,                         
+    p. 455 _sqq._                                 
+                                                  
+  Perrero: Gazzetta             1661 Weevils      Turin
+    Litteraria di Torino,                         
+    Feb. 24, 1883                                 
+                                                  
+  Cotton Mather: Magnalia       1662 Cow, two     New Haven, Conn.
+    Christi Americana, Book           Heifers,    
+    vi. London, 1702                  three Sheep,
+                                      and two Sows
+                                                  
+  Lerouge: Registre secret      1666 Mare         Tours
+    manuscrit                                     
+                                                  
+      "    "    "                "     "          St. P. Lemontiers
+                                                  
+  Lerouge: Registre secret      1667 She-Ass      Vaudes near
+    manuscrit                                       Bar-sur-Seine
+                                                  
+      "    "    "               1668 Mare         Angers
+                                                  
+  Annales scientifiques de      1670 Locusts      Clermont
+    l'Auvergne, Vol. vii,                         
+    p. 391                                        
+                                                  
+  Döpler: Theatrum pen., ii,    1676 Mare and Cow Silesia
+    p. 5                                          
+                                                  
+  Lerouge: Registre secret      1678       "      Beaugé
+    manuscrit                                     
+                                                  
+  Perrero: Gaz. Litter. di       "   Weevils      Turin
+    Torius, Feb. 24, 1883                         
+                                                  
+  Brillon: Decisiones, i,       1679 Mare         Parliament
+    p. 914. Mémoires, cit.,                         d'Aix
+    viii, p. 431. Boniface:                       
+    Traité des matières                           
+    criminelles, 1785, p. 31                      
+                                                  
+  Chorier: Hist du Dauphiné.   BeforeWorms        Constance
+    Thémis, viii                1680                and Coire
+                                                  
+  Lerouge: Registre secret      1680 Mare         Fourches near
+    manuscrit                                       Provins
+                                                  
+  Heinrich Roch: Schlesische    1681 Mare         Wünschelburg
+    Chronik, p. 342. Döpler:                        in Silesia
+    Theat. pen., ii, p. 573                       
+    _sqq._                                        
+                                                  
+      "    "    "               1684 Mare         Ottendorf
+                                                  
+      "    "    "               1685   "          Striga
+                                                  
+  Dulaure: Description des      1690 Locusts      Pont-de-Château
+    principaux lieux de la                          in Auvergne
+    France, 1789, v, p. 493                       
+    _sqq._ Mémoires, cit.,                        
+    viii, p. 412                                  
+                                                  
+  Lerouge: Registre secret      1692 Mare         Moulins
+    manuscrit                                     
+                                                  
+  La Hontan: Voyages, Let. xi, End ofTurtledoves  Canada
+    p. 79. Mémoires, cit.,     17th               
+    viii, p. 431               cent.              
+                                                  
+  Meiners: Vergleichung des      "   He-Goat      Russia
+    ältern u, neuern                   banished   
+    Russlands, p. 291.                 to Siberia 
+    _Cf._ Amira, p. 573                           
+                                                  
+  Registres de la Paroise de    1710 Rats         Grignon
+    Grignon                                       
+                                                  
+  Sorel: Procès contre des      1710 Vermin       Autun
+    animaux, etc., p. 23                          
+                                                  
+  Rinds Herreds Krönike and     1711   "          Als in Jutland
+    other sources given by                        
+    Amira, p. 565                                 
+                                                  
+  Agnel: Curiosités             1713 Termites     Piedade no Maranhão
+    judiciaires et                                  in Brazil
+    historiques du moyen-âge,                     
+    p. 46. _Cf._ Manoel                           
+    Bernardes: Nova Floresta                      
+    ou Sylva de varios                            
+    apophthegmas, etc. 5 tom.                     
+    Lisboá, 1706-47                               
+                                                  
+  MSS. of Bibliothèque          1726 Not specifiedParis
+    Nationale of Paris,                           
+    No. 10,970. D'Addosio:                        
+    Best. Del., p. 107                            
+                                                  
+  Ménebréa: Jugements contre    1731 Insects      Thonon
+    les animaux, p. 508                           
+                                                  
+  La Tradition, 1888, p. 363    1733 Vermin       Buranton
+    _sqq._ Amira, p. 564                          
+                                                  
+  Rousseaud de Lacombe:         1741 Cow          Poitou
+    Traité des matières crim.                     
+    D'Addosio: Best. Del.,                        
+    p. 107                                        
+                                                  
+  Ant. de Saint-Gervais:        1750 She-Ass      Vanvres
+    Hist. des Animaux                             
+                                                  
+  A Report of the Case of       1771 Dog          Chichester, England
+    Farmer Carter's Dog.                          
+    Amira, p. 559                                 
+                                                  
+  Comparon: Hist. du            1793  "           Paris
+    Tribunal Révolutionnaire                      
+    de Paris. _Cf._ Sorel,                        
+    op. cit., p. 16                               
+                                                  
+  Filangieri: Scienza della    18th  Dogs         Italy
+    Legislazione               cent.              
+                                                  
+  Det. Kong. Danske                               
+    Landhusholdnings-Selskabs  1805-6Vermin       Lyö in Denmark
+    Skrifter. Ny Saml. ii, 1,                     
+    22. Amira, p. 565                             
+                                                  
+  Desnoyers: Recherches,        1826 Locusts      Clermont-Ferrand
+    etc., p. 15                                   
+                                                  
+  Gazette des Tribunaux,        1845 Dog          Paris
+    Jan. 23, 1845                                 
+                                                  
+      "    "    "               1864 Pig          Pleternica in
+                                                    Slavonia
+                                                  
+  Krauss, quoted by Amira,      1866 Locusts      Pozega in
+    p. 573                                          Slavonia
+                                                  
+      "    "    "                "   Grasshoppers Vidovici in
+                                                    Slavonia
+                                                  
+  Desnoyer: Recherches,        19th  Locusts      Catalonia
+    etc., p. 15                cent.              
+                                                  
+  Allg. deutsche                                  
+    Strafrechts-zeitung,         "   Cock         Leeds in England
+    1861, No. 2. Also Pertile:                    
+    Gli animali in giudizio                       
+                                                  
+  Cretella: Gli Animali          "   Wolf         Calabria
+    sotto processo in Fanfulla                    
+    1891, No. 65. _Cf._ Amira,                    
+    p. 569                                        
+                                                  
+  New York Herald and Echo      1906 Dog          Délémont in
+    de Paris, May 4, 1906                        Switzerland
   ------------------------------------------------------------------------
 
 
@@ -7961,7 +7961,7 @@ killed and murdered a child in the parish of Roumaygne.
     A tous ceulx qui ces lettres verront ou orront, Jehan Lours, garde du
     scel des obligacions de la vicomté de Mortaing, salut, Sachent tous
     que par devant Bynet de l'Espiney, clerc tabellion juré ou siege dudit
-    lieu de Mortaing, fut present mestre Jehan Micton, pendart,[9] en la
+    lieu de Mortaing, fut present mestre Jehan Micton, pendart, en la
     viconté d'Avrenches, qui recognut et confessa avoir eu et repceu de
     homme sage et pourveu Thomas de Juvigney, viconte dudit lieu de
     Mortaing, c'est assavoir la somme de cinquante souls tournois pour sa
@@ -8107,7 +8107,7 @@ September, 1606, condemning Guillaume Guyart to be hanged and burned
 together with a bitch. Extract from the records of the clerk's office of
 Loing under the date of Sept. 12, 1606.
 
-    Entre le procureur de messieurs[10] demandeur et accusateur au
+    Entre le procureur de messieurs demandeur et accusateur au
     principal et requérant le proffit et adjudication de troys deffaulx et
     du quart d'abondant, d'une part, et Guillaume Guyard, accusé,
     deffendeur et défaillant, d'autre part.
@@ -8533,7 +8533,7 @@ condemning a cow to death for having killed a woman at Machern near
 Leipsic, July 20, 1621.
 
     Ao 1621 den 20 July ist Hanss Fritzchen weib Catharina alhier zu
-    Machern wohnende von Ihrer eigen Mietkuhe,[11] da sie gleich
+    Machern wohnende von Ihrer eigen Mietkuhe, da sie gleich
     hochleibss schwanger gang, auff Ihren Eigenen hofe zu Tode gestossen
     worden. Vber welch vnerhörten Fall der Juncker Friederich von
     Lindenau, als Erbsass diesess ortes, in der Jurisstischen Facultet zu
@@ -8668,7 +8668,7 @@ plusieurs remarkes importantes par McN. C., etc. Liv. iv. Sect. 8, Art.
 14. 1769.
 
 CLARUS, JULIUS: Opera Omnia. Sive practica civilis atque criminalis, etc.
-[Geneva], 1637.
+, 1637.
 
 CROLLANZA: Storia del Contado di Chiavenna, pp. 445-899.
 
@@ -9782,15 +9782,15 @@ _Richard Clay & Sons, Limited, London and Bungay._
 
 FOOTNOTES:
 
-[1] The name is also spelled Chassanée and Chasseneux. In the Middle Ages,
+ The name is also spelled Chassanée and Chasseneux. In the Middle Ages,
 and even as late as the end of the eighteenth century, the orthography of
 proper names was very uncertain.
 
-[2] "Item: a été délibéré que la ville se joindra aux paroisses de cette
+ "Item: a été délibéré que la ville se joindra aux paroisses de cette
 province qui voudront obtenir de Rome une excommunication contre les
 insects et que l'on contribuera aux frais au pro rata."
 
-[3] These animals are spoken of as _unvernünftige Thierlein genannt
+ These animals are spoken of as _unvernünftige Thierlein genannt
 Lutmäuse_. _Lut_ might be derived from the Old German _lût_ (_Laut_,
 Schrei), in which case _Lutmaus_ would mean shrew-mouse; but it is more
 probably from _lutum_ (loam, mould), and signifies mole or field-mouse.
@@ -9803,38 +9803,38 @@ birds, which are destructive of field-mice, has frequently caused the
 latter to multiply so as to become a terrible plague. This was the case in
 England in 1813-14, and in Germany in 1822, and again in 1856.
 
-[4] The first part of this treatise, consisting of seventeen chapters,
+ The first part of this treatise, consisting of seventeen chapters,
 discusses the different kinds of "monitoires" and their applications. Only
 the second part, describing the legal procedure, is here printed.
 
-[5] A few early instances of excommunication and malediction, our
+ A few early instances of excommunication and malediction, our
 knowledge of which is derived chiefly from hagiologies and other legendary
 sources, are not included in the present list, such, for example, as the
 cursing and burning of storks at Avignon by St. Agricola in 666, and the
 expulsion of venomous reptiles from the island Reichenau in 728 by Saint
 Perminius.
 
-[6] This case is probably identical with and an adjournment of that of
+ This case is probably identical with and an adjournment of that of
 1478.
 
-[7] Identical with the sentences covering the period of 1500-1530.
+ Identical with the sentences covering the period of 1500-1530.
 
-[8] In this latest record of such prosecutions a man named Marger was
+ In this latest record of such prosecutions a man named Marger was
 killed and robbed by Scherrer and his son, with the fierce and effective
 co-operation of their dog. The three murderers were tried and the two men
 sentenced to lifelong imprisonment, but the dog, as the chief culprit,
 without whose complicity the crime could not have been committed, was
 condemned to death.
 
-[9] In modern French _pendard_ means hang-dog. M. Lejeune states that he
+ In modern French _pendard_ means hang-dog. M. Lejeune states that he
 can recall no other instance of its use as synonymous with bourreau or
 hangman. Perhaps a facetious clerk may have deemed it applicable to a
 person whose office was in the present case that of a hang-pig.
 
-[10] Under this term are included the dean, canons, and chapter of the
+ Under this term are included the dean, canons, and chapter of the
 Cathedral of Chartres.
 
-[11] _Mietkuhe_, a cow pastured or wintered for pay.
+ _Mietkuhe_, a cow pastured or wintered for pay.
 
 
 
@@ -9849,7 +9849,7 @@ The original text includes Greek characters that have been replaced with
 transliterations in this text version.
 
 The original text includes a Maltese Cross symbol that is represented as
-[+] in this text version.
+ in this text version.
 
 
 

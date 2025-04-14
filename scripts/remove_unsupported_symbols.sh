@@ -13,8 +13,8 @@ folder="$1"
 find "$folder" -type f | while read -r file; do
     # Skip binary files (optional)
     if file "$file" | grep -q "text"; then
-        # Remove [ | ] from the content of each file
-        sed -i 's/[|[]//g;s/]//g' "$file"
+        # Remove paired brackets and the pipe symbol | from text
+        sed -i "" 's/\[[^]]*\]//g; s/[|]//g' "$file"
         echo "Modified: $file"
     else
         echo "Skipped binary file: $file"

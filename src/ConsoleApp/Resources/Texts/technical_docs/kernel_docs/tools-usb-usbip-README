@@ -4,7 +4,7 @@
 # Copyright (C) 2011 matt mooney <mfm@muteddisk.com>
 #               2005-2008 Takahiro Hirofuchi
 
-[Overview]
+
 USB/IP protocol allows to pass USB device from server to client over the
 network. Server is a machine which provides (shares) a USB device. Client is
 a machine which uses USB device provided by server over the network.
@@ -28,7 +28,7 @@ Whole project consists of four parts:
         A set of userspace tools used to handle connection and management.
         Used on both sides.
 
-[Requirements]
+
     - USB/IP device drivers
         Found in the drivers/usb/usbip/ directory of the Linux kernel tree.
 
@@ -42,23 +42,23 @@ Whole project consists of four parts:
 
     - libtool, automake >= 1.9, autoconf >= 2.5.0, pkg-config
 
-[Optional]
+
     - hwdata
         Contains USB device identification data.
 
 
-[Install]
+
     0. Generate configuration scripts.
 	$ ./autogen.sh
 
     1. Compile & install the userspace utilities.
-	$ ./configure [--with-tcp-wrappers=no] [--with-usbids-dir=<dir>]
+	$ ./configure  
 	$ make install
 
     2. Compile & install USB/IP drivers.
 
 
-[Usage]
+
 On a server side there are two entities which can be shared.
 First of them is physical usb device connected to the machine.
 To make it available below steps should be executed:
@@ -121,7 +121,7 @@ To attach new device to client machine below commands should be used:
 	- Detach the USB device.
 
 
-[Example]
+
 ---------------------------
 	SERVER SIDE
 ---------------------------
@@ -170,7 +170,7 @@ Mark the device of busid 3-3.2 as exportable:
 
     trois:# usbip --debug bind --busid 3-3.2
     ...
-    usbip debug: usbip_bind.c:162:[unbind_other] 3-3.2:1.0 -> usb-storage
+    usbip debug: usbip_bind.c:162: 3-3.2:1.0 -> usb-storage
     ...
     bind device on busid 3-3.2: complete
 
@@ -240,7 +240,7 @@ Detach the imported device:
     port 0 detached
 
 
-[Checklist]
+
     - See 'Debug Tips' on the project wiki.
 	- http://usbip.wiki.sourceforge.net/how-to-debug-usbip
     - usbip-host.ko must be bound to the target device.
@@ -253,5 +253,5 @@ Detach the imported device:
     - Check the kernel and daemon messages.
 
 
-[Contact]
+
     Mailing List: linux-usb@vger.kernel.org

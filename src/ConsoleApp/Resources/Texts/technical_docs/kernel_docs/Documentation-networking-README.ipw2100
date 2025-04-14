@@ -111,7 +111,7 @@ If the driver is built as a module, the following optional parameters are used
 by entering them on the command line with the modprobe command using this
 syntax:
 
-	modprobe ipw2100 [<option>=<VAL1><,VAL2>...]
+	modprobe ipw2100 
 
 For example, to disable the radio on driver loading, enter:
 

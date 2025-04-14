@@ -93,7 +93,7 @@ logically adjacent blocks.
 Holes
 -----
 
-This kernel supports cramfs holes (i.e. [efficient representation of]
+This kernel supports cramfs holes (i.e. 
 blocks in uncompressed data consisting entirely of NUL bytes), but by
 default mkcramfs doesn't test for & create holes, since cramfs in
 kernels up to at least 2.3.39 didn't support holes.  Run mkcramfs

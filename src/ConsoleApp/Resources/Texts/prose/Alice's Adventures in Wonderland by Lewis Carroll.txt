@@ -12,7 +12,7 @@ Title: Alice's Adventures in Wonderland
 
 Author: Lewis Carroll
 
-Release date: June 27, 2008 [eBook #11]
+Release date: June 27, 2008 
                 Most recently updated: April 7, 2025
 
 Language: English
@@ -22,7 +22,7 @@ Credits: Arthur DiBianca and David Widger
 
 *** START OF THE PROJECT GUTENBERG EBOOK ALICE'S ADVENTURES IN WONDERLAND ***
 
-[Illustration]
+
 
 
 

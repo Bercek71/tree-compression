@@ -102,7 +102,7 @@ Build the selftests::
 
 On the target machine, running the tests will use netdevsim by default::
 
-  [/root] # ./ksft-net-drv/run_kselftest.sh -t drivers/net:ping.py
+   # ./ksft-net-drv/run_kselftest.sh -t drivers/net:ping.py
   TAP version 13
   1..1
   # timeout set to 45
@@ -117,7 +117,7 @@ On the target machine, running the tests will use netdevsim by default::
 
 Create a config with remote info::
 
-  [/root] # cat > ./ksft-net-drv/drivers/net/net.config <<EOF
+   # cat > ./ksft-net-drv/drivers/net/net.config <<EOF
   NETIF=eth0
   LOCAL_V4=192.168.1.1
   REMOTE_V4=192.168.1.2
@@ -127,7 +127,7 @@ Create a config with remote info::
 
 Run the test::
 
-  [/root] # ./ksft-net-drv/drivers/net/ping.py
+   # ./ksft-net-drv/drivers/net/ping.py
   TAP version 13
   1..3
   ok 1 ping.test_v4

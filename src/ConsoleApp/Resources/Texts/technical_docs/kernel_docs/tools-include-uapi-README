@@ -15,7 +15,7 @@ may use some different #define pattern, etc.
 
 E.g.:
 
-  $ ls -1 tools/perf/trace/beauty/*.sh | head -5
+  $ ls -1 tools/perf/trace/beauty/*.sh  head -5
   tools/perf/trace/beauty/arch_errno_names.sh
   tools/perf/trace/beauty/drm_ioctl.sh
   tools/perf/trace/beauty/fadvise.sh
@@ -23,13 +23,13 @@ E.g.:
   tools/perf/trace/beauty/fsmount.sh
   $
   $ tools/perf/trace/beauty/fadvise.sh
-  static const char *fadvise_advices[] = {
-        [0] = "NORMAL",
-        [1] = "RANDOM",
-        [2] = "SEQUENTIAL",
-        [3] = "WILLNEED",
-        [4] = "DONTNEED",
-        [5] = "NOREUSE",
+  static const char *fadvise_advices = {
+         = "NORMAL",
+         = "RANDOM",
+         = "SEQUENTIAL",
+         = "WILLNEED",
+         = "DONTNEED",
+         = "NOREUSE",
   };
   $
 

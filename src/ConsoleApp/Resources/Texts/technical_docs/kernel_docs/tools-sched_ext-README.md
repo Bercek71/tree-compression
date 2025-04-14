@@ -78,7 +78,7 @@ options in the file.
 You may notice that most of the example schedulers include a "vmlinux.h" file.
 This is a large, auto-generated header file that contains all of the types
 defined in some vmlinux binary that was compiled with
-[BTF](https://docs.kernel.org/bpf/btf.html) (i.e. with the BTF-related Kconfig
+(https://docs.kernel.org/bpf/btf.html) (i.e. with the BTF-related Kconfig
 options specified above).
 
 The header file is created using `bpftool`, by passing it a vmlinux binary
@@ -137,7 +137,7 @@ all.
 ### Aside on CO-RE
 
 One of the cooler features of BPF is that it supports
-[CO-RE](https://nakryiko.com/posts/bpf-core-reference-guide/) (Compile Once Run
+(https://nakryiko.com/posts/bpf-core-reference-guide/) (Compile Once Run
 Everywhere). This feature allows you to reference fields inside of structs with
 types defined internal to the kernel, and not have to recompile if you load the
 BPF program on a different kernel with the field at a different offset. In our
@@ -250,21 +250,21 @@ const struct scx_exit_info *ei)
 ```
 
 In order to resolve this, please follow the steps above in
-[Getting a vmlinux.h file](#getting-a-vmlinuxh-file) in order to ensure your
+(#getting-a-vmlinuxh-file) in order to ensure your
 schedulers are using a vmlinux.h file that includes the requisite types.
 
 ## Misc
 
-### llvm: [OFF]
+### llvm: 
 
 You may see the following output when building the schedulers:
 
 ```
 Auto-detecting system features:
-...                         clang-bpf-co-re: [ on  ]
-...                                    llvm: [ OFF ]
-...                                  libcap: [ on  ]
-...                                  libbfd: [ on  ]
+...                         clang-bpf-co-re: 
+...                                    llvm: 
+...                                  libcap: 
+...                                  libbfd: 
 ```
 
-Seeing `llvm: [ OFF ]` here is not an issue. You can safely ignore.
+Seeing `llvm: ` here is not an issue. You can safely ignore.

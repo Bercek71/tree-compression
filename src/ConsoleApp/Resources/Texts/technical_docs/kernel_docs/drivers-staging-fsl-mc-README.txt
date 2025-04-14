@@ -41,35 +41,35 @@ The diagram below shows an overview of the DPAA2 resource management
 architecture:
 
          +--------------------------------------+
-         |                  OS                  |
-         |                        DPAA2 drivers |
-         |                             |        |
-         +-----------------------------|--------+
-                                       |
-                                       | (create,discover,connect
-                                       |  config,use,destroy)
-                                       |
-                         DPAA2         |
-         +------------------------| mc portal |-+
-         |                             |        |
-         |   +- - - - - - - - - - - - -V- - -+  |
-         |   |                               |  |
-         |   |   Management Complex (MC)     |  |
-         |   |                               |  |
-         |   +- - - - - - - - - - - - - - - -+  |
-         |                                      |
-         | Hardware                  Hardware   |
-         | Resources                 Objects    |
-         | ---------                 -------    |
-         | -queues                   -DPRC      |
-         | -buffer pools             -DPMCP     |
-         | -Eth MACs/ports           -DPIO      |
-         | -network interface        -DPNI      |
-         |  profiles                 -DPMAC     |
-         | -queue portals            -DPBP      |
-         | -MC portals                ...       |
-         |  ...                                 |
-         |                                      |
+                           OS                  
+                                 DPAA2 drivers 
+                                              
+         +-------------------------------------+
+                                       
+                                        (create,discover,connect
+                                         config,use,destroy)
+                                       
+                         DPAA2         
+         +------------------------ mc portal -+
+                                              
+            +- - - - - - - - - - - - -V- - -+  
+                                             
+               Management Complex (MC)       
+                                             
+            +- - - - - - - - - - - - - - - -+  
+                                               
+          Hardware                  Hardware   
+          Resources                 Objects    
+          ---------                 -------    
+          -queues                   -DPRC      
+          -buffer pools             -DPMCP     
+          -Eth MACs/ports           -DPIO      
+          -network interface        -DPNI      
+           profiles                 -DPMAC     
+          -queue portals            -DPBP      
+          -MC portals                ...       
+           ...                                 
+                                               
          +--------------------------------------+
 
 The MC mediates operations such as create, discover,
@@ -92,16 +92,16 @@ in creating a network interfaces.
     in the container.
 
     +---------------------------------------------------------+
-    | DPRC                                                    |
-    |                                                         |
-    |  +-------+  +-------+  +-------+  +-------+  +-------+  |
-    |  | DPMCP |  | DPIO  |  | DPBP  |  | DPNI  |  | DPMAC |  |
-    |  +-------+  +-------+  +-------+  +---+---+  +---+---+  |
-    |  | DPMCP |  | DPIO  |                                   |
-    |  +-------+  +-------+                                   |
-    |  | DPMCP |                                              |
-    |  +-------+                                              |
-    |                                                         |
+     DPRC                                                    
+                                                             
+      +-------+  +-------+  +-------+  +-------+  +-------+  
+       DPMCP    DPIO     DPBP     DPNI     DPMAC   
+      +-------+  +-------+  +-------+  +---+---+  +---+---+  
+       DPMCP    DPIO                                     
+      +-------+  +-------+                                   
+       DPMCP                                               
+      +-------+                                              
+                                                             
     +---------------------------------------------------------+
 
     From the point of view of an OS, a DPRC behaves similar to a plug and
@@ -110,9 +110,9 @@ in creating a network interfaces.
     regions and interrupts).
 
      DPRC.1 (bus)
-       |
+       
        +--+--------+-------+-------+-------+
-          |        |       |       |       |
+                                       
         DPMCP.1  DPIO.1  DPBP.1  DPNI.1  DPMAC.1
         DPMCP.2  DPIO.2
         DPMCP.3
@@ -150,7 +150,7 @@ in creating a network interfaces.
               +---+---+ +---+---+
                  CPU0     CPU1
               +---+---+ +---+---+
-                  |         |
+                           
               +---+---+ +---+---+
                  DPIO     DPIO
               +---+---+ +---+---+
@@ -160,12 +160,12 @@ in creating a network interfaces.
                    +---+---+
                       DPNI  --- DPBP,DPMCP
                    +---+---+
-                       |
-                       |
+                       
+                       
                    +---+---+
                      DPMAC
                    +---+---+
-                       |
+                       
                     port/PHY
 
     Below the objects are described.  For each object a brief description
@@ -230,9 +230,9 @@ in creating a network interfaces.
           is made via a DPRC command.
 
               +-------+  +-------+
-              | DPNI  |  | DPMAC |
+               DPNI     DPMAC 
               +---+---+  +---+---+
-                  |          |
+                            
                   +==========+
 
        -DPNI <--> DPBP
@@ -272,37 +272,37 @@ scenario and the objects bound to each driver.  A brief description
 of each driver follows.
 
                                              +------------+
-                                             | OS Network |
-                                             |   Stack    |
+                                              OS Network 
+                                                Stack    
                  +------------+              +------------+
-                 | Allocator  |. . . . . . . |  Ethernet  |
-                 |(DPMCP,DPBP)|              |   (DPNI)   |
+                  Allocator  . . . . . . .   Ethernet  
+                 (DPMCP,DPBP)                 (DPNI)   
                  +-.----------+              +---+---+----+
-                  .          .                   ^   |
-                 .            .     <data avail, |   |<enqueue,
-                .              .     tx confirm> |   | dequeue>
-    +-------------+             .                |   |
-    | DPRC driver |              .           +---+---V----+     +---------+
-    |   (DPRC)    |               . . . . . .| DPIO driver|     |   MAC   |
-    +----------+--+                          |  (DPIO)    |     | (DPMAC) |
-               |                             +------+-----+     +-----+---+
-               |<dev add/remove>                    |                 |
-               |                                    |                 |
-          +----+--------------+                     |              +--+---+
-          |   MC-bus driver   |                     |              | PHY  |
-          |                   |                     |              |driver|
-          | /soc/fsl-mc       |                     |              +--+---+
-          +-------------------+                     |                 |
-                                                    |                 |
- ================================ HARDWARE =========|=================|======
-                                                  DPIO                |
-                                                    |                 |
-                                                  DPNI---DPBP         |
-                                                    |                 |
-                                                  DPMAC               |
-                                                    |                 |
+                  .          .                   ^   
+                 .            .     <data avail,    <enqueue,
+                .              .     tx confirm>     dequeue>
+    +-------------+             .                   
+     DPRC driver               .           +---+---V----+     +---------+
+       (DPRC)                   . . . . . . DPIO driver        MAC   
+    +----------+--+                            (DPIO)          (DPMAC) 
+                                            +------+-----+     +-----+---+
+               <dev add/remove>                                     
+                                                                    
+          +----+--------------+                                   +--+---+
+             MC-bus driver                                       PHY  
+                                                                driver
+           /soc/fsl-mc                                          +--+---+
+          +-------------------+                                      
+                                                                     
+ ================================ HARDWARE ================================
+                                                  DPIO                
+                                                                     
+                                                  DPNI---DPBP         
+                                                                     
+                                                  DPMAC               
+                                                                     
                                                    PHY ---------------+
- ===================================================|========================
+ ===========================================================================
 
 A brief description of each driver is provided below.
 

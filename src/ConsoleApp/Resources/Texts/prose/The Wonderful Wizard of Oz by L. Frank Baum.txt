@@ -12,7 +12,7 @@ Title: The Wonderful Wizard of Oz
 
 Author: L. Frank Baum
 
-Release date: February 1, 1993 [eBook #55]
+Release date: February 1, 1993 
                 Most recently updated: December 29, 2024
 
 Language: English
@@ -21,7 +21,7 @@ Language: English
 
 *** START OF THE PROJECT GUTENBERG EBOOK THE WONDERFUL WIZARD OF OZ ***
 
-[Illustration]
+
 
 
 

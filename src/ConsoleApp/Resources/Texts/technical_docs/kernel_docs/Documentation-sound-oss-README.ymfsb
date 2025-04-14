@@ -23,7 +23,7 @@ DISCLIMER
 ABOUT THIS DRIVER
 =================
 
-  This code enables you to use your YMF724[A-F], YMF740[A-C], YMF744, YMF754
+  This code enables you to use your YMF724, YMF740, YMF744, YMF754
  cards. When enabled, your card acts as "SoundBlaster Pro" compatible card.
  It can only play 22.05kHz / 8bit / Stereo samples, control external MIDI
  port.

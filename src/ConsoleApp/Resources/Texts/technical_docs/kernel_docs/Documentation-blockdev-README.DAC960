@@ -208,7 +208,7 @@ replacing "/usr/src" with wherever you keep your Linux kernel source tree:
   cd /usr/src
   tar -xvzf DAC960-2.2.11.tar.gz (or DAC960-2.4.11.tar.gz)
   mv README.DAC960 linux/Documentation
-  mv DAC960.[ch] linux/drivers/block
+  mv DAC960. linux/drivers/block
   patch -p0 < DAC960.patch (if DAC960.patch is included)
   cd linux
   make config

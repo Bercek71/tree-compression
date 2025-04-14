@@ -7,7 +7,7 @@ Introduction
 This document gives useful information about the ARM Atmel SoCs that are
 currently supported in Linux Mainline (you know, the one on kernel.org).
 
-It is important to note that the Atmel | SMART ARM-based MPU product line is
+It is important to note that the Atmel  SMART ARM-based MPU product line is
 historically named "AT91" or "at91" throughout the Linux kernel development
 process even if this product prefix has completely disappeared from the
 official Atmel product name. Anyway, files, directories, git trees,
@@ -168,4 +168,4 @@ Naming conventions and best practice:
   or sama5d3_gmac.dtsi for example).
 - board Device Tree Source files (.dts) are prefixed by the string "at91-" so
   that they can be identified easily. Note that some files are historical exceptions
-  to this rule (sama5d3[13456]ek.dts, usb_a9g20.dts or animeo_ip.dts for example).
+  to this rule (sama5d3ek.dts, usb_a9g20.dts or animeo_ip.dts for example).

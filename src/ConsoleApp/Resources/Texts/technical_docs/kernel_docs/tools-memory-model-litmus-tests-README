@@ -245,7 +245,7 @@ This string can be given to the "norm7" and "classify7" tools to
 produce the name:
 
 	$ norm7 -bell linux-kernel.bell \
-		Rfi Once PodRR Once Fre Once Rfi Once PodRR Once Fre Once | \
+		Rfi Once PodRR Once Fre Once Rfi Once PodRR Once Fre Once  \
 	  sed -e 's/:.*//g'
 	SB+rfionceonce-poonceonces
 

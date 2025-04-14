@@ -91,15 +91,15 @@ To speed up testing and avoid various dependency issues, it is recommended to
 run vmtest in a Docker container. Before running vmtest, we need to prepare
 Docker container and local rootfs image. The overall steps are as follows:
 
-1. Create Docker container as shown in link [0].
+1. Create Docker container as shown in link .
 
-2. Use mkrootfs_debian.sh script [1] to build local rootfs image:
+2. Use mkrootfs_debian.sh script  to build local rootfs image:
 
 .. code-block:: console
 
   $ sudo ./mkrootfs_debian.sh --arch riscv64 --distro noble
 
-3. Start Docker container [0] and run vmtest in the container:
+3. Start Docker container  and run vmtest in the container:
 
 .. code-block:: console
 
@@ -108,22 +108,22 @@ Docker container and local rootfs image. The overall steps are as follows:
     -l <path of local rootfs image> -- \
     ./test_progs -d \
         \"$(cat tools/testing/selftests/bpf/DENYLIST.riscv64 \
-            | cut -d'#' -f1 \
-            | sed -e 's/^[[:space:]]*//' \
-                  -e 's/[[:space:]]*$//' \
-            | tr -s '\n' ',' \
+             cut -d'#' -f1 \
+             sed -e 's/^]*//' \
+                  -e 's/]*$//' \
+             tr -s '\n' ',' \
         )\"
 
-Link: https://github.com/pulehui/riscv-bpf-vmtest.git [0]
-Link: https://github.com/libbpf/ci/blob/main/rootfs/mkrootfs_debian.sh [1]
+Link: https://github.com/pulehui/riscv-bpf-vmtest.git 
+Link: https://github.com/libbpf/ci/blob/main/rootfs/mkrootfs_debian.sh 
 
 Additional information about selftest failures are
 documented here.
 
-profiler[23] test failures with clang/llvm <12.0.0
+profiler test failures with clang/llvm <12.0.0
 ==================================================
 
-With clang/llvm <12.0.0, the profiler[23] test may fail.
+With clang/llvm <12.0.0, the profiler test may fail.
 The symptom looks like
 
 .. code-block:: c
@@ -248,8 +248,8 @@ them to Clang/LLVM. These sub-tests are going to be skipped if Clang is too
 old to support them, they shouldn't cause build failures or runtime test
 failures:
 
-- __builtin_btf_type_id() [0_, 1_, 2_];
-- __builtin_preserve_type_info(), __builtin_preserve_enum_value() [3_, 4_].
+- __builtin_btf_type_id() ;
+- __builtin_preserve_type_info(), __builtin_preserve_enum_value() .
 
 .. _0: https://github.com/llvm/llvm-project/commit/6b01b465388b204d543da3cf49efd6080db094a9
 .. _1: https://github.com/llvm/llvm-project/commit/072cde03aaa13a2c57acf62d79876bf79aa1919f
@@ -276,7 +276,7 @@ Without it, the error from compiling bpf selftests looks like:
 
 .. code-block:: console
 
-  libbpf: failed to find BTF for extern 'tcp_slow_start' [25] section: -2
+  libbpf: failed to find BTF for extern 'tcp_slow_start'  section: -2
 
 __ https://github.com/llvm/llvm-project/commit/886f9ff53155075bd5f1e994f17b85d1e1b7470c
 
@@ -284,7 +284,7 @@ btf_tag test and Clang version
 ==============================
 
 The btf_tag selftest requires LLVM support to recognize the btf_decl_tag and
-btf_type_tag attributes. They are introduced in `Clang 14` [0_, 1_].
+btf_type_tag attributes. They are introduced in `Clang 14` .
 The subtests ``btf_type_tag_user_{mod1, mod2, vmlinux}`` also requires
 pahole version ``1.23``.
 

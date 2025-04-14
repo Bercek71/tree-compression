@@ -59,7 +59,7 @@ These dependencies are typically packaged by Linux distributions:
 
 These dependencies are available via PyPi:
 
-- pip install 'lark[interegular]'
+- pip install 'lark'
 
 
 XDR Specifications

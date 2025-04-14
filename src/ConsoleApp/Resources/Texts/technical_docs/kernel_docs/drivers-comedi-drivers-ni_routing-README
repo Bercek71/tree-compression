@@ -59,7 +59,7 @@ choices were made:
 2) The bulk of the real content for this directory is stored in two separate
   collections (i.e. sub-directories) of tables stored in c source files:
 
-  (a) ni_route_values/ni_[series-label]series.c
+  (a) ni_route_values/ni_series.c
 
         This data represents all the various register values to use for the
         multiple different signal MUXes for the specific device families.
@@ -81,7 +81,7 @@ choices were made:
         *** It would be a great help for users to test these values such that
         these files can be correctly marked/documented ***
 
-  (b) ni_device_routes/[board-name].c
+  (b) ni_device_routes/.c
 
         This data represents the known set of valid signal routes that are
         possible for each specific board.  Although the family defines the
@@ -90,14 +90,14 @@ choices were made:
 
         In order for a particular board to take advantage of the effort to
         simplify/clarify signal routing on NI devices, a corresponding
-        [board-name].c file must be created.  This file should reflect the known
+        .c file must be created.  This file should reflect the known
         valid _direct_ routing capabilities of the board.
 
         As noted above, the only known consistent source of information for
         valid device routes comes from the proprietary National Instruments
         Windows software, NI-MAX.  Also, as noted above, this information can
         only be visually conveyed from NI-MAX to other media.  To make this
-        easier, the naming conventions used in the [board-name].c file are
+        easier, the naming conventions used in the .c file are
         similar to the naming conventions as presented by NI-MAX.
 
 
@@ -105,7 +105,7 @@ choices were made:
     ni_route_values.c
     ni_device_routes.c
 
-  When adding a new [board-name].c file, be sure to also add in the line in
+  When adding a new .c file, be sure to also add in the line in
   ni_device_routes.c to include this information into comedi.
 
 
@@ -181,7 +181,7 @@ NI-STC with those naming conventions used here.
 
   (comedi)                      (NI-STC input or output)    (NOTE)
   ------------------------------------------------------------------------------
-  TRIGGER_LINE(i)               RTSI_Trig_i_Output_Select   i in range [0..7]
+  TRIGGER_LINE(i)               RTSI_Trig_i_Output_Select   i in range 
   NI_AI_STOP                    AI_STOP
   NI_AI_SampleClock             AI_START_Select
   NI_AI_SampleClockTimebase     AI_SI                       If internal sample

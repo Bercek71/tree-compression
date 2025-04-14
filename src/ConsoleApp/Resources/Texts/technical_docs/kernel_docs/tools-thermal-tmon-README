@@ -37,7 +37,7 @@ Build
 =========
 $ make
 $ sudo ./tmon -h
-Usage: tmon [OPTION...]
+Usage: tmon 
   -c, --control         cooling device in control
   -d, --daemon          run as daemon, no TUI
   -l, --log             log data to /var/tmp/tmon.log

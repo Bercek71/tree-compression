@@ -35,23 +35,23 @@ The Ethernet Switch is built on top of a Datapath Switch (DPSW) object.
 Configuration interface:
 
           ---------------------
-         | DPAA2 Switch driver |
+          DPAA2 Switch driver 
           ---------------------
                    .
                    .
               ----------
-             | DPSW API |
+              DPSW API 
               ----------
                    .           software
  ================= . ==============
                    .           hardware
           ---------------------
-         | MC hardware portals |
+          MC hardware portals 
           ---------------------
                    .
                    .
                  ------
-                | DPSW |
+                 DPSW 
                  ------
 
 Driver uses the switch device driver model and exposes each switch port as
@@ -63,19 +63,19 @@ limitation is going to be addressed in the future.
 The DPSW can have ports connected to DPNIs or to PHYs via DPMACs.
 
 
- [ethA]     [ethB]     [ethC]     [ethD]     [ethE]     [ethF]
+                          
     :          :          :          :          :          :
     :          :          :          :          :          :
-[eth drv]  [eth drv]  [                ethsw drv              ]
+    
     :          :          :          :          :          :        kernel
 ========================================================================
     :          :          :          :          :          :        hardware
- [DPNI]      [DPNI]     [============= DPSW =================]
-    |          |          |          |          |          |
-    |           ----------           |       [DPMAC]    [DPMAC]
-     -------------------------------            |          |
-                                                |          |
-                                              [PHY]      [PHY]
+            
+                                                      
+               ----------                      
+     -------------------------------                      
+                                                          
+                                                    
 
 For a more detailed description of the Ethernet switch device driver model
 see:

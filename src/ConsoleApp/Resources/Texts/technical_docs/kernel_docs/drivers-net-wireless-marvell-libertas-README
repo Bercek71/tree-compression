@@ -25,7 +25,7 @@ DRIVER LOADING
 
 	o. Load driver by using the following command:
 
-		insmod usb8388.ko [fw_name=usb8388.bin]
+		insmod usb8388.ko 
 
 =========================
 ETHTOOL
@@ -43,7 +43,7 @@ bus-info:
 Use the -e option to read the EEPROM contents of the card.
 
 	Usage:
-	ethtool -e ethX [raw on|off] [offset N] [length N]
+	ethtool -e ethX   
 
        -e     retrieves and prints an EEPROM dump for the  specified  ethernet
               device.   When raw is enabled, then it dumps the raw EEPROM data
@@ -190,15 +190,15 @@ setuserscan
 	Path: /sys/kernel/debug/libertas_wireless/ethX/
 
     Usage:
-       echo "[ARGS]" > setuserscan
+       echo "" > setuserscan
 
-         where [ARGS]:
+         where :
 
       bssid=xx:xx:xx:xx:xx:xx  specify a BSSID filter for the scan
-      ssid="[SSID]"            specify a SSID filter for the scan
-      keep=[0 or 1]            keep the previous scan results (1), discard (0)
-      dur=[scan time]          time to scan for each channel in milliseconds
-      type=[1,2,3]             BSS type: 1 (Infra), 2(Adhoc), 3(Any)
+      ssid=""            specify a SSID filter for the scan
+      keep=            keep the previous scan results (1), discard (0)
+      dur=          time to scan for each channel in milliseconds
+      type=             BSS type: 1 (Infra), 2(Adhoc), 3(Any)
 
     Any combination of the above arguments can be supplied on the command
     line. If dur tokens are absent, the driver default setting will be used.

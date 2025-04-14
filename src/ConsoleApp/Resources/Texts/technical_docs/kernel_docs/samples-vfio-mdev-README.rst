@@ -15,28 +15,28 @@ card.
 
      # tree /sys/devices/virtual/mtty/mtty/
         /sys/devices/virtual/mtty/mtty/
-        |-- mdev_supported_types
-        |   |-- mtty-1
-        |   |   |-- available_instances
-        |   |   |-- create
-        |   |   |-- device_api
-        |   |   |-- devices
-        |   |   `-- name
-        |   `-- mtty-2
-        |       |-- available_instances
-        |       |-- create
-        |       |-- device_api
-        |       |-- devices
-        |       `-- name
-        |-- mtty_dev
-        |   `-- sample_mtty_dev
-        |-- power
-        |   |-- autosuspend_delay_ms
-        |   |-- control
-        |   |-- runtime_active_time
-        |   |-- runtime_status
-        |   `-- runtime_suspended_time
-        |-- subsystem -> ../../../../class/mtty
+        -- mdev_supported_types
+           -- mtty-1
+              -- available_instances
+              -- create
+              -- device_api
+              -- devices
+              `-- name
+           `-- mtty-2
+               -- available_instances
+               -- create
+               -- device_api
+               -- devices
+               `-- name
+        -- mtty_dev
+           `-- sample_mtty_dev
+        -- power
+           -- autosuspend_delay_ms
+           -- control
+           -- runtime_active_time
+           -- runtime_status
+           `-- runtime_suspended_time
+        -- subsystem -> ../../../../class/mtty
         `-- uevent
 
 2. Create a mediated device by using the dummy device that you created in the
@@ -56,7 +56,7 @@ card.
    as  follows::
 
      # lspci -s 00:05.0 -xxvv
-     00:05.0 Serial controller: Device 4348:3253 (rev 10) (prog-if 02 [16550])
+     00:05.0 Serial controller: Device 4348:3253 (rev 10) (prog-if 02 )
              Subsystem: Device 4348:3253
              Physical Slot: 5
              Control: I/O+ Mem- BusMaster- SpecCycle- MemWINV- VGASnoop- ParErr-
@@ -64,8 +64,8 @@ card.
              Status: Cap- 66MHz- UDF- FastB2B- ParErr- DEVSEL=medium >TAbort-
      <TAbort- <MAbort- >SERR- <PERR- INTx-
              Interrupt: pin A routed to IRQ 10
-             Region 0: I/O ports at c150 [size=8]
-             Region 1: I/O ports at c158 [size=8]
+             Region 0: I/O ports at c150 
+             Region 1: I/O ports at c158 
              Kernel driver in use: serial
      00: 48 43 53 32 01 00 00 02 10 02 00 07 00 00 00 00
      10: 51 c1 00 00 59 c1 00 00 00 00 00 00 00 00 00 00
@@ -74,7 +74,7 @@ card.
 
      In the Linux guest VM, dmesg output for the device is as follows:
 
-     serial 0000:00:05.0: PCI INT A -> Link[LNKA] -> GSI 10 (level, high) -> IRQ 10
+     serial 0000:00:05.0: PCI INT A -> Link -> GSI 10 (level, high) -> IRQ 10
      0000:00:05.0: ttyS1 at I/O 0xc150 (irq = 10) is a 16550A
      0000:00:05.0: ttyS2 at I/O 0xc158 (irq = 10) is a 16550A
 
