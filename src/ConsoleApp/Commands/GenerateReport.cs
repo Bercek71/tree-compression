@@ -14,7 +14,7 @@ public class GenerateReport : ICommand
     {
         public string FileName { get; set; } = string.Empty;
         public long Size { get; set; }
-        public string Type { get; set; } = string.Empty; //subfolder name
+        public string Type { get; set; } = string.Empty; 
         public double CompressionRatio { get; set; }
         public TimeSpan CompressionTime { get; set; }
         public TimeSpan DecompressionTime { get; set; }
@@ -28,12 +28,7 @@ public class GenerateReport : ICommand
     
     public void Execute()
     {
-        //Read all the files from directory and subdirectories
-        //sort all found files by size
-        
-        //generate csv report put there 
-        //file name, size, compression ratio, compression time, decompression time, compressed size, tree size
-        
+
         var NLPCompressor = new NaturalLanguageTreeCompressing(new TreeRepairStrategy(maxN: 10));
         
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
