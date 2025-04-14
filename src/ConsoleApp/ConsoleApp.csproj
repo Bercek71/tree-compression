@@ -33,18 +33,25 @@
       <None Update="Resources\English\english-gum-ud-2.5.udpipe">
         <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       </None>
-      <None Update="Resources\Texts\old-man-and-the-sea.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
-      <None Update="Resources\Texts\odyssey.txt">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-      </None>
+        <None Update="Resources\Texts\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Resources\Texts\legal_papers\The Common Law by Oliver Wendell Holmes.txt">
+          <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </None>
+        <None Update="Resources\Texts\legal_papers\The Criminal Prosecution and Capital Punishment of Animals by E. P. Evans.txt">
+          <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+        </None>
     </ItemGroup>
     
     <ItemGroup>
       <Content Include="..\..\.dockerignore">
         <Link>.dockerignore</Link>
       </Content>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="CsvHelper" Version="33.0.1" />
     </ItemGroup>
 
 </Project>
