@@ -6,24 +6,26 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms;
 
-public class NaturalLanguageTreeCompressing(ICompressionStrategy<IDependencyTreeNode> compressionStrategy) : ITreeCompressor<IDependencyTreeNode>
+public class NaturalLanguageTreeCompressing(
+    ICompressionStrategy<IDependencyTreeNode> compressionStrategy,
+    IProcessObserver? observer = null) : ITreeCompressor<IDependencyTreeNode>
 {
     public ICompressionStrategy<IDependencyTreeNode> CompressionStrategy { get; } = compressionStrategy;
-    
+
     public Pipeline CompressingPipeline { get; } = new Pipeline()
         {
-            ProcessObserver = new ProcessMonitor()
+            ProcessObserver = observer ?? new ProcessMonitor()
         }
         .AddFilter(FilterFactory<IDependencyTreeNode>.CreateTextToTreeFilter(new UdPipeCreateTreeStrategy()))
         .AddFilter(FilterFactory<IDependencyTreeNode>.CreateCompressionFilter(compressionStrategy));
-    
+
     public Pipeline DecompressingPipeline { get; } = new Pipeline()
-            {
-                ProcessObserver = new ProcessMonitor()
-            }
-            .AddFilter(FilterFactory<IDependencyTreeNode>.CreateDecompressionFilter(compressionStrategy));
-    
-    
+        {
+            ProcessObserver = observer ?? new ProcessMonitor()
+        }
+        .AddFilter(FilterFactory<IDependencyTreeNode>.CreateDecompressionFilter(compressionStrategy));
+
+
     public CompressedTree Compress(string text)
     {
         return CompressingPipeline.Process(text) as CompressedTree ?? throw new InvalidOperationException();
@@ -37,7 +39,8 @@ public class NaturalLanguageTreeCompressing(ICompressionStrategy<IDependencyTree
 
     public string Decompress(CompressedTree compressedTree)
     {
-        var reuslt = DecompressingPipeline.Process(compressedTree) as IDependencyTreeNode ?? throw new InvalidOperationException();
+        var reuslt = DecompressingPipeline.Process(compressedTree) as IDependencyTreeNode ??
+                     throw new InvalidOperationException();
         return reuslt.ToString() ?? "";
     }
 }

@@ -1,10 +1,12 @@
 
 using System.Globalization;
 using ConsoleApp.Framework;
+using ConsoleApp.Utils;
 using CsvHelper;
 using CsvHelper.Configuration;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
+using TreeCompressionPipeline;
 
 namespace ConsoleApp.Commands;
 
@@ -16,9 +18,13 @@ public class GenerateReport : ICommand
         public long Size { get; set; }
         public string Type { get; set; } = string.Empty; 
         public double CompressionRatio { get; set; }
+        
+        public TimeSpan TextToTreeDuration { get; set; }
         public TimeSpan CompressionTime { get; set; }
         public TimeSpan DecompressionTime { get; set; }
         public long CompressedSize { get; set; }
+        
+        
         
         
     }
@@ -29,18 +35,21 @@ public class GenerateReport : ICommand
     public void Execute()
     {
 
-        var NLPCompressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10));
+        var processTimer = new ProcessTimer();
+        var nlpCompressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10), processTimer);
         
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
             .Select(file => new FileInfo(file))
-            .OrderByDescending(file => file.Length) // Sort by size
+            .OrderBy(file => file.Length) // Sort by size
             .ToList();
         
         Console.WriteLine($"Found {files.Count} files in {DirPath}");
         
         var report = new List<FileReport>();
         
-        var faildedFiles = new List<string>();
+        var failedFiles = new List<string>();
+
+        var stopwatch = new StopWatch();
         
         foreach (var file in files)
         {
@@ -48,22 +57,16 @@ public class GenerateReport : ICommand
             {
 
                 Console.WriteLine($"Processing file: {file.Name} ({file.Length} bytes)");
-                // Here you would typically perform compression and decompression
-                //read file content
                 var fileContent = File.ReadAllText(file.FullName);
-                //compress
-                var startTime = DateTime.Now;
-                var compressedTree = NLPCompressor.Compress(fileContent);
-                var compressionTime = DateTime.Now - startTime;
-                //decompress
-                startTime = DateTime.Now;
-                var decompressedText = NLPCompressor.Decompress(compressedTree);
-                var decompressionTime = DateTime.Now - startTime;
-                //calculate compression ratio
-                var compressionRatio = (double)compressedTree.Structure.Length / fileContent.Length;
-                //calculate compression time
-                var compressedSize = compressedTree.Structure.Length;
 
+                var compressedTree = nlpCompressor.Compress(fileContent);
+
+                _ = nlpCompressor.Decompress(compressedTree);
+
+                var compressionRatio = (double)compressedTree.Structure.Length / fileContent.Length;
+
+                var compressedSize = compressedTree.Structure.Length;
+                
 
                 var fileReport = new FileReport
                 {
@@ -71,8 +74,9 @@ public class GenerateReport : ICommand
                     Size = file.Length,
                     Type = file.DirectoryName ?? string.Empty,
                     CompressionRatio = compressionRatio,
-                    CompressionTime = compressionTime,
-                    DecompressionTime = decompressionTime,
+                    CompressionTime = processTimer[ProcessType.CompressionFilter],
+                    DecompressionTime = processTimer[ProcessType.DecompressionFilter],
+                    TextToTreeDuration = processTimer[ProcessType.TextToTreeFilter],
                     CompressedSize = compressedSize,
                 };
 
@@ -80,7 +84,7 @@ public class GenerateReport : ICommand
             }
             catch
             {
-                faildedFiles.Add(file.Name);
+                failedFiles.Add(file.Name);
                 continue;
             }
         }
@@ -94,7 +98,7 @@ public class GenerateReport : ICommand
         }
 
         Console.WriteLine($"Report byl úspěšně uložen do: {csvFilePath}");
-        Console.WriteLine($"Failed files: {string.Join(", ", faildedFiles)}");
+        Console.WriteLine($"Failed files: {string.Join(", ", failedFiles)}");
 
 
     }
