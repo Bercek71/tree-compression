@@ -27,16 +27,15 @@ if [[ $title_idx -eq -1 || $text_idx -eq -1 ]]; then
   exit 1
 fi
 
-# Use Python to safely parse and extract fields (easier with quoting, newlines)
+# Python part: fixed line with backslash escape
 python3 - <<EOF
 import csv
 import os
-import sys
 
 with open("$input_file", newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        title = row['case_title'].strip().replace('/', '_').replace('\\', '_')
+        title = row['case_title'].strip().replace('/', '_').replace('\\\\', '_')
         text = row['case_text']
         if not title:
             continue

@@ -127,6 +127,13 @@ public class GenerateReport : ICommand
                 try
                 {
                     var fileContent = File.ReadAllText(file.FullName);
+                    
+                    if(fileContent.Length == 0) 
+                    {
+                        failedFiles.Add(file.Name);
+                        overallTask.Increment(1);
+                        continue;
+                    }
 
                     var compressedTree = nlpCompressor.Compress(fileContent);
 
