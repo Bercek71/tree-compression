@@ -1,9 +1,9 @@
-
 using System.Globalization;
 using ConsoleApp.Framework;
 using ConsoleApp.Utils;
 using CsvHelper;
 using CsvHelper.Configuration;
+using Spectre.Console;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 using TreeCompressionPipeline;
@@ -16,90 +16,228 @@ public class GenerateReport : ICommand
     {
         public string FileName { get; set; } = string.Empty;
         public long Size { get; set; }
-        public string Type { get; set; } = string.Empty; 
+        public string Type { get; set; } = string.Empty;
         public double CompressionRatio { get; set; }
-        
+
         public TimeSpan TextToTreeDuration { get; set; }
         public TimeSpan CompressionTime { get; set; }
         public TimeSpan DecompressionTime { get; set; }
         public long CompressedSize { get; set; }
-        
-        
-        
-        
     }
-    
+
     [Argument("directory", "Directory to scan for files.")]
     public string DirPath { get; set; } = string.Empty;
     
+    [Argument("output", "Output directory for the report.", false)]
+    public string OutputDir { get; set; } = string.Empty;
+
     public void Execute()
     {
-
+        if (string.IsNullOrEmpty(DirPath))
+        {
+            throw new ArgumentNullException(nameof(DirPath), "Directory path cannot be null or empty.");
+        }
         var processTimer = new ProcessTimer();
         var nlpCompressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10), processTimer);
+
+        // Display initialization message
+        AnsiConsole.MarkupLine("[yellow]Initializing compression engine...[/]");
         
+        // Scan directory - show this with a spinner
+        AnsiConsole.Status()
+            .Start("Scanning directory...", ctx => 
+            {
+                ctx.Spinner(Spinner.Known.Dots);
+                ctx.SpinnerStyle(Style.Parse("green"));
+                
+                // Get and sort files
+                var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
+                    .Select(file => new FileInfo(file))
+                    .OrderByDescending(file => file.Length)
+                    .ToList();
+                
+                Thread.Sleep(500); // Small visual delay for feedback
+                
+                // Show result outside of Status context to avoid nesting issues
+                return files;
+            });
+        
+        // Get files again outside of the Status context
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
             .Select(file => new FileInfo(file))
-            .OrderBy(file => file.Length) // Sort by size
+            .OrderBy(file => file.Length)
             .ToList();
-        
-        Console.WriteLine($"Found {files.Count} files in {DirPath}");
-        
-        var report = new List<FileReport>();
-        
-        var failedFiles = new List<string>();
-
-        var stopwatch = new StopWatch();
-        
-        foreach (var file in files)
+            
+        // Show file scan results
+        AnsiConsole.WriteLine();
+        var panel = new Panel($"Found [bold yellow]{files.Count}[/] files in [blue]{DirPath}[/]")
         {
-            try
+            Border = BoxBorder.Rounded,
+            Padding = new Padding(1, 0),
+            BorderStyle = new Style(Color.Green)
+        };
+        
+        var statusMessage = new Rows(
+            new Markup("[green]✓[/] [bold]File Scan Complete[/]"),
+            panel
+        );
+        
+        AnsiConsole.Write(statusMessage);
+        AnsiConsole.WriteLine();
+        
+        // Prepare for processing
+        var report = new List<FileReport>();
+        var failedFiles = new List<string>();
+        
+        // Use progress display for file processing (separate from previous Status)
+        AnsiConsole.WriteLine();
+        AnsiConsole.MarkupLine("[bold]Starting file processing...[/]");
+        AnsiConsole.WriteLine();
+        
+        var progress = AnsiConsole.Progress()
+            .AutoClear(false)
+            .HideCompleted(false)
+            .Columns(new ProgressColumn[]
             {
+                new TaskDescriptionColumn(),    // Task description
+                new ProgressBarColumn(),        // Progress bar
+                new PercentageColumn(),         // Percentage
+                new RemainingTimeColumn(),      // Remaining time
+                new SpinnerColumn(),            // Spinner
+            });
+        
+        progress.Start(ctx =>
+        {
+            // Add tasks
+            var overallTask = ctx.AddTask("[green]Processing Files[/]", maxValue: files.Count);
+            
+            var fileCounter = 0;
+            
+            foreach (var file in files)
+            {
+                fileCounter++;
 
-                Console.WriteLine($"Processing file: {file.Name} ({file.Length} bytes)");
-                var fileContent = File.ReadAllText(file.FullName);
-
-                var compressedTree = nlpCompressor.Compress(fileContent);
-
-                _ = nlpCompressor.Decompress(compressedTree);
-
-                var compressionRatio = (double)compressedTree.Structure.Length / fileContent.Length;
-
-                var compressedSize = compressedTree.Structure.Length;
+                var displayNameRaw = file.Name.Length > 20 
+                    ? string.Concat(file.Name.AsSpan(0, 17), "...")
+                    : file.Name;
+                var safeDisplayName = Markup.Escape(displayNameRaw);
+                overallTask.Description = $"[green]Processing {fileCounter}/{files.Count}: {safeDisplayName}[/]";
                 
-
-                var fileReport = new FileReport
+                try
                 {
-                    FileName = file.Name,
-                    Size = file.Length,
-                    Type = file.DirectoryName ?? string.Empty,
-                    CompressionRatio = compressionRatio,
-                    CompressionTime = processTimer[ProcessType.CompressionFilter],
-                    DecompressionTime = processTimer[ProcessType.DecompressionFilter],
-                    TextToTreeDuration = processTimer[ProcessType.TextToTreeFilter],
-                    CompressedSize = compressedSize,
-                };
-
-                report.Add(fileReport);
+                    var fileContent = File.ReadAllText(file.FullName);
+                    
+                    var compressedTree = nlpCompressor.Compress(fileContent);
+                    
+                    _ = nlpCompressor.Decompress(compressedTree);
+                    
+                    var compressionRatio = (double)compressedTree.Structure.Length / fileContent.Length;
+                    
+                    var compressedSize = compressedTree.Structure.Length;
+                    
+                    var fileReport = new FileReport
+                    {
+                        FileName = file.Name,
+                        Size = file.Length,
+                        Type = file.DirectoryName ?? string.Empty,
+                        CompressionRatio = compressionRatio,
+                        CompressionTime = processTimer[ProcessType.CompressionFilter],
+                        DecompressionTime = processTimer[ProcessType.DecompressionFilter],
+                        TextToTreeDuration = processTimer[ProcessType.TextToTreeFilter],
+                        CompressedSize = compressedSize,
+                    };
+                    
+                    report.Add(fileReport);
+                }
+                catch
+                {
+                    failedFiles.Add(file.Name);
+                }
+                
+                overallTask.Increment(1);
             }
-            catch
-            {
-                failedFiles.Add(file.Name);
-                continue;
-            }
+        });
+        
+        // Summarize the report data with a table
+        if (report.Count > 0)
+        {
+            AnsiConsole.WriteLine();
+            
+            var summaryTable = new Table()
+                .Title("[yellow]Compression Summary[/]")
+                .Border(TableBorder.Rounded)
+                .BorderColor(Color.Green);
+            
+            summaryTable.AddColumn(new TableColumn("Metric").Centered());
+            summaryTable.AddColumn(new TableColumn("Value").Centered());
+            
+            // Calculate metrics
+            var avgCompressionRatio = report.Average(r => r.CompressionRatio);
+            var maxCompression = report.Min(r => r.CompressionRatio);
+            var totalSizeBefore = report.Sum(r => r.Size);
+            var totalSizeAfter = report.Sum(r => r.CompressedSize);
+            var avgCompressionTime = new TimeSpan((long)report.Average(r => r.CompressionTime.Ticks));
+            
+            summaryTable.AddRow("Files Processed", report.Count.ToString());
+            summaryTable.AddRow("Files Failed", failedFiles.Count.ToString());
+            summaryTable.AddRow("Avg. Compression Ratio", $"{avgCompressionRatio:P2}");
+            summaryTable.AddRow("Best Compression", $"{maxCompression:P2}");
+            summaryTable.AddRow("Total Size Before", $"{BytesToString(totalSizeBefore)}");
+            summaryTable.AddRow("Total Size After", $"{BytesToString(totalSizeAfter)}");
+            summaryTable.AddRow("Total Saved", $"{BytesToString(totalSizeBefore - totalSizeAfter)}");
+            summaryTable.AddRow("Avg. Compression Time", $"{avgCompressionTime.TotalMilliseconds:F1} ms");
+            
+            AnsiConsole.Write(summaryTable);
         }
         
         //write report to csv file using csv helper
         var csvFilePath = Path.Combine(DirPath, "report.csv");
+
+        if (!string.IsNullOrEmpty(OutputDir))
+        {
+            csvFilePath = OutputDir;
+        }
         using (var writer = new StreamWriter(csvFilePath))
         using (var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture)))
         {
             csv.WriteRecords(report);
         }
-
-        Console.WriteLine($"Report byl úspěšně uložen do: {csvFilePath}");
-        Console.WriteLine($"Failed files: {string.Join(", ", failedFiles)}");
-
-
+        
+        // Show success message with saving info
+        AnsiConsole.WriteLine();
+        var savePanel = new Panel($"Report saved to: [blue]{csvFilePath}[/]")
+        {
+            Border = BoxBorder.Double,
+            Padding = new Padding(1, 0),
+            BorderStyle = new Style(Color.Green)
+        };
+        AnsiConsole.Write(savePanel);
+        
+        // Show failed files if any
+        if (failedFiles.Count <= 0) return;
+        AnsiConsole.WriteLine();
+        AnsiConsole.MarkupLine("[red]Failed files:[/]");
+            
+        var failedFilesTable = new Table().Border(TableBorder.Rounded).BorderColor(Color.Red);
+        failedFilesTable.AddColumn("File Name");
+            
+        foreach (var failedFile in failedFiles)
+        {
+            failedFilesTable.AddRow(failedFile);
+        }
+            
+        AnsiConsole.Write(failedFilesTable);
+    }
+    
+    // Helper method to format bytes to human-readable format
+    private static string BytesToString(long byteCount)
+    {
+        string[] suf = ["B", "KB", "MB", "GB", "TB", "PB", "EB"];
+        if (byteCount == 0)
+            return "0" + suf[0];
+        var bytes = Math.Abs(byteCount);
+        var place = Convert.ToInt32(Math.Floor(Math.Log(bytes, 1024)));
+        var num = Math.Round(bytes / Math.Pow(1024, place), 1);
+        return $"{(Math.Sign(byteCount) * num)}{suf[place]}";
     }
 }

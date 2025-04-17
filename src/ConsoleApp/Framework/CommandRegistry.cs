@@ -1,4 +1,5 @@
 using System.Reflection;
+using Spectre.Console;
 
 namespace ConsoleApp.Framework
 {
@@ -26,10 +27,9 @@ namespace ConsoleApp.Framework
         {
             if (!Commands.TryGetValue(commandName.ToLower(), out var commandType))
             {
-                Console.WriteLine($"Unknown command: {commandName}");
+                AnsiConsole.MarkupLine($"[red]{commandName} command not found.[/]");
                 new Help().Execute();
                 return null;
-                //throw new ArgumentException($"Command {commandName} not found");
             }
 
             var commandInstance = Activator.CreateInstance(commandType);

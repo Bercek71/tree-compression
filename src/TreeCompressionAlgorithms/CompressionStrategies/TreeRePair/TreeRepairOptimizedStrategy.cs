@@ -4,22 +4,16 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 
-public class TreeRepairOptimizedStrategy : ICompressionStrategy<IDependencyTreeNode>
+public class TreeRepairOptimizedStrategy(
+    ITreeRePairEncoder? encoder = null,
+    int minFrequency = 2,
+    int maxN = 10,
+    int minN = 2)
+    : ICompressionStrategy<IDependencyTreeNode>
 {
-    private readonly ITreeRePairEncoder _encoder;
+    private readonly ITreeRePairEncoder _encoder = encoder ?? new DepthFirstEncoder();
     private readonly Dictionary<string, string> _grammarRules = new();
     private int _nextNonTerminal = 256; // Start from ASCII 256 to avoid conflicts
-    private readonly int _minFrequency;
-    private readonly int _maxN;
-    private readonly int _minN;
-
-    public TreeRepairOptimizedStrategy(ITreeRePairEncoder? encoder = null, int minFrequency = 2, int maxN = 10, int minN = 2)
-    {
-        _encoder = encoder ?? new DepthFirstEncoder();
-        _minFrequency = minFrequency;
-        _maxN = maxN;
-        _minN = minN;
-    }
 
     public CompressedTree Compress(IDependencyTreeNode? tree)
     {
@@ -43,9 +37,9 @@ public class TreeRepairOptimizedStrategy : ICompressionStrategy<IDependencyTreeN
 
     private void CompressSequence(List<string> sequence)
     {
-        int n = _maxN;
+        var n = maxN;
         
-        while (n >= _minN)
+        while (n >= minN)
         {
             if (n > sequence.Count)
             {
@@ -57,14 +51,14 @@ public class TreeRepairOptimizedStrategy : ICompressionStrategy<IDependencyTreeN
             var (nGram, positions) = FindMostFrequentNGram(sequence, n);
             
             // If no frequent n-gram found, reduce n and try again
-            if (nGram == null || positions.Count < _minFrequency)
+            if (nGram == null || positions.Count < minFrequency)
             {
                 n--;
                 continue;
             }
             
             // Create a new symbol for this n-gram
-            string newSymbol = ((char)_nextNonTerminal++).ToString();
+            var newSymbol = ((char)_nextNonTerminal++).ToString();
             _grammarRules[newSymbol] = nGram;
             
             // Replace all occurrences in linear time
@@ -86,24 +80,24 @@ public class TreeRepairOptimizedStrategy : ICompressionStrategy<IDependencyTreeN
         var window = new List<string>(n);
         
         // Prime the window with first n-1 elements
-        for (int i = 0; i < n - 1 && i < sequence.Count; i++)
+        for (var i = 0; i < n - 1 && i < sequence.Count; i++)
         {
             window.Add(sequence[i]);
         }
         
         // Slide window through sequence in linear time
-        for (int i = n - 1; i < sequence.Count; i++)
+        for (var i = n - 1; i < sequence.Count; i++)
         {
             // Complete the window
             window.Add(sequence[i]);
             
             // Get string representation
-            string nGramStr = string.Join(" ", window);
+            var nGramStr = string.Join(" ", window);
             
             // Record position
             if (!nGramMap.TryGetValue(nGramStr, out var positions))
             {
-                positions = new List<int>();
+                positions = [];
                 nGramMap[nGramStr] = positions;
             }
             
@@ -116,7 +110,7 @@ public class TreeRepairOptimizedStrategy : ICompressionStrategy<IDependencyTreeN
         // Find most frequent in linear time relative to unique n-grams (bounded by n)
         string? mostFrequentNGram = null;
         List<int>? mostFrequentPositions = null;
-        int maxFrequency = _minFrequency - 1;
+        var maxFrequency = minFrequency - 1;
         
         foreach (var entry in nGramMap)
         {
@@ -147,8 +141,8 @@ public class TreeRepairOptimizedStrategy : ICompressionStrategy<IDependencyTreeN
         
         // Instead of list operations for each position, rebuild sequence in one pass
         var newSequence = new List<string>(sequence.Count);
-        int currentPos = 0;
-        int positionIndex = positions.Count - 1; // Start with the smallest position
+        var currentPos = 0;
+        var positionIndex = positions.Count - 1; // Start with the smallest position
         
         // Process sequence in one pass
         while (currentPos < sequence.Count)

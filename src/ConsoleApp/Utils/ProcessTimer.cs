@@ -24,7 +24,6 @@ public class ProcessTimer : IProcessObserver
         if (process != _processStack.Peek()) return;
         var elapsed = _stopWatch.Stop();
         _processStack.Pop();
-        Console.WriteLine($"{process} completed in {elapsed.TotalMilliseconds} ms");
         if (!_processTimes.TryAdd(process, elapsed))
         {
             _processTimes[process] = elapsed;
@@ -34,7 +33,6 @@ public class ProcessTimer : IProcessObserver
     public void OnError(string process, Exception error)
     {
         OnComplete(process, error.Message);
-        Console.WriteLine($"{process} failed with error: {error.Message}");
     }
 
     public TimeSpan this[string compressionFilter] => _processTimes[compressionFilter];
