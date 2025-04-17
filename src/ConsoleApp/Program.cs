@@ -29,7 +29,7 @@ public static class Program
 
             "GenerateReport",
             "--directory",
-            "Resources/Texts/",
+            "Resources/Texts/technical_docs/kernel_docs",
         ];
 #endif
         

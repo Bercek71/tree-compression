@@ -1,8 +1,8 @@
 using System.ComponentModel;
 using ConsoleApp.Framework;
+using ConsoleApp.Utils;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
-using TreeCompressionPipeline;
 using Spectre.Console;
 
 namespace ConsoleApp.Commands;
@@ -11,7 +11,7 @@ namespace ConsoleApp.Commands;
 public class FrameworkTest : ICommand
 {
     [Argument("input", "The input string to compress")]
-    public required string InputFile { get; set; }
+    private string InputFile { get; set; }
 
     public void Execute()
     {
@@ -29,13 +29,20 @@ public class FrameworkTest : ICommand
                 var testingSentence = File.ReadAllText(InputFile);
                 AnsiConsole.MarkupLine($"[bold]Loaded sentence length:[/] [blue]{testingSentence.Length}[/]");
 
-                var compressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10));
+                var processTimer = new ProcessTimer();
+                var compressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10), processTimer);
 
                 ctx.Status("Compressing...");
                 var compressedTree = compressor.Compress(testingSentence);
 
                 ctx.Status("Decompressing...");
                 var decompressedText = compressor.Decompress(compressedTree);
+
+                if(processTimer.Node?.ToString() != decompressedText)
+                {
+                    AnsiConsole.MarkupLine("[red]Error:[/] Decompressed text does not match original.");
+                    throw new InvalidOperationException("Decompressed text does not match original.");
+                }
 
                 AnsiConsole.Write(new Rule("[bold green]Compression Summary[/]").RuleStyle("grey"));
 

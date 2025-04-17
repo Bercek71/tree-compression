@@ -25,16 +25,21 @@ namespace ConsoleApp.Framework
         public static void BindArguments(object target, string[] args)
         {
             var parser = new ArgumentParser(args);
-            var properties = target.GetType().GetProperties();
+            var type = target.GetType();
+
+            // Získání všech vlastností (včetně privátních)
+            var properties = type.GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
 
             foreach (var prop in properties)
             {
                 var attr = prop.GetCustomAttribute<ArgumentAttribute>();
                 if (attr == null) continue;
+
                 var value = parser.GetArgumentValue(attr.Name);
                 if (value != null)
                 {
-                    prop.SetValue(target, value);
+                    // Nastavení hodnoty i pro privátní vlastnosti
+                    prop.SetValue(target, Convert.ChangeType(value, prop.PropertyType));
                 }
                 else if (attr.Required)
                 {

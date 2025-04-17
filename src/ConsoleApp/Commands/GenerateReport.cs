@@ -26,10 +26,10 @@ public class GenerateReport : ICommand
     }
 
     [Argument("directory", "Directory to scan for files.")]
-    public string DirPath { get; set; } = string.Empty;
-    
+    private string DirPath { get; set; } = string.Empty;
+
     [Argument("output", "Output directory for the report.", false)]
-    public string OutputDir { get; set; } = string.Empty;
+    private string OutputDir { get; set; } = string.Empty;
 
     public void Execute()
     {
@@ -37,37 +37,38 @@ public class GenerateReport : ICommand
         {
             throw new ArgumentNullException(nameof(DirPath), "Directory path cannot be null or empty.");
         }
+
         var processTimer = new ProcessTimer();
         var nlpCompressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10), processTimer);
 
         // Display initialization message
         AnsiConsole.MarkupLine("[yellow]Initializing compression engine...[/]");
-        
+
         // Scan directory - show this with a spinner
         AnsiConsole.Status()
-            .Start("Scanning directory...", ctx => 
+            .Start("Scanning directory...", ctx =>
             {
                 ctx.Spinner(Spinner.Known.Dots);
                 ctx.SpinnerStyle(Style.Parse("green"));
-                
+
                 // Get and sort files
                 var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
                     .Select(file => new FileInfo(file))
-                    .OrderByDescending(file => file.Length)
+                //    .OrderByDescending(file => file.Length)
                     .ToList();
-                
+
                 Thread.Sleep(500); // Small visual delay for feedback
-                
+
                 // Show result outside of Status context to avoid nesting issues
                 return files;
             });
-        
+
         // Get files again outside of the Status context
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
             .Select(file => new FileInfo(file))
             .OrderBy(file => file.Length)
             .ToList();
-            
+
         // Show file scan results
         AnsiConsole.WriteLine();
         var panel = new Panel($"Found [bold yellow]{files.Count}[/] files in [blue]{DirPath}[/]")
@@ -76,65 +77,74 @@ public class GenerateReport : ICommand
             Padding = new Padding(1, 0),
             BorderStyle = new Style(Color.Green)
         };
-        
+
         var statusMessage = new Rows(
             new Markup("[green]✓[/] [bold]File Scan Complete[/]"),
             panel
         );
-        
+
         AnsiConsole.Write(statusMessage);
         AnsiConsole.WriteLine();
-        
+
         // Prepare for processing
         var report = new List<FileReport>();
         var failedFiles = new List<string>();
-        
+
         // Use progress display for file processing (separate from previous Status)
         AnsiConsole.WriteLine();
         AnsiConsole.MarkupLine("[bold]Starting file processing...[/]");
         AnsiConsole.WriteLine();
-        
+
         var progress = AnsiConsole.Progress()
             .AutoClear(false)
             .HideCompleted(false)
             .Columns(new ProgressColumn[]
             {
-                new TaskDescriptionColumn(),    // Task description
-                new ProgressBarColumn(),        // Progress bar
-                new PercentageColumn(),         // Percentage
-                new RemainingTimeColumn(),      // Remaining time
-                new SpinnerColumn(),            // Spinner
+                new TaskDescriptionColumn(), // Task description
+                new ProgressBarColumn(), // Progress bar
+                new PercentageColumn(), // Percentage
+                new RemainingTimeColumn(), // Remaining time
+                new SpinnerColumn(), // Spinner
             });
-        
+
         progress.Start(ctx =>
         {
             // Add tasks
             var overallTask = ctx.AddTask("[green]Processing Files[/]", maxValue: files.Count);
-            
+
             var fileCounter = 0;
-            
+
             foreach (var file in files)
             {
                 fileCounter++;
 
-                var displayNameRaw = file.Name.Length > 20 
+                var displayNameRaw = file.Name.Length > 20
                     ? string.Concat(file.Name.AsSpan(0, 17), "...")
                     : file.Name;
                 var safeDisplayName = Markup.Escape(displayNameRaw);
                 overallTask.Description = $"[green]Processing {fileCounter}/{files.Count}: {safeDisplayName}[/]";
-                
+
                 try
                 {
                     var fileContent = File.ReadAllText(file.FullName);
-                    
+
                     var compressedTree = nlpCompressor.Compress(fileContent);
-                    
-                    _ = nlpCompressor.Decompress(compressedTree);
-                    
+
+                    var decompressed = nlpCompressor.Decompress(compressedTree);
+
                     var compressionRatio = (double)compressedTree.Structure.Length / fileContent.Length;
-                    
+
                     var compressedSize = compressedTree.Structure.Length;
-                    
+
+                    if (processTimer.Node != null)
+                    {
+                        //assert equality with decompressed
+                        if (processTimer.Node.ToString() != decompressed)
+                        {
+                            throw new InvalidOperationException("Decompressed text does not match original.");
+                        }
+                    }
+
                     var fileReport = new FileReport
                     {
                         FileName = file.Name,
@@ -146,38 +156,38 @@ public class GenerateReport : ICommand
                         TextToTreeDuration = processTimer[ProcessType.TextToTreeFilter],
                         CompressedSize = compressedSize,
                     };
-                    
+
                     report.Add(fileReport);
                 }
                 catch
                 {
                     failedFiles.Add(file.Name);
                 }
-                
+
                 overallTask.Increment(1);
             }
         });
-        
+
         // Summarize the report data with a table
         if (report.Count > 0)
         {
             AnsiConsole.WriteLine();
-            
+
             var summaryTable = new Table()
                 .Title("[yellow]Compression Summary[/]")
                 .Border(TableBorder.Rounded)
                 .BorderColor(Color.Green);
-            
+
             summaryTable.AddColumn(new TableColumn("Metric").Centered());
             summaryTable.AddColumn(new TableColumn("Value").Centered());
-            
+
             // Calculate metrics
             var avgCompressionRatio = report.Average(r => r.CompressionRatio);
             var maxCompression = report.Min(r => r.CompressionRatio);
             var totalSizeBefore = report.Sum(r => r.Size);
             var totalSizeAfter = report.Sum(r => r.CompressedSize);
             var avgCompressionTime = new TimeSpan((long)report.Average(r => r.CompressionTime.Ticks));
-            
+
             summaryTable.AddRow("Files Processed", report.Count.ToString());
             summaryTable.AddRow("Files Failed", failedFiles.Count.ToString());
             summaryTable.AddRow("Avg. Compression Ratio", $"{avgCompressionRatio:P2}");
@@ -186,10 +196,13 @@ public class GenerateReport : ICommand
             summaryTable.AddRow("Total Size After", $"{BytesToString(totalSizeAfter)}");
             summaryTable.AddRow("Total Saved", $"{BytesToString(totalSizeBefore - totalSizeAfter)}");
             summaryTable.AddRow("Avg. Compression Time", $"{avgCompressionTime.TotalMilliseconds:F1} ms");
-            
+            summaryTable.AddRow("Best Compression", $"{maxCompression:F1} ms");
+            summaryTable.AddRow("Avg. Decompression Time",
+                $"{report.Average(r => r.DecompressionTime.TotalMilliseconds):F1} ms");
+
             AnsiConsole.Write(summaryTable);
         }
-        
+
         //write report to csv file using csv helper
         var csvFilePath = Path.Combine(DirPath, "report.csv");
 
@@ -197,12 +210,13 @@ public class GenerateReport : ICommand
         {
             csvFilePath = OutputDir;
         }
+
         using (var writer = new StreamWriter(csvFilePath))
         using (var csv = new CsvWriter(writer, new CsvConfiguration(CultureInfo.InvariantCulture)))
         {
             csv.WriteRecords(report);
         }
-        
+
         // Show success message with saving info
         AnsiConsole.WriteLine();
         var savePanel = new Panel($"Report saved to: [blue]{csvFilePath}[/]")
@@ -211,24 +225,35 @@ public class GenerateReport : ICommand
             Padding = new Padding(1, 0),
             BorderStyle = new Style(Color.Green)
         };
-        AnsiConsole.Write(savePanel);
-        
+
         // Show failed files if any
-        if (failedFiles.Count <= 0) return;
-        AnsiConsole.WriteLine();
-        AnsiConsole.MarkupLine("[red]Failed files:[/]");
-            
-        var failedFilesTable = new Table().Border(TableBorder.Rounded).BorderColor(Color.Red);
-        failedFilesTable.AddColumn("File Name");
-            
-        foreach (var failedFile in failedFiles)
+        if (failedFiles.Count > 0)
         {
-            failedFilesTable.AddRow(failedFile);
+            AnsiConsole.WriteLine();
+
+            if (failedFiles.Count < 5)
+            {
+                var failedFilesTable = new Table().Border(TableBorder.Rounded).BorderColor(Color.Red);
+                failedFilesTable.Title("[yellow]Failed files[/]");
+                failedFilesTable.AddColumn("File Name");
+                foreach (var failedFile in failedFiles)
+                {
+                    failedFilesTable.AddRow(failedFile);
+                }
+
+                AnsiConsole.Write(failedFilesTable);
+            }
+            else
+            {
+                AnsiConsole.Write(
+                    new Panel($"[bold]Failed files: {failedFiles.Count}/{files.Count}[/]").BorderColor(Color.Red));
+            }
         }
-            
-        AnsiConsole.Write(failedFilesTable);
+
+        AnsiConsole.Write(savePanel);
     }
-    
+
+
     // Helper method to format bytes to human-readable format
     private static string BytesToString(long byteCount)
     {
