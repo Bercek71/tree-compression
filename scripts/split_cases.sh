@@ -15,9 +15,9 @@ title_idx=-1
 text_idx=-1
 
 for i in "${!cols[@]}"; do
-  if [[ "${cols[$i]}" == "\"case_title\"" || "${cols[$i]}" == "case_title" ]]; then
+  if [[ "${cols[$i]}" == "\"title\"" || "${cols[$i]}" == "title" ]]; then
     title_idx=$i
-  elif [[ "${cols[$i]}" == "\"case_text\"" || "${cols[$i]}" == "case_text" ]]; then
+  elif [[ "${cols[$i]}" == "\"content\"" || "${cols[$i]}" == "" ]]; then
     text_idx=$i
   fi
 done
@@ -35,8 +35,8 @@ import os
 with open("$input_file", newline='', encoding='utf-8') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        title = row['case_title'].strip().replace('/', '_').replace('\\\\', '_')
-        text = row['case_text']
+        title = row['title'].strip().replace('/', '_').replace('\\\\', '_')
+        text = row['content']
         if not title:
             continue
         filename = f"{title}.txt"

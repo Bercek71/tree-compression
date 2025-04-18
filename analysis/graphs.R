@@ -1,5 +1,5 @@
 # ================================================================
-# KOMPRESNÍ ANALÝZA - PŘEPRACOVANÝ KÓD ####
+# KOMPRESNÍ ANALÝZA
 # ================================================================
 
 # Instalace a načtení potřebných knihoven

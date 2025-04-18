@@ -48,6 +48,7 @@ public class GenerateReport : ICommand
 
         // Scan directory - show this with a spinner
         AnsiConsole.Status()
+
             .Start("Scanning directory...", ctx =>
             {
                 ctx.Spinner(Spinner.Known.Dots);
@@ -56,7 +57,7 @@ public class GenerateReport : ICommand
                 // Get and sort files
                 var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
                     .Select(file => new FileInfo(file))
-                //    .OrderByDescending(file => file.Length)
+                    .OrderByDescending(file => file.Length)
                     .ToList();
 
                 Thread.Sleep(500); // Small visual delay for feedback
@@ -68,7 +69,7 @@ public class GenerateReport : ICommand
         // Get files again outside of the Status context
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
             .Select(file => new FileInfo(file))
-            .OrderBy(file => file.Length)
+            .OrderByDescending(file => file.Length)
             .ToList();
 
         // Show file scan results
