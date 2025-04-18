@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using System.Globalization;
 using ConsoleApp.Framework;
 using ConsoleApp.Utils;
@@ -18,11 +19,12 @@ public class GenerateReport : ICommand
         public long Size { get; set; }
         public string Type { get; set; } = string.Empty;
         public double CompressionRatio { get; set; }
-
+        
+        public long EncodedTreeSize { get; set; }
         public TimeSpan TextToTreeDuration { get; set; }
         public TimeSpan CompressionTime { get; set; }
         public TimeSpan DecompressionTime { get; set; }
-        public long CompressedSize { get; set; }
+        public int CompressedSize { get; set; }
     }
 
     [Argument("directory", "Directory to scan for files.")]
@@ -139,10 +141,12 @@ public class GenerateReport : ICommand
 
                     var decompressed = nlpCompressor.Decompress(compressedTree);
 
-                    var compressionRatio = (double)compressedTree.Structure.Length / fileContent.Length;
+                    var compressedSize = compressedTree.GetSize();
 
-                    var compressedSize = compressedTree.Structure.Length;
+                    var compressionRatio = (double) compressedTree.GetSize() / fileContent.Length;
 
+                    var encoder = new DepthFirstEncoder();
+                    
                     if (processTimer.Node != null)
                     {
                         //assert equality with decompressed
@@ -152,6 +156,7 @@ public class GenerateReport : ICommand
                         }
                     }
 
+                    Debug.Assert(processTimer.Node != null, "processTimer.Node != null");
                     var fileReport = new FileReport
                     {
                         FileName = file.Name,
@@ -162,6 +167,8 @@ public class GenerateReport : ICommand
                         DecompressionTime = processTimer[ProcessType.DecompressionFilter],
                         TextToTreeDuration = processTimer[ProcessType.TextToTreeFilter],
                         CompressedSize = compressedSize,
+                        
+                        EncodedTreeSize = encoder.EncodeTree(processTimer.Node).Sum(x => x.Length)
                     };
 
                     report.Add(fileReport);

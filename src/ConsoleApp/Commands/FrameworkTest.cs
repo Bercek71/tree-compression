@@ -29,34 +29,38 @@ public class FrameworkTest : ICommand
                 var testingSentence = File.ReadAllText(InputFile);
                 AnsiConsole.MarkupLine($"[bold]Loaded sentence length:[/] [blue]{testingSentence.Length}[/]");
 
-                var processTimer = new ProcessTimer();
+                var processTimer = new ProcessTimer(ctx);
                 var compressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10), processTimer);
 
-                ctx.Status("Compressing...");
                 var compressedTree = compressor.Compress(testingSentence);
 
-                ctx.Status("Decompressing...");
                 var decompressedText = compressor.Decompress(compressedTree);
+                ctx.Status("Completed.");                
 
-                if(processTimer.Node?.ToString() != decompressedText)
-                {
-                    AnsiConsole.MarkupLine("[red]Error:[/] Decompressed text does not match original.");
-                    throw new InvalidOperationException("Decompressed text does not match original.");
-                }
+                // if(processTimer.Node?.ToString() != decompressedText)
+                // {
+                //     AnsiConsole.MarkupLine("[red]Error:[/] Decompressed text does not match original.");
+                //     throw new InvalidOperationException("Decompressed text does not match original.");
+                // }
+                var encoder = new DepthFirstEncoder();
 
                 AnsiConsole.Write(new Rule("[bold green]Compression Summary[/]").RuleStyle("grey"));
+                //how to 
 
-                var table = new Table()
-                    .Border(TableBorder.Rounded)
-                    .AddColumn("Metric")
-                    .AddColumn("Value")
-                    .AddRow("Original Length", testingSentence.Length.ToString())
-                    .AddRow("Decompressed Length", decompressedText.Length.ToString())
-                    .AddRow("Compressed Tree Size", compressedTree.Structure.Length.ToString())
-                    .AddRow("Compression Ratio", 
-                        $"{(double)compressedTree.Structure.Length / testingSentence.Length:F3}");
+                if (processTimer.Node != null)
+                {
+                    var table = new Table()
+                        .Border(TableBorder.Rounded)
+                        .AddColumn("Metric")
+                        .AddColumn("Value")
+                        .AddRow("Original Length", testingSentence.Length.ToString())
+                        .AddRow("Decompressed Length", decompressedText.Length.ToString())
+                        .AddRow("Encoded tree size", encoder.EncodeTree(processTimer.Node).ToList().Sum(x => x.Length).ToString())
+                        .AddRow("Compression Ratio", 
+                            $"{(double)compressedTree.GetSize() / testingSentence.Length:F3}");
 
-                AnsiConsole.Write(table);
+                    AnsiConsole.Write(table);
+                }
 
                 AnsiConsole.MarkupLine("\n[bold green]Decompressed Text Preview:[/]");
                 AnsiConsole.WriteLine(decompressedText[..Math.Min(500, decompressedText.Length)] + "...");

@@ -1,18 +1,26 @@
+using System.Reflection.Metadata;
+using Spectre.Console;
 using TreeCompressionPipeline;
 using TreeCompressionPipeline.TreeStructure;
 
 namespace ConsoleApp.Utils;
 
-public class ProcessTimer : IProcessObserver
+public class ProcessTimer(StatusContext? ctx = null) : IProcessObserver
 {
     private readonly StopWatch _stopWatch = new StopWatch();
     private readonly Stack<string> _processStack = new Stack<string>();
     private readonly Dictionary<string, TimeSpan> _processTimes = new Dictionary<string, TimeSpan>();
+    
+    
     public IDependencyTreeNode? Node { get; private set; }
 
     public void OnStart(string process)
     {
         _processStack.Push(process);
+        if (ctx != null)
+        {
+            ctx.Status($"[yellow]Processing {process}[/]");
+        }
         _stopWatch.Start();
     }
 

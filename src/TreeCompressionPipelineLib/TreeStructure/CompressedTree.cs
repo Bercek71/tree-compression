@@ -1,3 +1,4 @@
+using System.Net.Mime;
 using System.Text;
 
 namespace TreeCompressionPipeline.TreeStructure;
@@ -35,5 +36,15 @@ public class CompressedTree
         }
         sb.AppendLine($"Structure: {Structure.Length} bytes");
         return sb.ToString();
+    }
+
+    public int GetSize()
+    {
+        var size = 0;
+        size = Metadata.Sum(kvp => kvp.Value.Length / 3);
+        
+        size += Structure.Length;
+        
+        return size;
     }
 }

@@ -19,9 +19,9 @@ public static class Program
             //"UDPipeTest"
 
 
-            //"FrameworkTest",
-            //"--input",
-            //"Resources/Texts/prose/old-man-and-the-sea.txt",
+            // "FrameworkTest",
+            // "--input",
+            // "Resources/Texts/prose/old-man-and-the-sea.txt",
 
             //"Resources/Texts/odyssey.txt",
 
@@ -29,7 +29,7 @@ public static class Program
 
             "GenerateReport",
             "--directory",
-            "Resources/Texts/legal_papers",
+            "Resources/Texts/",
         ];
 #endif
         
