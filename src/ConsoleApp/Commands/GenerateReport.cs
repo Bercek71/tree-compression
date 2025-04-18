@@ -69,7 +69,7 @@ public class GenerateReport : ICommand
         // Get files again outside of the Status context
         var files = Directory.GetFiles(DirPath, "*", SearchOption.AllDirectories)
             .Select(file => new FileInfo(file))
-            .OrderByDescending(file => file.Length)
+            .OrderBy(file => file.Length)
             .ToList();
 
         // Show file scan results
