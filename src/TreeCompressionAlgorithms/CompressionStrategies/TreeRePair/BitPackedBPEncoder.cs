@@ -1,9 +1,5 @@
 using TreeCompressionPipeline.TreeStructure;
 using System.Collections;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 
@@ -46,12 +42,12 @@ public class BitPackedBPEncoder : ITreeRePairEncoder
         if (list.Count == 0) return null;
 
         // Decode structure from base64
-        byte[] packedBits = System.Convert.FromBase64String(list[0]);
-        BitArray bitArray = new BitArray(packedBits);
+        var packedBits = System.Convert.FromBase64String(list[0]);
+        var bitArray = new BitArray(packedBits);
         var bits = bitArray.Cast<bool>().ToList(); // convert to list<bool> for indexing
 
-        int bitIndex = 0;
-        int valIndex = 1; // starts after structure
+        var bitIndex = 0;
+        var valIndex = 1; // starts after structure
         return Decode(bits, ref bitIndex, list, ref valIndex);
     }
 
