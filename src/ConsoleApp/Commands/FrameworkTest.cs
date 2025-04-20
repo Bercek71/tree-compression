@@ -4,6 +4,7 @@ using ConsoleApp.Utils;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 using Spectre.Console;
+using TreeCompressionPipeline.CompressionStrategies.TreeRePair;
 
 namespace ConsoleApp.Commands;
 
@@ -30,7 +31,7 @@ public class FrameworkTest : ICommand
                 AnsiConsole.MarkupLine($"[bold]Loaded sentence length:[/] [blue]{testingSentence.Length}[/]");
 
                 var processTimer = new ProcessTimer(ctx);
-                var compressor = new NaturalLanguageTreeCompressing(new TreeRepairOptimizedStrategy(maxN: 10), processTimer);
+                var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategy(), processTimer);
 
                 var compressedTree = compressor.Compress(testingSentence);
 

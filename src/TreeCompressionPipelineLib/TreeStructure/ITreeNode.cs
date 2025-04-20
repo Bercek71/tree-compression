@@ -8,5 +8,5 @@ public interface ITreeNode
     /// <summary>
     /// Hodnota uzlu stromu, může být cokoliv.
     /// </summary>
-    object Value { get; }
+    object Value { get; set; }
 }

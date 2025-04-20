@@ -4,7 +4,7 @@ namespace TreeCompressionPipeline.TreeStructure;
 
 public class DependencyTreeNode(string value) : IDependencyTreeNode
 {
-    public object Value { get; } = value;
+    public object Value { get; set; } = value;
     public List<IDependencyTreeNode> LeftChildren { get; } = [];
     public List<IDependencyTreeNode> RightChildren { get; } = [];
 

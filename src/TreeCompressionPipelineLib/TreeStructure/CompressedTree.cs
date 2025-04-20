@@ -41,7 +41,7 @@ public class CompressedTree
     public int GetSize()
     {
         var size = 0;
-        size = Metadata.Sum(kvp => kvp.Value.Length / 3);
+        size = Metadata.Sum(kvp => kvp.Value.Length);
         
         size += Structure.Length;
         

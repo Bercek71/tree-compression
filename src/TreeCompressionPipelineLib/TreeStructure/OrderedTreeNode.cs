@@ -3,7 +3,7 @@ namespace TreeCompressionPipeline.TreeStructure;
 public class OrderedTreeNode(object value) : IOrderedTreeNode
 {
     public IOrderedTreeNode? Parent { get; set; }
-    public object Value { get; init; } = value;
+    public object Value { get; set; } = value;
     public List<IOrderedTreeNode> Children { get; } = [];
 
     public override string ToString()

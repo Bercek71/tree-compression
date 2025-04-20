@@ -20,5 +20,5 @@ public class XmlTreeNode(string name) : IOrderedTreeNode
         }
     }
 
-    public object Value { get; } = name;
+    public object Value { get; set; } = name;
 }
