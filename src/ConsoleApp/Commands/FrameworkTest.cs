@@ -4,7 +4,6 @@ using ConsoleApp.Utils;
 using TreeCompressionAlgorithms;
 using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 using Spectre.Console;
-using TreeCompressionPipeline.CompressionStrategies.TreeRePair;
 
 namespace ConsoleApp.Commands;
 

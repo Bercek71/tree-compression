@@ -1,12 +1,7 @@
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using TreeCompressionPipeline.TreeStructure;
 using TreeCompressionPipeline.CompressionStrategies;
+using TreeCompressionPipeline.TreeStructure;
 
-namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
+namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
 {
     /// <summary>
     /// A complete TreeRePair implementation that carefully preserves the entire tree structure.
@@ -131,9 +126,6 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
 
             void TraverseTree(IDependencyTreeNode node)
             {
-                if (node == null)
-                    return;
-
                 // Count digrams in left children
                 CountDigramsInList(node.LeftChildren, frequencies);
 
@@ -157,21 +149,21 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private void CountDigramsInList(List<IDependencyTreeNode> nodes, Dictionary<string, int> frequencies)
         {
-            for (int i = 0; i < nodes.Count - 1; i++)
+            for (var i = 0; i < nodes.Count - 1; i++)
             {
-                string firstValue = nodes[i].Value.ToString();
-                string secondValue = nodes[i + 1].Value.ToString();
+                var firstValue = nodes[i].Value.ToString() ?? string.Empty;
+                var secondValue = nodes[i + 1].Value.ToString() ?? string.Empty;
 
                 // Skip if either node is a special node type
                 if (IsSpecialNode(firstValue) || IsSpecialNode(secondValue))
                     continue;
 
                 // Create a key for this digram
-                string key = $"{firstValue}|{secondValue}";
+                var key = $"{firstValue}|{secondValue}";
 
                 // Count frequency
-                if (frequencies.ContainsKey(key))
-                    frequencies[key]++;
+                if (frequencies.TryGetValue(key, out var value))
+                    frequencies[key] = ++value;
                 else
                     frequencies[key] = 1;
             }
@@ -180,9 +172,9 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// <summary>
         /// Checks if a node value is a special system node.
         /// </summary>
-        private bool IsSpecialNode(string value)
+        private static bool IsSpecialNode(string value)
         {
-            return value == "<DocumentRoot>" || value == "<root>";
+            return value is "<DocumentRoot>" or "<root>";
         }
 
         /// <summary>
@@ -190,46 +182,13 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private bool ReplaceDigramsInTree(IDependencyTreeNode root, string firstValue, string secondValue, string ruleName)
         {
-            bool replacedAny = false;
+            var replacedAny = false;
 
-            bool ReplaceInList(List<IDependencyTreeNode> nodes)
-            {
-                bool replaced = false;
-
-                for (int i = 0; i < nodes.Count - 1; i++)
-                {
-                    if (nodes[i].Value.ToString() == firstValue &&
-                        nodes[i + 1].Value.ToString() == secondValue)
-                    {
-                        // Create rule node
-                        var ruleNode = new DependencyTreeNode(ruleName);
-
-                        // Copy first node's left children to rule node
-                        foreach (var child in nodes[i].LeftChildren)
-                            ruleNode.AddLeftChild(DeepCopyTree(child));
-
-                        // Copy second node's right children to rule node
-                        foreach (var child in nodes[i + 1].RightChildren)
-                            ruleNode.AddRightChild(DeepCopyTree(child));
-
-                        // Replace the two nodes with the rule node
-                        nodes.RemoveAt(i);
-                        nodes.RemoveAt(i);
-                        nodes.Insert(i, ruleNode);
-
-                        replaced = true;
-                        i--; // Adjust index
-                    }
-                }
-
-                return replaced;
-            }
+            TraverseTree(root);
+            return replacedAny;
 
             void TraverseTree(IDependencyTreeNode node)
             {
-                if (node == null)
-                    return;
-
                 // Replace in this node's children
                 if (ReplaceInList(node.LeftChildren))
                     replacedAny = true;
@@ -242,21 +201,47 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
                 var leftChildren = new List<IDependencyTreeNode>(node.LeftChildren);
                 var rightChildren = new List<IDependencyTreeNode>(node.RightChildren);
 
-                foreach (var child in leftChildren)
+                foreach (var child in leftChildren.Where(child => node.LeftChildren.Contains(child)))
                 {
-                    if (node.LeftChildren.Contains(child))
-                        TraverseTree(child);
+                    TraverseTree(child);
                 }
 
-                foreach (var child in rightChildren)
+                foreach (var child in rightChildren.Where(child => node.RightChildren.Contains(child)))
                 {
-                    if (node.RightChildren.Contains(child))
-                        TraverseTree(child);
+                    TraverseTree(child);
                 }
             }
 
-            TraverseTree(root);
-            return replacedAny;
+            bool ReplaceInList(List<IDependencyTreeNode> nodes)
+            {
+                var replaced = false;
+
+                for (var i = 0; i < nodes.Count - 1; i++)
+                {
+                    if (nodes[i].Value.ToString() != firstValue ||
+                        nodes[i + 1].Value.ToString() != secondValue) continue;
+                    // Create rule node
+                    var ruleNode = new DependencyTreeNode(ruleName);
+
+                    // Copy first node's left children to rule node
+                    foreach (var child in nodes[i].LeftChildren)
+                        ruleNode.AddLeftChild(DeepCopyTree(child));
+
+                    // Copy second node's right children to rule node
+                    foreach (var child in nodes[i + 1].RightChildren)
+                        ruleNode.AddRightChild(DeepCopyTree(child));
+
+                    // Replace the two nodes with the rule node
+                    nodes.RemoveAt(i);
+                    nodes.RemoveAt(i);
+                    nodes.Insert(i, ruleNode);
+
+                    replaced = true;
+                    i--; // Adjust index
+                }
+
+                return replaced;
+            }
         }
 
         /// <summary>
@@ -365,9 +350,9 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private class SubtreeNode
         {
-            public string Value { get; set; }
-            public List<SubtreeNode> LeftChildren { get; set; } = new List<SubtreeNode>();
-            public List<SubtreeNode> RightChildren { get; set; } = new List<SubtreeNode>();
+            public string Value { get; init; } = string.Empty;
+            public List<SubtreeNode> LeftChildren { get; init; } = [];
+            public List<SubtreeNode> RightChildren { get; init; } = [];
         }
 
         /// <summary>
@@ -375,36 +360,30 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private IDependencyTreeNode ReconstructTree(IDependencyTreeNode node, Dictionary<string, List<SubtreeNode>> expandedRules)
         {
-            if (node == null)
-                return null;
-            
-            string nodeValue = node.Value.ToString();
+            string nodeValue = node.Value.ToString() ?? string.Empty;
             
             // If this is a rule reference, expand it
-            if (nodeValue.StartsWith("R") && expandedRules.ContainsKey(nodeValue))
+            if (nodeValue.StartsWith("R") && expandedRules.TryGetValue(nodeValue, out var expansion))
             {
                 // Get the expanded rule
-                var expansion = expandedRules[nodeValue];
                 if (expansion.Count == 0)
                     return new DependencyTreeNode("<empty>");
                 
                 // Create nodes for the expansion
-                List<IDependencyTreeNode> expandedNodes = new List<IDependencyTreeNode>();
+                var expandedNodes = new List<IDependencyTreeNode>();
                 foreach (var subNode in expansion)
                 {
                     var treeNode = new DependencyTreeNode(subNode.Value);
                     
                     // Add left children
-                    foreach (var leftChild in subNode.LeftChildren)
+                    foreach (var childNode in subNode.LeftChildren.Select(leftChild => CreateNodeFromSubtree(leftChild, expandedRules)))
                     {
-                        var childNode = CreateNodeFromSubtree(leftChild, expandedRules);
                         treeNode.AddLeftChild(childNode);
                     }
                     
                     // Add right children
-                    foreach (var rightChild in subNode.RightChildren)
+                    foreach (var childNode in subNode.RightChildren.Select(rightChild => CreateNodeFromSubtree(rightChild, expandedRules)))
                     {
-                        var childNode = CreateNodeFromSubtree(rightChild, expandedRules);
                         treeNode.AddRightChild(childNode);
                     }
                     
@@ -436,7 +415,7 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
                 
                 // Connect the expanded nodes in a chain
                 IDependencyTreeNode current = resultNode;
-                for (int i = 1; i < expandedNodes.Count; i++)
+                for (var i = 1; i < expandedNodes.Count; i++)
                 {
                     current.AddRightChild(expandedNodes[i]);
                     current = expandedNodes[i];
@@ -478,31 +457,27 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// <summary>
         /// Creates a tree node from a subtree node.
         /// </summary>
-        private IDependencyTreeNode CreateNodeFromSubtree(SubtreeNode subtree, Dictionary<string, List<SubtreeNode>> expandedRules)
+        private static IDependencyTreeNode CreateNodeFromSubtree(SubtreeNode subtree, Dictionary<string, List<SubtreeNode>> expandedRules)
         {
-            if (subtree.Value.StartsWith("R") && expandedRules.ContainsKey(subtree.Value))
+            if (subtree.Value.StartsWith("R") && expandedRules.TryGetValue(subtree.Value, out var expansion))
             {
-                // This is a rule reference, expand it
-                var expansion = expandedRules[subtree.Value];
                 if (expansion.Count == 0)
                     return new DependencyTreeNode("<empty>");
                 
                 // Create nodes for expansion
-                List<IDependencyTreeNode> expandedNodes = new List<IDependencyTreeNode>();
+                var expandedNodes = new List<IDependencyTreeNode>();
                 foreach (var subNode in expansion)
                 {
                     var treeNode = new DependencyTreeNode(subNode.Value);
                     
                     // Add children
-                    foreach (var leftChild in subNode.LeftChildren)
+                    foreach (var childNode in subNode.LeftChildren.Select(leftChild => CreateNodeFromSubtree(leftChild, expandedRules)))
                     {
-                        var childNode = CreateNodeFromSubtree(leftChild, expandedRules);
                         treeNode.AddLeftChild(childNode);
                     }
                     
-                    foreach (var rightChild in subNode.RightChildren)
+                    foreach (var childNode in subNode.RightChildren.Select(rightChild => CreateNodeFromSubtree(rightChild, expandedRules)))
                     {
-                        var childNode = CreateNodeFromSubtree(rightChild, expandedRules);
                         treeNode.AddRightChild(childNode);
                     }
                     
@@ -514,9 +489,9 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
                     return expandedNodes[0];
                 
                 var resultNode = expandedNodes[0];
-                IDependencyTreeNode current = resultNode;
+                var current = resultNode;
                 
-                for (int i = 1; i < expandedNodes.Count; i++)
+                for (var i = 1; i < expandedNodes.Count; i++)
                 {
                     current.AddRightChild(expandedNodes[i]);
                     current = expandedNodes[i];
@@ -530,15 +505,13 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
                 var node = new DependencyTreeNode(subtree.Value);
                 
                 // Add children
-                foreach (var leftChild in subtree.LeftChildren)
+                foreach (var childNode in subtree.LeftChildren.Select(leftChild => CreateNodeFromSubtree(leftChild, expandedRules)))
                 {
-                    var childNode = CreateNodeFromSubtree(leftChild, expandedRules);
                     node.AddLeftChild(childNode);
                 }
                 
-                foreach (var rightChild in subtree.RightChildren)
+                foreach (var childNode in subtree.RightChildren.Select(rightChild => CreateNodeFromSubtree(rightChild, expandedRules)))
                 {
-                    var childNode = CreateNodeFromSubtree(rightChild, expandedRules);
                     node.AddRightChild(childNode);
                 }
                 
@@ -549,12 +522,9 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// <summary>
         /// Creates a deep copy of a tree.
         /// </summary>
-        private IDependencyTreeNode DeepCopyTree(IDependencyTreeNode node)
+        private static IDependencyTreeNode DeepCopyTree(IDependencyTreeNode node)
         {
-            if (node == null)
-                return null;
-
-            var copy = new DependencyTreeNode(node.Value.ToString());
+            var copy = new DependencyTreeNode(node.Value.ToString() ?? string.Empty);
 
             foreach (var leftChild in node.LeftChildren)
                 copy.AddLeftChild(DeepCopyTree(leftChild));
@@ -570,42 +540,37 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private byte[] SerializeTree(IDependencyTreeNode tree)
         {
-            using (var ms = new MemoryStream())
-            using (var writer = new BinaryWriter(ms))
+            using var ms = new MemoryStream();
+            using var writer = new BinaryWriter(ms);
+            // Dictionary for value encoding
+            var valueDict = new Dictionary<string, ushort>();
+            ushort nextId = 1; // 0 reserved for null
+                
+            // Collect all unique values
+            CollectValues(tree, valueDict, ref nextId);
+                
+            // Write value dictionary
+            writer.Write((ushort)valueDict.Count);
+            foreach (var entry in valueDict)
             {
-                // Dictionary for value encoding
-                Dictionary<string, ushort> valueDict = new Dictionary<string, ushort>();
-                ushort nextId = 1; // 0 reserved for null
-                
-                // Collect all unique values
-                CollectValues(tree, valueDict, ref nextId);
-                
-                // Write value dictionary
-                writer.Write((ushort)valueDict.Count);
-                foreach (var entry in valueDict)
-                {
-                    writer.Write(entry.Value); // ID
-                    writer.Write(entry.Key);   // Value
-                }
-                
-                // Write tree structure
-                SerializeNode(writer, tree, valueDict);
-                
-                return ms.ToArray();
+                writer.Write(entry.Value); // ID
+                writer.Write(entry.Key);   // Value
             }
+                
+            // Write tree structure
+            SerializeNode(writer, tree, valueDict);
+                
+            return ms.ToArray();
         }
         
         /// <summary>
         /// Collects all unique values in the tree.
         /// </summary>
-        private void CollectValues(IDependencyTreeNode node, Dictionary<string, ushort> valueDict, ref ushort nextId)
+        private static void CollectValues(IDependencyTreeNode node, Dictionary<string, ushort> valueDict, ref ushort nextId)
         {
-            if (node == null)
-                return;
-            
             // Add this node's value if not already in dictionary
-            string value = node.Value.ToString();
-            if (!valueDict.ContainsKey(value))
+            var value = node.Value.ToString();
+            if (value != null && !valueDict.ContainsKey(value))
                 valueDict[value] = nextId++;
             
             // Process all children
@@ -621,18 +586,12 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private void SerializeNode(BinaryWriter writer, IDependencyTreeNode node, Dictionary<string, ushort> valueDict)
         {
-            if (node == null)
-            {
-                writer.Write((ushort)0); // 0 means null
-                return;
-            }
-            
             // Write value ID
-            string value = node.Value.ToString();
-            writer.Write(valueDict[value]);
-            
+            var value = node.Value.ToString();
+            if (value != null) writer.Write(valueDict[value]);
+
             // Write left children
-            byte leftCount = (byte)Math.Min(255, node.LeftChildren.Count);
+            var leftCount = (byte)Math.Min(255, node.LeftChildren.Count);
             writer.Write(leftCount);
             
             if (leftCount == 255) // Extended count
@@ -642,7 +601,7 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
                 SerializeNode(writer, child, valueDict);
             
             // Write right children
-            byte rightCount = (byte)Math.Min(255, node.RightChildren.Count);
+            var rightCount = (byte)Math.Min(255, node.RightChildren.Count);
             writer.Write(rightCount);
             
             if (rightCount == 255) // Extended count
@@ -674,7 +633,7 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
 
             foreach (var rule in serializedRules)
             {
-                string[] parts = rule.Value.Split('|');
+                var parts = rule.Value.Split('|');
                 if (parts.Length == 2)
                     result[rule.Key] = new Digram(parts[0], parts[1]);
             }
@@ -687,32 +646,30 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private IDependencyTreeNode DeserializeTree(byte[] data)
         {
-            using (var ms = new MemoryStream(data))
-            using (var reader = new BinaryReader(ms))
+            using var ms = new MemoryStream(data);
+            using var reader = new BinaryReader(ms);
+            try
             {
-                try
+                // Read value dictionary
+                var valueCount = reader.ReadUInt16();
+                var idToValue = new Dictionary<ushort, string>();
+                    
+                for (var i = 0; i < valueCount; i++)
                 {
-                    // Read value dictionary
-                    ushort valueCount = reader.ReadUInt16();
-                    Dictionary<ushort, string> idToValue = new Dictionary<ushort, string>();
-                    
-                    for (int i = 0; i < valueCount; i++)
-                    {
-                        ushort id = reader.ReadUInt16();
-                        string value = reader.ReadString();
-                        idToValue[id] = value;
-                    }
-                    
-                    // Deserialize tree
-                    return DeserializeNode(reader, idToValue);
+                    var id = reader.ReadUInt16();
+                    var value = reader.ReadString();
+                    idToValue[id] = value;
                 }
-                catch (Exception ex)
-                {
-                    if (_debug)
-                        Console.WriteLine($"Deserialization error: {ex.Message}");
                     
-                    return new DependencyTreeNode("<Deserialization error>");
-                }
+                // Deserialize tree
+                return DeserializeNode(reader, idToValue);
+            }
+            catch (Exception ex)
+            {
+                if (_debug)
+                    Console.WriteLine($"Deserialization error: {ex.Message}");
+                    
+                return new DependencyTreeNode("<Deserialization error>");
             }
         }
         
@@ -721,42 +678,40 @@ namespace TreeCompressionPipeline.CompressionStrategies.TreeRePair
         /// </summary>
         private IDependencyTreeNode DeserializeNode(BinaryReader reader, Dictionary<ushort, string> idToValue)
         {
-            ushort valueId = reader.ReadUInt16();
+            var valueId = reader.ReadUInt16();
             if (valueId == 0) // Null node
-                return null;
+                throw new InvalidOperationException("Null node encountered during deserialization.");
             
             // Get the actual value
-            if (!idToValue.TryGetValue(valueId, out string nodeValue))
+            if (!idToValue.TryGetValue(valueId, out var nodeValue))
                 nodeValue = $"<Unknown:{valueId}>";
             
             var node = new DependencyTreeNode(nodeValue);
             
             // Read left children
-            byte leftCountByte = reader.ReadByte();
+            var leftCountByte = reader.ReadByte();
             int leftCount = leftCountByte;
             
             if (leftCountByte == 255) // Extended count
                 leftCount = reader.ReadUInt16();
             
-            for (int i = 0; i < leftCount; i++)
+            for (var i = 0; i < leftCount; i++)
             {
                 var child = DeserializeNode(reader, idToValue);
-                if (child != null)
-                    node.AddLeftChild(child);
+                node.AddLeftChild(child);
             }
             
             // Read right children
-            byte rightCountByte = reader.ReadByte();
+            var rightCountByte = reader.ReadByte();
             int rightCount = rightCountByte;
             
             if (rightCountByte == 255) // Extended count
                 rightCount = reader.ReadUInt16();
             
-            for (int i = 0; i < rightCount; i++)
+            for (var i = 0; i < rightCount; i++)
             {
                 var child = DeserializeNode(reader, idToValue);
-                if (child != null)
-                    node.AddRightChild(child);
+                node.AddRightChild(child);
             }
             
             return node;

@@ -6,7 +6,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 /// <summary>
 /// Most compact possible encoding: Bit-packed Balanced Parentheses + preorder values.
 /// </summary>
-public class BitPackedBPEncoder : ITreeRePairEncoder
+public class BitPackedBpEncoder : ITreeRePairEncoder
 {
     public IEnumerable<string> EncodeTree(IDependencyTreeNode root)
     {
@@ -15,14 +15,14 @@ public class BitPackedBPEncoder : ITreeRePairEncoder
         Encode(root, bits, values);
 
         // Convert bit list to base64 string to store compactly
-        byte[] packedBits = PackBits(bits);
-        string structureBase64 = System.Convert.ToBase64String(packedBits);
+        var packedBits = PackBits(bits);
+        var structureBase64 = Convert.ToBase64String(packedBits);
 
         // Return base64-encoded structure followed by values
         return new[] { structureBase64 }.Concat(values);
     }
 
-    private void Encode(IDependencyTreeNode node, List<bool> bits, List<string> values)
+    private static void Encode(IDependencyTreeNode node, List<bool> bits, List<string> values)
     {
         bits.Add(true); // '('
         values.Add(node.Value.ToString() ?? "");
@@ -39,10 +39,10 @@ public class BitPackedBPEncoder : ITreeRePairEncoder
     public IDependencyTreeNode DecodeTree(IEnumerable<string> sequence)
     {
         var list = sequence.ToList();
-        if (list.Count == 0) return null;
+        if (list.Count == 0) throw new InvalidDataException("Empty sequence");
 
         // Decode structure from base64
-        var packedBits = System.Convert.FromBase64String(list[0]);
+        var packedBits = Convert.FromBase64String(list[0]);
         var bitArray = new BitArray(packedBits);
         var bits = bitArray.Cast<bool>().ToList(); // convert to list<bool> for indexing
 

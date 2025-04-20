@@ -209,30 +209,28 @@ public class TreeRepairOptimizedStrategy(
         // Process rules from simplest to most complex
         foreach (var rule in orderedRules)
         {
-            string[] tokens = rule.Value.Split(' ');
+            var tokens = rule.Value.Split(' ');
             
             // Expand any nested rules already processed
-            for (int i = 0; i < tokens.Length; i++)
+            for (var i = 0; i < tokens.Length; i++)
             {
-                if (processedRules.TryGetValue(tokens[i], out var expansion))
-                {
-                    // Replace with expanded value
-                    var newTokens = new List<string>();
+                if (!processedRules.TryGetValue(tokens[i], out var expansion)) continue;
+                // Replace with expanded value
+                var newTokens = new List<string>();
                     
-                    // Add tokens before this one
-                    for (int j = 0; j < i; j++)
-                        newTokens.Add(tokens[j]);
+                // Add tokens before this one
+                for (var j = 0; j < i; j++)
+                    newTokens.Add(tokens[j]);
                     
-                    // Add expanded tokens
-                    newTokens.AddRange(expansion);
+                // Add expanded tokens
+                newTokens.AddRange(expansion);
                     
-                    // Add tokens after this one
-                    for (int j = i + 1; j < tokens.Length; j++)
-                        newTokens.Add(tokens[j]);
+                // Add tokens after this one
+                for (var j = i + 1; j < tokens.Length; j++)
+                    newTokens.Add(tokens[j]);
                     
-                    tokens = newTokens.ToArray();
-                    i--; // Reprocess current position in case of nested expansions
-                }
+                tokens = newTokens.ToArray();
+                i--; // Reprocess current position in case of nested expansions
             }
             
             // Store fully expanded rule
@@ -242,7 +240,7 @@ public class TreeRepairOptimizedStrategy(
         // Now expand the sequence in a single pass
         var result = new List<string>();
         
-        foreach (string token in sequence)
+        foreach (var token in sequence)
         {
             if (processedRules.TryGetValue(token, out var expansion))
             {
@@ -269,8 +267,7 @@ public class TreeRepairOptimizedStrategy(
         while (index < sequence.Count && sequence[index] != "]" && sequence[index] != "|")
         {
             var child = DecodeTree(sequence, ref index);
-            if (child != null)
-                node.AddLeftChild(child);
+            node.AddLeftChild(child);
         }
 
         // Skip separator
@@ -281,8 +278,7 @@ public class TreeRepairOptimizedStrategy(
         while (index < sequence.Count && sequence[index] != "]")
         {
             var child = DecodeTree(sequence, ref index);
-            if (child != null)
-                node.AddRightChild(child);
+            node.AddRightChild(child);
         }
 
         // Skip closing bracket

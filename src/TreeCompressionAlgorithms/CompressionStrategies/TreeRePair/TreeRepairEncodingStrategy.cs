@@ -114,8 +114,7 @@ public class TreeRepairEncodingStrategy(ITreeRePairEncoder? encoder = null , int
         while (index < sequence.Count && sequence[index] != "]" && sequence[index] != "|")
         {
             var child = DecodeTree(sequence, ref index);
-            if (child != null)
-                node.AddLeftChild(child);
+            node.AddLeftChild(child);
         }
 
         // Skip separator
@@ -126,8 +125,7 @@ public class TreeRepairEncodingStrategy(ITreeRePairEncoder? encoder = null , int
         while (index < sequence.Count && sequence[index] != "]")
         {
             var child = DecodeTree(sequence, ref index);
-            if (child != null)
-                node.AddRightChild(child);
+            node.AddRightChild(child);
         }
 
         if (index < sequence.Count && sequence[index] == "]")

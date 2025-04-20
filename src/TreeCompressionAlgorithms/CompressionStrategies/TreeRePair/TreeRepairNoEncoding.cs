@@ -1,3 +1,4 @@
+#if EXPERIMENTAL
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -393,3 +394,4 @@ namespace TreeCompressionPipeline.Compression
         }
     }
 }
+#endif
