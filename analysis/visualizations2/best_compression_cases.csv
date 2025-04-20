@@ -1,0 +1,4 @@
+"Dataset","FileName","Type","Size","CompressionRatio","CompressionTime"
+"N-ární TreeRePair","Employee_Ip_Laws.txt","Právní dokumenty",18801,0.909541842231586,0
+"Optimalizovaný TreeRePair","Employee_Ip_Laws.txt","Právní dokumenty",18801,0.653634860525895,0
+"Původní TreeRePair","Documentation-arm-Atmel-README","Technická dokumentace",5858,1.2439399112325,0
