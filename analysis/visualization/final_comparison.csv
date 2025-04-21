@@ -1,0 +1,5 @@
+"Dataset","PrůměrnýKompresníPoměr","MedianKompresníhoPoměru","PrůměrnáDobaKomprese_ms","PrůměrnáDobaDekomprese_ms","PrůměrnýKompresníZisk_procent","PoměrÚspěšnéKomprese","PočetSouborů"
+"Opt. Linearizovaný TreeRePair",1.19241357511063,1.1981308411215,1081.44796380091,0,-19.1794762250874,9.04977375565611,221
+"Opt. TreeRePair bez linearizace",1.33646954879029,1.33294758339006,0,0,-33.5515960335244,5.26315789473684,228
+"Linearizovaný TreeRePair",1.5149760249145,1.51778980573128,0,0,-51.3954564386062,1.75438596491228,228
+"TreeRePair bez linearizace",1.57452088673929,1.55285002767017,507.042253521128,0,-57.3128528357193,0,213

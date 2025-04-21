@@ -1,4 +1,5 @@
 "Dataset","FileName","Type","Size","CompressionRatio","CompressionTime"
-"Linearizovaný TreeRePair","Documentation-blockdev-README.DAC960","Technická dokumentace",34730,2.61675784624244,2000
-"N-ární TreeRePair","tools-virtio-ringtest-README","Technická dokumentace",105,2.40952380952381,0
-"Optimalizovaný TreeRePair","tools-virtio-ringtest-README","Technická dokumentace",105,1.66666666666667,0
+"Linearizovaný TreeRePair","tools-virtio-ringtest-README","Technická dokumentace",105,2.40952380952381,0
+"Opt. Linearizovaný TreeRePair","tools-virtio-ringtest-README","Technická dokumentace",105,1.66666666666667,0
+"Opt. TreeRePair bez linearizace","tools-virtio-ringtest-README","Technická dokumentace",105,2.06666666666667,0
+"TreeRePair bez linearizace","Documentation-blockdev-README.DAC960","Technická dokumentace",34730,2.61675784624244,2000
