@@ -41,7 +41,7 @@ report_narr <- read_csv("../docs/data/reports/report - treerepair - n-arr .csv")
 
 # Přejmenování datasetů pro lepší přehlednost
 names_mapping <- c(
-  "report_original" = "Původní TreeRePair",
+  "report_original" = "Linearizovaný TreeRePair",
   "report_optimized" = "Optimalizovaný TreeRePair",
   "report_narr" = "N-ární TreeRePair"
 )
@@ -120,7 +120,7 @@ file_type_colors <- c(
 
 # Barevná paleta pro metody komprese
 compression_method_colors <- c(
-  "Původní TreeRePair" = "#1B9E77",
+  "Linearizovaný TreeRePair" = "#1B9E77",
   "Optimalizovaný TreeRePair" = "#D95F02",
   "N-ární TreeRePair" = "#7570B3"
 )
@@ -724,12 +724,12 @@ relative_performance <- all_reports %>%
     values_from = CompressionRatio
   ) %>%
   mutate(
-    `Optimalizovaný vs Původní` = `Optimalizovaný TreeRePair` / `Původní TreeRePair`,
-    `N-ární vs Původní` = `N-ární TreeRePair` / `Původní TreeRePair`,
+    `Optimalizovaný vs Linearizovaný` = `Optimalizovaný TreeRePair` / `Linearizovaný TreeRePair`,
+    `N-ární vs Linearizovaný` = `N-ární TreeRePair` / `Linearizovaný TreeRePair`,
     `N-ární vs Optimalizovaný` = `N-ární TreeRePair` / `Optimalizovaný TreeRePair`
   ) %>%
   pivot_longer(
-    cols = c(`Optimalizovaný vs Původní`, `N-ární vs Původní`, `N-ární vs Optimalizovaný`),
+    cols = c(`Optimalizovaný vs Linearizovaný`, `N-ární vs Linearizovaný`, `N-ární vs Optimalizovaný`),
     names_to = "Comparison",
     values_to = "RelativeRatio"
   )
@@ -928,12 +928,12 @@ ranking_data <- data.frame(
     "N-ární TreeRePair"
   ),
   Třetí = c(
-    "Původní TreeRePair",
-    "Původní TreeRePair",
-    "Původní TreeRePair",
-    "Původní TreeRePair",
-    "Původní TreeRePair",
-    "Původní TreeRePair"
+    "Linearizovaný TreeRePair",
+    "Linearizovaný TreeRePair",
+    "Linearizovaný TreeRePair",
+    "Linearizovaný TreeRePair",
+    "Linearizovaný TreeRePair",
+    "Linearizovaný TreeRePair"
   )
 )
 

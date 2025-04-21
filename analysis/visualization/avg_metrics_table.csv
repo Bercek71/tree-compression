@@ -1,10 +1,10 @@
 "Dataset","Type","Avg_Ratio","Avg_CompTime","Avg_DecompTime","Avg_GainPercent","Count"
+"Linearizovaný TreeRePair","Právní dokumenty",1.57360455676522,20.6185567010309,0,-57.3541706134472,97
+"Linearizovaný TreeRePair","Próza",1.56920371173541,4727.27272727273,0,-55.6117333783492,22
+"Linearizovaný TreeRePair","Technická dokumentace",1.58393420812753,23.5294117647059,0,-58.391131882221,85
 "N-ární TreeRePair","Právní dokumenty",1.63488088840348,0,0,-63.481704237448,100
 "N-ární TreeRePair","Próza",1.19300855441589,0,0,-18.3264615196839,23
 "N-ární TreeRePair","Technická dokumentace",1.4674081294989,0,0,-46.7389374117311,96
 "Optimalizovaný TreeRePair","Právní dokumenty",1.23887394381542,60,0,-23.8821116834911,100
 "Optimalizovaný TreeRePair","Próza",1.04804794901679,11578.9473684211,0,-4.12288345550349,19
 "Optimalizovaný TreeRePair","Technická dokumentace",1.16990295470382,139.784946236559,0,-16.9887663157203,93
-"Původní TreeRePair","Právní dokumenty",1.57360455676522,20.6185567010309,0,-57.3541706134472,97
-"Původní TreeRePair","Próza",1.56920371173541,4727.27272727273,0,-55.6117333783492,22
-"Původní TreeRePair","Technická dokumentace",1.58393420812753,23.5294117647059,0,-58.391131882221,85
