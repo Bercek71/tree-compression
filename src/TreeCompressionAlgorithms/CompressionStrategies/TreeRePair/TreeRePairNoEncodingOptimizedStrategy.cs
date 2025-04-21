@@ -6,7 +6,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
     /// <summary>
     /// A complete TreeRePair implementation that carefully preserves the entire tree structure.
     /// </summary>
-    public class TreeRePairStrategy : ICompressionStrategy<IDependencyTreeNode>
+    public class TreeRePairNoEncodingOptimizedStrategy : ICompressionStrategy<IDependencyTreeNode>
     {
         private readonly int _minFrequency;
         private readonly int _maxIterations;
@@ -34,7 +34,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
         /// <summary>
         /// Initializes a new instance of the TreeRePairStrategy.
         /// </summary>
-        public TreeRePairStrategy(int minFrequency = 2, int maxIterations = 100, bool debug = false)
+        public TreeRePairNoEncodingOptimizedStrategy(int minFrequency = 2, int maxIterations = 100, bool debug = false)
         {
             _minFrequency = minFrequency;
             _maxIterations = maxIterations;
@@ -63,7 +63,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
             // Serialize the compressed tree
             return new CompressedTree
             {
-                Structure = SerializeTree(workingCopy),
+                Structure = DependencyTreeNode.SerializeToBytes(workingCopy),
                 Metadata = SerializeRules(_rules)
             };
         }
@@ -256,7 +256,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
             {
                 // Deserialize the rules and compressed tree
                 var rules = DeserializeRules(compressedTree.Metadata);
-                IDependencyTreeNode compressedRoot = DeserializeTree(compressedTree.Structure);
+                IDependencyTreeNode compressedRoot = DependencyTreeNode.DeserializeFromBytes(compressedTree.Structure);
 
                 // Build a map of expanded rules
                 var expandedRules = ExpandAllRules(rules);

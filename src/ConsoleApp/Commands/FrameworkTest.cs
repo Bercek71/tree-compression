@@ -30,7 +30,7 @@ public class FrameworkTest : ICommand
                 AnsiConsole.MarkupLine($"[bold]Loaded sentence length:[/] [blue]{testingSentence.Length}[/]");
 
                 var processTimer = new ProcessTimer(ctx);
-                var compressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategy(), processTimer);
+                var compressor = new NaturalLanguageTreeCompressing(new TreeRePairNoEncodingOptimizedStrategy(), processTimer);
 
                 var compressedTree = compressor.Compress(testingSentence);
 

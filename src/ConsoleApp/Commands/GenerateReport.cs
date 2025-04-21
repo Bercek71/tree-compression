@@ -41,7 +41,7 @@ public class GenerateReport : ICommand
         }
 
         var processTimer = new ProcessTimer();
-        var nlpCompressor = new NaturalLanguageTreeCompressing(new TreeRePairStrategy(), processTimer);
+        var nlpCompressor = new NaturalLanguageTreeCompressing(new TreeRePairNoEncodingOptimizedStrategy(), processTimer);
 
         // Display initialization message
         AnsiConsole.MarkupLine("[yellow]Initializing compression engine...[/]");
