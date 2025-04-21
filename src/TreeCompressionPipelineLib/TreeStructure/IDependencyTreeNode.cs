@@ -38,5 +38,8 @@ public interface IDependencyTreeNode : ITreeNode
     /// Rodič uzlu.
     /// </summary>
     IDependencyTreeNode? Parent { get; set; }
-    
+
+
+    public int GetNodeCount();
+
 }

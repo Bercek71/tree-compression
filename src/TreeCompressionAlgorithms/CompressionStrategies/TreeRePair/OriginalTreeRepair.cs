@@ -50,7 +50,8 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
             return new CompressedTree
             {
                 Structure = treeData,
-                Metadata = new Dictionary<string, string>(_grammarRules)
+                Metadata = new Dictionary<string, string>(_grammarRules),
+                CompressedNode = compressedTree,
             };
         }
 

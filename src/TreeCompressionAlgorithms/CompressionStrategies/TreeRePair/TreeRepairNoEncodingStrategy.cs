@@ -109,7 +109,8 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
                 return new CompressedTree
                 {
                     Structure = DependencyTreeNode.SerializeToBytes(_rootNode),
-                    Metadata = _rules.ToDictionary(r => r.Nonterminal, r => r.Digram.ToString())
+                    Metadata = _rules.ToDictionary(r => r.Nonterminal, r => r.Digram.ToString()),
+                    CompressedNode = _rootNode,
                 };
             }
             catch (Exception ex)

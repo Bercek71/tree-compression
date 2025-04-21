@@ -64,7 +64,8 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
             return new CompressedTree
             {
                 Structure = DependencyTreeNode.SerializeToBytes(workingCopy),
-                Metadata = SerializeRules(_rules)
+                Metadata = SerializeRules(_rules),
+                CompressedNode = workingCopy,
             };
         }
 

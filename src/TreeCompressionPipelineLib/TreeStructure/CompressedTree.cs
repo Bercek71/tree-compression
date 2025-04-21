@@ -24,6 +24,8 @@ public class CompressedTree
     /// Metadata komprimované stromové struktury. 
     /// </summary>
     public Dictionary<string, string> Metadata { get; init; } = new();
+
+    public IDependencyTreeNode? CompressedNode { get; init; } = null;
     
     public override string ToString()
     {

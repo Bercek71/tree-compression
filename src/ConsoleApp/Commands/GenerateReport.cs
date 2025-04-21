@@ -25,6 +25,8 @@ public class GenerateReport : ICommand
         public TimeSpan CompressionTime { get; set; }
         public TimeSpan DecompressionTime { get; set; }
         public int CompressedSize { get; set; }
+        public int? CompressedNodeCount { get; set; } = null;
+        public int? UncompressedNodeCount { get; set; } = null;
     }
 
     [Argument("directory", "Directory to scan for files.")]
@@ -41,7 +43,7 @@ public class GenerateReport : ICommand
         }
 
         var processTimer = new ProcessTimer();
-        var nlpCompressor = new NaturalLanguageTreeCompressing(new TreeRePairNoEncodingOptimizedStrategy(), processTimer);
+        var nlpCompressor = new NaturalLanguageTreeCompressing(new OriginalTreeRepairStrategy(), processTimer);
 
         // Display initialization message
         AnsiConsole.MarkupLine("[yellow]Initializing compression engine...[/]");
@@ -147,6 +149,13 @@ public class GenerateReport : ICommand
                     var compressionRatio = (double) compressedTree.GetSize() / fileContent.Length;
 
                     var encoder = new DepthFirstEncoder();
+
+                    int? compressedNodeCount = null;
+                    
+                    if(compressedTree.CompressedNode != null)
+                    {
+                        compressedNodeCount = compressedTree.CompressedNode.GetNodeCount();
+                    }
                     
                     if (processTimer.Node != null)
                     {
@@ -168,6 +177,8 @@ public class GenerateReport : ICommand
                         DecompressionTime = processTimer[ProcessType.DecompressionFilter],
                         TextToTreeDuration = processTimer[ProcessType.TextToTreeFilter],
                         CompressedSize = compressedSize,
+                        UncompressedNodeCount = processTimer.Node.GetNodeCount(),
+                        CompressedNodeCount = compressedNodeCount,
                         
                         EncodedTreeSize = encoder.EncodeTree(processTimer.Node).Sum(x => x.Length)
                     };

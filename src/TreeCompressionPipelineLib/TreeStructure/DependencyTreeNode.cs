@@ -61,6 +61,14 @@ public class DependencyTreeNode(string value) : IDependencyTreeNode
         RightChildren.Add(child);
     }
 
+    public int GetNodeCount()
+    {
+        var count = 1 + LeftChildren.Sum(child => child.GetNodeCount()); // Počítáme aktuální uzel
+
+        count += RightChildren.Sum(child => child.GetNodeCount());
+        return count;
+    }
+
     public void Accept(ISyntacticTreeVisitor visitor)
     {
         visitor.Visit(this);

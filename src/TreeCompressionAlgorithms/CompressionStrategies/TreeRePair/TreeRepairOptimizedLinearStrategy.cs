@@ -31,7 +31,7 @@ public class TreeRepairOptimizedLinearStrategy(
         return new CompressedTree
         {
             Structure = ConvertSequenceToByteArray(sequence),
-            Metadata = new Dictionary<string, string>(_grammarRules) // Create a copy
+            Metadata = new Dictionary<string, string>(_grammarRules), // Create a copy
         };
     }
 
