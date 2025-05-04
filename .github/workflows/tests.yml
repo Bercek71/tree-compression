@@ -41,14 +41,14 @@ jobs:
       - name: Build
         run: dotnet build TreeCompresion.sln --configuration Release --no-restore /p:TreatWarningsAsErrors=false
 
-      - name: Run tests with error suppression
-        run: dotnet test TreeCompresion.sln --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --nologo /p:TreatWarningsAsErrors=false --logger "console;verbosity=detailed"
+      - name: Run tests with coverage
+        run: dotnet test TreeCompresion.sln --configuration Release --verbosity normal --collect:"XPlat Code Coverage" --results-directory ./TestResults/ --nologo /p:TreatWarningsAsErrors=false --logger "console;verbosity=detailed"
         continue-on-error: true  # Continue even if tests fail
 
       - name: Generate coverage report
         uses: danielpalme/ReportGenerator-GitHub-Action@5.2.0
         with:
-          reports: '**/coverage.cobertura.xml'
+          reports: './TestResults/**/coverage.cobertura.xml'
           targetdir: 'CoverageReport'
           reporttypes: 'HtmlInline;Cobertura'
           verbosity: 'Info'
