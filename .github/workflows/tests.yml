@@ -38,18 +38,15 @@ jobs:
           
           # Run tests with coverage
           dotnet-coverage collect --output TestResults/coverage.cobertura.xml --output-format cobertura \
-            "dotnet test src/Tests/TreeCompressionLibraryTests/TreeCompressionLibraryTests.csproj --configuration Release"
+            "dotnet test src/Tests/Tests.csproj --configuration Release"
           
-          dotnet-coverage merge -o TestResults/merged-coverage.cobertura.xml -f cobertura \
-            TestResults/coverage.cobertura.xml
-          
-          # Run other tests
-          dotnet test src/Tests/AlgorithmImplementationTests/AlgorithmImplementationTests.csproj --configuration Release
+          # If we need to merge multiple coverage files in the future, we can uncomment this
+          # dotnet-coverage merge -o TestResults/merged-coverage.cobertura.xml -f cobertura TestResults/coverage.cobertura.xml
 
       - name: Generate coverage report
         uses: danielpalme/ReportGenerator-GitHub-Action@5.2.0
         with:
-          reports: 'TestResults/merged-coverage.cobertura.xml'
+          reports: 'TestResults/coverage.cobertura.xml'
           targetdir: 'TestResults/CoverageReport'
           reporttypes: 'HtmlInline;Cobertura'
 
