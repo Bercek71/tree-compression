@@ -25,6 +25,10 @@ public class Pipeline
     /// </returns>
     public Pipeline AddFilter(IFilter filter)
     {
+        if (filter == null)
+        {
+            throw new ArgumentNullException(nameof(filter), "Filter cannot be null");
+        }
         if (ProcessObserver != null)
         {
             filter.AddObserver(ProcessObserver);

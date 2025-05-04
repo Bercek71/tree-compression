@@ -11,7 +11,7 @@ public interface IProcessObserver
    /// <param name="process">
    ///  Název procesu, který je spuštěn.
    /// </param>
-   protected internal void OnStart(string process);
+   public void OnStart(string process);
    
    /// <summary>
    /// Metoda, která je volána při průběhu procesu.
@@ -23,7 +23,7 @@ public interface IProcessObserver
    /// Procenta dokončení procesu.
    /// </param>
    [Obsolete("Metoda by měla sloužit pouze pro debugging a testování.")]
-   protected internal void OnProgress(string process, double percentComplete);
+   public void OnProgress(string process, double percentComplete);
    
    /// <summary>
    /// Metoda, která je volána při dokončení procesu.
@@ -34,7 +34,7 @@ public interface IProcessObserver
    /// <param name="result">
    ///   Výsledek procesu, který může být libovolného typu.
    /// </param>
-   protected internal void OnComplete(string process, object result);
+   public void OnComplete(string process, object result);
    
    /// <summary>
    /// Metoda, která je volána při chybě v průběhu procesu.
@@ -45,5 +45,5 @@ public interface IProcessObserver
    /// <param name="error">
    ///   Vyjímka, která popisuje chybu v průběhu procesu.
    /// </param>
-   protected internal void OnError(string process, Exception error);
+   public void OnError(string process, Exception error);
 }

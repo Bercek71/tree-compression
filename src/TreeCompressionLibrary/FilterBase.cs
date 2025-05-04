@@ -53,7 +53,7 @@ public abstract class FilterBase<T, TO> : IFilter
         {
             if (data is not T typedData)
             {
-                throw new ArgumentException("Filter received invalid data type");
+                throw new InvalidCastException("Filter received invalid data type");
             }
                 
             var processedData = ProcessData(typedData);
