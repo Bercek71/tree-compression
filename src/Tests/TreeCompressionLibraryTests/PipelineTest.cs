@@ -1,16 +1,11 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TreeCompressionPipeline;
-using Moq;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using NUnit.Framework;
 using Assert = Microsoft.VisualStudio.TestTools.UnitTesting.Assert;
 
-namespace TreeCompressionPipeline.Tests
+namespace Tests.TreeCompressionLibraryTests
 {
     [TestClass]
-    public class ProcessSubjectTests
+    public class PipelineTests
     {
         // Test implementation of IProcessSubject for testing
         private class TestProcessSubject : IProcessSubject

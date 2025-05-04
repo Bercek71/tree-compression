@@ -27,12 +27,7 @@
     &lt;/TestAncestor&gt;
   &lt;/Or&gt;
 &lt;/SessionState&gt;</s:String>
-	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=954dae64_002D1e28_002D44b7_002D931f_002D8b5035f03ca6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="TreeRePairStrategyTests" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;TestAncestor&gt;
-    &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.TreeRePairStrategyTests&lt;/TestId&gt;
-    &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.OriginalTreeRepairStrategyTests&lt;/TestId&gt;
-  &lt;/TestAncestor&gt;
-&lt;/SessionState&gt;</s:String>
+	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=TreeCompressionMain_002FResources/@EntryIndexedValue">False</s:Boolean>
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=TreeCompressionMain_002FResources/@EntryIndexRemoved">True</s:Boolean>
 	

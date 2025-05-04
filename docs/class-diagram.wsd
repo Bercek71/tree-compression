@@ -1,0 +1,243 @@
+@startuml TreeCompressionLibrary
+
+' Style settings
+skinparam classAttributeIconSize 0
+skinparam classFontStyle bold
+skinparam classFontSize 12
+skinparam classBackgroundColor #E3F2FD
+skinparam interfaceBackgroundColor #E8F5E9
+skinparam packageBackgroundColor #FAFAFA
+skinparam arrowColor #424242
+skinparam packageStyle rectangle
+skinparam linetype ortho
+
+' Main Package
+package "TreeCompressionLibrary" {
+
+  ' Tree Structure Interfaces and Classes
+  package "TreeStructure" {
+    ' Base interfaces
+    interface "ITreeNode" as ITreeNode {
+      +object Value { get; set; }
+    }
+    
+    interface "IOrderedTreeNode" as IOrderedTreeNode {
+      +List<IOrderedTreeNode> Children { get; }
+      +IOrderedTreeNode? Parent { get; set; }
+      +void AddChild(IOrderedTreeNode child)
+      +void Accept(IOrderedTreeVisitor visitor)
+    }
+    
+    interface "IDependencyTreeNode" as IDependencyTreeNode {
+      +List<IDependencyTreeNode> LeftChildren { get; }
+      +List<IDependencyTreeNode> RightChildren { get; }
+      +IDependencyTreeNode? Parent { get; set; }
+      +void AddLeftChild(IDependencyTreeNode child)
+      +void AddRightChild(IDependencyTreeNode child)
+      +int GetNodeCount()
+      +void Accept(ISyntacticTreeVisitor visitor)
+    }
+    
+    ' Visitor interfaces
+    interface "IOrderedTreeVisitor" as IOrderedTreeVisitor {
+      +void Visit(IOrderedTreeNode node)
+    }
+    
+    interface "ISyntacticTreeVisitor" as ISyntacticTreeVisitor {
+      +void Visit(IDependencyTreeNode node)
+    }
+    
+    ' Concrete tree node implementations
+    class "DependencyTreeNode" as DependencyTreeNode {
+      +object Value { get; set; }
+      +List<IDependencyTreeNode> LeftChildren { get; }
+      +List<IDependencyTreeNode> RightChildren { get; }
+      +IDependencyTreeNode? Parent { get; set; }
+      +DependencyTreeNode(string value)
+      +void AddLeftChild(IDependencyTreeNode child)
+      +void AddRightChild(IDependencyTreeNode child)
+      +int GetNodeCount()
+      +void Accept(ISyntacticTreeVisitor visitor)
+      +string ToString()
+      +{static} byte[] SerializeToBytes(IDependencyTreeNode node)
+      +{static} IDependencyTreeNode DeserializeFromBytes(byte[] data)
+    }
+    
+    class "OrderedTreeNode" as OrderedTreeNode {
+      +IOrderedTreeNode? Parent { get; set; }
+      +object Value { get; set; }
+      +List<IOrderedTreeNode> Children { get; }
+      +OrderedTreeNode(object value)
+      +void AddChild(IOrderedTreeNode child)
+      +void Accept(IOrderedTreeVisitor visitor)
+      +string ToString()
+    }
+    
+    ' Visitors
+    class "ToStringVisitor" as ToStringVisitor {
+      -int _indentationLevel
+      -HashSet<IOrderedTreeNode> _visitedNodes
+      -StringBuilder _stringBuilder
+      +void Visit(IOrderedTreeNode node)
+      +string ToString()
+    }
+    
+    class "PrintVisitor" as PrintVisitor {
+      -int _indentationLevel
+      -HashSet<IOrderedTreeNode?> _visitedNodes
+      +void Visit(IOrderedTreeNode node)
+    }
+    
+    ' Compressed tree structure
+    class "CompressedTree" as CompressedTree {
+      +byte[] Structure { get; set; }
+      +Type TreeType { get; set; }
+      +Type NodeValueType { get; set; }
+      +Dictionary<string, string> Metadata { get; init; }
+      +IDependencyTreeNode? CompressedNode { get; init; }
+      +string ToString()
+      +int GetSize()
+    }
+  }
+  
+  ' Pipeline and Filter Components
+  ' Observer Pattern
+  interface "IProcessObserver" as IProcessObserver {
+    +void OnStart(string process)
+    +void OnProgress(string process, double percentComplete)
+    +void OnComplete(string process, object result)
+    +void OnError(string process, Exception error)
+  }
+  
+  interface "IProcessSubject" as IProcessSubject {
+    +void AddObserver(IProcessObserver observer)
+    +void RemoveObserver(IProcessObserver observer)
+    #void NotifyStart(string process)
+    #void NotifyProgress(string process, double percentComplete)
+    #void NotifyComplete(string process, object result)
+    #void NotifyError(string process, Exception error)
+  }
+  
+  ' Main filter interface
+  interface "IFilter" as IFilter {
+    +object Process(object data)
+    +IFilter Chain(IFilter nextFilter)
+  }
+  
+  ' Strategy interfaces
+  interface "ITreeCreationStrategy<out T>" as ITreeCreationStrategy {
+    +T CreateTree(string text)
+  }
+  
+  interface "ICompressionStrategy<T>" as ICompressionStrategy {
+    +CompressedTree Compress(T tree)
+    +T Decompress(CompressedTree compressedTree)
+  }
+  
+  ' Concrete observer implementation
+  class "ProcessMonitor" as ProcessMonitor {
+    +void OnStart(string process)
+    +void OnProgress(string process, double percentComplete)
+    +void OnComplete(string process, object result)
+    +void OnError(string process, Exception error)
+  }
+  
+  ' Abstract filter base
+  abstract class "FilterBase<T, TO>" as FilterBase {
+    -IFilter? _nextFilter
+    -List<IProcessObserver> _processObservers
+    #abstract TO ProcessData(T data)
+    +object Process(object data)
+    +IFilter Chain(IFilter nextFilter)
+    +void AddObserver(IProcessObserver observer)
+    +void RemoveObserver(IProcessObserver observer)
+    +void NotifyStart(string process)
+    +void NotifyProgress(string process, double percentComplete)
+    +void NotifyComplete(string process, object result)
+    +void NotifyError(string process, Exception error)
+  }
+  
+  ' Pipeline class
+  class "Pipeline" as Pipeline {
+    -IFilter? _firstFilter
+    -IFilter? _lastFilter
+    +IProcessObserver? ProcessObserver { get; init; }
+    +Pipeline AddFilter(IFilter filter)
+    +object Process(object input)
+  }
+  
+  ' Factory class
+  class "FilterFactory<T>" as FilterFactory {
+    +{static} IFilter CreateTextToTreeFilter(ITreeCreationStrategy<T> strategy)
+    +{static} IFilter CreateCompressionFilter(ICompressionStrategy<T> strategy)
+    +{static} IFilter CreateDecompressionFilter(ICompressionStrategy<T> strategy)
+  }
+  
+  ' Concrete filter implementations
+  package "Filters" {
+    class "TextToTreeFilter<T>" as TextToTreeFilter {
+      -ITreeCreationStrategy<T> _creationStrategy
+      #override T ProcessData(string text)
+      +TextToTreeFilter(ITreeCreationStrategy<T> creationStrategy)
+    }
+    
+    class "CompressionFilter<T>" as CompressionFilter {
+      -ICompressionStrategy<T> _strategy
+      #override CompressedTree ProcessData(T tree)
+      +CompressionFilter(ICompressionStrategy<T> strategy)
+    }
+    
+    class "DecompressionFilter<T>" as DecompressionFilter {
+      -ICompressionStrategy<T> _strategy
+      #override T ProcessData(CompressedTree compressedTree)
+      +DecompressionFilter(ICompressionStrategy<T> strategy)
+    }
+  }
+  
+  ' ProcessType constants
+  class "ProcessType" as ProcessType {
+    +{static} string TextToTreeFilter { get; }
+    +{static} string CompressionFilter { get; }
+    +{static} string DecompressionFilter { get; }
+  }
+  
+  ' Obsolete class - included for completeness
+  package "CompressionStrategies" {
+    abstract class "CompressionStrategy" as CompressionStrategy {
+      #Dictionary<string, int> FindPatterns(ITreeNode tree)
+      +abstract CompressedTree Compress(ITreeNode tree)
+      +abstract ITreeNode Decompress(CompressedTree compressedTree)
+    }
+  }
+}
+
+' Relationships
+' Inheritance
+IOrderedTreeNode --|> ITreeNode
+IDependencyTreeNode --|> ITreeNode
+IFilter --|> IProcessSubject
+OrderedTreeNode ..|> IOrderedTreeNode
+DependencyTreeNode ..|> IDependencyTreeNode
+ProcessMonitor ..|> IProcessObserver
+ToStringVisitor ..|> IOrderedTreeVisitor
+PrintVisitor ..|> IOrderedTreeVisitor
+FilterBase ..|> IFilter
+CompressionStrategy ..|> ICompressionStrategy
+TextToTreeFilter --|> "FilterBase<string, T>"
+CompressionFilter --|> "FilterBase<T, CompressedTree>"
+DecompressionFilter --|> "FilterBase<CompressedTree, T>"
+
+' Associations
+Pipeline --> "0..*" IFilter : contains >
+FilterBase --> "0..1" IFilter : chains to >
+FilterBase --> "0..*" IProcessObserver : notifies >
+TextToTreeFilter --> "1" ITreeCreationStrategy : uses >
+CompressionFilter --> "1" ICompressionStrategy : uses >
+DecompressionFilter --> "1" ICompressionStrategy : uses >
+OrderedTreeNode --> "0..*" IOrderedTreeNode : has children >
+DependencyTreeNode --> "0..*" IDependencyTreeNode : has children >
+OrderedTreeNode --> "0..1" IOrderedTreeNode : has parent >
+DependencyTreeNode --> "0..1" IDependencyTreeNode : has parent >
+OrderedTreeNode ..> ToStringVisitor : uses >
+
+@enduml
