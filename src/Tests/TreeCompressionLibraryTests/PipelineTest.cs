@@ -63,10 +63,10 @@ namespace Tests.TreeCompressionLibraryTests
             public int CompleteCount { get; private set; }
             public int ErrorCount { get; private set; }
             
-            public string LastProcess { get; private set; }
-            public double LastProgress { get; private set; }
-            public object LastResult { get; private set; }
-            public Exception LastError { get; private set; }
+            public string LastProcess { get; private set; } = string.Empty;
+            public double LastProgress { get; private set; } = double.NaN;
+            public object LastResult { get; private set; } = new object();
+            public Exception LastError { get; private set; } = new Exception();
 
             public void OnStart(string process)
             {
@@ -101,15 +101,15 @@ namespace Tests.TreeCompressionLibraryTests
                 ProgressCount = 0;
                 CompleteCount = 0;
                 ErrorCount = 0;
-                LastProcess = null;
+                LastProcess = string.Empty;
                 LastProgress = 0;
-                LastResult = null;
-                LastError = null;
+                LastResult = new object();
+                LastError = new Exception();
             }
         }
 
-        private TestProcessSubject _subject;
-        private TestObserver _observer;
+        private TestProcessSubject _subject = new TestProcessSubject();
+        private TestObserver _observer = new TestObserver();
 
         [TestInitialize]
         public void Setup()

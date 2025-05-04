@@ -10,7 +10,7 @@ namespace Tests.TreeCompressionLibraryTests
         // Test implementation of IProcessSubject for testing
         private class TestProcessSubject : IProcessSubject
         {
-            private readonly List<IProcessObserver> _observers = new List<IProcessObserver>();
+            private readonly List<IProcessObserver> _observers = [];
 
             public void AddObserver(IProcessObserver observer)
             {
@@ -26,7 +26,7 @@ namespace Tests.TreeCompressionLibraryTests
             {
                 foreach (var observer in _observers)
                 {
-                    observer.OnStart(process);
+                    if (process != null) observer.OnStart(process);
                 }
             }
 
@@ -34,7 +34,7 @@ namespace Tests.TreeCompressionLibraryTests
             {
                 foreach (var observer in _observers)
                 {
-                    observer.OnProgress(process, percentComplete);
+                    if (process != null) observer.OnProgress(process, percentComplete);
                 }
             }
 
@@ -42,7 +42,9 @@ namespace Tests.TreeCompressionLibraryTests
             {
                 foreach (var observer in _observers)
                 {
-                    observer.OnComplete(process, result);
+                    if (process == null) continue;
+                    if (result != null)
+                        observer.OnComplete(process, result);
                 }
             }
 
@@ -50,7 +52,9 @@ namespace Tests.TreeCompressionLibraryTests
             {
                 foreach (var observer in _observers)
                 {
-                    observer.OnError(process, error);
+                    if (process == null) continue;
+                    if (error != null)
+                        observer.OnError(process, error);
                 }
             }
         }
@@ -108,8 +112,8 @@ namespace Tests.TreeCompressionLibraryTests
             }
         }
 
-        private TestProcessSubject _subject;
-        private TestObserver _observer;
+        private TestProcessSubject _subject = new TestProcessSubject();
+        private TestObserver _observer = new TestObserver();
 
         [SetUp]
         public void Setup()
@@ -237,13 +241,13 @@ namespace Tests.TreeCompressionLibraryTests
             _subject.NotifyComplete("MultiProcess", "Done");
             
             // Assert
-            foreach (var observer in observers)
+            foreach (var observer in observers.OfType<TestObserver>())
             {
                 Assert.AreEqual(1, observer.StartCount);
                 Assert.AreEqual(1, observer.ProgressCount);
                 Assert.AreEqual(1, observer.CompleteCount);
                 Assert.AreEqual(0, observer.ErrorCount);
-                
+
                 Assert.AreEqual("MultiProcess", observer.LastProcess);
                 Assert.AreEqual(33.3, observer.LastProgress);
                 Assert.AreEqual("Done", observer.LastResult);

@@ -7,10 +7,9 @@ namespace Tests.TreeCompressionLibraryTests;
 [TestClass]
 public class FilterBaseProcessSubjectTests
 {
-    // Create a concrete implementation of FilterBase for testing
     private class TestFilter<T, TO> : FilterBase<T, TO>
     {
-        public Func<T, TO> ProcessFunction { get; set; }
+        public Func<T, TO> ProcessFunction { get; set; } = new Func<T, TO>( data => default!);
 
         protected override TO ProcessData(T data)
         {
@@ -24,8 +23,8 @@ public class FilterBaseProcessSubjectTests
         public new void NotifyError(string process, Exception error) => base.NotifyError(process, error);
     }
 
-    private TestFilter<string, int> _filter;
-    private Mock<IProcessObserver> _observerMock;
+    private TestFilter<string, int> _filter = new TestFilter<string, int>();
+    private Mock<IProcessObserver> _observerMock = new Mock<IProcessObserver>();
 
     [TestInitialize]
     public void Setup()

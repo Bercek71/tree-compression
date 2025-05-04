@@ -1,3 +1,4 @@
+using System.Diagnostics;
 using Moq;
 using NUnit.Framework;
 using TreeCompressionPipeline;
@@ -28,10 +29,11 @@ public class PipelineWithProcessObserverTests
     public void AddFilter_WithObserver_AddsObserverToFilter()
     {
         // Act
-        _pipeline.AddFilter(_filterMock.Object);
+        Debug.Assert(_filterMock?.Object != null, "_filterMock?.Object != null");
+        _pipeline?.AddFilter(_filterMock?.Object);
             
         // Assert
-        _filterMock.Verify(f => f.AddObserver(_observerMock.Object), Times.Once);
+        _filterMock.Verify(f => f.AddObserver(_observerMock!.Object), Times.Once);
     }
 
     [Test]
@@ -41,21 +43,22 @@ public class PipelineWithProcessObserverTests
         _pipeline = new Pipeline(); // No observer set
             
         // Act
-        _pipeline.AddFilter(_filterMock.Object);
+        Debug.Assert(_filterMock?.Object != null, "_filterMock?.Object != null");
+        _pipeline.AddFilter(_filterMock?.Object!);
             
         // Assert
-        _filterMock.Verify(f => f.AddObserver(It.IsAny<IProcessObserver>()), Times.Never);
+        _filterMock!.Verify(f => f.AddObserver(It.IsAny<IProcessObserver>()), Times.Never);
     }
 
     [Test]
     public void Process_CallsFilterProcessWithCorrectData()
     {
         // Arrange
-        var inputData = "test input";
-        var expectedOutput = "test output";
+        const string inputData = "test input";
+        const string expectedOutput = "test output";
             
-        _filterMock.Setup(f => f.Process(inputData)).Returns(expectedOutput);
-        _pipeline.AddFilter(_filterMock.Object);
+        _filterMock!.Setup(f => f.Process(inputData)).Returns(expectedOutput);
+        _pipeline!.AddFilter(_filterMock.Object);
             
         // Act
         var result = _pipeline.Process(inputData);
