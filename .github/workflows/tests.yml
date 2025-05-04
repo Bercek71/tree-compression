@@ -28,13 +28,13 @@ jobs:
           dotnet-version: ${{ matrix.dotnet-version }}
 
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore TreeCompresion.sln
 
       - name: Build
-        run: dotnet build --configuration Release --no-restore
+        run: dotnet build TreeCompresion.sln --configuration Release --no-restore
 
       - name: Test
-        run: dotnet test --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
+        run: dotnet test TreeCompresion.sln --configuration Release --no-build --verbosity normal --collect:"XPlat Code Coverage"
 
       - name: Generate coverage report
         uses: danielpalme/ReportGenerator-GitHub-Action@5.2.0
@@ -82,7 +82,7 @@ jobs:
         continue-on-error: true  # Make this optional in case SONAR_TOKEN is not configured
         
       - name: Build for Analysis
-        run: dotnet build --configuration Release
+        run: dotnet build TreeCompresion.sln --configuration Release
         
       - name: End SonarQube Analysis
         env:
