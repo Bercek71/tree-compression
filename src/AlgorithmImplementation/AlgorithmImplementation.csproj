@@ -4,11 +4,12 @@
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <RootNamespace>TreeCompressionAlgorithms</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\..\lib\UDPipeBindings\UDPipeBindings.csproj" />
-      <ProjectReference Include="..\TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj" />
+      <ProjectReference Include="..\TreeCompressionLibrary\TreeCompressionLibrary.csproj" />
     </ItemGroup>
 
     <ItemGroup>

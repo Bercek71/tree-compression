@@ -6,13 +6,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MorphoDiTaBindings", "lib\M
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDPipeBindings", "lib\UDPipeBindings\UDPipeBindings.csproj", "{5BFF9106-44D0-470A-BE96-0FCA0B9A28EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionPipelineLib", "src\TreeCompressionPipelineLib\TreeCompressionPipelineLib.csproj", "{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionLibrary", "src\TreeCompressionLibrary\TreeCompressionLibrary.csproj", "{A8F45513-7EFC-40F8-9FC3-706E23A9C83C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeCompressionAlgorithms", "src\TreeCompressionAlgorithms\TreeCompressionAlgorithms.csproj", "{51CA9CCF-4B18-476D-85AF-82F456C1C13B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AlgorithmImplementation", "src\AlgorithmImplementation\AlgorithmImplementation.csproj", "{51CA9CCF-4B18-476D-85AF-82F456C1C13B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{3599E06B-C16D-4444-89C5-66C1085CC35A}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4A62ECA2-5EC9-4973-A16F-3653E22C5DA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{ED14E492-7766-47A2-AE8C-CECC1454ECD5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "TreeCompressionLibrary", "TreeCompressionLibrary", "{3133CAD9-9352-4C88-A22B-9EFDDDF5D791}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,5 +51,6 @@ Global
 		{51CA9CCF-4B18-476D-85AF-82F456C1C13B} = {4A62ECA2-5EC9-4973-A16F-3653E22C5DA3}
 		{5B6ADC87-9DBE-4471-B903-E55E1D0362FD} = {4A62ECA2-5EC9-4973-A16F-3653E22C5DA3}
 		{A8F45513-7EFC-40F8-9FC3-706E23A9C83C} = {4A62ECA2-5EC9-4973-A16F-3653E22C5DA3}
+		{3133CAD9-9352-4C88-A22B-9EFDDDF5D791} = {ED14E492-7766-47A2-AE8C-CECC1454ECD5}
 	EndGlobalSection
 EndGlobal
