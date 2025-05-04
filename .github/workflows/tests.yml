@@ -45,13 +45,13 @@ jobs:
           verbosity: 'Info'
 
       - name: Upload coverage report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: coverage-report-${{ matrix.dotnet-version }}
           path: CoverageReport
 
       - name: Upload test results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: test-results-${{ matrix.dotnet-version }}
           path: TestResults
@@ -120,7 +120,7 @@ jobs:
         continue-on-error: true  # Optional tests for now
 
       - name: Archive performance results
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: performance-results
           path: performance-results/
