@@ -39,12 +39,12 @@ report_optimized <- read_csv("../docs/data/reports/report - treerepair - linear 
 report_no_linear <- read_csv("../docs/data/reports/report - treerepair - no linearization.csv")
 report_no_linear_opt <- read_csv("../docs/data/reports/report - treerepair - no linearization optimized.csv")
 
-# Přejmenování datasetů pro lepší přehlednost
+# Přejmenování datasetů pro lepší přehlednost - Upravené podle nové terminologie
 names_mapping <- c(
-  "report_original" = "Linearizovaný TreeRePair",
-  "report_optimized" = "Opt. Linearizovaný TreeRePair",
-  "report_no_linear" = "TreeRePair bez linearizace",
-  "report_no_linear_opt" = "Opt. TreeRePair bez linearizace"
+  "report_original" = "Linearizace + RePair",
+  "report_optimized" = "Opt. linearizace + RePair",
+  "report_no_linear" = "Komprese bez linearizace",
+  "report_no_linear_opt" = "Opt. komprese bez linearizace"
 )
 
 # ================================================================
@@ -120,12 +120,12 @@ file_type_colors <- c(
   "Ostatní" = "#A6CEE3"
 )
 
-# Rozšířená barevná paleta pro metody komprese (4 metody)
+# Rozšířená barevná paleta pro metody komprese (4 metody) - Upravené podle nové terminologie
 compression_method_colors <- c(
-  "Linearizovaný TreeRePair" = "#1B9E77",
-  "Opt. Linearizovaný TreeRePair" = "#D95F02",
-  "TreeRePair bez linearizace" = "#7570B3",
-  "Opt. TreeRePair bez linearizace" = "#E7298A"
+  "Linearizace + RePair" = "#1B9E77",
+  "Opt. linearizace + RePair" = "#D95F02",
+  "Komprese bez linearizace" = "#7570B3",
+  "Opt. komprese bez linearizace" = "#E7298A"
 )
 
 # ================================================================
@@ -531,15 +531,12 @@ gain_comparison <- ggplot(
 all_reports <- all_reports %>%
   mutate(
     MethodCategory = case_when(
-      Dataset %in% c("Linearizovaný TreeRePair", "Opt. Linearizovaný
-   TreeRePair") ~ "S linearizací",
-      Dataset %in% c("TreeRePair bez linearizace", "Opt. TreeRePair bez linearizace") ~ "Bez linearizace"
+      Dataset %in% c("Linearizace + RePair", "Opt. linearizace + RePair") ~ "S linearizací",
+      Dataset %in% c("Komprese bez linearizace", "Opt. komprese bez linearizace") ~ "Bez linearizace"
     ),
     OptimizationCategory = case_when(
-      Dataset %in% c("Linearizovaný TreeRePair", "TreeRePair bez linearizace") ~ "Základní",
-      Dataset %in% c("Opt. Linearizovaný
-   TreeRePair", "Opt. TreeRePair bez linearizace") ~ "Opt. Linearizovaný
-  "
+      Dataset %in% c("Linearizace + RePair", "Komprese bez linearizace") ~ "Základní",
+      Dataset %in% c("Opt. linearizace + RePair", "Opt. komprese bez linearizace") ~ "Optimalizovaná"
     )
   )
 
@@ -561,11 +558,10 @@ linearization_comparison <- ggplot(all_reports, aes(x = Type, y = CompressionRat
 optimization_comparison <- ggplot(all_reports, aes(x = Type, y = CompressionRatio, fill = OptimizationCategory)) +
   geom_boxplot(alpha = 0.7, position = "dodge") +
   geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
-  scale_fill_manual(values = c("Základní" = "#E31A1C", "Opt. Linearizovaný" = "#FF7F00")) +
+  scale_fill_manual(values = c("Základní" = "#E31A1C", "Optimalizovaná" = "#FF7F00")) +
   labs(
     title = "Vliv optimalizace na kompresní poměr",
-    subtitle = "Porovnání základních a Opt. Linearizovaný
-ch metod",
+    subtitle = "Porovnání základních a optimalizovaných metod",
     x = "Typ souboru",
     y = "Kompresní poměr",
     fill = "Kategorie optimalizace"
@@ -767,7 +763,7 @@ opt_category_avg_ratio <- ggplot(avg_by_optimization_category,
                                aes(x = Type, y = AvgCompressionRatio, fill = OptimizationCategory)) +
   geom_bar(stat = "identity", position = "dodge", alpha = 0.8) +
   geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
-  scale_fill_manual(values = c("Základní" = "#E31A1C", "Opt. Linearizovaný" = "#FF7F00")) +
+  scale_fill_manual(values = c("Základní" = "#E31A1C", "Optimalizovaná" = "#FF7F00")) +
   labs(
     title = "Průměrný kompresní poměr podle kategorie optimalizace",
     x = "Typ souboru",
@@ -897,7 +893,7 @@ final_comparison_normalized <- final_comparison_long %>%
 radar_data <- final_comparison_normalized %>%
   pivot_wider(
     names_from = Metric,
-    values_from = NormalizedValuess
+    values_from = NormalizedValue
   )
 
 # Uložení dat pro radar chart
