@@ -11,21 +11,11 @@
 	<s:String x:Key="/Default/CodeInspection/ExcludedFiles/FilesAndFoldersToSkip2/=7020124F_002D9FFC_002D4AC3_002D8F3D_002DAAB8E0240759_002Ff_003AStack_00601_002Ecs_002Fl_003A_002E_002E_003F_002E_002E_003F_002E_002E_003FLibrary_003FApplication_0020Support_003FJetBrains_003FRider2025_002E1_003Fresharper_002Dhost_003FDecompilerCache_003Fdecompiler_003F1278210c0860499583ff4e962a449d7d55200_003F98_003F96a6eeb9_003FStack_00601_002Ecs/@EntryIndexedValue">ForceIncluded</s:String>
 	<s:String x:Key="/Default/Environment/AssemblyExplorer/XmlDocument/@EntryValue">&lt;AssemblyExplorer&gt;
   &lt;Assembly Path="/Users/marekberan/.nuget/packages/udpipe.csharp.wrapper/4.0.0/lib/net9.0/UDPipe.CSharp.Wrapper.dll" /&gt;
+  &lt;Assembly Path="/Users/marekberan/.nuget/packages/nunit/4.3.2/lib/net8.0/nunit.framework.dll" /&gt;
 &lt;/AssemblyExplorer&gt;</s:String>
 	<s:String x:Key="/Default/Environment/Highlighting/HighlightingSourceSnapshotLocation/@EntryValue">/Users/marekberan/Library/Caches/JetBrains/Rider2025.1/resharper-host/temp/Rider/vAny/CoverageData/_TreeCompresion.-218876432/Snapshot/snapshot.utdcvr</s:String>
 	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=3e503d19_002D733f_002D41f0_002D807a_002Dbcdb7b265eaa/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="PipelineTest" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;
-  &lt;Or&gt;
-    &lt;ProjectFolder&gt;E370E9A0-67FC-4B1E-BA34-08A2D099EC85/d:TreeCompressionLibraryTests&lt;/ProjectFolder&gt;
-    &lt;TestAncestor&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.CompressionStrategyBaseTests&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.TreeRePairStrategyTests&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.OriginalTreeRepairStrategyTests&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.DependencyTreeNodeTests&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.TreeRepairNoEncodingStrategyTests&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.CompressedTreeTests&lt;/TestId&gt;
-      &lt;TestId&gt;MSTest::E370E9A0-67FC-4B1E-BA34-08A2D099EC85::net9.0::TreeCompressionAlgorithms.Tests.NaturalLanguageTreeCompressingTests&lt;/TestId&gt;
-    &lt;/TestAncestor&gt;
-  &lt;/Or&gt;
+  &lt;Project Location="/Users/marekberan/Code/SP/tree-compression/src/Tests" Presentation="&amp;lt;Tests&amp;gt;\&amp;lt;Tests&amp;gt;" /&gt;
 &lt;/SessionState&gt;</s:String>
 	
 	<s:Boolean x:Key="/Default/ResxEditorPersonal/CheckedGroups/=TreeCompressionMain_002FResources/@EntryIndexedValue">False</s:Boolean>

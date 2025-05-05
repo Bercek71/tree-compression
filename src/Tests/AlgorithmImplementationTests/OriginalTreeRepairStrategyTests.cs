@@ -2,7 +2,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 using TreeCompressionPipeline.TreeStructure;
 
-namespace TreeCompressionAlgorithms.Tests;
+namespace Tests.AlgorithmImplementationTests;
 
 [TestClass]
 public class OriginalTreeRepairStrategyTests

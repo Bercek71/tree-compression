@@ -1,15 +1,6 @@
 @startuml TreeCompressionLibrary
 
 ' Style settings
-skinparam classAttributeIconSize 0
-skinparam classFontStyle bold
-skinparam classFontSize 12
-skinparam classBackgroundColor #E3F2FD
-skinparam interfaceBackgroundColor #E8F5E9
-skinparam packageBackgroundColor #FAFAFA
-skinparam arrowColor #424242
-skinparam packageStyle rectangle
-skinparam linetype ortho
 
 ' Main Package
 package "TreeCompressionLibrary" {

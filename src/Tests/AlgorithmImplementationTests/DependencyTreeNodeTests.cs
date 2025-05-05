@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using TreeCompressionPipeline.TreeStructure;
 
-namespace TreeCompressionAlgorithms.Tests;
+namespace Tests.AlgorithmImplementationTests;
 
 [TestClass]
 public class DependencyTreeNodeTests

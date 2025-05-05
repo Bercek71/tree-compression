@@ -1,13 +1,9 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using TreeCompressionPipeline;
-using TreeCompressionPipeline.TreeStructure;
-using TreeCompressionPipeline.CompressionStrategies;
-using System;
 using System.Text;
-using System.Collections.Generic;
-using System.Linq;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using TreeCompressionPipeline.CompressionStrategies;
+using TreeCompressionPipeline.TreeStructure;
 
-namespace TreeCompressionAlgorithms.Tests
+namespace Tests.AlgorithmImplementationTests
 {
     [TestClass]
     public class CompressionStrategyBaseTests
