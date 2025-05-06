@@ -904,3 +904,1656 @@ cat("\nAnalýza komprese stromových struktur dokončena.\n")
 cat("Počet analyzovaných souborů:", nrow(all_reports), "\n")
 cat("Počet zpracovaných metod komprese:", length(unique(all_reports$Dataset)), "\n")
 cat("Všechny grafy a analýzy byly uloženy do adresáře 'visualization'.\n")
+
+
+# ================================================================
+# DALŠÍ DOPLŇUJÍCÍ GRAFY K ANALÝZE KOMPRESE STROMOVÝCH STRUKTUR
+# ================================================================
+
+# ================================================================
+# POKROČILÉ VIZUALIZACE
+# ================================================================
+
+# B1: Analýza stability kompresního poměru - směrodatná odchylka podle metody
+stability_analysis <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    MeanCompRatio = mean(CompressionRatio),
+    StdDevCompRatio = sd(CompressionRatio),
+    RangeCompRatio = max(CompressionRatio) - min(CompressionRatio),
+    MedianCompRatio = median(CompressionRatio),
+    IQR_CompRatio = IQR(CompressionRatio),
+    .groups = "drop"
+  )
+
+stability_plot <- ggplot(stability_analysis, aes(x = Dataset, y = StdDevCompRatio, fill = Type)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.8) +
+  scale_fill_manual(values = file_type_colors) +
+  labs(
+    title = "Stabilita kompresního poměru podle metody a typu souboru",
+    subtitle = "Nižší směrodatná odchylka znamená stabilnější výsledky komprese",
+    x = "Metoda komprese",
+    y = "Směrodatná odchylka kompresního poměru",
+    fill = "Typ souboru"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B2: Jitter plot pro detailní zobrazení rozložení kompresních poměrů
+jitter_plot <- ggplot(all_reports, aes(x = Type, y = CompressionRatio, color = Dataset)) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8), 
+             alpha = 0.7, size = 2) +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_color_manual(values = compression_method_colors) +
+  labs(
+    title = "Rozložení jednotlivých kompresních poměrů podle typu souboru a metody",
+    subtitle = "Každý bod představuje jeden soubor",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(legend.position = "top")
+
+# B3: Kombinovaný graf kompresního poměru (box + violin + jitter)
+combined_ratio_plot <- ggplot(all_reports, aes(x = Type, y = CompressionRatio, fill = Dataset)) +
+  geom_violin(alpha = 0.3, draw_quantiles = c(0.5), scale = "width", trim = TRUE) +
+  geom_boxplot(width = 0.1, alpha = 0.8, outlier.shape = NA) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.1, dodge.width = 0.8), 
+             alpha = 0.5, size = 1, aes(color = Dataset)) +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_fill_manual(values = compression_method_colors) +
+  scale_color_manual(values = compression_method_colors) +
+  labs(
+    title = "Komplexní vizualizace kompresního poměru",
+    subtitle = "Kombinace violin plot, box plot a bodů pro jednotlivé soubory",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    fill = "Metoda komprese",
+    color = "Metoda komprese"
+  ) +
+  my_theme +
+  guides(color = "none")  # Skrýt duplicitní legendu pro barvu
+
+# B4: Porovnání velikosti stromu napříč typy dokumentů
+tree_size_comparison <- ggplot(all_reports, aes(x = Type, y = TreeSize, fill = Dataset)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  scale_y_log10(labels = comma_format(suffix = " B")) +
+  scale_fill_manual(values = compression_method_colors) +
+  labs(
+    title = "Porovnání velikosti stromu podle typu souboru a metody",
+    x = "Typ souboru",
+    y = "Velikost stromu (B, logaritmická stupnice)",
+    fill = "Metoda komprese"
+  ) +
+  my_theme
+
+# B5: Vizualizace kompresního poměru a doby zpracování jako dva grafy vedle sebe
+side_by_side <- all_reports %>%
+  pivot_longer(
+    cols = c(CompressionRatio, TotalProcessingTime),
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "CompressionRatio" ~ "Kompresní poměr",
+      Metric == "TotalProcessingTime" ~ "Celková doba zpracování (ms)"
+    )
+  )
+
+side_by_side_plot <- ggplot(side_by_side, aes(x = Type, y = Value, fill = Dataset)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = compression_method_colors) +
+  scale_y_continuous(
+    sec.axis = sec_axis(~ ., name = "Celková doba zpracování (ms)"),
+    labels = function(x) format(x, scientific = FALSE)
+  ) +
+  labs(
+    title = "Porovnání kompresního poměru a celkové doby zpracování",
+    x = "Typ souboru",
+    y = "Hodnota",
+    fill = "Metoda komprese"
+  ) +
+  my_theme
+
+# B6: Rozložení kompresního poměru pro různé metody (více detailní histogramy)
+detailed_histograms <- ggplot(all_reports, aes(x = CompressionRatio, fill = Dataset)) +
+  geom_histogram(binwidth = 0.025, alpha = 0.7, position = "identity") +
+  facet_grid(Dataset ~ Type, scales = "free_y") +
+  scale_fill_manual(values = compression_method_colors) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 0.8) +
+  labs(
+    title = "Detailní histogramy kompresního poměru",
+    subtitle = "Rozděleno podle metody komprese a typu souboru",
+    x = "Kompresní poměr",
+    y = "Počet souborů",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(legend.position = "none")
+
+# B7: Porovnání vlivu velikosti vs. typu souboru na kompresní poměr
+size_vs_type_effect <- ggplot(all_reports, 
+                             aes(x = Type, y = CompressionRatio, fill = SizeCategory)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_fill_viridis_d(option = "D", end = 0.8) +
+  facet_wrap(~ Dataset) +
+  labs(
+    title = "Vliv typu souboru a velikostní kategorie na kompresní poměr",
+    subtitle = "Rozděleno podle metody komprese",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    fill = "Velikostní kategorie"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B8: Analýza vlivu struktury stromu na kompresi - počet uzlů vs. kompresní poměr
+tree_structure_influence <- ggplot(all_reports, 
+                                 aes(x = TreeNodesCount, y = CompressionRatio, color = Dataset)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format()) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vliv počtu uzlů stromu na kompresní poměr",
+    x = "Počet uzlů stromu (logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B9: Kompresní efektivita vzhledem k průměrné velikosti uzlu
+all_reports <- all_reports %>%
+  mutate(AvgNodeSize = ifelse(is.na(TreeNodesCount) | TreeNodesCount == 0, NA, TreeSize / TreeNodesCount))
+
+node_size_effectiveness <- ggplot(
+  all_reports %>% filter(!is.na(AvgNodeSize)), 
+  aes(x = AvgNodeSize, y = CompressionRatio, color = Dataset)
+) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format(suffix = " B/uzel")) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vliv průměrné velikosti uzlu na kompresní poměr",
+    x = "Průměrná velikost uzlu (B/uzel, logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B10: Trade-off mezi kompresním poměrem a rychlostí komprese
+tradeoff_plot <- ggplot(all_reports, 
+                      aes(x = CompressionRatio, y = CompressionTime, color = Dataset)) +
+  geom_point(aes(size = Size), alpha = 0.7) +
+  scale_y_log10(labels = comma_format(suffix = " ms")) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_size_continuous(trans = "log10", range = c(2, 8), labels = comma_format()) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  facet_wrap(~ Type, scales = "free_y") +
+  labs(
+    title = "Trade-off mezi kompresním poměrem a dobou komprese",
+    subtitle = "Velikost bodů odpovídá velikosti souboru",
+    x = "Kompresní poměr",
+    y = "Doba komprese (ms, logaritmická stupnice)",
+    color = "Metoda komprese",
+    size = "Velikost souboru (B)"
+  ) +
+  my_theme
+
+# B11: Porovnání kompresního poměru a poměru velikosti stromu k původní velikosti
+ratio_comparison_plot <- ggplot(all_reports, 
+                              aes(x = TreeToTextRatio, y = CompressionRatio, color = Dataset)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format()) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vztah mezi poměrem velikosti stromu k textu a kompresním poměrem",
+    x = "Poměr velikosti stromu / text (logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B12: Porovnání efektivity pro malé, střední a velké soubory
+size_category_box <- ggplot(all_reports, 
+                          aes(x = SizeCategory, y = CompressionRatio, fill = Dataset)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_fill_manual(values = compression_method_colors) +
+  facet_wrap(~ Type) +
+  labs(
+    title = "Kompresní poměr podle velikostní kategorie a typu souboru",
+    subtitle = "Rozděleno podle metody komprese",
+    x = "Velikostní kategorie",
+    y = "Kompresní poměr",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B13: Spider (radar) chart pro komplexní porovnání metod
+# Připravit data pro spider chart - průměrné hodnoty po normalizaci
+radar_data_prep <- all_reports %>%
+  group_by(Dataset) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    AvgDecompTime = mean(DecompressionTime),
+    AvgGainPercent = mean(CompressionGainPercent),
+    AvgPerformance = mean(CompressionPerformance),
+    .groups = "drop"
+  )
+
+# Normalizace hodnot pro spider chart (0-1 škála)
+radar_data_normalized <- radar_data_prep %>%
+  mutate(
+    CompRatio_Norm = 1 - ((AvgCompRatio - min(AvgCompRatio)) / (max(AvgCompRatio) - min(AvgCompRatio))),
+    CompTime_Norm = 1 - ((AvgCompTime - min(AvgCompTime)) / (max(AvgCompTime) - min(AvgCompTime))),
+    DecompTime_Norm = 1 - ((AvgDecompTime - min(AvgDecompTime)) / (max(AvgDecompTime) - min(AvgDecompTime))),
+    GainPercent_Norm = (AvgGainPercent - min(AvgGainPercent)) / (max(AvgGainPercent) - min(AvgGainPercent)),
+    Performance_Norm = (AvgPerformance - min(AvgPerformance)) / (max(AvgPerformance) - min(AvgPerformance))
+  ) %>%
+  select(Dataset, ends_with("_Norm")) %>%
+  pivot_longer(
+    cols = -Dataset,
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "CompRatio_Norm" ~ "Kompresní poměr",
+      Metric == "CompTime_Norm" ~ "Doba komprese",
+      Metric == "DecompTime_Norm" ~ "Doba dekomprese",
+      Metric == "GainPercent_Norm" ~ "Kompresní zisk",
+      Metric == "Performance_Norm" ~ "Výkon komprese"
+    )
+  )
+
+# Spider chart pro porovnání metod
+spider_chart <- ggplot(radar_data_normalized, 
+                      aes(x = Metric, y = Value, color = Dataset, group = Dataset)) +
+  geom_polygon(aes(fill = Dataset), alpha = 0.1) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_fill_manual(values = compression_method_colors) +
+  coord_polar() +
+  labs(
+    title = "Porovnání kompresních metod - Spider Chart",
+    subtitle = "Vyšší hodnoty jsou lepší pro všechny metriky (hodnoty normalizovány)",
+    color = "Metoda komprese",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_line(color = "gray90"),
+    panel.grid.minor.y = element_blank()
+  )
+
+# B14: Analýza optimality - křivka Pareto fronty pro čas komprese vs. kompresní poměr
+# Vytvoření jednoduchého scatter plotu
+pareto_data <- all_reports %>%
+  select(FileName, Dataset, Type, Size, CompressionRatio, CompressionTime)
+
+# Funkce pro identifikaci Pareto optimálních bodů
+identify_pareto <- function(df) {
+  df_sorted <- df %>%
+    arrange(CompressionRatio, CompressionTime)
+  
+  pareto_points <- c(1)
+  current_min_time <- df_sorted$CompressionTime[1]
+  
+  for (i in 2:nrow(df_sorted)) {
+    if (df_sorted$CompressionTime[i] < current_min_time) {
+      pareto_points <- c(pareto_points, i)
+      current_min_time <- df_sorted$CompressionTime[i]
+    }
+  }
+  
+  df_sorted$IsParetoOptimal <- FALSE
+  df_sorted$IsParetoOptimal[pareto_points] <- TRUE
+  
+  return(df_sorted)
+}
+
+# Aplikace Pareto analýzy pro každý typ souboru
+pareto_results <- list()
+for (type in unique(pareto_data$Type)) {
+  type_data <- pareto_data %>% filter(Type == type)
+  pareto_results[[type]] <- identify_pareto(type_data)
+}
+
+pareto_all <- bind_rows(pareto_results)
+
+# Vytvoření Pareto grafu
+pareto_plot <- ggplot(pareto_all, 
+                     aes(x = CompressionRatio, y = CompressionTime, color = Dataset)) +
+  geom_point(aes(size = Size, shape = IsParetoOptimal), alpha = 0.7) +
+  scale_y_log10(labels = comma_format(suffix = " ms")) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_shape_manual(values = c(16, 17)) +
+  scale_size_continuous(trans = "log10", range = c(2, 8), labels = comma_format()) +
+  facet_wrap(~ Type, scales = "free") +
+  labs(
+    title = "Pareto optimální řešení: Kompresní poměr vs. Doba komprese",
+    subtitle = "Trojúhelníky označují Pareto optimální body",
+    x = "Kompresní poměr",
+    y = "Doba komprese (ms, logaritmická stupnice)",
+    color = "Metoda komprese",
+    size = "Velikost souboru (B)",
+    shape = "Pareto optimální"
+  ) +
+  my_theme
+
+# B15: Heatmapa průměrného kompresního poměru podle typu souboru a metody
+heatmap_comp_ratio <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    .groups = "drop"
+  )
+
+heatmap_plot <- ggplot(heatmap_comp_ratio, aes(x = Type, y = Dataset, fill = AvgCompRatio)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red", 
+                     midpoint = 1, limits = c(min(heatmap_comp_ratio$AvgCompRatio), 
+                                            max(heatmap_comp_ratio$AvgCompRatio))) +
+  geom_text(aes(label = sprintf("%.2f", AvgCompRatio)), color = "black", size = 4) +
+  labs(
+    title = "Heatmapa průměrných kompresních poměrů",
+    subtitle = "Podle typu souboru a metody komprese",
+    x = "Typ souboru",
+    y = "Metoda komprese",
+    fill = "Průměrný\nkompresní poměr"
+  ) +
+  my_theme +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# B16: Porovnání distribuční funkce CDF kompresního poměru
+cdf_plot <- ggplot(all_reports, aes(x = CompressionRatio, color = Dataset)) +
+  stat_ecdf(geom = "step", pad = FALSE, size = 1) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  labs(
+    title = "Kumulativní distribuční funkce (CDF) kompresního poměru",
+    subtitle = "Vyšší křivka u hodnoty 1.0 značí lepší metodu (více souborů pod hranicí úspěšné komprese)",
+    x = "Kompresní poměr",
+    y = "Kumulativní relativní četnost",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B17: Porovnání relativního zlepšení optimalizovaných metod
+# Vypočítat průměrné hodnoty pro základní a optimalizované metody
+improvement_data <- all_reports %>%
+  mutate(
+    OptimizationPair = case_when(
+      Dataset == "Linearizace + RePair" ~ "LinearizacePair",
+      Dataset == "Opt. linearizace + RePair" ~ "LinearizacePair",
+      Dataset == "Komprese bez linearizace" ~ "BezLinearizacePair",
+      Dataset == "Opt. komprese bez linearizace" ~ "BezLinearizacePair"
+    ),
+    IsOptimized = case_when(
+      Dataset %in% c("Opt. linearizace + RePair", "Opt. komprese bez linearizace") ~ "Optimalizovaná",
+      TRUE ~ "Základní"
+    )
+  ) %>%
+  group_by(Type, OptimizationPair, IsOptimized) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    AvgGainPercent = mean(CompressionGainPercent),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(
+    names_from = IsOptimized,
+    values_from = c(AvgCompRatio, AvgCompTime, AvgGainPercent)
+  ) %>%
+  mutate(
+    CompRatio_Improvement = (AvgCompRatio_Základní - AvgCompRatio_Optimalizovaná) / AvgCompRatio_Základní * 100,
+    CompTime_Improvement = (AvgCompTime_Základní - AvgCompTime_Optimalizovaná) / AvgCompTime_Základní * 100,
+    GainPercent_Improvement = (AvgGainPercent_Optimalizovaná - AvgGainPercent_Základní) / AvgGainPercent_Základní * 100
+  )
+
+# Převod do dlouhého formátu pro grafické znázornění
+improvement_long <- improvement_data %>%
+  select(Type, OptimizationPair, ends_with("_Improvement")) %>%
+  pivot_longer(
+    cols = ends_with("_Improvement"),
+    names_to = "Metric",
+    values_to = "ImprovementPercent"
+  ) %>%
+  mutate(
+    OptimizationPair = case_when(
+      OptimizationPair == "LinearizacePair" ~ "Linearizace + RePair",
+      OptimizationPair == "BezLinearizacePair" ~ "Komprese bez linearizace"
+    ),
+    Metric = case_when(
+      Metric == "CompRatio_Improvement" ~ "Zlepšení kompresního poměru",
+      Metric == "CompTime_Improvement" ~ "Zlepšení doby komprese",
+      Metric == "GainPercent_Improvement" ~ "Zlepšení kompresního zisku"
+    )
+  )
+
+# Graf zlepšení
+improvement_plot <- ggplot(improvement_long, 
+                         aes(x = Type, y = ImprovementPercent, fill = OptimizationPair)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.8) +
+  geom_text(aes(label = sprintf("%.1f%%", ImprovementPercent)), 
+           position = position_dodge(width = 0.9), vjust = -0.3, size = 3) +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = c("Linearizace + RePair" = "#1F78B4", 
+                              "Komprese bez linearizace" = "#33A02C")) +
+  labs(
+    title = "Relativní zlepšení optimalizovaných metod oproti základním",
+    subtitle = "Kladné hodnoty znamenají zlepšení, záporné hodnoty zhoršení",
+    x = "Typ souboru",
+    y = "Relativní zlepšení (%)",
+    fill = "Skupina metod"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B18: Porovnání "trade-off" mezi prostorovou a časovou složitostí
+tradeoff_space_time <- ggplot(all_reports, 
+                            aes(x = CompressionGainPercent, y = TotalProcessingTime / Size * 1000, 
+                               color = Dataset)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, alpha = 0.2) +
+  scale_y_log10(labels = comma_format(suffix = " ms/KB")) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  labs(
+    title = "Trade-off mezi kompresním ziskem a dobou zpracování",
+    subtitle = "Poměr doby zpracování k velikosti souboru (časová složitost) vs. kompresní zisk (prostorová složitost)",
+    x = "Kompresní zisk (%)",
+    y = "Doba zpracování na KB (ms/KB, logaritmická stupnice)",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B19: Analýza vlivu optimalizace na různé metriky
+optimization_effect <- all_reports %>%
+  pivot_longer(
+    cols = c(CompressionRatio, CompressionTime, DecompressionTime, CompressionGainPercent),
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "CompressionRatio" ~ "Kompresní poměr",
+      Metric == "CompressionTime" ~ "Doba komprese (ms)",
+      Metric == "DecompressionTime" ~ "Doba dekomprese (ms)",
+      Metric == "CompressionGainPercent" ~ "Kompresní zisk (%)"
+    )
+  )
+
+optimization_plot <- ggplot(optimization_effect, 
+                          aes(x = OptimizationCategory, y = Value, fill = MethodCategory)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = method_category_colors) +
+  labs(
+    title = "Vliv optimalizace na různé metriky podle kategorie linearizace",
+    x = "Kategorie optimalizace",
+    y = "Hodnota metriky",
+    fill = "Kategorie linearizace"
+  ) +
+  my_theme
+
+
+
+# ================================================================
+# DALŠÍ DOPLŇUJÍCÍ GRAFY K ANALÝZE KOMPRESE STROMOVÝCH STRUKTUR
+# ================================================================
+
+# POZNÁMKA: Tyto grafy rozšiřují předchozí sady vizualizací - vložte je na konec
+# vašeho skriptu pro úplnou analýzu
+
+# ================================================================
+# POKROČILÉ VIZUALIZACE
+# ================================================================
+
+# B1: Analýza stability kompresního poměru - směrodatná odchylka podle metody
+stability_analysis <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    MeanCompRatio = mean(CompressionRatio),
+    StdDevCompRatio = sd(CompressionRatio),
+    RangeCompRatio = max(CompressionRatio) - min(CompressionRatio),
+    MedianCompRatio = median(CompressionRatio),
+    IQR_CompRatio = IQR(CompressionRatio),
+    .groups = "drop"
+  )
+
+stability_plot <- ggplot(stability_analysis, aes(x = Dataset, y = StdDevCompRatio, fill = Type)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.8) +
+  scale_fill_manual(values = file_type_colors) +
+  labs(
+    title = "Stabilita kompresního poměru podle metody a typu souboru",
+    subtitle = "Nižší směrodatná odchylka znamená stabilnější výsledky komprese",
+    x = "Metoda komprese",
+    y = "Směrodatná odchylka kompresního poměru",
+    fill = "Typ souboru"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B2: Jitter plot pro detailní zobrazení rozložení kompresních poměrů
+jitter_plot <- ggplot(all_reports, aes(x = Type, y = CompressionRatio, color = Dataset)) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.2, dodge.width = 0.8), 
+             alpha = 0.7, size = 2) +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_color_manual(values = compression_method_colors) +
+  labs(
+    title = "Rozložení jednotlivých kompresních poměrů podle typu souboru a metody",
+    subtitle = "Každý bod představuje jeden soubor",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(legend.position = "top")
+
+# B3: Kombinovaný graf kompresního poměru (box + violin + jitter)
+combined_ratio_plot <- ggplot(all_reports, aes(x = Type, y = CompressionRatio, fill = Dataset)) +
+  geom_violin(alpha = 0.3, draw_quantiles = c(0.5), scale = "width", trim = TRUE) +
+  geom_boxplot(width = 0.1, alpha = 0.8, outlier.shape = NA) +
+  geom_jitter(position = position_jitterdodge(jitter.width = 0.1, dodge.width = 0.8), 
+             alpha = 0.5, size = 1, aes(color = Dataset)) +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_fill_manual(values = compression_method_colors) +
+  scale_color_manual(values = compression_method_colors) +
+  labs(
+    title = "Komplexní vizualizace kompresního poměru",
+    subtitle = "Kombinace violin plot, box plot a bodů pro jednotlivé soubory",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    fill = "Metoda komprese",
+    color = "Metoda komprese"
+  ) +
+  my_theme +
+  guides(color = "none")  # Skrýt duplicitní legendu pro barvu
+
+# B4: Porovnání velikosti stromu napříč typy dokumentů
+tree_size_comparison <- ggplot(all_reports, aes(x = Type, y = TreeSize, fill = Dataset)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  scale_y_log10(labels = comma_format(suffix = " B")) +
+  scale_fill_manual(values = compression_method_colors) +
+  labs(
+    title = "Porovnání velikosti stromu podle typu souboru a metody",
+    x = "Typ souboru",
+    y = "Velikost stromu (B, logaritmická stupnice)",
+    fill = "Metoda komprese"
+  ) +
+  my_theme
+
+# B5: Vizualizace kompresního poměru a doby zpracování jako dva grafy vedle sebe
+side_by_side <- all_reports %>%
+  pivot_longer(
+    cols = c(CompressionRatio, TotalProcessingTime),
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "CompressionRatio" ~ "Kompresní poměr",
+      Metric == "TotalProcessingTime" ~ "Celková doba zpracování (ms)"
+    )
+  )
+
+side_by_side_plot <- ggplot(side_by_side, aes(x = Type, y = Value, fill = Dataset)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = compression_method_colors) +
+  scale_y_continuous(
+    sec.axis = sec_axis(~ ., name = "Celková doba zpracování (ms)"),
+    labels = function(x) format(x, scientific = FALSE)
+  ) +
+  labs(
+    title = "Porovnání kompresního poměru a celkové doby zpracování",
+    x = "Typ souboru",
+    y = "Hodnota",
+    fill = "Metoda komprese"
+  ) +
+  my_theme
+
+# B6: Rozložení kompresního poměru pro různé metody (více detailní histogramy)
+detailed_histograms <- ggplot(all_reports, aes(x = CompressionRatio, fill = Dataset)) +
+  geom_histogram(binwidth = 0.025, alpha = 0.7, position = "identity") +
+  facet_grid(Dataset ~ Type, scales = "free_y") +
+  scale_fill_manual(values = compression_method_colors) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 0.8) +
+  labs(
+    title = "Detailní histogramy kompresního poměru",
+    subtitle = "Rozděleno podle metody komprese a typu souboru",
+    x = "Kompresní poměr",
+    y = "Počet souborů",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(legend.position = "none")
+
+# B7: Porovnání vlivu velikosti vs. typu souboru na kompresní poměr
+size_vs_type_effect <- ggplot(all_reports, 
+                             aes(x = Type, y = CompressionRatio, fill = SizeCategory)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_fill_viridis_d(option = "D", end = 0.8) +
+  facet_wrap(~ Dataset) +
+  labs(
+    title = "Vliv typu souboru a velikostní kategorie na kompresní poměr",
+    subtitle = "Rozděleno podle metody komprese",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    fill = "Velikostní kategorie"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B8: Analýza vlivu struktury stromu na kompresi - počet uzlů vs. kompresní poměr
+tree_structure_influence <- ggplot(all_reports, 
+                                 aes(x = TreeNodesCount, y = CompressionRatio, color = Dataset)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format()) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vliv počtu uzlů stromu na kompresní poměr",
+    x = "Počet uzlů stromu (logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B9: Kompresní efektivita vzhledem k průměrné velikosti uzlu
+all_reports <- all_reports %>%
+  mutate(AvgNodeSize = ifelse(is.na(TreeNodesCount) | TreeNodesCount == 0, NA, TreeSize / TreeNodesCount))
+
+node_size_effectiveness <- ggplot(
+  all_reports %>% filter(!is.na(AvgNodeSize)), 
+  aes(x = AvgNodeSize, y = CompressionRatio, color = Dataset)
+) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format(suffix = " B/uzel")) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vliv průměrné velikosti uzlu na kompresní poměr",
+    x = "Průměrná velikost uzlu (B/uzel, logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B10: Trade-off mezi kompresním poměrem a rychlostí komprese
+tradeoff_plot <- ggplot(all_reports, 
+                      aes(x = CompressionRatio, y = CompressionTime, color = Dataset)) +
+  geom_point(aes(size = Size), alpha = 0.7) +
+  scale_y_log10(labels = comma_format(suffix = " ms")) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_size_continuous(trans = "log10", range = c(2, 8), labels = comma_format()) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  facet_wrap(~ Type, scales = "free_y") +
+  labs(
+    title = "Trade-off mezi kompresním poměrem a dobou komprese",
+    subtitle = "Velikost bodů odpovídá velikosti souboru",
+    x = "Kompresní poměr",
+    y = "Doba komprese (ms, logaritmická stupnice)",
+    color = "Metoda komprese",
+    size = "Velikost souboru (B)"
+  ) +
+  my_theme
+
+# B11: Porovnání kompresního poměru a poměru velikosti stromu k původní velikosti
+ratio_comparison_plot <- ggplot(all_reports, 
+                              aes(x = TreeToTextRatio, y = CompressionRatio, color = Dataset)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format()) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vztah mezi poměrem velikosti stromu k textu a kompresním poměrem",
+    x = "Poměr velikosti stromu / text (logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B12: Porovnání efektivity pro malé, střední a velké soubory
+size_category_box <- ggplot(all_reports, 
+                          aes(x = SizeCategory, y = CompressionRatio, fill = Dataset)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_fill_manual(values = compression_method_colors) +
+  facet_wrap(~ Type) +
+  labs(
+    title = "Kompresní poměr podle velikostní kategorie a typu souboru",
+    subtitle = "Rozděleno podle metody komprese",
+    x = "Velikostní kategorie",
+    y = "Kompresní poměr",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B13: Spider (radar) chart pro komplexní porovnání metod
+# Připravit data pro spider chart - průměrné hodnoty po normalizaci
+radar_data_prep <- all_reports %>%
+  group_by(Dataset) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    AvgDecompTime = mean(DecompressionTime),
+    AvgGainPercent = mean(CompressionGainPercent),
+    AvgPerformance = mean(CompressionPerformance),
+    .groups = "drop"
+  )
+
+# Normalizace hodnot pro spider chart (0-1 škála)
+radar_data_normalized <- radar_data_prep %>%
+  mutate(
+    CompRatio_Norm = 1 - ((AvgCompRatio - min(AvgCompRatio)) / (max(AvgCompRatio) - min(AvgCompRatio))),
+    CompTime_Norm = 1 - ((AvgCompTime - min(AvgCompTime)) / (max(AvgCompTime) - min(AvgCompTime))),
+    DecompTime_Norm = 1 - ((AvgDecompTime - min(AvgDecompTime)) / (max(AvgDecompTime) - min(AvgDecompTime))),
+    GainPercent_Norm = (AvgGainPercent - min(AvgGainPercent)) / (max(AvgGainPercent) - min(AvgGainPercent)),
+    Performance_Norm = (AvgPerformance - min(AvgPerformance)) / (max(AvgPerformance) - min(AvgPerformance))
+  ) %>%
+  select(Dataset, ends_with("_Norm")) %>%
+  pivot_longer(
+    cols = -Dataset,
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "CompRatio_Norm" ~ "Kompresní poměr",
+      Metric == "CompTime_Norm" ~ "Doba komprese",
+      Metric == "DecompTime_Norm" ~ "Doba dekomprese",
+      Metric == "GainPercent_Norm" ~ "Kompresní zisk",
+      Metric == "Performance_Norm" ~ "Výkon komprese"
+    )
+  )
+
+# Spider chart pro porovnání metod
+spider_chart <- ggplot(radar_data_normalized, 
+                      aes(x = Metric, y = Value, color = Dataset, group = Dataset)) +
+  geom_polygon(aes(fill = Dataset), alpha = 0.1) +
+  geom_line(size = 1) +
+  geom_point(size = 3) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_fill_manual(values = compression_method_colors) +
+  coord_polar() +
+  labs(
+    title = "Porovnání kompresních metod - Spider Chart",
+    subtitle = "Vyšší hodnoty jsou lepší pro všechny metriky (hodnoty normalizovány)",
+    color = "Metoda komprese",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(
+    axis.text.y = element_blank(),
+    axis.ticks.y = element_blank(),
+    panel.grid.major.y = element_line(color = "gray90"),
+    panel.grid.minor.y = element_blank()
+  )
+
+# B14: Analýza optimality - křivka Pareto fronty pro čas komprese vs. kompresní poměr
+# Vytvoření jednoduchého scatter plotu
+pareto_data <- all_reports %>%
+  select(FileName, Dataset, Type, Size, CompressionRatio, CompressionTime)
+
+# Funkce pro identifikaci Pareto optimálních bodů
+identify_pareto <- function(df) {
+  df_sorted <- df %>%
+    arrange(CompressionRatio, CompressionTime)
+  
+  pareto_points <- c(1)
+  current_min_time <- df_sorted$CompressionTime[1]
+  
+  for (i in 2:nrow(df_sorted)) {
+    if (df_sorted$CompressionTime[i] < current_min_time) {
+      pareto_points <- c(pareto_points, i)
+      current_min_time <- df_sorted$CompressionTime[i]
+    }
+  }
+  
+  df_sorted$IsParetoOptimal <- FALSE
+  df_sorted$IsParetoOptimal[pareto_points] <- TRUE
+  
+  return(df_sorted)
+}
+
+# Aplikace Pareto analýzy pro každý typ souboru
+pareto_results <- list()
+for (type in unique(pareto_data$Type)) {
+  type_data <- pareto_data %>% filter(Type == type)
+  pareto_results[[type]] <- identify_pareto(type_data)
+}
+
+pareto_all <- bind_rows(pareto_results)
+
+# Vytvoření Pareto grafu
+pareto_plot <- ggplot(pareto_all, 
+                     aes(x = CompressionRatio, y = CompressionTime, color = Dataset)) +
+  geom_point(aes(size = Size, shape = IsParetoOptimal), alpha = 0.7) +
+  scale_y_log10(labels = comma_format(suffix = " ms")) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_shape_manual(values = c(16, 17)) +
+  scale_size_continuous(trans = "log10", range = c(2, 8), labels = comma_format()) +
+  facet_wrap(~ Type, scales = "free") +
+  labs(
+    title = "Pareto optimální řešení: Kompresní poměr vs. Doba komprese",
+    subtitle = "Trojúhelníky označují Pareto optimální body",
+    x = "Kompresní poměr",
+    y = "Doba komprese (ms, logaritmická stupnice)",
+    color = "Metoda komprese",
+    size = "Velikost souboru (B)",
+    shape = "Pareto optimální"
+  ) +
+  my_theme
+
+# B15: Heatmapa průměrného kompresního poměru podle typu souboru a metody
+heatmap_comp_ratio <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    .groups = "drop"
+  )
+
+heatmap_plot <- ggplot(heatmap_comp_ratio, aes(x = Type, y = Dataset, fill = AvgCompRatio)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red", 
+                     midpoint = 1, limits = c(min(heatmap_comp_ratio$AvgCompRatio), 
+                                            max(heatmap_comp_ratio$AvgCompRatio))) +
+  geom_text(aes(label = sprintf("%.2f", AvgCompRatio)), color = "black", size = 4) +
+  labs(
+    title = "Heatmapa průměrných kompresních poměrů",
+    subtitle = "Podle typu souboru a metody komprese",
+    x = "Typ souboru",
+    y = "Metoda komprese",
+    fill = "Průměrný\nkompresní poměr"
+  ) +
+  my_theme +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# B16: Porovnání distribuční funkce CDF kompresního poměru
+cdf_plot <- ggplot(all_reports, aes(x = CompressionRatio, color = Dataset)) +
+  stat_ecdf(geom = "step", pad = FALSE, size = 1) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  labs(
+    title = "Kumulativní distribuční funkce (CDF) kompresního poměru",
+    subtitle = "Vyšší křivka u hodnoty 1.0 značí lepší metodu (více souborů pod hranicí úspěšné komprese)",
+    x = "Kompresní poměr",
+    y = "Kumulativní relativní četnost",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B17: Porovnání relativního zlepšení optimalizovaných metod
+# Vypočítat průměrné hodnoty pro základní a optimalizované metody
+improvement_data <- all_reports %>%
+  mutate(
+    OptimizationPair = case_when(
+      Dataset == "Linearizace + RePair" ~ "LinearizacePair",
+      Dataset == "Opt. linearizace + RePair" ~ "LinearizacePair",
+      Dataset == "Komprese bez linearizace" ~ "BezLinearizacePair",
+      Dataset == "Opt. komprese bez linearizace" ~ "BezLinearizacePair"
+    ),
+    IsOptimized = case_when(
+      Dataset %in% c("Opt. linearizace + RePair", "Opt. komprese bez linearizace") ~ "Optimalizovaná",
+      TRUE ~ "Základní"
+    )
+  ) %>%
+  group_by(Type, OptimizationPair, IsOptimized) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    AvgGainPercent = mean(CompressionGainPercent),
+    .groups = "drop"
+  ) %>%
+  pivot_wider(
+    names_from = IsOptimized,
+    values_from = c(AvgCompRatio, AvgCompTime, AvgGainPercent)
+  ) %>%
+  mutate(
+    CompRatio_Improvement = (AvgCompRatio_Základní - AvgCompRatio_Optimalizovaná) / AvgCompRatio_Základní * 100,
+    CompTime_Improvement = (AvgCompTime_Základní - AvgCompTime_Optimalizovaná) / AvgCompTime_Základní * 100,
+    GainPercent_Improvement = (AvgGainPercent_Optimalizovaná - AvgGainPercent_Základní) / AvgGainPercent_Základní * 100
+  )
+
+# Převod do dlouhého formátu pro grafické znázornění
+improvement_long <- improvement_data %>%
+  select(Type, OptimizationPair, ends_with("_Improvement")) %>%
+  pivot_longer(
+    cols = ends_with("_Improvement"),
+    names_to = "Metric",
+    values_to = "ImprovementPercent"
+  ) %>%
+  mutate(
+    OptimizationPair = case_when(
+      OptimizationPair == "LinearizacePair" ~ "Linearizace + RePair",
+      OptimizationPair == "BezLinearizacePair" ~ "Komprese bez linearizace"
+    ),
+    Metric = case_when(
+      Metric == "CompRatio_Improvement" ~ "Zlepšení kompresního poměru",
+      Metric == "CompTime_Improvement" ~ "Zlepšení doby komprese",
+      Metric == "GainPercent_Improvement" ~ "Zlepšení kompresního zisku"
+    )
+  )
+
+# Graf zlepšení
+improvement_plot <- ggplot(improvement_long, 
+                         aes(x = Type, y = ImprovementPercent, fill = OptimizationPair)) +
+  geom_bar(stat = "identity", position = "dodge", alpha = 0.8) +
+  geom_text(aes(label = sprintf("%.1f%%", ImprovementPercent)), 
+           position = position_dodge(width = 0.9), vjust = -0.3, size = 3) +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = c("Linearizace + RePair" = "#1F78B4", 
+                              "Komprese bez linearizace" = "#33A02C")) +
+  labs(
+    title = "Relativní zlepšení optimalizovaných metod oproti základním",
+    subtitle = "Kladné hodnoty znamenají zlepšení, záporné hodnoty zhoršení",
+    x = "Typ souboru",
+    y = "Relativní zlepšení (%)",
+    fill = "Skupina metod"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# B18: Porovnání "trade-off" mezi prostorovou a časovou složitostí
+tradeoff_space_time <- ggplot(all_reports, 
+                            aes(x = CompressionGainPercent, y = TotalProcessingTime / Size * 1000, 
+                               color = Dataset)) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "lm", se = TRUE, alpha = 0.2) +
+  scale_y_log10(labels = comma_format(suffix = " ms/KB")) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  labs(
+    title = "Trade-off mezi kompresním ziskem a dobou zpracování",
+    subtitle = "Poměr doby zpracování k velikosti souboru (časová složitost) vs. kompresní zisk (prostorová složitost)",
+    x = "Kompresní zisk (%)",
+    y = "Doba zpracování na KB (ms/KB, logaritmická stupnice)",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# B19: Analýza vlivu optimalizace na různé metriky
+optimization_effect <- all_reports %>%
+  pivot_longer(
+    cols = c(CompressionRatio, CompressionTime, DecompressionTime, CompressionGainPercent),
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "CompressionRatio" ~ "Kompresní poměr",
+      Metric == "CompressionTime" ~ "Doba komprese (ms)",
+      Metric == "DecompressionTime" ~ "Doba dekomprese (ms)",
+      Metric == "CompressionGainPercent" ~ "Kompresní zisk (%)"
+    )
+  )
+
+optimization_plot <- ggplot(optimization_effect, 
+                          aes(x = OptimizationCategory, y = Value, fill = MethodCategory)) +
+  geom_boxplot(alpha = 0.7, position = "dodge") +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = method_category_colors) +
+  labs(
+    title = "Vliv optimalizace na různé metriky podle kategorie linearizace",
+    x = "Kategorie optimalizace",
+    y = "Hodnota metriky",
+    fill = "Kategorie linearizace"
+  ) +
+  my_theme
+
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "AvgCompRatio" ~ "Průměrný kompresní poměr",
+      Metric == "MedianCompRatio" ~ "Mediánový kompresní poměr",
+      Metric == "AvgCompTime" ~ "Průměrná doba komprese (ms)",
+      Metric == "AvgGainPercent" ~ "Průměrný kompresní zisk (%)",
+      Metric == "SuccessRate" ~ "Úspěšnost komprese (%)"
+    )
+  )
+
+# Normalizace hodnot pro lepší vizualizaci
+overview_metrics_normalized <- overview_metrics %>%
+  group_by(Metric) %>%
+  mutate(
+    NormalizedValue = case_when(
+      Metric %in% c("Průměrný kompresní poměr", "Mediánový kompresní poměr") ~ 
+        1 - (Value - min(Value)) / (max(Value) - min(Value)),
+      Metric == "Průměrná doba komprese (ms)" ~ 
+        1 - (Value - min(Value)) / (max(Value) - min(Value)),
+      TRUE ~ (Value - min(Value)) / (max(Value) - min(Value))
+    )
+  ) %>%
+  ungroup()
+
+# Vytvoření přehledového tile plotu
+overview_tile_plot <- ggplot(overview_metrics_normalized, 
+                           aes(x = Metric, y = Dataset, fill = NormalizedValue)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "white", high = "steelblue") +
+  geom_text(aes(label = case_when(
+    Metric %in% c("Průměrný kompresní poměr", "Mediánový kompresní poměr") ~ sprintf("%.2f", Value),
+    Metric == "Průměrná doba komprese (ms)" ~ sprintf("%.0f", Value),
+    TRUE ~ sprintf("%.1f%%", Value)
+  )), color = "black", size = 3.5) +
+  labs(
+    title = "Přehled klíčových metrik pro jednotlivé metody komprese",
+    subtitle = "Tmavší barva značí lepší výkon v dané metrice po normalizaci",
+    x = "",
+    y = "",
+    fill = "Normalizovaná\nhodnota"
+  ) +
+  my_theme +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# ================================================================
+# GRAFY VYHODNOCUJÍCÍ OPTIMÁLNÍ VOLBU METODY ####
+# ================================================================
+
+# C1: Porovnání rychlosti podle velikosti souboru - rozhodovací graf
+speed_by_size <- ggplot(all_reports, 
+                      aes(x = Size, y = CompressionTime / Size * 1000, color = Dataset)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format(suffix = " B")) +
+  scale_y_log10(labels = comma_format(suffix = " ms/KB")) +
+  scale_color_manual(values = compression_method_colors) +
+  labs(
+    title = "Doba komprese na KB podle velikosti souboru",
+    subtitle = "Pomáhá určit, která metoda je nejefektivnější pro různé velikosti souborů",
+    x = "Velikost souboru (B, logaritmická stupnice)",
+    y = "Doba komprese na KB (ms/KB, logaritmická stupnice)",
+    color = "Metoda komprese"
+  ) +
+  my_theme +
+  facet_wrap(~ Type, scales = "free")
+
+# C2: Průměrné kompresní poměry napříč velikostními kategoriemi a typy souborů
+avg_ratio_by_size_type <- all_reports %>%
+  group_by(Dataset, SizeCategory, Type) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    Count = n(),
+    .groups = "drop"
+  ) %>%
+  filter(Count >= 3)  # Pouze skupiny s dostatečným počtem vzorků
+
+matrix_plot <- ggplot(avg_ratio_by_size_type, 
+                    aes(x = SizeCategory, y = Type, fill = AvgCompRatio)) +
+  geom_tile(color = "white") +
+  facet_wrap(~ Dataset) +
+  scale_fill_gradient2(low = "blue", mid = "white", high = "red", 
+                     midpoint = 1, limits = c(min(avg_ratio_by_size_type$AvgCompRatio), 
+                                            max(avg_ratio_by_size_type$AvgCompRatio))) +
+  geom_text(aes(label = sprintf("%.2f", AvgCompRatio)), color = "black", size = 3) +
+  labs(
+    title = "Průměrné kompresní poměry podle velikostní kategorie a typu souboru",
+    subtitle = "Rozděleno podle metody komprese",
+    x = "Velikostní kategorie",
+    y = "Typ souboru",
+    fill = "Průměrný\nkompresní poměr"
+  ) +
+  my_theme +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# C3: Složený sloupcový graf pro porovnání úspěšnosti komprese podle typu a metody
+success_rate_data <- all_reports %>%
+  mutate(CompressionSuccess = ifelse(CompressionRatio < 1, "Úspěšná", "Neúspěšná")) %>%
+  group_by(Dataset, Type, CompressionSuccess) %>%
+  summarise(Count = n(), .groups = "drop") %>%
+  group_by(Dataset, Type) %>%
+  mutate(Total = sum(Count), Percentage = Count / Total * 100) %>%
+  ungroup()
+
+success_rate_plot <- ggplot(success_rate_data, 
+                          aes(x = Type, y = Percentage, fill = CompressionSuccess)) +
+  geom_bar(stat = "identity", position = "stack") +
+  geom_text(aes(label = sprintf("%.0f%%", Percentage)), 
+           position = position_stack(vjust = 0.5), color = "white", fontface = "bold") +
+  facet_wrap(~ Dataset) +
+  scale_fill_manual(values = c("Úspěšná" = "#4DAF4A", "Neúspěšná" = "#E41A1C")) +
+  labs(
+    title = "Podíl úspěšně a neúspěšně komprimovaných souborů",
+    subtitle = "Podle typu souboru a metody komprese",
+    x = "Typ souboru",
+    y = "Podíl souborů (%)",
+    fill = "Výsledek komprese"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# C4: Analýza kompresní efektivity vzhledem k vlastnostem stromu
+# Vytvoření indexu komplexity stromu (zjednodušený model)
+all_reports <- all_reports %>%
+  mutate(
+    TreeComplexityIndex = ifelse(is.na(TreeNodesCount) | TreeNodesCount == 0, NA,
+                               TreeNodesCount * log10(TreeSize / TreeNodesCount + 1))
+  )
+
+tree_complexity_plot <- ggplot(
+  all_reports %>% filter(!is.na(TreeComplexityIndex)), 
+  aes(x = TreeComplexityIndex, y = CompressionRatio, color = Dataset)
+) +
+  geom_point(alpha = 0.7) +
+  geom_smooth(method = "loess", se = TRUE, alpha = 0.2) +
+  scale_x_log10(labels = comma_format()) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Type, scales = "free") +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Vliv indexu komplexity stromu na kompresní poměr",
+    subtitle = "Index komplexity = počet uzlů * log10(průměrná velikost uzlu + 1)",
+    x = "Index komplexity stromu (logaritmická stupnice)",
+    y = "Kompresní poměr",
+    color = "Metoda komprese"
+  ) +
+  my_theme
+
+# C5: Kombninace kompresního poměru a doby komprese v jednotném grafu
+combined_ratio_time <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    .groups = "drop"
+  )
+
+combined_plot <- ggplot(combined_ratio_time, 
+                      aes(x = AvgCompRatio, y = AvgCompTime, color = Dataset, shape = Type)) +
+  geom_point(size = 4) +
+  geom_text_repel(aes(label = Type), 
+                box.padding = 0.5, point.padding = 0.5, 
+                segment.color = "grey50", size = 3) +
+  scale_y_log10(labels = comma_format(suffix = " ms")) +
+  scale_color_manual(values = compression_method_colors) +
+  geom_vline(xintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+  labs(
+    title = "Porovnání metod podle kompresního poměru a doby komprese",
+    subtitle = "Ideální metoda je v levém dolním rohu (nízký kompresní poměr, krátká doba komprese)",
+    x = "Průměrný kompresní poměr",
+    y = "Průměrná doba komprese (ms, logaritmická stupnice)",
+    color = "Metoda komprese",
+    shape = "Typ souboru"
+  ) +
+  my_theme +
+  theme(legend.position = "right")
+
+# C6: Metoda komprese jako faktor - porovnání vlivu
+methods_as_factor <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    AvgGainPercent = mean(CompressionGainPercent),
+    .groups = "drop"
+  ) %>%
+  pivot_longer(
+    cols = c(AvgCompRatio, AvgCompTime, AvgGainPercent),
+    names_to = "Metric",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Metric = case_when(
+      Metric == "AvgCompRatio" ~ "Průměrný kompresní poměr",
+      Metric == "AvgCompTime" ~ "Průměrná doba komprese (ms)",
+      Metric == "AvgGainPercent" ~ "Průměrný kompresní zisk (%)"
+    )
+  )
+
+method_as_factor_plot <- ggplot(methods_as_factor, 
+                              aes(x = Type, y = Value, fill = Dataset, group = Dataset)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~ Metric, scales = "free_y") +
+  scale_fill_manual(values = compression_method_colors) +
+  labs(
+    title = "Vliv metody komprese jako faktoru na různé metriky",
+    x = "Typ souboru",
+    y = "Hodnota metriky",
+    fill = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# C7: Agregovaný přehled pro manažerskou prezentaci
+management_summary <- all_reports %>%
+  group_by(Dataset) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    MedianCompRatio = median(CompressionRatio),
+    AvgCompTime = mean(CompressionTime),
+    AvgGainPercent = mean(CompressionGainPercent),
+    SuccessRate = sum(CompressionRatio < 1) / n() * 100,
+    TimePerMB = mean(CompressionTime / (Size/1024/1024)),
+    .groups = "drop"
+  )
+
+# C8: Lollipop graf pro srovnání kompresních faktorů
+lollipop_data <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgCompFactor = mean(CompressionFactor),
+    .groups = "drop"
+  )
+
+lollipop_plot <- ggplot(lollipop_data, aes(x = AvgCompFactor, y = Type, color = Dataset)) +
+  geom_segment(aes(x = 0, xend = AvgCompFactor, yend = Type), 
+              size = 1.5, alpha = 0.7) +
+  geom_point(size = 4) +
+  scale_x_continuous(limits = c(0, max(lollipop_data$AvgCompFactor) * 1.1)) +
+  scale_color_manual(values = compression_method_colors) +
+  facet_wrap(~ Dataset) +
+  labs(
+    title = "Porovnání průměrných kompresních faktorů podle typu souboru a metody",
+    subtitle = "Vyšší hodnoty znamenají lepší kompresi",
+    x = "Průměrný kompresní faktor",
+    y = "Typ souboru",
+    color = "Metoda komprese"
+  ) +
+  my_theme +
+  theme(legend.position = "none")
+
+# C9: Časové náročnost různých fází komprese
+compression_phases <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgTextToTree = mean(TextToTreeDuration),
+    AvgCompression = mean(CompressionTime - TextToTreeDuration),
+    AvgDecompression = mean(DecompressionTime),
+    .groups = "drop"
+  ) %>%
+  pivot_longer(
+    cols = c(AvgTextToTree, AvgCompression, AvgDecompression),
+    names_to = "Phase",
+    values_to = "Duration"
+  ) %>%
+  mutate(
+    Phase = case_when(
+      Phase == "AvgTextToTree" ~ "Převod textu na strom",
+      Phase == "AvgCompression" ~ "Vlastní komprese",
+      Phase == "AvgDecompression" ~ "Dekomprese"
+    )
+  )
+
+phases_plot <- ggplot(compression_phases, 
+                    aes(x = Type, y = Duration, fill = Phase)) +
+  geom_bar(stat = "identity", position = "stack") +
+  facet_wrap(~ Dataset) +
+  scale_fill_brewer(palette = "Set2") +
+  labs(
+    title = "Časová náročnost jednotlivých fází zpracování",
+    subtitle = "Podle typu souboru a metody komprese",
+    x = "Typ souboru",
+    y = "Doba trvání (ms)",
+    fill = "Fáze zpracování"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# C10: Optimální metoda pro různé scénáře - rozhodovací matice
+# Vytvoření skóre pro různé scénáře
+scenario_scoring <- all_reports %>%
+  group_by(Dataset) %>%
+  summarise(
+    CompressRatioScore = 1 - (mean(CompressionRatio) - min(all_reports$CompressionRatio)) / 
+      (max(all_reports$CompressionRatio) - min(all_reports$CompressionRatio)),
+    SpeedScore = 1 - (mean(CompressionTime) - min(all_reports$CompressionTime)) / 
+      (max(all_reports$CompressionTime) - min(all_reports$CompressionTime)),
+    DecompSpeedScore = 1 - (mean(DecompressionTime) - min(all_reports$DecompressionTime)) / 
+      (max(all_reports$DecompressionTime) - min(all_reports$DecompressionTime)),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    BalancedScore = (CompressRatioScore + SpeedScore + DecompSpeedScore) / 3,
+    SpaceOptimizedScore = (CompressRatioScore * 0.7 + SpeedScore * 0.15 + DecompSpeedScore * 0.15),
+    SpeedOptimizedScore = (CompressRatioScore * 0.15 + SpeedScore * 0.7 + DecompSpeedScore * 0.15),
+    DecompOptimizedScore = (CompressRatioScore * 0.15 + SpeedScore * 0.15 + DecompSpeedScore * 0.7)
+  ) %>%
+  select(Dataset, BalancedScore, SpaceOptimizedScore, SpeedOptimizedScore, DecompOptimizedScore) %>%
+  pivot_longer(
+    cols = ends_with("Score"),
+    names_to = "Scenario",
+    values_to = "Score"
+  ) %>%
+  mutate(
+    Scenario = case_when(
+      Scenario == "BalancedScore" ~ "Vyvážený scénář",
+      Scenario == "SpaceOptimizedScore" ~ "Úspora místa",
+      Scenario == "SpeedOptimizedScore" ~ "Rychlost komprese",
+      Scenario == "DecompOptimizedScore" ~ "Rychlost dekomprese"
+    )
+  )
+
+# Nalezení nejlepších metod pro každý scénář
+best_methods <- scenario_scoring %>%
+  group_by(Scenario) %>%
+  filter(Score == max(Score)) %>%
+  ungroup()
+
+# Vytvoření matice skóre
+scenario_heatmap <- ggplot(scenario_scoring, 
+                         aes(x = Scenario, y = Dataset, fill = Score)) +
+  geom_tile(color = "white") +
+  scale_fill_gradient(low = "white", high = "darkgreen") +
+  geom_text(aes(label = sprintf("%.2f", Score)), color = "black", size = 4) +
+  geom_tile(data = best_methods, 
+           aes(x = Scenario, y = Dataset), 
+           fill = NA, color = "gold", size = 1.5) +
+  labs(
+    title = "Optimální metody pro různé scénáře použití",
+    subtitle = "Zlatý rámeček označuje nejlepší metodu pro daný scénář",
+    x = "Scénář použití",
+    y = "Metoda komprese",
+    fill = "Skóre"
+  ) +
+  my_theme +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank()
+  )
+
+# ================================================================
+# SLOŽENÉ GRAFY A MULTIFAKTOROVÉ ANALÝZY ####
+# ================================================================
+
+# D1: Analýza vzájemných interakcí mezi různými faktory
+# Příprava dat pro analýzu interakcí
+interaction_data <- all_reports %>%
+  group_by(MethodCategory, OptimizationCategory, Type, SizeCategory) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    Count = n(),
+    .groups = "drop"
+  ) %>%
+  filter(Count >= 3)  # Pouze skupiny s dostatečným počtem vzorků
+
+# Interakce mezi kategorií metody a optimalizace
+method_opt_interaction <- ggplot(interaction_data, 
+                              aes(x = MethodCategory, y = AvgCompRatio, color = OptimizationCategory, 
+                                 group = OptimizationCategory)) +
+  geom_point(size = 3) +
+  geom_line(size = 1) +
+  facet_grid(SizeCategory ~ Type) +
+  scale_color_manual(values = optimization_category_colors) +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 0.8) +
+  labs(
+    title = "Interakce mezi kategorií metody a optimalizace",
+    subtitle = "Rozděleno podle typu souboru a velikostní kategorie",
+    x = "Kategorie metody",
+    y = "Průměrný kompresní poměr",
+    color = "Kategorie optimalizace"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# D2: Celkové pořadí metod podle vážených kritérií
+# Vytvoření vážených skóre pro různé metriky
+weighted_ranking <- all_reports %>%
+  group_by(Dataset) %>%
+  summarise(
+    CompRatioScore = 1 - (mean(CompressionRatio) - min(all_reports$CompressionRatio)) / 
+      (max(all_reports$CompressionRatio) - min(all_reports$CompressionRatio)),
+    TimeScore = 1 - (mean(CompressionTime) - min(all_reports$CompressionTime)) / 
+      (max(all_reports$CompressionTime) - min(all_reports$CompressionTime)),
+    GainScore = (mean(CompressionGainPercent) - min(all_reports$CompressionGainPercent)) / 
+      (max(all_reports$CompressionGainPercent) - min(all_reports$CompressionGainPercent)),
+    StabilityScore = 1 - (sd(CompressionRatio) - min(c(sd(all_reports$CompressionRatio)))) / 
+      (max(c(sd(all_reports$CompressionRatio))) - min(c(sd(all_reports$CompressionRatio)))),
+    SuccessScore = sum(CompressionRatio < 1) / n(),
+    .groups = "drop"
+  ) %>%
+  mutate(
+    WeightedScore = CompRatioScore * 0.35 + TimeScore * 0.25 + 
+      GainScore * 0.2 + StabilityScore * 0.1 + SuccessScore * 0.1
+  ) %>%
+  arrange(desc(WeightedScore))
+
+# Vytvoření celkového hodnocení
+ranking_plot <- ggplot(weighted_ranking, aes(x = reorder(Dataset, WeightedScore), y = WeightedScore)) +
+  geom_bar(stat = "identity", fill = "steelblue", width = 0.7) +
+  geom_text(aes(label = sprintf("%.2f", WeightedScore)), hjust = -0.2) +
+  coord_flip() +
+  scale_y_continuous(limits = c(0, max(weighted_ranking$WeightedScore) * 1.2)) +
+  labs(
+    title = "Celkové hodnocení metod komprese",
+    subtitle = "Vážené skóre: kompresní poměr (35%), rychlost (25%), zisk (20%), stabilita (10%), úspěšnost (10%)",
+    x = "Metoda komprese",
+    y = "Vážené skóre"
+  ) +
+  my_theme
+
+# D3: Detailní breakdown skóre podle kategorií
+ranking_breakdown <- weighted_ranking %>%
+  select(Dataset, CompRatioScore, TimeScore, GainScore, StabilityScore, SuccessScore) %>%
+  pivot_longer(
+    cols = -Dataset,
+    names_to = "Category",
+    values_to = "Score"
+  ) %>%
+  mutate(
+    Category = case_when(
+      Category == "CompRatioScore" ~ "Kompresní poměr",
+      Category == "TimeScore" ~ "Rychlost komprese",
+      Category == "GainScore" ~ "Kompresní zisk",
+      Category == "StabilityScore" ~ "Stabilita komprese",
+      Category == "SuccessScore" ~ "Úspěšnost komprese"
+    )
+  )
+
+breakdown_plot <- ggplot(ranking_breakdown, 
+                       aes(x = reorder(Dataset, Score, FUN = function(x) sum(x)), 
+                          y = Score, fill = Category)) +
+  geom_bar(stat = "identity", position = "stack") +
+  coord_flip() +
+  scale_fill_brewer(palette = "Set3") +
+  labs(
+    title = "Breakdown celkového hodnocení metod komprese",
+    subtitle = "Rozděleno podle kategorií hodnocení",
+    x = "Metoda komprese",
+    y = "Skóre",
+    fill = "Kategorie hodnocení"
+  ) +
+  my_theme
+
+# D4: Porovnání průměrné vs. mediánové hodnoty (kompresní poměr)
+avg_median_comparison <- all_reports %>%
+  group_by(Dataset, Type) %>%
+  summarise(
+    AvgCompRatio = mean(CompressionRatio),
+    MedianCompRatio = median(CompressionRatio),
+    .groups = "drop"
+  ) %>%
+  pivot_longer(
+    cols = c(AvgCompRatio, MedianCompRatio),
+    names_to = "Statistic",
+    values_to = "Value"
+  ) %>%
+  mutate(
+    Statistic = case_when(
+      Statistic == "AvgCompRatio" ~ "Průměrný kompresní poměr",
+      Statistic == "MedianCompRatio" ~ "Mediánový kompresní poměr"
+    )
+  )
+
+avg_median_plot <- ggplot(avg_median_comparison, 
+                        aes(x = Type, y = Value, fill = Statistic)) +
+  geom_bar(stat = "identity", position = "dodge") +
+  facet_wrap(~ Dataset) +
+  scale_fill_manual(values = c("Průměrný kompresní poměr" = "#66A61E", 
+                              "Mediánový kompresní poměr" = "#E6AB02")) +
+  geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 0.8) +
+  labs(
+    title = "Porovnání průměrného a mediánového kompresního poměru",
+    subtitle = "Rozdíl indikuje přítomnost odlehlých hodnot",
+    x = "Typ souboru",
+    y = "Kompresní poměr",
+    fill = "Statistika"
+  ) +
+  my_theme +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+# D5: Distribuce kompresních poměrů pomocí hustotních křivek s vyznačenými kvantily
+density_with_quantiles <- ggplot(all_reports, aes(x = CompressionRatio, color = Dataset, fill = Dataset)) +
+  geom_density(alpha = 0.2) +
+  geom_vline(aes(xintercept = 1.0), linetype = "dashed", color = "darkred", size = 1) +
+  geom_vline(data = all_reports %>% 
+               group_by(Dataset) %>% 
+               summarise(q25 = quantile(CompressionRatio, 0.25),
+                         median = median(CompressionRatio),
+                         q75 = quantile(CompressionRatio, 0.75),
+                         .groups = "drop") %>%
+               pivot_longer(cols = c(q25, median, q75), 
+                           names_to = "Quantile", 
+                           values_to = "Value"),
+             aes(xintercept = Value, color = Dataset), 
+             linetype = "dotted", size = 0.8) +
+  scale_color_manual(values = compression_method_colors) +
+  scale_fill_manual(values = compression_method_colors) +
+  facet_wrap(~ Type) +
+  labs(
+    title = "Distribuce kompresních poměrů s vyznačenými kvantily",
+    subtitle = "Tečkované čáry značí 25%, 50% a 75% kvantily pro každou metodu",
+    x = "Kompresní poměr",
+    y = "Hustota",
+    color = "Metoda komprese",
+    fill = "Metoda komprese"
+  ) +
+  my_theme
+
+
+
+# ================================================================
+# UKLÁDÁNÍ VŠECH ZBÝVAJÍCÍCH GRAFŮ
+# ================================================================
+
+# Uložení grafů ze sady B
+save_plot(stability_plot, "b11_stability_plot", width = 14, height = 8)
+save_plot(jitter_plot, "b12_jitter_plot", width = 14, height = 8)
+save_plot(combined_ratio_plot, "b13_combined_ratio_plot", width = 14, height = 8)
+save_plot(tree_size_comparison, "b14_tree_size_comparison", width = 12, height = 8)
+save_plot(side_by_side_plot, "b15_side_by_side_plot", width = 14, height = 8)
+save_plot(detailed_histograms, "b16_detailed_histograms", width = 16, height = 12)
+save_plot(size_vs_type_effect, "b17_size_vs_type_effect", width = 16, height = 12)
+save_plot(tree_structure_influence, "b18_tree_structure_influence", width = 14, height = 10)
+save_plot(node_size_effectiveness, "b19_node_size_effectiveness", width = 14, height = 10)
+save_plot(tradeoff_plot, "b20_tradeoff_plot", width = 14, height = 10)
+
+# Uložení grafů ze sady C a D
+save_plot(ratio_comparison_plot, "c01_ratio_comparison_plot", width = 14, height = 10)
+save_plot(size_category_box, "c02_size_category_box", width = 14, height = 10)
+save_plot(spider_chart, "c03_spider_chart", width = 12, height = 10)
+save_plot(pareto_plot, "c04_pareto_plot", width = 14, height = 10)
+save_plot(heatmap_plot, "c05_heatmap_plot", width = 12, height = 8)
+save_plot(cdf_plot, "c06_cdf_plot", width = 14, height = 10)
+save_plot(improvement_plot, "c07_improvement_plot", width = 16, height = 10)
+save_plot(tradeoff_space_time, "c08_tradeoff_space_time", width = 14, height = 10)
+save_plot(optimization_plot, "c09_optimization_plot", width = 16, height = 10)
+save_plot(ranking_plot, "d01_ranking_plot", width = 12, height = 8)
+save_plot(breakdown_plot, "d02_breakdown_plot", width = 12, height = 8)
+save_plot(avg_median_plot, "d03_avg_median_plot", width = 16, height = 10)
+save_plot(density_with_quantiles, "d04_density_with_quantiles", width = 14, height = 10)
+
+# ================================================================
+# VYTVOŘENÍ NOVÝCH DASHBOARDŮ
+# ================================================================
+
+# Dashboard pro porovnání interakcí a efektů
+dashboard_interactions <- (method_opt_interaction / size_vs_type_effect)
+
+# Dashboard pro celkové hodnocení metod
+dashboard_evaluation <- (scenario_heatmap | ranking_plot) /
+                       (breakdown_plot | spider_chart)
+
+# Dashboard pro analýzu distribucí
+dashboard_distributions <- (detailed_histograms / density_with_quantiles) |
+                          (combined_ratio_plot / cdf_plot)
+
+# Dashboard pro analýzu trade-offs
+dashboard_tradeoffs <- (tradeoff_plot / tradeoff_space_time) |
+                      (combined_plot / pareto_plot)
+
+# Uložení nových dashboardů
+save_plot(dashboard_interactions, "dashboard_9_interactions", width = 16, height = 16)
+save_plot(dashboard_evaluation, "dashboard_10_evaluation", width = 16, height = 16)
+save_plot(dashboard_distributions, "dashboard_11_distributions", width = 18, height = 16)
+save_plot(dashboard_tradeoffs, "dashboard_12_tradeoffs", width = 16, height = 16)
+
+# ================================================================
+# ZÁVĚREČNÉ SHRNUTÍ
+# ================================================================
+
+cat("\n\n=================================================================\n")
+cat("ANALÝZA KOMPRESE STROMOVÝCH STRUKTUR - KOMPLETNÍ SADA VIZUALIZACÍ\n")
+cat("=================================================================\n\n")
+
+cat("Celkový počet vygenerovaných grafů:", 
+    21 + 20 + 10 + 4, "\n")
+
+cat("Celkový počet dashboardů:", 
+    4 + 4 + 4, "\n")
+
+cat("\nVšechny grafy byly úspěšně uloženy do adresáře 'visualization'.\n")
+cat("Grafy jsou rozděleny do kategorií podle typu analýz:\n")
+cat(" - Základní analýzy (01-21)\n")
+cat(" - Rozšířené analýzy (a01-a20)\n")
+cat(" - Pokročilé vizualizace (b01-b20)\n")
+cat(" - Komplexní analýzy a hodnocení (c01-c09, d01-d04)\n\n")
+
+cat("Dashboardy kombinují související grafy pro komplexní pohled na data.\n")
+cat(" - Dashboardy 1-4: Základní porovnání kompresních metod\n")
+cat(" - Dashboardy 5-8: Rozšířené analýzy podle různých faktorů\n")
+cat(" - Dashboardy 9-12: Pokročilé multifaktorové analýzy a hodnocení\n\n")
+
+cat("Hlavní poznatky z analýzy lze najít v následujících grafech:\n")
+cat(" - Celkové hodnocení metod: d01_ranking_plot, c03_spider_chart\n")
+cat(" - Optimální metody pro různé scénáře: b10_scenario_heatmap\n")
+cat(" - Trade-off mezi kompresním poměrem a rychlostí: c04_pareto_plot\n")
+cat(" - Efektivita podle typu souborů: b03_matrix_plot, c05_heatmap_plot\n\n")
+
+cat("Analýza úspěšně dokončena!\n")
