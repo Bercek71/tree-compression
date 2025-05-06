@@ -41,7 +41,7 @@ public class TreeRePairStrategyTests
     public void TreeRepairEncodingStrategy_CompressAndDecompress_ReturnsEquivalentTree()
     {
         // Arrange
-        var strategy = new TreeRepairEncodingStrategy(minFrequency: 2);
+        var strategy = new RePairTreeLinearization(minFrequency: 2);
         var originalTree = CreateTestTree();
             
         // Act
@@ -83,8 +83,8 @@ public class TreeRePairStrategyTests
             tree.AddRightChild(duplicateSubtree);
         }
             
-        var strategyHighFreq = new TreeRepairEncodingStrategy(minFrequency: 5);
-        var strategyLowFreq = new TreeRepairEncodingStrategy(minFrequency: 2);
+        var strategyHighFreq = new RePairTreeLinearization(minFrequency: 5);
+        var strategyLowFreq = new RePairTreeLinearization(minFrequency: 2);
             
         // Act
         var compressedHighFreq = strategyHighFreq.Compress(tree);
@@ -100,7 +100,7 @@ public class TreeRePairStrategyTests
     public void TreeRepairEncodingStrategy_CompressNullTree_ThrowsArgumentNullException()
     {
         // Arrange
-        var strategy = new TreeRepairEncodingStrategy();
+        var strategy = new RePairTreeLinearization();
             
         // Act & Assert
         Assert.ThrowsException<ArgumentNullException>(() => strategy.Compress(null));
@@ -110,7 +110,7 @@ public class TreeRePairStrategyTests
     public void TreeRepairEncodingStrategy_DecompressNullTree_ThrowsArgumentNullException()
     {
         // Arrange
-        var strategy = new TreeRepairEncodingStrategy();
+        var strategy = new RePairTreeLinearization();
             
         // Act & Assert
         Assert.ThrowsException<ArgumentNullException>(() => strategy.Decompress(null));

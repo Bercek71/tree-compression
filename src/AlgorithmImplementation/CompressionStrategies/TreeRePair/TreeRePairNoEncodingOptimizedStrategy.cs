@@ -86,23 +86,31 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
                     .Where(kv => kv.Value >= _minFrequency)
                     .OrderByDescending(kv => kv.Value)
                     .FirstOrDefault();
+                
+                //apply special metric (size * frequency) + (size - frequency)
+                var metric = mostFrequent.Value * mostFrequent.Key.Length + 
+                             (mostFrequent.Key.Length - mostFrequent.Value);
+                
+                //make it dictionary as well
+                var mostFrequentMetric = frequencies
+                    .Where(kv => kv.Value >= _minFrequency)
+                    .OrderByDescending(kv => metric)
+                    .FirstOrDefault();
 
-                if (mostFrequent.Key == null || mostFrequent.Value < _minFrequency)
+                if (mostFrequentMetric.Key == null || mostFrequentMetric.Value < _minFrequency)
                     break;
 
                 // Parse digram
-                string[] parts = mostFrequent.Key.Split('|');
+                string[] parts = mostFrequentMetric.Key.Split('|');
                 if (parts.Length != 2)
                     continue;
 
                 string firstValue = parts[0];
                 string secondValue = parts[1];
 
-                // Skip if both are already rule references
                 if (firstValue.StartsWith("R") && secondValue.StartsWith("R"))
                     continue;
 
-                // Create a new rule
                 string ruleName = $"R{_ruleCounter++}";
                 _rules[ruleName] = new Digram(firstValue, secondValue);
 
@@ -132,7 +140,7 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
 
                 // Count digrams in right children
                 CountDigramsInList(node.RightChildren, frequencies);
-
+                
                 // Process all children recursively
                 foreach (var child in node.LeftChildren)
                     TraverseTree(child);
@@ -165,6 +173,8 @@ namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair
                 // Count frequency
                 if (frequencies.TryGetValue(key, out var value))
                     frequencies[key] = ++value;
+                
+                
                 else
                     frequencies[key] = 1;
             }

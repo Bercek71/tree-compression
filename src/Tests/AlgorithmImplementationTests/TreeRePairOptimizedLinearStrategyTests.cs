@@ -11,7 +11,7 @@ public class TreeRePairOptimizedLinearStrategyTests
     public void TreeRePairOptimizedLinear_RoundTrip_PreservesStructure()
     {
         // Arrange
-        var strategy = new TreeRepairOptimizedLinearStrategy();
+        var strategy = new RePairOptimizedLinearStrategy();
         var root = CreateTestTree();
         var originalString = root.ToString();
             
@@ -28,7 +28,7 @@ public class TreeRePairOptimizedLinearStrategyTests
     public void TreeRePairOptimizedLinear_CompressLargeTree_HandlesEfficiently()
     {
         // Arrange
-        var strategy = new TreeRepairOptimizedLinearStrategy();
+        var strategy = new RePairOptimizedLinearStrategy();
         var root = new DependencyTreeNode("root");
             
         // Create large test tree (200+ nodes)
@@ -68,8 +68,8 @@ public class TreeRePairOptimizedLinearStrategyTests
     {
         // Arrange
         var tree = CreateTestTree();
-        var strategy1 = new TreeRepairOptimizedLinearStrategy(minN: 2, maxN: 5);
-        var strategy2 = new TreeRepairOptimizedLinearStrategy(minN: 3, maxN: 10);
+        var strategy1 = new RePairOptimizedLinearStrategy(minN: 2, maxN: 5);
+        var strategy2 = new RePairOptimizedLinearStrategy(minN: 3, maxN: 10);
             
         // Act
         var compressed1 = strategy1.Compress(tree);

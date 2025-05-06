@@ -11,7 +11,7 @@ public class StressTests
     public void MultipleCompressDecompress_EnsureStability()
     {
         // Arrange
-        var strategy = new TreeRepairOptimizedLinearStrategy();
+        var strategy = new RePairOptimizedLinearStrategy();
         var tree = CreateTestTree();
         var originalString = tree.ToString();
             
@@ -37,7 +37,7 @@ public class StressTests
     public void RandomTrees_CompressDecompress_Stability()
     {
         // Arrange
-        var strategy = new TreeRepairOptimizedLinearStrategy();
+        var strategy = new RePairOptimizedLinearStrategy();
         var random = new Random(42); // Fixed seed for reproducibility
             
         // Create 20 random trees of varying sizes

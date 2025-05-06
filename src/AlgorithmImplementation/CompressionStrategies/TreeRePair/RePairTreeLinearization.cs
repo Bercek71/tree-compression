@@ -4,7 +4,7 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 
-public class TreeRepairEncodingStrategy(ITreeRePairEncoder? encoder = null , int minFrequency = 2, int maxN = 10, int minN = 2) : ICompressionStrategy<IDependencyTreeNode>
+public class RePairTreeLinearization(ITreeRePairEncoder? encoder = null , int minFrequency = 2, int maxN = 10, int minN = 2) : ICompressionStrategy<IDependencyTreeNode>
 {
     private readonly ITreeRePairEncoder _encoder = encoder ?? new DepthFirstEncoder();
     private readonly Dictionary<string, string> _grammarRules = new();

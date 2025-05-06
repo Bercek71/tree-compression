@@ -36,7 +36,7 @@ public class FullPipelineIntegrationTests
         // Arrange
         var originalText = "this is a test sentence for the full pipeline integration test";
         var treeCreationStrategy = new TestTreeCreationStrategy();
-        var compressionStrategy = new TreeRepairEncodingStrategy();
+        var compressionStrategy = new RePairTreeLinearization();
 
         var pipeline = new Pipeline();
 
@@ -82,7 +82,7 @@ public class FullPipelineIntegrationTests
     {
         // Arrange
         var treeCreationStrategy = new TestTreeCreationStrategy();
-        var compressionStrategy = new TreeRepairEncodingStrategy();
+        var compressionStrategy = new RePairTreeLinearization();
 
         var pipeline = new Pipeline();
         pipeline.AddFilter(new TextToTreeFilter<IDependencyTreeNode>(treeCreationStrategy))
@@ -105,7 +105,7 @@ public class FullPipelineIntegrationTests
     public void FullPipeline_SingleNode_CompressDecompress_Works()
     {
         // Arrange
-        var strategy = new TreeRepairEncodingStrategy();
+        var strategy = new RePairTreeLinearization();
         var singleNode = new DependencyTreeNode("single");
 
         // Act

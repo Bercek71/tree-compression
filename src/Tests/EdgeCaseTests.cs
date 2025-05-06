@@ -14,7 +14,7 @@ public class EdgeCaseTests
     public void EmptyInput_HandledGracefully()
     {
         // Arrange
-        var textStrategy = new TreeRepairEncodingStrategy();
+        var textStrategy = new RePairTreeLinearization();
         var treeCreationStrategy = new TestTreeCreationStrategy();
             
         // Create a pipeline from text -> tree -> compressed
@@ -39,7 +39,7 @@ public class EdgeCaseTests
     public void SingleNode_CompressDecompress_Works()
     {
         // Arrange
-        var strategy = new TreeRepairEncodingStrategy();
+        var strategy = new RePairTreeLinearization();
         var singleNode = new DependencyTreeNode("single");
             
         // Act
@@ -57,7 +57,7 @@ public class EdgeCaseTests
     public void ExtremeLongNodeValues_Handled()
     {
         // Arrange
-        var strategy = new TreeRepairOptimizedLinearStrategy();
+        var strategy = new RePairOptimizedLinearStrategy();
         var root = new DependencyTreeNode("root");
             
         // Create extremely long node values
@@ -77,7 +77,7 @@ public class EdgeCaseTests
     public void UnbalancedTree_DeepOnOneSide_HandledCorrectly()
     {
         // Arrange
-        var strategy = new TreeRepairOptimizedLinearStrategy();
+        var strategy = new RePairOptimizedLinearStrategy();
         var root = new DependencyTreeNode("root");
             
         // Create a deeply unbalanced tree (all right children)

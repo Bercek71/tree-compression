@@ -4,7 +4,7 @@ using TreeCompressionPipeline.TreeStructure;
 
 namespace TreeCompressionAlgorithms.CompressionStrategies.TreeRePair;
 
-public class TreeRepairOptimizedLinearStrategy(
+public class RePairOptimizedLinearStrategy(
     ITreeRePairEncoder? encoder = null,
     int minFrequency = 2,
     int maxN = 10,
