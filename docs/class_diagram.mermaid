@@ -1,0 +1,129 @@
+classDiagram
+    %% Interfaces
+    class IFilter {
+        <<interface>>
+        +Process(object data): object
+        +Chain(IFilter nextFilter): IFilter
+    }
+    
+    class IProcessSubject {
+        <<interface>>
+        +AddObserver(IProcessObserver observer)
+        +RemoveObserver(IProcessObserver observer)
+        #NotifyStart(string process)
+        #NotifyProgress(string process, double percentComplete)
+        #NotifyComplete(string process, object result)
+        #NotifyError(string process, Exception error)
+    }
+    
+    class IProcessObserver {
+        <<interface>>
+        +OnStart(string process)
+        +OnProgress(string process, double percentComplete)
+        +OnComplete(string process, object result)
+        +OnError(string process, Exception error)
+    }
+        
+
+    class ITreeCompressor~T~ {
+        <<interface>>
+        #CompressionStrategy: ICompressionStrategy~T~
+        #CompressingPipeline: Pipeline
+        #DecompressingPipeline: Pipeline
+        +Compress(string text): CompressedTree
+        +Decompress(CompressedTree compressedTree): string
+    }
+    
+    class ICompressionStrategy~T~ {
+        <<interface>>
+        +Compress(T tree): CompressedTree
+        +Decompress(CompressedTree compressedTree): T
+    }
+    
+    class ITreeCreationStrategy~T~ {
+        <<interface>>
+        +CreateTree(string text): T
+    }
+    
+    %% Abstract classes
+    class FilterBase~T,TO~ {
+        <<abstract>>
+        -_nextFilter: IFilter?
+        -_processObservers: List~IProcessObserver~
+        #ProcessData(T data): TO
+        +Process(object data): object
+        +Chain(IFilter nextFilter): IFilter
+        +AddObserver(IProcessObserver observer)
+        +RemoveObserver(IProcessObserver observer)
+        +NotifyStart(string process)
+        +NotifyProgress(string process, double percentComplete)
+        +NotifyComplete(string process, object result)
+        +NotifyError(string process, Exception error)
+    }
+    
+    class FilterFactory~T~ {
+        <<abstract>>
+        +CreateTextToTreeFilter(ITreeCreationStrategy~T~ strategy): IFilter
+        +CreateCompressionFilter(ICompressionStrategy~T~ strategy): IFilter
+        +CreateDecompressionFilter(ICompressionStrategy~T~ strategy): IFilter
+    }
+    
+    %% Concrete classes
+    class Pipeline {
+        -_firstFilter: IFilter?
+        -_lastFilter: IFilter?
+        +ProcessObserver: IProcessObserver?
+        +AddFilter(IFilter filter): Pipeline
+        +Process(object input): object
+    }
+    
+    class ProcessMonitor {
+        +OnStart(string process)
+        +OnProgress(string process, double percentComplete)
+        +OnComplete(string process, object result)
+        +OnError(string process, Exception error)
+    }
+    
+    class TextToTreeFilter~T~ {
+        -creationStrategy: ITreeCreationStrategy~T~
+        #ProcessData(string text): T
+    }
+    
+    class CompressionFilter~T~ {
+        -strategy: ICompressionStrategy~T~
+        #ProcessData(T tree): CompressedTree
+    }
+    
+    class DecompressionFilter~T~ {
+        -strategy: ICompressionStrategy~T~
+        #ProcessData(CompressedTree compressedTree): T
+    }
+    
+    %% Relationships
+    IFilter --|> IProcessSubject
+    
+    FilterBase~T,TO~ ..|> IFilter
+    
+    TextToTreeFilter~T~ --|> FilterBase~T,TO~
+    CompressionFilter~T~ --|> FilterBase~T,TO~
+    DecompressionFilter~T~ --|> FilterBase~T,TO~
+    
+    ProcessMonitor ..|> IProcessObserver
+    
+    TreeRepairStrategy ..|> ICompressionStrategy~T~
+    
+    Pipeline o-- IFilter
+    Pipeline o-- IProcessObserver
+    
+    IFilter -- IProcessObserver : observes >
+    
+    FilterFactory~T~ -- TextToTreeFilter~T~ : creates >
+    FilterFactory~T~ -- CompressionFilter~T~ : creates >
+    FilterFactory~T~ -- DecompressionFilter~T~ : creates >
+    
+    TextToTreeFilter~T~ --> ITreeCreationStrategy~T~
+    CompressionFilter~T~ --> ICompressionStrategy~T~
+    DecompressionFilter~T~ --> ICompressionStrategy~T~
+    
+    ITreeCompressor~T~ --> ICompressionStrategy~T~
+    ITreeCompressor~T~ o--> Pipeline
