@@ -1,17 +1,17 @@
 "Dataset","Type","Avg_Ratio","Avg_CompTime","Avg_DecompTime","Avg_GainPercent","Count"
-"Linearizovaný TreeRePair","Právní dokumenty",1.63488088840348,0,0,-63.481704237448,100
-"Linearizovaný TreeRePair","Próza",1.19300855441589,0,0,-18.3264615196839,23
-"Linearizovaný TreeRePair","Technická dokumentace",1.4674081294989,0,0,-46.7389374117311,96
-"Linearizovaný TreeRePair","Výzkumné články",1.51289640629974,0,0,-51.2830041976109,9
-"Opt. Linearizovaný TreeRePair","Právní dokumenty",1.23887394381542,60,0,-23.8821116834911,100
-"Opt. Linearizovaný TreeRePair","Próza",1.04804794901679,11578.9473684211,0,-4.12288345550349,19
-"Opt. Linearizovaný TreeRePair","Technická dokumentace",1.16990295470382,139.784946236559,0,-16.9887663157203,93
-"Opt. Linearizovaný TreeRePair","Výzkumné články",1.21356887768151,0,0,-21.3514471531841,9
-"Opt. TreeRePair bez linearizace","Právní dokumenty",1.42358134730179,0,0,-42.3521882487736,100
-"Opt. TreeRePair bez linearizace","Próza",1.10649473920108,0,0,-9.73930260219655,23
-"Opt. TreeRePair bez linearizace","Technická dokumentace",1.30070128444745,0,0,-30.0684616764022,96
-"Opt. TreeRePair bez linearizace","Výzkumné články",1.33780223171409,0,0,-33.7743099978969,9
-"TreeRePair bez linearizace","Právní dokumenty",1.57360455676522,20.6185567010309,0,-57.3541706134472,97
-"TreeRePair bez linearizace","Próza",1.56920371173541,4727.27272727273,0,-55.6117333783492,22
-"TreeRePair bez linearizace","Technická dokumentace",1.58393420812753,23.5294117647059,0,-58.391131882221,85
-"TreeRePair bez linearizace","Výzkumné články",1.50849083558046,0,0,-50.842084465706,9
+"Komprese bez linearizace","Beletrie",1.56920371173541,4727.27272727273,0,-55.6117333783492,22
+"Komprese bez linearizace","Právní dokumenty",1.57360455676522,20.6185567010309,0,-57.3541706134472,97
+"Komprese bez linearizace","Technická dokumentace",1.58393420812753,23.5294117647059,0,-58.391131882221,85
+"Komprese bez linearizace","Výzkumné články",1.50849083558046,0,0,-50.842084465706,9
+"Linearizace + RePair","Beletrie",1.19300855441589,0,0,-18.3264615196839,23
+"Linearizace + RePair","Právní dokumenty",1.63488088840348,0,0,-63.481704237448,100
+"Linearizace + RePair","Technická dokumentace",1.4674081294989,0,0,-46.7389374117311,96
+"Linearizace + RePair","Výzkumné články",1.51289640629974,0,0,-51.2830041976109,9
+"Opt. komprese bez linearizace","Beletrie",1.10649473920108,0,0,-9.73930260219655,23
+"Opt. komprese bez linearizace","Právní dokumenty",1.42358134730179,0,0,-42.3521882487736,100
+"Opt. komprese bez linearizace","Technická dokumentace",1.30070128444745,0,0,-30.0684616764022,96
+"Opt. komprese bez linearizace","Výzkumné články",1.33780223171409,0,0,-33.7743099978969,9
+"Opt. linearizace + RePair","Beletrie",1.04804794901679,11578.9473684211,0,-4.12288345550349,19
+"Opt. linearizace + RePair","Právní dokumenty",1.23887394381542,60,0,-23.8821116834911,100
+"Opt. linearizace + RePair","Technická dokumentace",1.16990295470382,139.784946236559,0,-16.9887663157203,93
+"Opt. linearizace + RePair","Výzkumné články",1.21356887768151,0,0,-21.3514471531841,9

@@ -57,7 +57,7 @@ process_report <- function(report, name) {
     # Úprava názvů typů souborů pro lepší čitelnost
     mutate(Type = case_when(
       grepl("kernel_docs", Type) ~ "Technická dokumentace",
-      grepl("prose", Type) ~ "Próza",
+      grepl("prose", Type) ~ "Beletrie",
       grepl("legal_papers", Type) ~ "Právní dokumenty",
       grepl("research_papers", Type) ~ "Výzkumné články",
       TRUE ~ "Ostatní"
@@ -114,7 +114,7 @@ my_theme <- theme_minimal(base_size = 12) +
 # Barevná paleta pro typy souborů
 file_type_colors <- c(
   "Technická dokumentace" = "#2C7FB8", 
-  "Próza" = "#7FBC41", 
+  "Beletrie" = "#7FBC41", 
   "Právní dokumenty" = "#D7301F",
   "Výzkumné články" = "#E6AB02",
   "Ostatní" = "#A6CEE3"

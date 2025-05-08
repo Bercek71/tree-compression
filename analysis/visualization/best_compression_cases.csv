@@ -1,5 +1,5 @@
 "Dataset","FileName","Type","Size","CompressionRatio","CompressionTime"
-"Linearizovaný TreeRePair","Employee_Ip_Laws.txt","Právní dokumenty",18801,0.909541842231586,0
-"Opt. Linearizovaný TreeRePair","Employee_Ip_Laws.txt","Právní dokumenty",18801,0.653634860525895,0
-"Opt. TreeRePair bez linearizace","Documentation-arm-OMAP-README","Technická dokumentace",385,0.820779220779221,0
-"TreeRePair bez linearizace","Documentation-arm-Atmel-README","Technická dokumentace",5858,1.2439399112325,0
+"Komprese bez linearizace","Documentation-arm-Atmel-README","Technická dokumentace",5858,1.2439399112325,0
+"Linearizace + RePair","Employee_Ip_Laws.txt","Právní dokumenty",18801,0.909541842231586,0
+"Opt. komprese bez linearizace","Documentation-arm-OMAP-README","Technická dokumentace",385,0.820779220779221,0
+"Opt. linearizace + RePair","Employee_Ip_Laws.txt","Právní dokumenty",18801,0.653634860525895,0

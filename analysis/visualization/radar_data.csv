@@ -1,0 +1,17 @@
+"Dataset","Value","PrůměrnýKompresníPoměr","PrůměrnáDobaKomprese_ms","PrůměrnýKompresníZisk_procent","PoměrÚspěšnéKomprese"
+"Opt. linearizace + RePair",1.19241357511063,1,NA,NA,NA
+"Opt. linearizace + RePair",1081.44796380091,NA,0,NA,NA
+"Opt. linearizace + RePair",-19.1794762250874,NA,NA,1,NA
+"Opt. linearizace + RePair",9.04977375565611,NA,NA,NA,1
+"Opt. komprese bez linearizace",1.33646954879029,0.62299602939906,NA,NA,NA
+"Opt. komprese bez linearizace",0,NA,1,NA,NA
+"Opt. komprese bez linearizace",-33.5515960335244,NA,NA,0.623109174013457,NA
+"Opt. komprese bez linearizace",5.26315789473684,NA,NA,NA,0.581578947368421
+"Linearizace + RePair",1.5149760249145,0.155832825001427,NA,NA,NA
+"Linearizace + RePair",0,NA,1,NA,NA
+"Linearizace + RePair",-51.3954564386062,NA,NA,0.155176302836588,NA
+"Linearizace + RePair",1.75438596491228,NA,NA,NA,0.193859649122807
+"Komprese bez linearizace",1.57452088673929,0,NA,NA,NA
+"Komprese bez linearizace",507.042253521128,NA,0.531145029170842,NA,NA
+"Komprese bez linearizace",-57.3128528357193,NA,NA,0,NA
+"Komprese bez linearizace",0,NA,NA,NA,0
