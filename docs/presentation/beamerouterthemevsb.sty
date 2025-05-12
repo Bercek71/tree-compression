@@ -1,0 +1,85 @@
+%%
+%% This is file `beamerouterthemevsb.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% OuterTheme.dtx 
+%% 
+%% Toto dílo podléhá licenci CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/
+%% Můžete jej šířit a používat pro nekomerční účely, musí však být uveden autor a dokument nelze měnit.
+%% 
+%% This work is licensed under CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/deed.en
+%% You may distribute it and use it for non-commercial purposes, but the author must be mentioned and the document can not be changed.
+%% 
+\ProvidesPackage{beamerouterthemevsb}
+\mode<presentation>
+\ifthenelse{\boolean{vsb@DisplayFrameTitle}}
+{
+  \ifthenelse{\boolean{vsb@DisplaySign}}
+{
+  \setbeamertemplate{frametitle}
+  {
+  \nointerlineskip
+  \begin{beamercolorbox}[sep=0.3cm,ht=1.8em,wd=\paperwidth]%
+  {frametitle}
+  \vbox{}\vskip-2ex
+  \strut\insertframetitle\strut
+  \hfill
+  \raisebox{-0.25\height}{%
+    \includegraphics[height=1.35em]{\vsb@TightSignFileName}}
+  \vskip-0.8ex%
+  \end{beamercolorbox}
+  }
+}
+{
+\setbeamertemplate{frametitle}[default][left]
+}
+}
+{
+\setbeamertemplate{frametitle}{}
+}
+\defbeamertemplate*{headline}{vsb theme}%
+{%
+\leavevmode%
+\hbox%
+{%
+\begin{beamercolorbox}%
+  [wd=\paperwidth,ht=2.25ex,dp=1.5ex,leftskip=0.3cm]%
+  {section in head/foot}%
+\usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}%
+\ifx\insertsubsectionhead\empty%
+\else/\hspace*{2ex}\insertsubsectionhead\hspace*{2ex}%
+\fi%
+\end{beamercolorbox}%
+}%
+}
+\defbeamertemplate*{footline}{vsb theme}
+{
+\leavevmode
+\hbox%
+{%
+\begin{beamercolorbox}%
+  [wd=.333333\paperwidth,ht=2.25ex,dp=1ex,leftskip=0.3cm]%
+{author in head/foot}%
+\usebeamerfont{author in head/foot}%
+  \insertshortauthor\expandafter\beamer@ifempty%
+\expandafter{\beamer@shortinstitute}{}{~~(\insertshortinstitute)}%
+\end{beamercolorbox}%
+\begin{beamercolorbox}%
+  [wd=.333333\paperwidth,ht=2.25ex,dp=1ex,center]{title in head/foot}%
+\usebeamerfont{title in head/foot}\insertshorttitle%
+\end{beamercolorbox}%
+\begin{beamercolorbox}%
+  [wd=.333333\paperwidth,ht=2.25ex,dp=1ex,right]%
+  {pagenum in head/foot}%
+\usebeamerfont{pagenum in head/foot}%
+\insertframenumber{}~/~\inserttotalframenumber\hspace*{0.3cm}%
+\end{beamercolorbox}%
+}
+\vskip0pt
+}
+\mode<all>
+\endinput
+%%
+%% End of file `beamerouterthemevsb.sty'.

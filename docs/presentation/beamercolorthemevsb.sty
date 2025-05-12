@@ -1,0 +1,47 @@
+%%
+%% This is file `beamercolorthemevsb.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% ColorTheme.dtx 
+%% 
+%% Toto dílo podléhá licenci CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/
+%% Můžete jej šířit a používat pro nekomerční účely, musí však být uveden autor a dokument nelze měnit.
+%% 
+%% This work is licensed under CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/deed.en
+%% You may distribute it and use it for non-commercial purposes, but the author must be mentioned and the document can not be changed.
+%% 
+\ProvidesPackage{beamercolorthemevsb}
+\mode<presentation>
+\definecolor{vsb@GreenColor}{RGB}{0,164,153}
+\setbeamercolor{normal text}{fg=black,bg=white}
+\setbeamercolor{alerted text}{parent=normal text}
+\setbeamercolor{example text}{parent=normal text}
+\setbeamercolor{structure}%
+  {fg=vsb@GreenColor,bg=vsb@GreenColor!20!white}
+\setbeamercolor{titlelike}{parent=structure,bg=white}
+\setbeamercolor{frametitle}{parent=structure}
+\setbeamercolor{block title}%
+  {parent=structure,fg=white,bg=vsb@GreenColor}
+\setbeamercolor{block title alerted}{parent=block title}
+\setbeamercolor{block title example}{parent=block title}
+\setbeamercolor{block body}%
+  {parent=normal text,use=block title,bg=structure.bg}
+\setbeamercolor{block body alerted}{parent=block body}
+\setbeamercolor{block body example}{parent=block body}
+\setbeamercolor{itemize item}{parent=structure}
+\setbeamercolor{itemize subitem}{parent=structure}
+\setbeamercolor{itemize subsubitem}{parent=structure}
+\setbeamercolor{section in toc}{parent=normal text}
+\setbeamercolor{subsection in toc}{parent=normal text}
+\setbeamercolor{author in head/foot}{fg=white,bg=vsb@GreenColor}
+\setbeamercolor{title in head/foot}{parent=author in head/foot}
+\setbeamercolor{section in head/foot}{parent=author in head/foot}
+\setbeamercolor{subsection in head/foot}%
+  {parent=author in head/foot}
+\setbeamercolor{pagenum in head/foot}{parent=author in head/foot}
+\mode<all>
+\endinput
+%%
+%% End of file `beamercolorthemevsb.sty'.

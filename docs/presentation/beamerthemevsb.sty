@@ -1,0 +1,163 @@
+%%
+%% This is file `beamerthemevsb.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% PresentationTheme.dtx 
+%% 
+%% Toto dílo podléhá licenci CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/
+%% Můžete jej šířit a používat pro nekomerční účely, musí však být uveden autor a dokument nelze měnit.
+%% 
+%% This work is licensed under CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/deed.en
+%% You may distribute it and use it for non-commercial purposes, but the author must be mentioned and the document can not be changed.
+%% 
+\ProvidesPackage{beamerthemevsb}
+\mode<presentation>
+\RequirePackage{bm}
+\RequirePackage{booktabs}
+\RequirePackage{etoolbox}
+\RequirePackage{fixmath}
+\RequirePackage{ifthen}
+\RequirePackage{ifluatex}
+\ifluatex
+\PackageInfo{vsb beamer theme}{Using luatex}
+\usepackage[no-math]{fontspec}
+\IfFontExistsTF{Calibri}
+{
+\PackageInfo{vsb beamer theme}{Using Calibri font}
+\setsansfont{Calibri}
+}
+{
+\PackageWarning{vsb beamer theme}
+  {Calibri font not found. Using Latin Modern Sans instead.}
+\setsansfont{Latin Modern Sans}
+}
+\else
+\PackageInfo{vsb beamer theme}{Using pdflatex}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\fi
+\newcommand{\vsb@ThemeImagesDirectory}{ThemeImg}
+\newcommand{\vsb@UniversityCZENLogoFileName}%
+  {\vsb@ThemeImagesDirectory/vsbCZEN.pdf}
+\newcommand{\vsb@BuildingImageFileName}%
+  {\vsb@ThemeImagesDirectory/vsbBuilding.pdf}
+\newcommand{\vsb@TightSignFileName}%
+  {\vsb@ThemeImagesDirectory/vsbSignTight.pdf}
+\newcommand{\vsb@BibIcon}{\vsb@ThemeImagesDirectory/bibicon.pdf}
+\newcommand{\vsb@LogoFileName}{}
+\newboolean{vsb@DisplayFrameTitle}
+\setboolean{vsb@DisplayFrameTitle}{true}
+\newboolean{vsb@DisplaySign}
+\setboolean{vsb@DisplaySign}{true}
+\newlength\vsb@TitleHeight
+\DeclareOptionBeamer{vsb}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{vsbEN.pdf}{vsbCZ.pdf}}}
+\DeclareOptionBeamer{ekf}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{ekfEN.pdf}{ekfCZ.pdf}}}
+\DeclareOptionBeamer{enet}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{enetEN.pdf}{enetCZ.pdf}}}
+\DeclareOptionBeamer{fast}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{fastEN.pdf}{fastCZ.pdf}}}
+\DeclareOptionBeamer{fbi}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{fbiEN.pdf}{fbiCZ.pdf}}}
+\DeclareOptionBeamer{fei}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{feiEN.pdf}{feiCZ.pdf}}}
+\DeclareOptionBeamer{fmt}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{fmtEN.pdf}{fmtCZ.pdf}}}
+\DeclareOptionBeamer{fs}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{fsEN.pdf}{fsCZ.pdf}}}
+\DeclareOptionBeamer{hgf}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{hgfEN.pdf}{hgfCZ.pdf}}}
+\DeclareOptionBeamer{it4i}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{it4iEN.pdf}{it4iCZ.pdf}}}
+\DeclareOptionBeamer{cnt}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{cntEN.pdf}{cntCZ.pdf}}}
+\DeclareOptionBeamer{iet}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{ietEN.pdf}{ietCZ.pdf}}}
+\DeclareOptionBeamer{vec}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{vecEN.pdf}{vecCZ.pdf}}}
+\DeclareOptionBeamer{ceet}{\renewcommand{\vsb@LogoFileName}%
+  {\vsb@ThemeImagesDirectory/\vsb@LangDep{ceetEN.pdf}{ceetCZ.pdf}}}
+\DeclareOptionBeamer{frametitle}%
+  {\setboolean{vsb@DisplayFrameTitle}{true}}
+\DeclareOptionBeamer{noframetitle}%
+  {\setboolean{vsb@DisplayFrameTitle}{false}}
+\DeclareOptionBeamer{sign}%
+  {\setboolean{vsb@DisplaySign}{true}}
+\DeclareOptionBeamer{nosign}%
+  {\setboolean{vsb@DisplaySign}{false}}
+\ProcessOptionsBeamer
+\newcommand{\vsb@LangDep}[2]{\iflanguage{english}{#1}%
+  {\iflanguage{czech}{#2}
+  {\PackageError{vsb beamer theme}{Unknown language}}}}
+\newcommand{\vsb@OpeningFrames}
+{
+\begin{frame}[plain,noframenumbering]
+\begin{center}
+\includegraphics[height=0.19\textheight]%
+  {\vsb@UniversityCZENLogoFileName}\\[8mm]
+\includegraphics[height=0.34\textheight]%
+  {\vsb@BuildingImageFileName}\\[8mm]
+\color{vsb@GreenColor}{\Large{}www.vsb.cz}
+\end{center}
+\end{frame}
+\begingroup
+\setbeamertemplate{footline}
+{
+\leavevmode
+\hbox{%
+  \begin{beamercolorbox}%
+    [wd=\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+\end{beamercolorbox}}%
+\vskip0pt
+}
+\begin{frame}[noframenumbering]
+\titlepage
+\end{frame}
+\endgroup
+}
+\newcommand{\vsb@ClosingFrames}
+{
+\section{}
+\begingroup
+\setbeamertemplate{footline}
+{
+\leavevmode
+\hbox{%
+  \begin{beamercolorbox}%
+    [wd=\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}%
+  \end{beamercolorbox}}%
+\vskip0pt
+}
+\title[]{\vsb@LangDep{Thank you for your attention}%
+  {Děkuji za pozornost}}
+\subtitle{\phantom{S}}
+\begin{frame}[noframenumbering]
+\titlepage
+\end{frame}
+\endgroup
+}
+\useinnertheme{vsb}
+\useoutertheme{vsb}
+\usecolortheme{vsb}
+\usefonttheme{vsb}
+\setbeamercovered{transparent}
+\g@addto@macro\beamer@lastminutepatches
+{
+\ifdefempty{\vsb@LogoFileName}
+{
+\PackageError{vsb beamer theme}{No department logo is given.}
+}
+{
+\titlegraphic{\edef\tmp{\noexpand%
+  \includegraphics[height=0.2\textheight]{\vsb@LogoFileName}}\tmp}
+}
+\vsb@OpeningFrames
+}
+\AtEndDocument{\vsb@ClosingFrames}
+\mode<all>
+\endinput
+%%
+%% End of file `beamerthemevsb.sty'.

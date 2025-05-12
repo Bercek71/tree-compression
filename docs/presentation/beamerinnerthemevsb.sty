@@ -1,0 +1,83 @@
+%%
+%% This is file `beamerinnerthemevsb.sty',
+%% generated with the docstrip utility.
+%%
+%% The original source files were:
+%%
+%% InnerTheme.dtx 
+%% 
+%% Toto dílo podléhá licenci CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/
+%% Můžete jej šířit a používat pro nekomerční účely, musí však být uveden autor a dokument nelze měnit.
+%% 
+%% This work is licensed under CC BY-NC-ND 3.0 CZ, https://creativecommons.org/licenses/by-nc-nd/3.0/cz/deed.en
+%% You may distribute it and use it for non-commercial purposes, but the author must be mentioned and the document can not be changed.
+%% 
+\ProvidesPackage{beamerinnerthemevsb}
+\mode<presentation>
+\setbeamertemplate{blocks}[default]
+\setbeamertemplate{block begin}%
+{%
+\settoheight{\vsb@TitleHeight}{\insertblocktitle}%
+\par\vskip\medskipamount%
+\ifnum\vsb@TitleHeight>0%
+\begin{beamercolorbox}[colsep*=.75ex]{block title}
+\usebeamerfont*{block title}\insertblocktitle%
+\end{beamercolorbox}%
+{\parskip0pt\par}%
+\ifbeamercolorempty[bg]{block title}
+{}
+{\ifbeamercolorempty[bg]{block body}{}{\nointerlineskip\vskip-0.5pt}}%
+\fi%
+\usebeamerfont{block body}%
+\begin{beamercolorbox}[colsep*=.75ex,vmode]{block body}%
+\ifbeamercolorempty[bg]{block body}%
+  {\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+\setbeamertemplate{block alerted begin}
+{
+\settoheight{\vsb@TitleHeight}{\insertblocktitle}%
+\par\vskip\medskipamount%
+\ifnum\vsb@TitleHeight>0%
+\begin{beamercolorbox}[colsep*=.75ex]{block title alerted}
+\usebeamerfont*{block title alerted}\insertblocktitle%
+\end{beamercolorbox}%
+{\parskip0pt\par}%
+\ifbeamercolorempty[bg]{block title alerted}
+{}
+{\ifbeamercolorempty[bg]{block body alerted}%
+  {}{\nointerlineskip\vskip-0.5pt}}%
+\fi%
+\usebeamerfont{block body alerted}%
+\begin{beamercolorbox}[colsep*=.75ex,vmode]{block body alerted}%
+\ifbeamercolorempty[bg]{block body alerted}%
+  {\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+\setbeamertemplate{block example begin}
+{
+\settoheight{\vsb@TitleHeight}{\insertblocktitle}%
+\par\vskip\medskipamount%
+\ifnum\vsb@TitleHeight>0%
+\begin{beamercolorbox}[colsep*=.75ex]{block title example}
+\usebeamerfont*{block title example}\insertblocktitle%
+\end{beamercolorbox}%
+{\parskip0pt\par}%
+\ifbeamercolorempty[bg]{block title example}
+{}
+{\ifbeamercolorempty[bg]{block body example}%
+  {}{\nointerlineskip\vskip-0.5pt}}%
+\fi%
+\usebeamerfont{block body example}%
+\begin{beamercolorbox}[colsep*=.75ex,vmode]{block body example}%
+\ifbeamercolorempty[bg]{block body example}%
+  {\vskip-.25ex}{\vskip-.75ex}\vbox{}%
+}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{items}[square]
+\setbeamertemplate{sections/subsections in toc}[square]
+\setbeamertemplate{bibliography item}%
+  {\raisebox{-1.9mm}{\includegraphics[width=1.5em]{\vsb@BibIcon}}}
+\setbeamersize{text margin left=1.25em, text margin right=1.25em}
+\mode<all>
+\endinput
+%%
+%% End of file `beamerinnerthemevsb.sty'.
