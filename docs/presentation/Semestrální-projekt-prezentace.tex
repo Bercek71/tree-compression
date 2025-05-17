@@ -193,11 +193,54 @@
   \end{itemize}
 \end{frame}
 
-% \begin{frame}
-%   \begin{itemize}
-    
-%   \end{itemize}
-% \end{frame}
+\begin{frame}{Algoritmy}
+  % TODO -- popsat algoritmy 
+\end{frame}
+
+\section{Testování}
+
+\begin{frame}{Testovací data}
+      \begin{itemize}
+        \item 4 různé typy textu
+        \item Celkový počet ~200 textů
+        \item Celkový objem ~10~MB
+        \item Všechny texty jsou v angličtině
+        \item Texty jsou uloženy v textovém formátu
+      \end{itemize}
+    \begin{block}{Tabulka datasetu}
+    \begin{table}[ht]
+      \centering
+      \begin{tabular}{|l|c|c|}
+        \hline
+        \textbf{Typ textu} & \textbf{Počet souborů} & \textbf{Rozsah velikostí} \\
+        \hline
+        Beletrie & 23 & 28~--~120~KB \\
+        Právní dokumenty & 103 & 1~KB~--~800~KB \\
+        Technická dokumentace & 96 & $<$1~KB~--~100~KB \\
+        Vědecké články & 20 & 1~KB~--~100~KB \\
+        \hline
+      \end{tabular}
+    \end{table}
+    \end{block}
+\end{frame}
+
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/compression_ratio_by_size_per_method.pdf}
+    \label{fig:compression_ratio_by_size_per_method}
+  \end{figure}
+\end{frame}
+
+
+\begin{frame}
+  \begin{figure}
+    \centering
+    \includegraphics[width=\textwidth]{fig/presentation_overview.pdf}
+    \label{fig:presentation_overview}
+  \end{figure}
+\end{frame}
 
 \section{Literatura}
 \begin{frame}[allowframebreaks]

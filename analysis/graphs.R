@@ -218,6 +218,26 @@ compression_ratio_by_size <- ggplot(all_reports, aes(x = Size, y = CompressionRa
   ) +
   my_theme
 
+  # ================================================================
+  # GRAF: Kompresní poměr podle velikosti souboru pro každou metodu zvlášť, barva = typ souboru
+  compression_ratio_by_size_per_method <- ggplot(
+    all_reports,
+    aes(x = Size, y = CompressionRatio, color = Type)
+  ) +
+    geom_point(size = 2, alpha = 0.7) +
+    geom_hline(yintercept = 1.0, linetype = "dashed", color = "darkred", size = 1) +
+    scale_x_log10(labels = comma_format()) +
+    scale_color_manual(values = file_type_colors) +
+    facet_wrap(~Dataset, scales = "free") +
+    labs(
+      title = "Kompresní poměr podle velikosti souboru pro každou metodu zvlášť",
+      subtitle = "Barva = typ souboru",
+      x = "Velikost souboru (B, logaritmická stupnice)",
+      y = "Kompresní poměr",
+      color = "Typ souboru"
+    ) +
+    my_theme
+
 # ================================================================
 # GRAF 6: HISTOGRAM KOMPRESNÍHO POMĚRU
 # ================================================================
@@ -612,6 +632,8 @@ save_plot(compression_time_comparison, "02_compression_time_comparison")
 save_plot(decompression_time_comparison, "03_decompression_time_comparison")
 save_plot(comp_decomp_ratio, "04_compression_decompression_ratio")
 save_plot(compression_ratio_by_size, "05_compression_ratio_by_size", width = 14, height = 10)
+save_plot(compression_ratio_by_size_per_method, "compression_ratio_by_size_per_method", width = 14, height = 10)
+
 save_plot(compression_ratio_hist, "06_compression_ratio_histogram")
 save_plot(compression_time_by_size, "07_compression_time_by_size")
 save_plot(compression_gain_vs_time, "08_compression_gain_vs_time", width = 14, height = 10)
