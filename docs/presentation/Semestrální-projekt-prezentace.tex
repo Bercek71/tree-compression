@@ -1,6 +1,8 @@
 \documentclass[lualatex,hyperref={pdfencoding=auto}]{beamer}
 \usepackage[czech]{babel}
-
+\usepackage{tikz}
+\usepackage{forest}
+\usetikzlibrary{arrows.meta}
 \usetheme[fei]{vsb}
 
 \title[Komprese stromových struktur]{Komprese stromových struktur}
@@ -13,112 +15,98 @@
 
 \begin{document}
 
-\begin{frame}
-\tableofcontents
-% Komentář: Představím hlavní body prezentace, aby se posluchači mohli zorientovat.
-\end{frame}
-
 \section{Úvod}
-\begin{frame}{Proč komprimovat stromy?}
-\begin{itemize}
-  \item Stromy = přirozený výstup syntaktické analýzy
-  \item Text obsahuje opakující se vzorce
-  \item Hypotéza: komprese možná díky opakovatelnosti
-\end{itemize}
-\includegraphics[width=\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Představím motivaci – závislostní stromy vznikající z textu mohou obsahovat opakující se vzory, které lze komprimovat.
+
+\begin{frame}{Obsah}
+    \tableofcontents
 \end{frame}
 
-\begin{frame}{Cíle projektu}
+\begin{frame}{Cíl a motivace}
 \begin{itemize}
-  \item Komprimovat syntaktické stromy
-  \item Porovnat různé metody
-  \item Vyhodnotit efektivitu
+    \item Srovnání metod komprese závislostních stromů z přirozeného jazyka
+    \item Cíl: Proof of Concept - zjistit, zda je možné komprimovat textové data převedením do stromové struktury 
 \end{itemize}
-\includegraphics[width=0.8\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Stručně shrnu, že projekt má experimentální charakter – zkoumám různé strategie a jejich výkonnost.
+\centering
+\begin{forest}
+  for tree={
+    draw,
+    rounded corners,
+    fill=blue!10,
+    font=\sffamily,
+    minimum width=1.2cm,
+    minimum height=0.8cm,
+    text centered,
+    edge={-, thick},
+    l sep+=20pt,
+    s sep+=15pt,
+    child anchor=north,
+    parent anchor=south,
+  }
+  [Root
+    [Left-1, anchor=north east
+      [Far-left]
+      [Left-middle]
+    ]
+    [Left-2]
+    [Right-1]
+    [Right-2, anchor=north west
+      [Right-middle]
+      [Far-right]
+    ]
+  ]
+\end{forest}
 \end{frame}
 
-\section{Zpracování dat}
-\begin{frame}{Z textu na strom}
-\begin{itemize}
-  \item MorphoDiTa → lemmatizace
-  \item UDPipe → syntaktický strom
-\end{itemize}
-\includegraphics[width=\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Vysvětlím, jaké nástroje jsem použil a jak vypadá výstup - závislostní strom.
+\section{Implementace knihovny}
+
+
+
+\begin{frame}{Použité technologie}
+    \begin{columns}[t] % Zarovnání sloupců nahoře
+        \begin{column}{0.5\textwidth}
+            \vspace{0pt} % Vynucení zarovnání nahoře
+            \textbf{Programovací jazyk a platforma:}
+            \begin{itemize}
+                \item C\# 9.0
+                \item .NET 5.0 a vyšší
+                \item Visual Studio 2022
+            \end{itemize}
+
+                
+            \textbf{Knihovny:}
+            \begin{itemize}
+                \item UDPipe 
+                (rozpoznávání syntaktických stromů)
+                \item MorphoDiTa (morfologická analýza)
+            \end{itemize}
+        \end{column}
+        
+        \begin{column}{0.5\textwidth}
+            \vspace{0pt} % Vynucení zarovnání nahoře
+            \textbf{Další nástroje:}
+            \begin{itemize}
+                \item R (datová analýza a vizualizace)
+                \item Mkdocs (dokumentace)
+                \item Bash skripty (podpůrné nástroje)
+            \end{itemize}
+            
+            \textbf{Bindings:}
+            \begin{itemize}
+                \item C\# wrapper pro UDPipe (nativní knihovna)
+            \end{itemize}
+        \end{column}
+    \end{columns}
 \end{frame}
 
-\section{Architektura}
-\begin{frame}{Struktura knihovny}
-\begin{itemize}
-  \item Vzor Pipes and Filters
-  \item Moduly pro analýzu, kompresi, dekompresi
-  \item Konzolová aplikace pro testování
-\end{itemize}
-\includegraphics[width=0.9\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Předvedu, jak je knihovna navržená a že je flexibilní pro další experimenty.
-\end{frame}
 
-\begin{frame}{Pipeline scénáře}
-\begin{itemize}
-  \item Komprese: Text → Strom → Komprese
-  \item Dekompres: Načtení → Dekomprese → Ověření
-\end{itemize}
-\includegraphics[width=0.9\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Ukážu příklad datového toku. Zdůrazním modulární návrh.
-\end{frame}
-
-\section{Algoritmy}
-\begin{frame}{Algoritmus RePair}
-\begin{itemize}
-  \item Hledání opakujících se párů
-  \item Nahrazení neterminály
-  \item Vytvoření gramatiky
-\end{itemize}
-\includegraphics[width=\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Vysvětlím jednoduše princip RePair – hledáme opakující se sekvence a postupně je nahrazujeme.
-\end{frame}
-
-\begin{frame}{TreeRePair – bez linearizace}
-\begin{itemize}
-  \item Hledání opakujících se podstromů
-  \item Hodnocení podle četnosti a velikosti
-  \item Nahrazení pravidly
-\end{itemize}
-\includegraphics[width=\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Stromy se přímo zpracovávají – nehledáme sekvence, ale opakované části stromu.
-\end{frame}
-
-\begin{frame}{Linearizace + RePair}
-\begin{itemize}
-  \item Preorder průchod → sekvence
-  \item RePair → pravidla
-  \item Vylepšení: n-gramy, kontext
-\end{itemize}
-\includegraphics[width=\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Převedeme strom na text a použijeme RePair. Je to rychlejší, ale může ztratit část struktury.
-\end{frame}
-
-\section{Výsledky}
-\begin{frame}{Shrnutí výsledků}
-\begin{itemize}
-  \item Linearizace + RePair: nejlepší průměrné výsledky
-  \item TreeRePair: náročnější, méně efektivní
-  \item Skutečná komprese: cca 9 % případů
-\end{itemize}
-\includegraphics[width=0.9\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Zhodnotím výkonnost metod. Nejlepší poměry měla optimalizovaná linearizace + RePair.
-\end{frame}
-
-\begin{frame}{Závěr a výhled}
-\begin{itemize}
-  \item Komprese stromů není triviální
-  \item Optimalizace výrazně pomáhají
-  \item Možnosti do budoucna: paralelizace, adaptivní metody
-\end{itemize}
-\includegraphics[width=0.8\textwidth]{fig/sphere_mix_real.pdf}
-% Komentář: Shrnu zjištění – komprese má smysl, ale není jednoduchá. Budoucnost vidím v chytrém přepínání a kombinacích metod.
+\begin{frame}{Implementace knihovny}
+    \begin{figure}
+        \centering
+        \includegraphics[width=\textwidth]{fig/class-diagram.png}
+        \caption{Třídní diagram části implementace zaměření na řetězení filtrů}
+        \label{fig:class-diagram}
+    \end{figure}
+    
 \end{frame}
 
 \end{document}

@@ -1,0 +1,3 @@
+\babel@toc {czech}{}\relax 
+\beamer@sectionintoc {1}{Úvod}{3}{0}{1}
+\beamer@sectionintoc {2}{Implementace knihovny}{5}{0}{2}
