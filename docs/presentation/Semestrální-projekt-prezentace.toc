@@ -1,4 +1,6 @@
 \babel@toc {czech}{}\relax 
 \beamer@sectionintoc {1}{Úvod}{3}{0}{1}
 \beamer@sectionintoc {2}{Implementace knihovny}{5}{0}{2}
-\beamer@sectionintoc {3}{Algoritmy}{7}{0}{3}
+\beamer@sectionintoc {3}{Převod textu do stromové struktury}{7}{0}{3}
+\beamer@sectionintoc {4}{Algoritmy}{9}{0}{4}
+\beamer@sectionintoc {5}{Literatura}{10}{0}{5}
