@@ -1,10 +1,11 @@
 \documentclass[lualatex,hyperref={pdfencoding=auto}]{beamer}
 \usepackage[czech]{babel}
 % \usepackage[utf8]{inputenc}
-\usetheme[fei]{vsb}
-
 \usepackage{biblatex}
 \addbibresource{citace.bib}
+\usetheme[fei]{vsb}
+
+
 
 \usepackage{tikz}
 \usetikzlibrary{positioning,calc}
@@ -90,6 +91,8 @@
 \begin{frame}{Převod textu do stromové struktury}
   \begin{itemize}
     \item Dependency parsing - závislosti mezi slovy ve větě.\nocite{kubler2009dependency} \nocite{jurafsky2024speech} \nocite{filippova2008dependency}
+    \item Využití knihovny UDPipe pro syntaktickou analýzu textu
+    \item Vytvoření syntaktického stromu pro každou větu
   \end{itemize}
   \centering
   \begin{tikzpicture}[
@@ -177,16 +180,26 @@
 \section{Algoritmy}
 \begin{frame}{Algoritmy}
   \begin{itemize}
-    \item Gramatickou komresi, protože je vhodná pro kompresi stromových struktur, kde se často opakují podobné podstromy a vzory (např. v XML dokumentech)
-    \item TreeRePair -- algoritmus pro kompresi stromových struktur, který využívá gramatiky a pravidel pro nahrazování podstromů - využívá se pro kompresi XML a dalších stromových datových struktur \nocite{lohrey2011tree} \nocite{lohrey2013xml} \nocite{lohrey2015grammar}
+    \item Zaměření na gramatickou kompresi
     \item Komprimace pomocí linearizace -- převod stromu na posloupnost uzlů a jejich následná komprese pomocí algoritmů pro kompresi textu \nocite{McAnlis2016}
   \end{itemize}
 \end{frame}
 
+\begin{frame}{Linearizace}
+  \begin{itemize}
+    \item Defakto převod stromu zpět na textovou reprezentaci
+    \item Zvýšená redundance v důsledku zachování stromové struktury
+    \item Řešeno hloubkovým průchodem -- dosahoval nejlepších výsledků    
+  \end{itemize}
+\end{frame}
 
+% \begin{frame}
+%   \begin{itemize}
+    
+%   \end{itemize}
+% \end{frame}
 
 \section{Literatura}
-
 \begin{frame}[allowframebreaks]
     \frametitle{Literatura}
     \printbibliography[heading=none]
