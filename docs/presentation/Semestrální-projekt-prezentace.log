@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  19 MAY 2025 15:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  19 MAY 2025 19:35
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1586,28 +1586,28 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 90.
  <./fig/class-diagram.png (PNG copy)>]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 133.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 137.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
 [6
 
 ]
-LaTeX Font Info:    Trying to load font information for U+msa on input line 181.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 185.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 181.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 185.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 181.
+LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on input line 185.
  (/usr/local/texlive/2025/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 )
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 181.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 185.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1616,7 +1616,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 181.
 ]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 193.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 197.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1625,7 +1625,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 193.
 ]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 215.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 219.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1634,7 +1634,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 215.
 ]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 256.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 264.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1643,7 +1643,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 256.
 ]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 285.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 293.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1653,10 +1653,10 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 285.
 <fig/compression_ratio_by_size_per_method.pdf, id=190, 1011.78pt x 722.7pt>
 File: fig/compression_ratio_by_size_per_method.pdf Graphic file (type pdf)
 <use fig/compression_ratio_by_size_per_method.pdf>
-Package pdftex.def Info: fig/compression_ratio_by_size_per_method.pdf  used on input line 294.
+Package pdftex.def Info: fig/compression_ratio_by_size_per_method.pdf  used on input line 302.
 (pdftex.def)             Requested size: 336.99532pt x 240.70825pt.
 
-Overfull \vbox (12.83984pt too high) detected at line 294
+Overfull \vbox (12.83984pt too high) detected at line 302
 
 \vbox(250.46841+0.0)x336.99532, glue set - 1.0
 .\penalty 10000
@@ -1674,10 +1674,10 @@ Overfull \vbox (12.83984pt too high) detected at line 294
 <fig/presentation_overview.pdf, id=209, 1011.78pt x 722.7pt>
 File: fig/presentation_overview.pdf Graphic file (type pdf)
 <use fig/presentation_overview.pdf>
-Package pdftex.def Info: fig/presentation_overview.pdf  used on input line 303.
+Package pdftex.def Info: fig/presentation_overview.pdf  used on input line 311.
 (pdftex.def)             Requested size: 336.99532pt x 240.70825pt.
 
-Overfull \vbox (12.83984pt too high) detected at line 303
+Overfull \vbox (12.83984pt too high) detected at line 311
 
 \vbox(250.46841+0.0)x336.99532, glue set - 1.0
 .\penalty 10000
@@ -1695,32 +1695,32 @@ Overfull \vbox (12.83984pt too high) detected at line 303
 <ThemeImg/bibicon.pdf, id=227, 64.24pt x 64.24pt>
 File: ThemeImg/bibicon.pdf Graphic file (type pdf)
 <use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
 File: ThemeImg/bibicon.pdf Graphic file (type pdf)
 <use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
 File: ThemeImg/bibicon.pdf Graphic file (type pdf)
 <use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
 File: ThemeImg/bibicon.pdf Graphic file (type pdf)
 <use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
 
 
 LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 309.
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 317.
 
 File: ThemeImg/bibicon.pdf Graphic file (type pdf)
 <use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1729,7 +1729,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 309.
  <./ThemeImg/bibicon.pdf>]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 309.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 317.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1748,7 +1748,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 309.
 
 File: ThemeImg/feiCZ.pdf Graphic file (type pdf)
 <use ThemeImg/feiCZ.pdf>
-Package pdftex.def Info: ThemeImg/feiCZ.pdf  used on input line 311.
+Package pdftex.def Info: ThemeImg/feiCZ.pdf  used on input line 319.
 (pdftex.def)             Requested size: 160.86385pt x 50.09291pt.
 
 
@@ -1767,15 +1767,15 @@ Package logreq Info: Writing requests to 'Semestrální-projekt-prezentace.run.x
 
  ) 
 Here is how much of TeX's memory you used:
- 34534 strings out of 473190
- 685710 string characters out of 5715800
+ 34542 strings out of 473190
+ 685820 string characters out of 5715800
  1474838 words of memory out of 5000000
- 57095 multiletter control sequences out of 15000+600000
+ 57103 multiletter control sequences out of 15000+600000
  589436 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,782b,1994s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Semestrální-projekt-prezentace.pdf (16 pages, 2190233 bytes).
+Output written on Semestrální-projekt-prezentace.pdf (16 pages, 2189536 bytes).
 PDF statistics:
  336 PDF objects out of 1000 (max. 8388607)
  225 compressed objects within 3 object streams

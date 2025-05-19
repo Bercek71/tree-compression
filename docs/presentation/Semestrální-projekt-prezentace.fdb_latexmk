@@ -1,14 +1,14 @@
 # Fdb version 4
-["biber Semestrální-projekt-prezentace"] 1747657436.93391 "Semestrální-projekt-prezentace.bcf" "Semestrální-projekt-prezentace.bbl" "Semestrální-projekt-prezentace" 1747661133.90555 0
-  "./Semestrální-projekt-prezentace.bcf" 1747661133.76554 108901 c1701a844241b07c1351bf6e50770d0a ""
-  "Semestrální-projekt-prezentace.bcf" 1747661133.76554 108901 c1701a844241b07c1351bf6e50770d0a "pdflatex"
+["biber Semestrální-projekt-prezentace"] 1747657436.93391 "Semestrální-projekt-prezentace.bcf" "Semestrální-projekt-prezentace.bbl" "Semestrální-projekt-prezentace" 1747676118.32137 0
+  "./Semestrální-projekt-prezentace.bcf" 1747676118.18318 108901 c1701a844241b07c1351bf6e50770d0a ""
+  "Semestrální-projekt-prezentace.bcf" 1747676118.18318 108901 c1701a844241b07c1351bf6e50770d0a "pdflatex"
   "citace.bib" 1747503965.52026 5720 4c37d6e54c89cf664daefd5d6d6d8b48 ""
   (generated)
   "Semestrální-projekt-prezentace.bbl"
   "Semestrální-projekt-prezentace.blg"
   (rewritten before read)
-["pdflatex"] 1747661132.29797 "/Users/marekberan/Code/SP/tree-compression/docs/presentation/Semestrální-projekt-prezentace.tex" "Semestrální-projekt-prezentace.pdf" "Semestrální-projekt-prezentace" 1747661133.90597 0
-  "/Users/marekberan/Code/SP/tree-compression/docs/presentation/Semestrální-projekt-prezentace.tex" 1747661132.06341 10679 d221cfaa1859d6a9bfda8ef578903277 ""
+["pdflatex"] 1747676116.82331 "/Users/marekberan/Code/SP/tree-compression/docs/presentation/Semestrální-projekt-prezentace.tex" "Semestrální-projekt-prezentace.pdf" "Semestrální-projekt-prezentace" 1747676118.32177 0
+  "/Users/marekberan/Code/SP/tree-compression/docs/presentation/Semestrální-projekt-prezentace.tex" 1747676116.60888 11592 6089210291f28f7d5d45ca4e19c8f201 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2025/texmf-dist/fonts/tfm/jknappen/ec/eccc1095.tfm" 1136768653 3072 1b1df026a15993ee98d265b49cf8d5f2 ""
@@ -285,13 +285,13 @@
   "/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1747041035 5467155 19efa205003f9ecad95fbbaa6ff24da1 ""
   "/usr/local/texlive/2025/texmf-var/web2c/pdftex/pdflatex.fmt" 1747040948 3345733 c93875d7d89931baebd3d0c0167883c7 ""
   "/usr/local/texlive/2025/texmf.cnf" 1741450484 577 418a7058ec8e006d8704f60ecd22c938 ""
-  "Semestrální-projekt-prezentace.aux" 1747661133.76326 5727 5a47a1fea560e2b5616d732bb1c01024 "pdflatex"
+  "Semestrální-projekt-prezentace.aux" 1747676118.18098 5727 5a47a1fea560e2b5616d732bb1c01024 "pdflatex"
   "Semestrální-projekt-prezentace.bbl" 1747657438.52226 7980 6283485b473f959d94ee1e89c8d8e75b "biber Semestrální-projekt-prezentace"
-  "Semestrální-projekt-prezentace.nav" 1747661133.76614 2565 eed2b49cdb32c2bacd5b45e0143fff3a "pdflatex"
-  "Semestrální-projekt-prezentace.out" 1747661133.76475 447 f830436da95765c1f0a56a2dba09391e "pdflatex"
-  "Semestrální-projekt-prezentace.run.xml" 1747661133.76609 2495 cf0e65d3f4100c420f31a1986b9f4849 "pdflatex"
-  "Semestrální-projekt-prezentace.tex" 1747661132.06341 10679 d221cfaa1859d6a9bfda8ef578903277 ""
-  "Semestrální-projekt-prezentace.toc" 1747661133.76616 281 5acb20d73ddfc9cc34b85f0f57450f67 "pdflatex"
+  "Semestrální-projekt-prezentace.nav" 1747676118.18395 2565 eed2b49cdb32c2bacd5b45e0143fff3a "pdflatex"
+  "Semestrální-projekt-prezentace.out" 1747676118.18241 447 f830436da95765c1f0a56a2dba09391e "pdflatex"
+  "Semestrální-projekt-prezentace.run.xml" 1747676118.1839 2495 cf0e65d3f4100c420f31a1986b9f4849 "pdflatex"
+  "Semestrální-projekt-prezentace.tex" 1747676116.60888 11592 6089210291f28f7d5d45ca4e19c8f201 ""
+  "Semestrální-projekt-prezentace.toc" 1747676118.18397 281 5acb20d73ddfc9cc34b85f0f57450f67 "pdflatex"
   "ThemeImg/bibicon.pdf" 1583393362 1230 497753a5be62d75bb61bb545e9d83bbc ""
   "ThemeImg/feiCZ.pdf" 1583393362 939412 ac74cf2e28d80450bbd54c15077d19fa ""
   "ThemeImg/vsbBuilding.pdf" 1583393362 40263 958e470fc39e2216d2f1e109088f8f51 ""
