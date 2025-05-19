@@ -41,42 +41,42 @@
 \end{itemize}
 \end{frame}
 
-\section{Implementace knihovny}
-\begin{frame}{Použité technologie}
-    \begin{columns}[t] 
-        \begin{column}{0.5\textwidth}
-            \vspace{0pt} % Vynucení zarovnání nahoře
-            \textbf{Programovací jazyk a platforma:}
-            \begin{itemize}
-                \item C\# 9.0
-                \item .NET 5.0 a vyšší
-                \item Visual Studio 2022
-            \end{itemize}
-            \vspace{12pt}
-            \textbf{Knihovny:}
-            \begin{itemize}
-                \item UDPipe 
-                (rozpoznávání syntaktických stromů) \nocite{udpipe:2017}
-                \item MorphoDiTa (morfologická analýza) \nocite{strakova14}
-            \end{itemize}
-        \end{column}
-        \begin{column}{0.5\textwidth}
-            \vspace{0pt} % Vynucení zarovnání nahoře
-            \textbf{Další nástroje:}
-            \begin{itemize}
-                \item R (datová analýza a vizualizace)
-                \item Mkdocs (dokumentace)
-                \item Bash skripty (podpůrné nástroje)
-            \end{itemize}
+% \section{Implementace knihovny}
+% \begin{frame}{Použité technologie}
+%     \begin{columns}[t] 
+%         \begin{column}{0.5\textwidth}
+%             \vspace{0pt} % Vynucení zarovnání nahoře
+%             \textbf{Programovací jazyk a platforma:}
+%             \begin{itemize}
+%                 \item C\# 9.0
+%                 \item .NET 5.0 a vyšší
+%                 \item Visual Studio 2022
+%             \end{itemize}
+%             \vspace{12pt}
+%             \textbf{Knihovny:}
+%             \begin{itemize}
+%                 \item UDPipe 
+%                 (rozpoznávání syntaktických stromů) \nocite{udpipe:2017}
+%                 \item MorphoDiTa (morfologická analýza) \nocite{strakova14}
+%             \end{itemize}
+%         \end{column}
+%         \begin{column}{0.5\textwidth}
+%             \vspace{0pt} % Vynucení zarovnání nahoře
+%             \textbf{Další nástroje:}
+%             \begin{itemize}
+%                 \item R (datová analýza a vizualizace)
+%                 \item Mkdocs (dokumentace)
+%                 \item Bash skripty (podpůrné nástroje)
+%             \end{itemize}
             
-            \textbf{Bindings:}
-            \begin{itemize}
-                \item C\# wrapper pro UDPipe (nativní knihovna) 
-                \item C\# wrapper pro MorphoDiTa (nativní knihovna) 
-            \end{itemize}
-        \end{column}
-    \end{columns}
-\end{frame}
+%             \textbf{Bindings:}
+%             \begin{itemize}
+%                 \item C\# wrapper pro UDPipe (nativní knihovna) 
+%                 \item C\# wrapper pro MorphoDiTa (nativní knihovna) 
+%             \end{itemize}
+%         \end{column}
+%     \end{columns}
+% \end{frame}
 
 
 \begin{frame}{Implementace knihovny}
@@ -187,31 +187,14 @@
     \item Zpočátku exaktní metody (generování hashů pro všechny podstromy)
     \item Komprimace pomocí linearizace -- převod stromu na posloupnost uzlů a jejich následná komprese pomocí algoritmů pro kompresi textu \nocite{McAnlis2016}
     \item Pokus o optimalizaci linearizovaného RePair (Recursive Pairing) algoritmu pro kompresi linearizovaných stromových struktur (maximální komprimace redundantních struktur) -- hledání n-tic
-    \item TreeRePair -- algoritmus pro kompresi stromových struktur inspirovaný RePair algoritmem \nocite{Neubauer2010}
-    \item Opět pokus o optimalizaci TreeRePair algoritmu pro kompresi závislostních stromů
+    \item Komprese bez linearizace -- algoritmus pro kompresi stromových struktur inspirovaný RePair algoritmem 
+    \item Opět pokus o optimalizaci
   \end{itemize}
 \end{frame}
 
-
-\begin{frame}{Proces linearizace stromu}
-      \textbf{Typy průchodů stromem:}
-      \begin{itemize}
-        \item Preorder 
-        \item Inorder 
-        \item Postorder 
-        \item Průchod do šířky 
-      \end{itemize}
-      
-      \textbf{Preorder linearizace:}
-      \begin{itemize}
-        \item Nejlepší výsledky pro TreeRePair
-        \item Asymptotická složitost: $O(n)$
-      \end{itemize}
-\end{frame}
-
-\begin{frame}{TreeRePair pro závislostní stromy}
+\begin{frame}{Pseudokód algoritmu}
 \begin{algorithm}[H]
-\caption{TreeRePair -- zjednodušený pseudokód} 
+\caption{Algoritmus pro kompresi bez linearizace} 
 \begin{algorithmic}[1] 
   \REQUIRE Závislostní strom $T$ 
   \STATE Inicializuj čítač pravidel a slovník digramů 
@@ -231,32 +214,32 @@
 
 \end{frame}
 
-\begin{frame}{TreeRePair algoritmus - podrobněji}
-      % \textbf{Kroky algoritmu:}
-      % \begin{enumerate}
-      %   \item Identifikace opakujících se podstromů
-      %   \item Výběr nejčastějších podstromů
-      %   \item Vytvoření gramatického pravidla
-      %   \item Nahrazení výskytů podstromu
-      %   \item Opakování dokud existují vhodné podstromy
-      % \end{enumerate}
-      \begin{itemize}
-        \item Celková časová složitost:
-        \begin{itemize}
-          \item Dominantní částí je kompresní cyklus: $O(k \cdot n)$
-          \item Vzhledem k tomu, že k je v implementaci omezeno konstantou $\text{MAX\_ITERATIONS} (100)$, lze říci, že asymptotická složitost je $O(n)$
-          \item Bez omezení na počet iterací je složitost $O(n^2)$
-        \end{itemize}
-      \end{itemize}
-      \begin{itemize}
-        \item Prostorová složitost:
-        \begin{itemize}
-          \item Slovník digramů: $O(n)$ -- v nejhorším případě máme $O(n)$ unikátních digramů
-          \item Seznam pravidel gramatiky: $O(k) = O(1)$ vzhledem ke konstantnímu omezení
-          \item Celková prostorová složitost: $O(n)$
-        \end{itemize}
-      \end{itemize}
-\end{frame}
+% \begin{frame}{TreeRePair algoritmus - podrobněji}
+%       % \textbf{Kroky algoritmu:}
+%       % \begin{enumerate}
+%       %   \item Identifikace opakujících se podstromů
+%       %   \item Výběr nejčastějších podstromů
+%       %   \item Vytvoření gramatického pravidla
+%       %   \item Nahrazení výskytů podstromu
+%       %   \item Opakování dokud existují vhodné podstromy
+%       % \end{enumerate}
+%       \begin{itemize}
+%         \item Celková časová složitost:
+%         \begin{itemize}
+%           \item Dominantní částí je kompresní cyklus: $O(k \cdot n)$
+%           \item Vzhledem k tomu, že k je v implementaci omezeno konstantou $\text{MAX\_ITERATIONS} (100)$, lze říci, že asymptotická složitost je $O(n)$
+%           \item Bez omezení na počet iterací je složitost $O(n^2)$
+%         \end{itemize}
+%       \end{itemize}
+%       \begin{itemize}
+%         \item Prostorová složitost:
+%         \begin{itemize}
+%           \item Slovník digramů: $O(n)$ -- v nejhorším případě máme $O(n)$ unikátních digramů
+%           \item Seznam pravidel gramatiky: $O(k) = O(1)$ vzhledem ke konstantnímu omezení
+%           \item Celková prostorová složitost: $O(n)$
+%         \end{itemize}
+%       \end{itemize}
+% \end{frame}
 
 \begin{frame}{Optimalizace TreeRePair algoritmu}
       \textbf{Metriky pro hodnocení podstromů:}
@@ -264,13 +247,11 @@
         \item Četnost výskytu: počet identických instancí
         \item Velikost: počet uzlů v podstromu
         \item Kompresní zisk: $(\text{velikost} \times \text{četnost}) - (\text{velikost} + \text{četnost})$ - vyjadřuje zisk z komprese -- tzn. rozdíl mezi velikostí podstromu a velikostí gramatického pravidla
-        \item Hloubka a vyváženost struktury
       \end{itemize}
       
       \textbf{Optimalizační techniky:}
       \begin{itemize}
-        \item Efektivní hašování podstromů
-        \item Inkrementální aktualizace metrik -- pouze pro změněné podstromy
+        \item Vyvužití heuristiky pro výběr podstromů
       \end{itemize}
 \end{frame}
 

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  19 MAY 2025 12:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (TeX Live 2025) (preloaded format=pdflatex 2025.5.12)  19 MAY 2025 15:25
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1522,24 +1522,16 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Semestrální-projekt-prezentace.bbl' found.
- (./Semestrální-projekt-prezentace.bbl
-
-Package biblatex Warning: The following entry could not be found
-(biblatex)                in the database:
-(biblatex)                Neubauer2010
-(biblatex)                Please verify the spelling and rerun
-(biblatex)                LaTeX afterwards.
-
-)
+ (./Semestrální-projekt-prezentace.bbl)
 Package biblatex Info: Reference section=0 on input line 28.
 Package biblatex Info: Reference segment=0 on input line 28.
  (./Semestrální-projekt-prezentace.nav)
-<ThemeImg/vsbCZEN.pdf, id=43, 436.18575pt x 103.33919pt>
+<ThemeImg/vsbCZEN.pdf, id=39, 436.18575pt x 103.33919pt>
 File: ThemeImg/vsbCZEN.pdf Graphic file (type pdf)
 <use ThemeImg/vsbCZEN.pdf>
 Package pdftex.def Info: ThemeImg/vsbCZEN.pdf  used on input line 28.
 (pdftex.def)             Requested size: 200.87416pt x 47.5896pt.
-<ThemeImg/vsbBuilding.pdf, id=44, 466.74374pt x 157.58875pt>
+<ThemeImg/vsbBuilding.pdf, id=40, 466.74374pt x 157.58875pt>
 File: ThemeImg/vsbBuilding.pdf Graphic file (type pdf)
 <use ThemeImg/vsbBuilding.pdf>
 Package pdftex.def Info: ThemeImg/vsbBuilding.pdf  used on input line 28.
@@ -1549,7 +1541,7 @@ Package pdftex.def Info: ThemeImg/vsbBuilding.pdf  used on input line 28.
 [1
 
 {/usr/local/texlive/2025/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{/usr/local/texlive/2025/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./ThemeImg/vsbCZEN.pdf> <./ThemeImg/vsbBuilding.pdf>]
-<ThemeImg/feiCZ.pdf, id=58, 350.70023pt x 109.21pt>
+<ThemeImg/feiCZ.pdf, id=54, 350.70023pt x 109.21pt>
 File: ThemeImg/feiCZ.pdf Graphic file (type pdf)
 <use ThemeImg/feiCZ.pdf>
 Package pdftex.def Info: ThemeImg/feiCZ.pdf  used on input line 28.
@@ -1559,7 +1551,7 @@ Package pdftex.def Info: ThemeImg/feiCZ.pdf  used on input line 28.
 [2
 
  <./ThemeImg/feiCZ.pdf>] (./Semestrální-projekt-prezentace.toc)
-<ThemeImg/vsbSignTight.pdf, id=98, 26.2857pt x 29.04602pt>
+<ThemeImg/vsbSignTight.pdf, id=93, 26.2857pt x 29.04602pt>
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
 Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 34.
@@ -1578,16 +1570,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 42.
 [4
 
 ]
-File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
-<use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 79.
-(pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
-
-
-[5
-
-]
-<fig/class-diagram.png, id=135, 1943.26pt x 1013.7875pt>
+<fig/class-diagram.png, id=120, 1943.26pt x 1013.7875pt>
 File: fig/class-diagram.png Graphic file (type png)
 <use fig/class-diagram.png>
 Package pdftex.def Info: fig/class-diagram.png  used on input line 90.
@@ -1598,7 +1581,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 90.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
-[6
+[5
 
  <./fig/class-diagram.png (PNG copy)>]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
@@ -1607,7 +1590,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 133.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
-[7
+[6
 
 ]
 LaTeX Font Info:    Trying to load font information for U+msa on input line 181.
@@ -1628,15 +1611,21 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 181.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
-[8
+[7
 
 ]
-
-LaTeX Warning: Citation 'Neubauer2010' undefined on input line 193.
-
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
 Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 193.
+(pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
+
+
+[8
+
+]
+File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
+<use ThemeImg/vsbSignTight.pdf>
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 215.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1645,7 +1634,7 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 193.
 ]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 210.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 256.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
@@ -1654,142 +1643,97 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 210.
 ]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 232.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 285.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
 [11
 
 ]
-File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
-<use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 259.
-(pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
+<fig/compression_ratio_by_size_per_method.pdf, id=190, 1011.78pt x 722.7pt>
+File: fig/compression_ratio_by_size_per_method.pdf Graphic file (type pdf)
+<use fig/compression_ratio_by_size_per_method.pdf>
+Package pdftex.def Info: fig/compression_ratio_by_size_per_method.pdf  used on input line 294.
+(pdftex.def)             Requested size: 336.99532pt x 240.70825pt.
+
+Overfull \vbox (12.83984pt too high) detected at line 294
+
+\vbox(250.46841+0.0)x336.99532, glue set - 1.0
+.\penalty 10000
+.\vbox(0.0+0.0)x0.0
+.\penalty 10000
+.\penalty 10000
+.\penalty 10000
+.etc.
+
 
 
 [12
 
-]
-File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
-<use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 275.
-(pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
+ <./fig/compression_ratio_by_size_per_method.pdf>]
+<fig/presentation_overview.pdf, id=209, 1011.78pt x 722.7pt>
+File: fig/presentation_overview.pdf Graphic file (type pdf)
+<use fig/presentation_overview.pdf>
+Package pdftex.def Info: fig/presentation_overview.pdf  used on input line 303.
+(pdftex.def)             Requested size: 336.99532pt x 240.70825pt.
+
+Overfull \vbox (12.83984pt too high) detected at line 303
+
+\vbox(250.46841+0.0)x336.99532, glue set - 1.0
+.\penalty 10000
+.\vbox(0.0+0.0)x0.0
+.\penalty 10000
+.\penalty 10000
+.\penalty 10000
+.etc.
+
 
 
 [13
 
-]
+ <./fig/presentation_overview.pdf>]
+<ThemeImg/bibicon.pdf, id=227, 64.24pt x 64.24pt>
+File: ThemeImg/bibicon.pdf Graphic file (type pdf)
+<use ThemeImg/bibicon.pdf>
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
+File: ThemeImg/bibicon.pdf Graphic file (type pdf)
+<use ThemeImg/bibicon.pdf>
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
+File: ThemeImg/bibicon.pdf Graphic file (type pdf)
+<use ThemeImg/bibicon.pdf>
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
+File: ThemeImg/bibicon.pdf Graphic file (type pdf)
+<use ThemeImg/bibicon.pdf>
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
+
+
+LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10.95> not available
+(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 309.
+
+File: ThemeImg/bibicon.pdf Graphic file (type pdf)
+<use ThemeImg/bibicon.pdf>
+Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 309.
+(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 304.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 309.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
 [14
 
-]
-<fig/compression_ratio_by_size_per_method.pdf, id=225, 1011.78pt x 722.7pt>
-File: fig/compression_ratio_by_size_per_method.pdf Graphic file (type pdf)
-<use fig/compression_ratio_by_size_per_method.pdf>
-Package pdftex.def Info: fig/compression_ratio_by_size_per_method.pdf  used on input line 313.
-(pdftex.def)             Requested size: 336.99532pt x 240.70825pt.
-
-Overfull \vbox (12.83984pt too high) detected at line 313
-
-\vbox(250.46841+0.0)x336.99532, glue set - 1.0
-.\penalty 10000
-.\vbox(0.0+0.0)x0.0
-.\penalty 10000
-.\penalty 10000
-.\penalty 10000
-.etc.
-
-
-
-[15
-
- <./fig/compression_ratio_by_size_per_method.pdf>]
-<fig/presentation_overview.pdf, id=243, 1011.78pt x 722.7pt>
-File: fig/presentation_overview.pdf Graphic file (type pdf)
-<use fig/presentation_overview.pdf>
-Package pdftex.def Info: fig/presentation_overview.pdf  used on input line 322.
-(pdftex.def)             Requested size: 336.99532pt x 240.70825pt.
-
-Overfull \vbox (12.83984pt too high) detected at line 322
-
-\vbox(250.46841+0.0)x336.99532, glue set - 1.0
-.\penalty 10000
-.\vbox(0.0+0.0)x0.0
-.\penalty 10000
-.\penalty 10000
-.\penalty 10000
-.etc.
-
-
-
-[16
-
- <./fig/presentation_overview.pdf>]
-<ThemeImg/bibicon.pdf, id=260, 64.24pt x 64.24pt>
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-
-
-LaTeX Font Warning: Font shape `T1/cmss/m/sc' in size <10.95> not available
-(Font)              Font shape `T1/cmr/m/sc' tried instead on input line 328.
-
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-File: ThemeImg/bibicon.pdf Graphic file (type pdf)
-<use ThemeImg/bibicon.pdf>
-Package pdftex.def Info: ThemeImg/bibicon.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.32002pt x 16.31972pt.
-File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
-<use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
-
-
-[17
-
  <./ThemeImg/bibicon.pdf>]
 File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
 <use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 328.
+Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 309.
 (pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
 
 
-[18
-
-
-]
-File: ThemeImg/vsbSignTight.pdf Graphic file (type pdf)
-<use ThemeImg/vsbSignTight.pdf>
-Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 328.
-(pdftex.def)             Requested size: 16.76341pt x 18.52316pt.
-
-
-[19
+[15
 
 
 ]
@@ -1804,11 +1748,11 @@ Package pdftex.def Info: ThemeImg/vsbSignTight.pdf  used on input line 328.
 
 File: ThemeImg/feiCZ.pdf Graphic file (type pdf)
 <use ThemeImg/feiCZ.pdf>
-Package pdftex.def Info: ThemeImg/feiCZ.pdf  used on input line 330.
+Package pdftex.def Info: ThemeImg/feiCZ.pdf  used on input line 311.
 (pdftex.def)             Requested size: 160.86385pt x 50.09291pt.
 
 
-[20
+[16
 
 
 ] (./Semestrální-projekt-prezentace.aux)
@@ -1817,24 +1761,24 @@ LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 Package rerunfilecheck Info: File `Semestrální-projekt-prezentace.out' has not changed.
-(rerunfilecheck)             Checksum: 689B058029C6B5FB3C6A01FF682162C2;506.
+(rerunfilecheck)             Checksum: F830436DA95765C1F0A56A2DBA09391E;447.
 Package logreq Info: Writing requests to 'Semestrální-projekt-prezentace.run.xml'.
 \openout1 = `Semestrální-projekt-prezentace.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34635 strings out of 473190
- 687801 string characters out of 5715800
- 1475994 words of memory out of 5000000
- 57175 multiletter control sequences out of 15000+600000
- 598793 words of font info for 140 fonts, out of 8000000 for 9000
+ 34534 strings out of 473190
+ 685710 string characters out of 5715800
+ 1474838 words of memory out of 5000000
+ 57095 multiletter control sequences out of 15000+600000
+ 589436 words of font info for 115 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  128i,15n,123p,782b,1994s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
-Output written on Semestrální-projekt-prezentace.pdf (20 pages, 2253138 bytes).
+</usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfcc1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsi1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0800.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss1440.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfss2488.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx0600.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sfsx1095.pfb></usr/local/texlive/2025/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb>
+Output written on Semestrální-projekt-prezentace.pdf (16 pages, 2190233 bytes).
 PDF statistics:
- 387 PDF objects out of 1000 (max. 8388607)
- 264 compressed objects within 3 object streams
- 58 named destinations out of 1000 (max. 500000)
- 139 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 336 PDF objects out of 1000 (max. 8388607)
+ 225 compressed objects within 3 object streams
+ 47 named destinations out of 1000 (max. 500000)
+ 131 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -805,16 +805,16 @@ save_plot(opt_category_avg_ratio, "20_opt_category_avg_ratio")
 # Jednoduchý přehledový graf pro prezentace
 presentation_overview <- ggplot(
   avg_metrics_table,
-  aes(x = Dataset, y = Avg_Ratio, fill = Dataset)
+  aes(x = Type, y = Avg_Ratio, fill = Type)
 ) +
   geom_bar(stat = "identity", alpha = 0.9) +
   geom_text(aes(label = sprintf("%.2f", Avg_Ratio)), vjust = -0.5) +
-  facet_wrap(~Type) +
-  scale_fill_manual(values = compression_method_colors) +
+  facet_wrap(~Dataset) +
+  scale_fill_manual(values = file_type_colors) +
   labs(
     title = "Srovnání kompresních poměrů stromových algoritmů",
-    subtitle = "Průměrný kompresní poměr podle typu souboru a metody",
-    x = "Metoda komprese",
+    subtitle = "Průměrný kompresní poměr podle metody a typu souboru",
+    x = "Typ souboru",
     y = "Průměrný kompresní poměr"
   ) +
   theme_minimal() +
