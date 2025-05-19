@@ -1,0 +1,18 @@
+\frametitle{TreeRePair pro závislostní stromy -- Pseudokód}
+\begin{algorithm}[H]
+\caption{Algoritmus gramatické komprese pro uspořádané dependency stromy}
+\begin{algorithmic}[1]
+\REQUIRE $T$ -- vstupní uspořádaný dependency strom
+\ENSURE $G$ -- gramatika komprimující $T$
+\STATE Inicializuj $G$ pravidly odpovídajícími všem typům uzlů v $T$
+\REPEAT
+  \STATE Najdi nejčastější podstrom (např. vzor rodič + potomek)
+  \IF{nenalezen žádný častý podstrom}
+    \STATE \textbf{break}
+  \ENDIF
+  \STATE Zaveď nový neterminál reprezentující tento podstrom
+  \STATE Nahraď všechny výskyty tohoto podstromu v $G$ novým neterminálem
+\UNTIL{nenalezen žádný častý podstrom}
+\RETURN $G$
+\end{algorithmic}
+\end{algorithm}

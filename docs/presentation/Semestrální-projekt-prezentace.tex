@@ -2,6 +2,9 @@
 \usepackage[czech]{babel}
 % \usepackage[utf8]{inputenc}
 \usepackage{biblatex}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+% \usepackage{graphicx}
 \addbibresource{citace.bib}
 \usetheme[fei]{vsb}
 
@@ -181,33 +184,109 @@
 \begin{frame}{Algoritmy}
   \begin{itemize}
     \item Zaměření na gramatickou kompresi
+    \item Zpočátku exaktní metody (generování hashů pro všechny podstromy)
     \item Komprimace pomocí linearizace -- převod stromu na posloupnost uzlů a jejich následná komprese pomocí algoritmů pro kompresi textu \nocite{McAnlis2016}
+    \item Pokus o optimalizaci linearizovaného RePair (Recursive Pairing) algoritmu pro kompresi linearizovaných stromových struktur (maximální komprimace redundantních struktur) -- hledání n-tic
+    \item TreeRePair -- algoritmus pro kompresi stromových struktur inspirovaný RePair algoritmem \nocite{Neubauer2010}
+    \item Opět pokus o optimalizaci TreeRePair algoritmu pro kompresi závislostních stromů
   \end{itemize}
 \end{frame}
 
-\begin{frame}{Linearizace}
-  \begin{itemize}
-    \item Defakto převod stromu zpět na textovou reprezentaci
-    \item Zvýšená redundance v důsledku zachování stromové struktury
-    \item Řešeno hloubkovým průchodem -- dosahoval nejlepších výsledků    
-  \end{itemize}
+
+\begin{frame}{Proces linearizace stromu}
+      \textbf{Typy průchodů stromem:}
+      \begin{itemize}
+        \item Preorder 
+        \item Inorder 
+        \item Postorder 
+        \item Průchod do šířky 
+      \end{itemize}
+      
+      \textbf{Preorder linearizace:}
+      \begin{itemize}
+        \item Nejlepší výsledky pro TreeRePair
+        \item Asymptotická složitost: $O(n)$
+      \end{itemize}
 \end{frame}
 
-\begin{frame}{Algoritmy}
-  % TODO -- popsat algoritmy 
+\begin{frame}{TreeRePair pro závislostní stromy}
+\begin{algorithm}[H]
+\caption{TreeRePair -- zjednodušený pseudokód} 
+\begin{algorithmic}[1] 
+  \REQUIRE Závislostní strom $T$ 
+  \STATE Inicializuj čítač pravidel a slovník digramů 
+  \STATE Projdi strom a vytvoř index všech digramů $(\text{rodič}, \text{dítě}, \text{pozice})$ 
+  \WHILE{existuje digram $D$ s četností $\geq 2$} 
+  \STATE Najdi digram $D$ s nejvyšší četností 
+  \STATE Vytvoř nový neterminál $N_i$ a pravidlo $N_i 
+  \rightarrow D$ 
+  \STATE Nahraď všechny výskyty digramu $D$ neterminálem $N_i$ 
+  \STATE Aktualizuj index digramů 
+  \STATE Pokud komprese není efektivní, ukonči 
+  \ENDWHILE 
+  \STATE Odstraň nepoužitá pravidla 
+  \RETURN Komprimovaný strom $T$ a pravidla gramatiky 
+\end{algorithmic} 
+\end{algorithm}
+
 \end{frame}
+
+\begin{frame}{TreeRePair algoritmus - podrobněji}
+      % \textbf{Kroky algoritmu:}
+      % \begin{enumerate}
+      %   \item Identifikace opakujících se podstromů
+      %   \item Výběr nejčastějších podstromů
+      %   \item Vytvoření gramatického pravidla
+      %   \item Nahrazení výskytů podstromu
+      %   \item Opakování dokud existují vhodné podstromy
+      % \end{enumerate}
+      \begin{itemize}
+        \item Celková časová složitost:
+        \begin{itemize}
+          \item Dominantní částí je kompresní cyklus: $O(k \cdot n)$
+          \item Vzhledem k tomu, že k je v implementaci omezeno konstantou $\text{MAX\_ITERATIONS} (100)$, lze říci, že asymptotická složitost je $O(n)$
+          \item Bez omezení na počet iterací je složitost $O(n^2)$
+        \end{itemize}
+      \end{itemize}
+      \begin{itemize}
+        \item Prostorová složitost:
+        \begin{itemize}
+          \item Slovník digramů: $O(n)$ -- v nejhorším případě máme $O(n)$ unikátních digramů
+          \item Seznam pravidel gramatiky: $O(k) = O(1)$ vzhledem ke konstantnímu omezení
+          \item Celková prostorová složitost: $O(n)$
+        \end{itemize}
+      \end{itemize}
+\end{frame}
+
+\begin{frame}{Optimalizace TreeRePair algoritmu}
+      \textbf{Metriky pro hodnocení podstromů:}
+      \begin{itemize}
+        \item Četnost výskytu: počet identických instancí
+        \item Velikost: počet uzlů v podstromu
+        \item Kompresní zisk: $(\text{velikost} \times \text{četnost}) - (\text{velikost} + \text{četnost})$ - vyjadřuje zisk z komprese -- tzn. rozdíl mezi velikostí podstromu a velikostí gramatického pravidla
+        \item Hloubka a vyváženost struktury
+      \end{itemize}
+      
+      \textbf{Optimalizační techniky:}
+      \begin{itemize}
+        \item Efektivní hašování podstromů
+        \item Inkrementální aktualizace metrik -- pouze pro změněné podstromy
+      \end{itemize}
+\end{frame}
+
+
 
 \section{Testování}
 
 \begin{frame}{Testovací data}
       \begin{itemize}
         \item 4 různé typy textu
-        \item Celkový počet ~200 textů
+        \item Celkový počet souborů: 242
+        % \item Celkový počet vět: 1~000~000
         \item Celkový objem ~10~MB
         \item Všechny texty jsou v angličtině
-        \item Texty jsou uloženy v textovém formátu
       \end{itemize}
-    \begin{block}{Tabulka datasetu}
+      \vspace{12pt}
     \begin{table}[ht]
       \centering
       \begin{tabular}{|l|c|c|}
@@ -220,8 +299,8 @@
         Vědecké články & 20 & 1~KB~--~100~KB \\
         \hline
       \end{tabular}
+      \caption{Typy textu a jejich velikosti}
     \end{table}
-    \end{block}
 \end{frame}
 
 
