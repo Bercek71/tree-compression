@@ -230,7 +230,7 @@ compression_ratio_by_size <- ggplot(all_reports, aes(x = Size, y = CompressionRa
     scale_color_manual(values = file_type_colors) +
     facet_wrap(~Dataset, scales = "free") +
     labs(
-      title = "Kompresní poměr podle velikosti souboru pro každou metodu zvlášť",
+      title = "Kompresní poměr podle velikosti souboru",
       subtitle = "Barva = typ souboru",
       x = "Velikost souboru (B, logaritmická stupnice)",
       y = "Kompresní poměr",

@@ -121,6 +121,120 @@
       \field{pages}{11\bibrangedash 20}
       \range{pages}{10}
     \endentry
+    \entry{lohrey2015grammar}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=b8b42c1eb6fed99990fc29bb52e8d4fa}{%
+           family={Lohrey},
+           familyi={L\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{fullhash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{fullhashraw}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{bibnamehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{authorbibnamehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{authornamehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{authorfullhash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \strng{authorfullhashraw}{b8b42c1eb6fed99990fc29bb52e8d4fa}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Developments in Language Theory: 19th International Conference, DLT 2015, Liverpool, UK, July 27-30, 2015, Proceedings. 19}
+      \field{title}{Grammar-based tree compression}
+      \field{year}{2015}
+      \true{nocite}
+      \field{pages}{46\bibrangedash 57}
+      \range{pages}{12}
+    \endentry
+    \entry{lohrey2011tree}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=b8b42c1eb6fed99990fc29bb52e8d4fa}{%
+           family={Lohrey},
+           familyi={L\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d226901dc57276d0e4de6a04721b0ce9}{%
+           family={Maneth},
+           familyi={M\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4f717432c7eaf94f307daeb474be3bec}{%
+           family={Mennicke},
+           familyi={M\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{fullhash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{fullhashraw}{90d0a731401540bf3c2041033d6419d2}
+      \strng{bibnamehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authorbibnamehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authornamehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authorfullhash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authorfullhashraw}{90d0a731401540bf3c2041033d6419d2}
+      \field{extraname}{1}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 Data Compression Conference}
+      \field{title}{Tree structure compression with repair}
+      \field{year}{2011}
+      \true{nocite}
+      \field{pages}{353\bibrangedash 362}
+      \range{pages}{10}
+    \endentry
+    \entry{lohrey2013xml}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=b8b42c1eb6fed99990fc29bb52e8d4fa}{%
+           family={Lohrey},
+           familyi={L\bibinitperiod},
+           given={Markus},
+           giveni={M\bibinitperiod}}}%
+        {{hash=d226901dc57276d0e4de6a04721b0ce9}{%
+           family={Maneth},
+           familyi={M\bibinitperiod},
+           given={Sebastian},
+           giveni={S\bibinitperiod}}}%
+        {{hash=4f717432c7eaf94f307daeb474be3bec}{%
+           family={Mennicke},
+           familyi={M\bibinitperiod},
+           given={Roy},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{fullhash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{fullhashraw}{90d0a731401540bf3c2041033d6419d2}
+      \strng{bibnamehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authorbibnamehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authornamehash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authorfullhash}{90d0a731401540bf3c2041033d6419d2}
+      \strng{authorfullhashraw}{90d0a731401540bf3c2041033d6419d2}
+      \field{extraname}{2}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Information Systems}
+      \field{number}{8}
+      \field{title}{XML tree structure compression using RePair}
+      \field{volume}{38}
+      \field{year}{2013}
+      \true{nocite}
+      \field{pages}{1150\bibrangedash 1167}
+      \range{pages}{18}
+    \endentry
     \entry{McAnlis2016}{book}{}{}
       \name{author}{2}{}{%
         {{hash=59f513bba94717413ed9afcb3ac2cbfa}{%
@@ -197,6 +311,101 @@
       \range{pages}{7}
       \verb{doi}
       \verb 10.1007/978-3-319-44339-3_13
+      \endverb
+    \endentry
+    \entry{udpipe:2017}{inproceedings}{}{}
+      \name{author}{2}{}{%
+        {{hash=d709af6997b3ea76ee9b027f6dda0b00}{%
+           family={Straka},
+           familyi={S\bibinitperiod},
+           given={Milan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=361a5fb39b897f3a1fae1e021c24ea6e}{%
+           family={Straková},
+           familyi={S\bibinitperiod},
+           given={Jana},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Vancouver, Canada}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{fullhash}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{fullhashraw}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{bibnamehash}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{authorbibnamehash}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{authornamehash}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{authorfullhash}{ba6b5729413eb850549fa6d711f63ee1}
+      \strng{authorfullhashraw}{ba6b5729413eb850549fa6d711f63ee1}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the CoNLL 2017 Shared Task: Multilingual Parsing from Raw Text to Universal Dependencies}
+      \field{month}{8}
+      \field{title}{Tokenizing, POS Tagging, Lemmatizing and Parsing UD 2.0 with UDPipe}
+      \field{year}{2017}
+      \true{nocite}
+      \field{pages}{88\bibrangedash 99}
+      \range{pages}{12}
+      \verb{urlraw}
+      \verb http://www.aclweb.org/anthology/K/K17/K17-3009.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.aclweb.org/anthology/K/K17/K17-3009.pdf
+      \endverb
+    \endentry
+    \entry{strakova14}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=361a5fb39b897f3a1fae1e021c24ea6e}{%
+           family={Straková},
+           familyi={S\bibinitperiod},
+           given={Jana},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d709af6997b3ea76ee9b027f6dda0b00}{%
+           family={Straka},
+           familyi={S\bibinitperiod},
+           given={Milan},
+           giveni={M\bibinitperiod}}}%
+        {{hash=bf8ce49dbc8185f7f3b7188465c822a7}{%
+           family={Hajič},
+           familyi={H\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Baltimore, Maryland}%
+      }
+      \list{publisher}{1}{%
+        {Association for Computational Linguistics}%
+      }
+      \strng{namehash}{b22efb20f2b06da1a3299709648e6825}
+      \strng{fullhash}{b22efb20f2b06da1a3299709648e6825}
+      \strng{fullhashraw}{b22efb20f2b06da1a3299709648e6825}
+      \strng{bibnamehash}{b22efb20f2b06da1a3299709648e6825}
+      \strng{authorbibnamehash}{b22efb20f2b06da1a3299709648e6825}
+      \strng{authornamehash}{b22efb20f2b06da1a3299709648e6825}
+      \strng{authorfullhash}{b22efb20f2b06da1a3299709648e6825}
+      \strng{authorfullhashraw}{b22efb20f2b06da1a3299709648e6825}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of 52nd Annual Meeting of the Association for Computational Linguistics: System Demonstrations}
+      \field{month}{6}
+      \field{title}{Open-{S}ource {T}ools for {M}orphology, {L}emmatization, {POS} {T}agging and {N}amed {E}ntity {R}ecognition}
+      \field{year}{2014}
+      \true{nocite}
+      \field{pages}{13\bibrangedash 18}
+      \range{pages}{6}
+      \verb{urlraw}
+      \verb http://www.aclweb.org/anthology/P/P14/P14-5003.pdf
+      \endverb
+      \verb{url}
+      \verb http://www.aclweb.org/anthology/P/P14/P14-5003.pdf
       \endverb
     \endentry
   \enddatalist

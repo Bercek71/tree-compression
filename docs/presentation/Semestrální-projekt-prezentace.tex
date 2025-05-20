@@ -29,14 +29,14 @@
 
 \section{Úvod}
 
-\begin{frame}{Obsah}
-    \tableofcontents
-\end{frame}
+% \begin{frame}{Obsah}
+%     \tableofcontents
+% \end{frame}
 
 \begin{frame}{Cíl práce}
 \begin{itemize}
-  \item Hlavní cíl: Ověřit, zda je možné efektivně komprimovat přirozený jazyk pomocí převodu textu do stromové struktury a následné komprese stromu
-  \item Vytvořit Proof of Concept této myšlenky a demonstrovat tento přístup na reálných datech
+  \item Hlavní cíl: Ověřit, zda je možné efektivně komprimovat přirozený jazyk pomocí převodu do stromové struktury a následné komprese stromu
+  % \item Vytvořit Proof of Concept této myšlenky a demonstrovat tento přístup na reálných datech
 \end{itemize}
 
 \end{frame}
@@ -79,6 +79,8 @@
 % \end{frame}
 
 
+
+
 \begin{frame}{Implementace knihovny}
   \nocite{Oquendo2016Pipe}
     \begin{figure}
@@ -92,9 +94,11 @@
 \section{Převod textu do stromové struktury}
 
 \begin{frame}{Převod textu do stromové struktury}
+  \nocite{kubler2009dependency}
+  \nocite{strakova14}
   \begin{itemize}
     \item Dependency parsing - závislosti mezi slovy ve větě.\nocite{kubler2009dependency} \nocite{jurafsky2024speech} \nocite{filippova2008dependency}
-    \item Využití knihovny UDPipe pro syntaktickou analýzu textu
+    \item Využití knihovny UDPipe \nocite{udpipe:2017}
   \end{itemize}
   % \centering
   \vspace{12pt}
@@ -186,6 +190,9 @@
 
 \section{Algoritmy}
 \begin{frame}{Algoritmy}
+    \nocite{lohrey2015grammar}
+    \nocite{lohrey2013xml}
+    \nocite{lohrey2011tree}
   \begin{itemize}
     \item Zaměření na gramatickou kompresi stromových struktur
     \item Nejprve testování exaktních metod: generování hashů pro celou množinu podstromů a hledání opakujících se vzorů
