@@ -97,7 +97,7 @@
   \nocite{kubler2009dependency}
   \nocite{strakova14}
   \begin{itemize}
-    \item Dependency parsing - závislosti mezi slovy ve větě.\nocite{kubler2009dependency} \nocite{jurafsky2024speech} \nocite{filippova2008dependency}
+    \item Dependency parsing - závislosti mezi slovy ve větě \nocite{kubler2009dependency} \nocite{jurafsky2024speech} \nocite{filippova2008dependency}
     \item Využití knihovny UDPipe \nocite{udpipe:2017}
   \end{itemize}
   % \centering
@@ -143,7 +143,7 @@
 \begin{frame}{Umělé rozšíření stromu}
   \begin{itemize}
     \item Rozšíření stromu pro podporu více vět bez nutnosti práce s lesem
-    \item Pro zajištění dostatečné velikosti syntaktického stromu pro testování a kompresi
+    \item Pro zajištění dostatečné velikosti závislostího stromu pro testování a kompresi
   \end{itemize}
   \centering
     \begin{tikzpicture}[
@@ -189,41 +189,99 @@
 \end{frame}
 
 \section{Algoritmy}
-\begin{frame}{Algoritmy}
-    \nocite{lohrey2015grammar}
-    \nocite{lohrey2013xml}
-    \nocite{lohrey2011tree}
-  \begin{itemize}
-    \item Zaměření na gramatickou kompresi stromových struktur
-    \item Nejprve testování exaktních metod: generování hashů pro celou množinu podstromů a hledání opakujících se vzorů
-    \item Komprese pomocí linearizace: převod stromu na posloupnost uzlů a následná aplikace kompresních algoritmů pro řetězce (odzkoušení RePair) \nocite{McAnlis2016}
-    \item Optimalizace linearizovaného RePair: rozšíření hledání z dvojic (pair) na obecné n-tice pro lepší kompresi opakujících se struktur souvisejících se stromem
-    \item Komprese přímo na stromu (bez linearizace): návrh algoritmu inspirovaného RePair, který pracuje přímo se stromovou strukturou
-    \item Porovnání a optimalizace obou přístupů
-  \end{itemize}
+\begin{frame}{Přehled přístupů ke kompresi}
+    \begin{itemize}
+        \item Inspirace algoritmem RePair  pro kompresi řetězců \nocite{McAnlis2016}
+        \item Dva hlavní přístupy k aplikaci na stromové struktury:
+        \begin{enumerate}
+            \item \textbf{Linearizace + komprese} -- převod stromu na posloupnost, aplikace RePair
+            \item \textbf{Přímá komprese stromu} -- adaptace RePair pro práci přímo se stromovou strukturou
+        \end{enumerate}
+        % \item Cíl: porovnat efektivitu obou přístupů na syntaktických stromech
+    \end{itemize}
 \end{frame}
 
-\begin{frame}{Pseudokód algoritmu}
-\begin{algorithm}[H]
-\caption{Algoritmus pro kompresi bez linearizace} 
-\begin{algorithmic}[1] 
-  \REQUIRE Závislostní strom $T$ 
-  \STATE Inicializuj čítač pravidel a slovník digramů 
-  \STATE Projdi strom a vytvoř index všech digramů $(\text{rodič}, \text{dítě}, \text{pozice})$ 
-  \WHILE{existuje digram $D$ s četností $\geq 2$} 
-  \STATE Najdi digram $D$ s nejvyšší četností 
-  \STATE Vytvoř nový neterminál $N_i$ a pravidlo $N_i 
-  \rightarrow D$ 
-  \STATE Nahraď všechny výskyty digramu $D$ neterminálem $N_i$ 
-  \STATE Aktualizuj index digramů 
-  \STATE Pokud komprese není efektivní, ukonči 
-  \ENDWHILE 
-  \STATE Odstraň nepoužitá pravidla 
-  \RETURN Komprimovaný strom $T$ a pravidla gramatiky 
-\end{algorithmic} 
-\end{algorithm}
-
+\begin{frame}{Přístup 1: Linearizace + komprese}
+    \textbf{Princip:}
+    \begin{itemize}
+        \item Převod stromu na lineární posloupnost uzlů -- experimentování s různými metodami linearizace (Preorder, Postorder, Level-order)
+        \item Aplikace standardního RePair algoritmu na tuto posloupnost
+        \item Optimalizace: rozšíření z párů (pairs) na obecné n-tice (n-grams) pro lepší kompresi dlouhých vzorů vytvořených kvůli linearizaci
+    \end{itemize}    
 \end{frame}
+
+\begin{frame}{Přístup 2: Přímá komprese stromu}
+    \textbf{Princip:}
+    \begin{itemize}
+        \item Algoritmus inspirovaný TreeRePair, využívaného pro kompresi XML dokumentů \nocite{lohrey2013xml}
+        \item Identifikace opakujících se dvojic (digramů) rodič--potomek + pozice potomka v rámci ostatních potomků 
+        \item Vytváření gramatických pravidel pro podstromy
+    \end{itemize}
+    
+\end{frame}
+
+\begin{frame}{TreeRePair algoritmus -- základní koncept}
+    \textbf{Klíčové komponenty:}
+    \begin{itemize}
+        \item \textbf{Digram:} pár (rodič, dítě) reprezentující hranu ve stromě
+        \item \textbf{Četnost:} počet výskytů daného digramu v celém stromě
+        \item \textbf{Pravidlo:} náhrada opakujícího se vzoru neterminálem
+    \end{itemize}
+    
+    \vspace{10pt}
+    \textbf{Iterativní proces:}
+    \begin{enumerate}
+        \item Identifikace nejčastějšího digramu
+        \item Vytvoření nového gramatického pravidla
+        \item Nahrazení všech výskytů digramu neterminálem
+        \item Aktualizace indexu digramů
+        \item Opakování dokud je komprese efektivní
+    \end{enumerate}
+\end{frame}
+
+\begin{frame}{Optimalizace algoritmu}
+    \textbf{Heuristiky pro ukončení:}
+    \begin{itemize}
+        \item Sledování kompresního zisku po každé iteraci
+        \item Ukončení při poklesu zisku pod stanovený práh
+        % \item Maximální počet iterací (100) pro omezení času výpočtu
+    \end{itemize}
+    
+    \vspace{10pt}
+    \textbf{Post-processing optimalizace:}
+    \begin{itemize}
+        \item Odstranění přebytečných pravidel (neterminál → neterminál)
+        \item Využití tranzitivního uzávěru pro zjednodušení gramatiky
+        % \item Vyhodnocení efektivity podle změny celkové velikosti
+    \end{itemize}
+    
+    \vspace{10pt}
+    \textbf{Složitost:}
+    \begin{itemize}
+        \item Časová: O(n) s omezením iterací, jinak O(n²)
+        % \item Prostorová: O(n)
+    \end{itemize}
+\end{frame}
+% \begin{frame}{Pseudokód algori tmu}
+% \begin{algorithm}[H]
+% \caption{Algoritmus pro kompresi bez linearizace} 
+% \begin{algorithmic}[1] 
+%   \REQUIRE Závislostní strom $T$ 
+%   \STATE Inicializuj čítač pravidel a slovník digramů 
+%   \STATE Projdi strom a vytvoř index všech digramů $(\text{rodič}, \text{dítě}, \text{pozice})$ 
+%   \WHILE{existuje digram $D$ s četností $\geq 2$} 
+%   \STATE Najdi digram $D$ s nejvyšší četností 
+%   \STATE Vytvoř nový neterminál $N_i$ a pravidlo $N_i 
+%   \rightarrow D$ 
+%   \STATE Nahraď všechny výskyty digramu $D$ neterminálem $N_i$ 
+%   \STATE Aktualizuj index digramů 
+%   \STATE Pokud komprese není efektivní, ukonči 
+%   \ENDWHILE 
+%   \STATE Odstraň nepoužitá pravidla 
+%   \RETURN Komprimovaný strom $T$ a pravidla gramatiky 
+% \end{algorithmic} 
+% \end{algorithm}
+% \end{frame}
 
 % \begin{frame}{TreeRePair algoritmus - podrobněji}
 %       % \textbf{Kroky algoritmu:}
@@ -252,23 +310,23 @@
 %       \end{itemize}
 % \end{frame}
 
-\begin{frame}{Optimalizace algoritmu}
-  % \textbf{Heuristiky pro ukončení algoritmu:}
-  % \begin{itemize}
-  %   \item Algoritmus je inspirován TreeRePair, ale je upraven pro práci se závislostními stromy.
-  %   \item Nejedná se o přesnou implementaci TreeRePair, pouze využívám podobný princip nahrazování opakujících se struktur.
-  %   \item Ukončení je řízeno heuristikou: algoritmus končí, pokud další nahrazení již nepřináší dostatečný kompresní zisk.
-  %   \item Typicky se sleduje, zda komprese ještě snižuje velikost reprezentace (stromu + pravidel).
-  %   \item Lze také nastavit maximální počet iterací nebo minimální požadovaný zisk.
-  % \end{itemize}
+% \begin{frame}{Optimalizace algoritmu}
+%   % \textbf{Heuristiky pro ukončení algoritmu:}
+%   % \begin{itemize}
+%   %   \item Algoritmus je inspirován TreeRePair, ale je upraven pro práci se závislostními stromy.
+%   %   \item Nejedná se o přesnou implementaci TreeRePair, pouze využívám podobný princip nahrazování opakujících se struktur.
+%   %   \item Ukončení je řízeno heuristikou: algoritmus končí, pokud další nahrazení již nepřináší dostatečný kompresní zisk.
+%   %   \item Typicky se sleduje, zda komprese ještě snižuje velikost reprezentace (stromu + pravidel).
+%   %   \item Lze také nastavit maximální počet iterací nebo minimální požadovaný zisk.
+%   % \end{itemize}
 
-  \textbf{Optimalizační strategie:}
-  \begin{itemize}
-    \item Po každé iteraci vyhodnotit metriku efektivity nahrazení (např. změna velikosti, kompresní zisk).
-    \item Ukončit, pokud zisk klesne pod zvolený práh, nebo pokud by další iterace vedla k nárůstu velikosti %(to se mi stalo v několika případech, protože si algoritmus pamatuje nejen symboly ale i pořadí)
-    \item Odstranit přebytečná pravidla, která vedou od neterminálu k dalšímu neterminálu (využít tranzitivní uzávěr)
-  \end{itemize}
-\end{frame}
+%   \textbf{Optimalizační strategie:}
+%   \begin{itemize}
+%     \item Po každé iteraci vyhodnotit metriku efektivity nahrazení (např. změna velikosti, kompresní zisk).
+%     \item Ukončit, pokud zisk klesne pod zvolený práh, nebo pokud by další iterace vedla k nárůstu velikosti %(to se mi stalo v několika případech, protože si algoritmus pamatuje nejen symboly ale i pořadí)
+%     \item Odstranit přebytečná pravidla, která vedou od neterminálu k dalšímu neterminálu (využít tranzitivní uzávěr)
+%   \end{itemize}
+% \end{frame}
 
 
 

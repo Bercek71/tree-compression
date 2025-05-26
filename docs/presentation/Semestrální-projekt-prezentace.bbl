@@ -121,77 +121,6 @@
       \field{pages}{11\bibrangedash 20}
       \range{pages}{10}
     \endentry
-    \entry{lohrey2015grammar}{inproceedings}{}{}
-      \name{author}{1}{}{%
-        {{hash=b8b42c1eb6fed99990fc29bb52e8d4fa}{%
-           family={Lohrey},
-           familyi={L\bibinitperiod},
-           given={Markus},
-           giveni={M\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {Springer}%
-      }
-      \strng{namehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{fullhash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{fullhashraw}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{bibnamehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{authorbibnamehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{authornamehash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{authorfullhash}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \strng{authorfullhashraw}{b8b42c1eb6fed99990fc29bb52e8d4fa}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{Developments in Language Theory: 19th International Conference, DLT 2015, Liverpool, UK, July 27-30, 2015, Proceedings. 19}
-      \field{title}{Grammar-based tree compression}
-      \field{year}{2015}
-      \true{nocite}
-      \field{pages}{46\bibrangedash 57}
-      \range{pages}{12}
-    \endentry
-    \entry{lohrey2011tree}{inproceedings}{}{}
-      \name{author}{3}{}{%
-        {{hash=b8b42c1eb6fed99990fc29bb52e8d4fa}{%
-           family={Lohrey},
-           familyi={L\bibinitperiod},
-           given={Markus},
-           giveni={M\bibinitperiod}}}%
-        {{hash=d226901dc57276d0e4de6a04721b0ce9}{%
-           family={Maneth},
-           familyi={M\bibinitperiod},
-           given={Sebastian},
-           giveni={S\bibinitperiod}}}%
-        {{hash=4f717432c7eaf94f307daeb474be3bec}{%
-           family={Mennicke},
-           familyi={M\bibinitperiod},
-           given={Roy},
-           giveni={R\bibinitperiod}}}%
-      }
-      \list{organization}{1}{%
-        {IEEE}%
-      }
-      \strng{namehash}{90d0a731401540bf3c2041033d6419d2}
-      \strng{fullhash}{90d0a731401540bf3c2041033d6419d2}
-      \strng{fullhashraw}{90d0a731401540bf3c2041033d6419d2}
-      \strng{bibnamehash}{90d0a731401540bf3c2041033d6419d2}
-      \strng{authorbibnamehash}{90d0a731401540bf3c2041033d6419d2}
-      \strng{authornamehash}{90d0a731401540bf3c2041033d6419d2}
-      \strng{authorfullhash}{90d0a731401540bf3c2041033d6419d2}
-      \strng{authorfullhashraw}{90d0a731401540bf3c2041033d6419d2}
-      \field{extraname}{1}
-      \field{sortinit}{L}
-      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{booktitle}{2011 Data Compression Conference}
-      \field{title}{Tree structure compression with repair}
-      \field{year}{2011}
-      \true{nocite}
-      \field{pages}{353\bibrangedash 362}
-      \range{pages}{10}
-    \endentry
     \entry{lohrey2013xml}{article}{}{}
       \name{author}{3}{}{%
         {{hash=b8b42c1eb6fed99990fc29bb52e8d4fa}{%
@@ -221,7 +150,6 @@
       \strng{authornamehash}{90d0a731401540bf3c2041033d6419d2}
       \strng{authorfullhash}{90d0a731401540bf3c2041033d6419d2}
       \strng{authorfullhashraw}{90d0a731401540bf3c2041033d6419d2}
-      \field{extraname}{2}
       \field{sortinit}{L}
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
