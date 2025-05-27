@@ -80,7 +80,7 @@
 
 
 
-
+\section{Knihovna}
 \begin{frame}{Implementace knihovny}
   \nocite{Oquendo2016Pipe}
     \begin{figure}
@@ -89,6 +89,44 @@
         \caption{Třídní diagram části implementace zaměření na řetězení filtrů}
         \label{fig:class-diagram}
     \end{figure}
+\end{frame}
+
+\begin{frame}{Data Flow diagram}
+    \resizebox{\textwidth}{!}{%
+\begin{tikzpicture}[
+  node distance=0.6cm and 1.6cm,
+  datanode/.style={rectangle, draw, fill=blue!5, minimum width=2.4cm, minimum height=0.8cm, font=\footnotesize},
+  processnode/.style={rectangle, rounded corners, draw, fill=green!5, minimum width=2.8cm, minimum height=0.8cm, font=\footnotesize},
+  arrow/.style={->, >=stealth, thick}
+]
+
+% Horní větev – Komprese (zleva doprava)
+\node[datanode] (text) {Text};
+\node[processnode, right=of text] (parse) {Převod na strom};
+\node[datanode, right=of parse] (tree) {Stromová struktura};
+\node[processnode, right=of tree] (compress) {Komprese};
+\node[datanode, right=of compress] (compressed) {Komprimovaný strom};
+
+% Spodní větev – Dekompresní pipeline (zprava doleva)
+\node[datanode, below=1.4cm of compressed] (compressed2) {Komprimovaný strom};
+\node[processnode, left=of compressed2] (decompress) {Dekomprese};
+\node[datanode, left=of decompress] (tree2) {Stromová struktura};
+\node[processnode, left=of tree2] (toText) {Převod na text};
+\node[datanode, left=of toText] (outputText) {Výstupní text};
+
+% Horní šipky
+\draw[arrow] (text) -- (parse);
+\draw[arrow] (parse) -- (tree);
+\draw[arrow] (tree) -- (compress);
+\draw[arrow] (compress) -- (compressed);
+
+% Spodní šipky (zprava doleva)
+\draw[arrow] (compressed2) -- (decompress);
+\draw[arrow] (decompress) -- (tree2);
+\draw[arrow] (tree2) -- (toText);
+\draw[arrow] (toText) -- (outputText);
+\end{tikzpicture}
+}
 \end{frame}
 
 \section{Převod textu do stromové struktury}
@@ -220,24 +258,24 @@
     
 \end{frame}
 
-\begin{frame}{TreeRePair algoritmus -- základní koncept}
-    \textbf{Klíčové komponenty:}
-    \begin{itemize}
-        \item \textbf{Digram:} pár (rodič, dítě) reprezentující hranu ve stromě
-        \item \textbf{Četnost:} počet výskytů daného digramu v celém stromě
-        \item \textbf{Pravidlo:} náhrada opakujícího se vzoru neterminálem
-    \end{itemize}
+% \begin{frame}{TreeRePair algoritmus -- základní koncept}
+%     \textbf{Klíčové komponenty:}
+%     \begin{itemize}
+%         \item \textbf{Digram:} trojce (rodič, dítě, pozice potomka) reprezentující hranu ve stromě
+%         \item \textbf{Četnost:} počet výskytů daného digramu v celém stromě
+%         \item \textbf{Pravidlo:} náhrada opakujícího se vzoru neterminálem
+%     \end{itemize}
     
-    \vspace{10pt}
-    \textbf{Iterativní proces:}
-    \begin{enumerate}
-        \item Identifikace nejčastějšího digramu
-        \item Vytvoření nového gramatického pravidla
-        \item Nahrazení všech výskytů digramu neterminálem
-        \item Aktualizace indexu digramů
-        \item Opakování dokud je komprese efektivní
-    \end{enumerate}
-\end{frame}
+%     \vspace{10pt}
+%     \textbf{Iterativní proces:}
+%     \begin{enumerate}
+%         \item Identifikace nejčastějšího digramu
+%         \item Vytvoření nového gramatického pravidla
+%         \item Nahrazení všech výskytů digramu neterminálem
+%         \item Aktualizace indexu digramů
+%         \item Opakování dokud je komprese efektivní
+%     \end{enumerate}
+% \end{frame}
 
 \begin{frame}{Optimalizace algoritmu}
     \textbf{Heuristiky pro ukončení:}
@@ -251,16 +289,16 @@
     \textbf{Post-processing optimalizace:}
     \begin{itemize}
         \item Odstranění přebytečných pravidel (neterminál → neterminál)
-        \item Využití tranzitivního uzávěru pro zjednodušení gramatiky
+        \item Nevydařené pokusy o využití tranzitivního uzávěru pro zjednodušení gramatiky
         % \item Vyhodnocení efektivity podle změny celkové velikosti
     \end{itemize}
     
-    \vspace{10pt}
-    \textbf{Složitost:}
-    \begin{itemize}
-        \item Časová: O(n) s omezením iterací, jinak O(n²)
+    % \vspace{10pt}
+    % \textbf{Složitost:}
+    % \begin{itemize}
+        % \item Časová: O(n) s omezením iterací, jinak O(n²)
         % \item Prostorová: O(n)
-    \end{itemize}
+    % \end{itemize}
 \end{frame}
 % \begin{frame}{Pseudokód algori tmu}
 % \begin{algorithm}[H]

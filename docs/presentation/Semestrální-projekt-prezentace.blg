@@ -1,0 +1,17 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[0] Config.pm:311> INFO - Logfile is 'Semestrální-projekt-prezentace.blg'
+[35] biber-darwin:340> INFO - === Tue May 27, 2025, 08:48:32
+[129] Biber.pm:420> INFO - Reading './Semestrální-projekt-prezentace.bcf'
+[167] Biber.pm:994> INFO - Found 8 citekeys in bib section 0
+[174] Biber.pm:4463> INFO - Processing section 0
+[180] Biber.pm:4654> INFO - Looking for bibtex file 'citace.bib' for section 0
+[180] bibtex.pm:1713> INFO - LaTeX decoding ...
+[188] bibtex.pm:1519> INFO - Found BibTeX data source 'citace.bib'
+[233] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'variable = shifted' with 'variable = non-ignorable'
+[233] UCollate.pm:68> INFO - Overriding locale 'cs-CZ' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[233] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'cs-CZ'
+[240] bbl.pm:676> INFO - Writing 'SemestrÃ¡lnÃ­-projekt-prezentace.bbl' with encoding 'UTF-8'
+[242] bbl.pm:779> INFO - Output to SemestrÃ¡lnÃ­-projekt-prezentace.bbl
+[242] Biber.pm:131> WARN - legacy month field 'June' in entry 'strakova14' is not an integer - this will probably not sort properly.
+[242] Biber.pm:131> WARN - legacy month field 'August' in entry 'udpipe:2017' is not an integer - this will probably not sort properly.
+[242] Biber.pm:133> INFO - WARNINGS: 2
